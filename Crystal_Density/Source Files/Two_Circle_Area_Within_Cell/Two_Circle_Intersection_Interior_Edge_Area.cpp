@@ -50,6 +50,38 @@ double Two_Circle_Intersection_Interior_Edge_Area ( Cell_2Circles const& c2c, Ed
     int index_1 = (e.index + 3) % 4;
     int index_2 = (e.index + 1) % 4;
     
+    if (cell_1.edges[index_1].intersection_type == 5 && Norm( cell_1.edges[index_1].i1, c2.c ) < c2.r)
+    {
+        int index_3 = (index_1 + 1) % 4;
+        int index_4 = (index_1 + 2) % 4;
+        
+        return Two_Circle_Intersection_Concave_Cone_Area( c2c, cell_1.edges[index_3], cell_2.edges[index_3], cell_1.edges[index_4], cell_2.edges[index_4]);
+    }
+    
+    else if (cell_1.edges[index_2].intersection_type == 5 && Norm( cell_1.edges[index_2].i1, c2.c ) < c2.r)
+    {
+        int index_3 = (index_2 + 1) % 4;
+        int index_4 = (index_2 + 2) % 4;
+        
+        return Two_Circle_Intersection_Concave_Cone_Area( c2c, cell_1.edges[index_3], cell_2.edges[index_3], cell_1.edges[index_4], cell_2.edges[index_4]);
+    }
+    
+    else if (cell_2.edges[index_1].intersection_type == 5 && Norm( cell_2.edges[index_1].i1, c1.c ) < c1.r)
+    {
+        int index_3 = (index_1 + 1) % 4;
+        int index_4 = (index_1 + 2) % 4;
+        
+        return Two_Circle_Intersection_Concave_Cone_Area( c2c, cell_1.edges[index_3], cell_2.edges[index_3], cell_1.edges[index_4], cell_2.edges[index_4]);
+    }
+    
+    else if (cell_2.edges[index_2].intersection_type == 5 && Norm( cell_2.edges[index_2].i1, c1.c ) < c1.r)
+    {
+        int index_3 = (index_2 + 1) % 4;
+        int index_4 = (index_2 + 2) % 4;
+        
+        return Two_Circle_Intersection_Concave_Cone_Area( c2c, cell_1.edges[index_3], cell_2.edges[index_3], cell_1.edges[index_4], cell_2.edges[index_4]);
+    }
+    
     P2 p1, p2, p3, p4;
     
     p2 = e.startpt;

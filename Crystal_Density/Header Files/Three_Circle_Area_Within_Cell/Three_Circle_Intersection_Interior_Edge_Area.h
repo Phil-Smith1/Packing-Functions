@@ -1,6 +1,8 @@
 #pragma once
 
 #include "Make_Cell.h"
-#include "Three_Circle_Intersection_Area_Within_Cell.h"
+#include "First_Order_Total_Area.h"
+#include "Second_Order_Total_Area.h"
+#include "Third_Order_Total_Area.h"
 
-double Three_Circle_Intersection_Interior_Edge_Area ( Circle const& c1, Circle const& c2, Circle const& c3, Edge const& e, Cell const& cell_1, Cell const& cell_2, Cell const& cell_3 );
+double Three_Circle_Intersection_Interior_Edge_Area ( Cell_3Circles const& c3c, Edge const& e );
