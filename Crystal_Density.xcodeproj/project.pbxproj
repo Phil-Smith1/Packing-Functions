@@ -1,0 +1,940 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE03C346223825B200C19AC5 /* Three_Circle_Intersection_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE03C345223825B200C19AC5 /* Three_Circle_Intersection_Area.cpp */; };
+		EE051916223148B10091755F /* Derivatives_At_Pt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE051914223148B10091755F /* Derivatives_At_Pt.cpp */; };
+		EE05191A22314C300091755F /* Discontinuity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE05191922314C300091755F /* Discontinuity.cpp */; };
+		EE05191C2231552D0091755F /* Derivatives_Of_Data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE05191B2231552D0091755F /* Derivatives_Of_Data.cpp */; };
+		EE051920223182C70091755F /* Packing_Functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE05191F223182C70091755F /* Packing_Functions.cpp */; };
+		EE05192222318EE50091755F /* Cell_2Circles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE05192122318EE50091755F /* Cell_2Circles.cpp */; };
+		EE09748F21F0F060006A34D3 /* Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE09748E21F0F060006A34D3 /* Cell.cpp */; };
+		EE09749221F0F1DD006A34D3 /* Edge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE09749121F0F1DD006A34D3 /* Edge.cpp */; };
+		EE2CFB9721F8838100270503 /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE2CFB9621F8838100270503 /* Circle.cpp */; };
+		EE368DE822427DC5003A9AFD /* Interior_Pts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE368DE722427DC5003A9AFD /* Interior_Pts.cpp */; };
+		EE379184222EFF3F000B57C8 /* Frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE379183222EFF3F000B57C8 /* Frame.cpp */; };
+		EE379188222F02D8000B57C8 /* Cell_Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE379187222F02D8000B57C8 /* Cell_Circle.cpp */; };
+		EE3999A12239815800083354 /* Cell_4Circles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE3999A02239815800083354 /* Cell_4Circles.cpp */; };
+		EE3999A32239818400083354 /* Four_Circles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE3999A22239818400083354 /* Four_Circles.cpp */; };
+		EE3AA60A21B848710088403C /* Crystal_Density.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE3AA60921B848710088403C /* Crystal_Density.cpp */; };
+		EE3AADBC2228157100E1FAE5 /* Two_Circle_Intersection_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE3AADBB2228157100E1FAE5 /* Two_Circle_Intersection_Area.cpp */; };
+		EE3AADBE2228170B00E1FAE5 /* Norm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE3AADBD2228170A00E1FAE5 /* Norm.cpp */; };
+		EE3AADC02228186700E1FAE5 /* Angle_Between_Vectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE3AADBF2228186700E1FAE5 /* Angle_Between_Vectors.cpp */; };
+		EE3AADC4222819CE00E1FAE5 /* Segment_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE3AADC3222819CE00E1FAE5 /* Segment_Area.cpp */; };
+		EE3AADC6222819FE00E1FAE5 /* Intersection_Of_Two_Circles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE3AADC5222819FE00E1FAE5 /* Intersection_Of_Two_Circles.cpp */; };
+		EE4FF54B2236A9E7008E25F0 /* Three_Circles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE4FF54A2236A9E7008E25F0 /* Three_Circles.cpp */; };
+		EE4FF54D2236AA83008E25F0 /* Cell_3Circles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE4FF54C2236AA83008E25F0 /* Cell_3Circles.cpp */; };
+		EE4FF5512236AF7C008E25F0 /* Areas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE4FF5502236AF7C008E25F0 /* Areas.cpp */; };
+		EE6FE9EE2226FD7E006B4477 /* Two_Circles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE6FE9ED2226FD7E006B4477 /* Two_Circles.cpp */; };
+		EE79CED9224162E30077AFFE /* Deformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE79CED8224162E30077AFFE /* Deformation.cpp */; };
+		EECF3559222D79FF0079CD62 /* Cell_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3558222D79FF0079CD62 /* Cell_Area.cpp */; };
+		EECF355B222D7A500079CD62 /* Cell_Data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF355A222D7A4F0079CD62 /* Cell_Data.cpp */; };
+		EECF355D222D7AA80079CD62 /* Line_Circle_Intersections.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF355C222D7AA80079CD62 /* Line_Circle_Intersections.cpp */; };
+		EECF355F222D7ADB0079CD62 /* Edge_Circle_Intersections.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF355E222D7ADB0079CD62 /* Edge_Circle_Intersections.cpp */; };
+		EECF3561222D7B4E0079CD62 /* Triangle_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3560222D7B4E0079CD62 /* Triangle_Area.cpp */; };
+		EECF3563222D7BA20079CD62 /* Cell_Circle_Intersections.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3562222D7BA20079CD62 /* Cell_Circle_Intersections.cpp */; };
+		EECF3565222D7BD10079CD62 /* Num_Vertices_Within_Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3564222D7BD10079CD62 /* Num_Vertices_Within_Circle.cpp */; };
+		EECF3567222D7CCB0079CD62 /* Make_Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3566222D7CCB0079CD62 /* Make_Cell.cpp */; };
+		EECF3569222D7D070079CD62 /* Pt_Within_Convex_Hull.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3568222D7D070079CD62 /* Pt_Within_Convex_Hull.cpp */; };
+		EECF356B222D7D570079CD62 /* Same_Side.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF356A222D7D570079CD62 /* Same_Side.cpp */; };
+		EECF356D222D7D7D0079CD62 /* Correct_Side_Of_Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF356C222D7D7D0079CD62 /* Correct_Side_Of_Cell.cpp */; };
+		EECF356F222D7DA70079CD62 /* Area_Excluded_By_Exterior_Edge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF356E222D7DA70079CD62 /* Area_Excluded_By_Exterior_Edge.cpp */; };
+		EECF3571222D7DE70079CD62 /* Irregular_Sector_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3570222D7DE70079CD62 /* Irregular_Sector_Area.cpp */; };
+		EECF3573222D7E130079CD62 /* Interior_Edge_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3572222D7E130079CD62 /* Interior_Edge_Area.cpp */; };
+		EECF3575222D7E6C0079CD62 /* Concave_Cone_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3574222D7E6C0079CD62 /* Concave_Cone_Area.cpp */; };
+		EECF3577222D7EBA0079CD62 /* Circle_Area_Within_Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3576222D7EBA0079CD62 /* Circle_Area_Within_Cell.cpp */; };
+		EECF3579222D7F050079CD62 /* First_Order_Total_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3578222D7F050079CD62 /* First_Order_Total_Area.cpp */; };
+		EECF357B222D7F700079CD62 /* Two_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF357A222D7F700079CD62 /* Two_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp */; };
+		EECF357D222D7F9F0079CD62 /* Two_Circle_Intersection_Irregular_Sector_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF357C222D7F9F0079CD62 /* Two_Circle_Intersection_Irregular_Sector_Area.cpp */; };
+		EECF357F222D7FDE0079CD62 /* Two_Circle_Intersection_Concave_Cone_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF357E222D7FDE0079CD62 /* Two_Circle_Intersection_Concave_Cone_Area.cpp */; };
+		EECF3581222D80300079CD62 /* Two_Circle_Intersection_Interior_Edge_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3580222D80300079CD62 /* Two_Circle_Intersection_Interior_Edge_Area.cpp */; };
+		EECF3583222D81CF0079CD62 /* Two_Circle_Intersection_Area_Within_Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3582222D81CF0079CD62 /* Two_Circle_Intersection_Area_Within_Cell.cpp */; };
+		EECF3585222D824A0079CD62 /* Second_Order_Total_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3584222D824A0079CD62 /* Second_Order_Total_Area.cpp */; };
+		EECF3587222D828A0079CD62 /* Order_Circles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3586222D828A0079CD62 /* Order_Circles.cpp */; };
+		EECF3589222D82EE0079CD62 /* Non_Trivial_Three_Circle_Intersection_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3588222D82EE0079CD62 /* Non_Trivial_Three_Circle_Intersection_Area.cpp */; };
+		EECF358B222D83130079CD62 /* Non_Trivial_Three_Circle_Intersection_Pts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF358A222D83130079CD62 /* Non_Trivial_Three_Circle_Intersection_Pts.cpp */; };
+		EECF358D222D83690079CD62 /* Three_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF358C222D83690079CD62 /* Three_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp */; };
+		EECF358F222D839C0079CD62 /* Three_Circle_Intersection_Concave_Cone_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF358E222D839C0079CD62 /* Three_Circle_Intersection_Concave_Cone_Area.cpp */; };
+		EECF3591222D83C80079CD62 /* Three_Circle_Intersection_Irregular_Sector_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3590222D83C80079CD62 /* Three_Circle_Intersection_Irregular_Sector_Area.cpp */; };
+		EECF3593222D84200079CD62 /* Three_Circle_Intersection_Interior_Edge_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3592222D84200079CD62 /* Three_Circle_Intersection_Interior_Edge_Area.cpp */; };
+		EECF3595222D84BC0079CD62 /* Non_Trivial_Three_Circle_Intersection_Area_Within_Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3594222D84BC0079CD62 /* Non_Trivial_Three_Circle_Intersection_Area_Within_Cell.cpp */; };
+		EECF3597222D84F50079CD62 /* Non_Inclusion_Three_Circle_Intersection_Area_Within_Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3596222D84F50079CD62 /* Non_Inclusion_Three_Circle_Intersection_Area_Within_Cell.cpp */; };
+		EECF3599222D854B0079CD62 /* Three_Circle_Intersection_Area_Within_Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3598222D854B0079CD62 /* Three_Circle_Intersection_Area_Within_Cell.cpp */; };
+		EECF359B222D85AC0079CD62 /* Third_Order_Total_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF359A222D85AC0079CD62 /* Third_Order_Total_Area.cpp */; };
+		EECF359D222D864F0079CD62 /* Non_Trivial_Four_Circle_Intersection_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF359C222D864F0079CD62 /* Non_Trivial_Four_Circle_Intersection_Area.cpp */; };
+		EECF359F222D86900079CD62 /* Non_Trivial_Four_Circle_Intersection_Pts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF359E222D86900079CD62 /* Non_Trivial_Four_Circle_Intersection_Pts.cpp */; };
+		EECF35A1222D86EF0079CD62 /* Four_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF35A0222D86EF0079CD62 /* Four_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp */; };
+		EECF35A3222D87D00079CD62 /* Non_Trivial_Four_Circle_Intersection_Area_Within_Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF35A2222D87D00079CD62 /* Non_Trivial_Four_Circle_Intersection_Area_Within_Cell.cpp */; };
+		EECF35A5222D88290079CD62 /* Non_Inclusion_Four_Circle_Intersection_Area_Within_Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF35A4222D88290079CD62 /* Non_Inclusion_Four_Circle_Intersection_Area_Within_Cell.cpp */; };
+		EECF35A7222D88600079CD62 /* Four_Circle_Intersection_Area_Within_Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF35A6222D88600079CD62 /* Four_Circle_Intersection_Area_Within_Cell.cpp */; };
+		EECF35A9222D89570079CD62 /* Fourth_Order_Total_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF35A8222D89570079CD62 /* Fourth_Order_Total_Area.cpp */; };
+		EECF35B3222D89F00079CD62 /* Extract_Data_Pts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF35B2222D89F00079CD62 /* Extract_Data_Pts.cpp */; };
+		EECF35B5222D8C320079CD62 /* Derivatives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF35B4222D8C320079CD62 /* Derivatives.cpp */; };
+		EECF35B9222D8CA70079CD62 /* Plot_Graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF35B8222D8CA70079CD62 /* Plot_Graph.cpp */; };
+		EECF35BB222D8CC80079CD62 /* Print_Info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF35BA222D8CC80079CD62 /* Print_Info.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EE3AA60421B848710088403C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EE01B6D72209B1D200EDFA6E /* Derivatives.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Derivatives.h; sourceTree = "<group>"; };
+		EE01B6DA2209F07200EDFA6E /* Print_Info.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Print_Info.h; sourceTree = "<group>"; };
+		EE0379CE21F77DEC00DC08A2 /* Interior_Edge_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interior_Edge_Area.h; sourceTree = "<group>"; };
+		EE03C345223825B200C19AC5 /* Three_Circle_Intersection_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Three_Circle_Intersection_Area.cpp; sourceTree = "<group>"; };
+		EE03E12F223ACE570010BC95 /* Two_Circle_Intersection_Area.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Two_Circle_Intersection_Area.h; sourceTree = "<group>"; };
+		EE051914223148B10091755F /* Derivatives_At_Pt.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Derivatives_At_Pt.cpp; sourceTree = "<group>"; };
+		EE051917223149EE0091755F /* Derivatives_At_Pt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Derivatives_At_Pt.h; sourceTree = "<group>"; };
+		EE05191822314C180091755F /* Discontinuity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Discontinuity.h; sourceTree = "<group>"; };
+		EE05191922314C300091755F /* Discontinuity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Discontinuity.cpp; sourceTree = "<group>"; };
+		EE05191B2231552D0091755F /* Derivatives_Of_Data.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Derivatives_Of_Data.cpp; sourceTree = "<group>"; };
+		EE05191D2231554B0091755F /* Derivatives_Of_Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Derivatives_Of_Data.h; sourceTree = "<group>"; };
+		EE05191E223182B60091755F /* Packing_Functions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Packing_Functions.h; sourceTree = "<group>"; };
+		EE05191F223182C70091755F /* Packing_Functions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Packing_Functions.cpp; sourceTree = "<group>"; };
+		EE05192122318EE50091755F /* Cell_2Circles.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cell_2Circles.cpp; sourceTree = "<group>"; };
+		EE05192322318EF70091755F /* Cell_2Circles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cell_2Circles.h; sourceTree = "<group>"; };
+		EE0794A821ECC586002669B6 /* Cell_Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cell_Data.h; sourceTree = "<group>"; };
+		EE0794A921ECC751002669B6 /* Cell_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cell_Area.h; sourceTree = "<group>"; };
+		EE09748A21F0A51C006A34D3 /* Num_Vertices_Within_Circle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Num_Vertices_Within_Circle.h; sourceTree = "<group>"; };
+		EE09748B21F0AA92006A34D3 /* Segment_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Segment_Area.h; sourceTree = "<group>"; };
+		EE09748C21F0AB0A006A34D3 /* Angle_Between_Vectors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Angle_Between_Vectors.h; sourceTree = "<group>"; };
+		EE09748D21F0C2FB006A34D3 /* Area_Excluded_By_Exterior_Edge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Area_Excluded_By_Exterior_Edge.h; sourceTree = "<group>"; };
+		EE09748E21F0F060006A34D3 /* Cell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cell.cpp; sourceTree = "<group>"; };
+		EE09749021F0F071006A34D3 /* Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		EE09749121F0F1DD006A34D3 /* Edge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Edge.cpp; sourceTree = "<group>"; };
+		EE09749321F0F1E5006A34D3 /* Edge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Edge.h; sourceTree = "<group>"; };
+		EE20D73B221449E600168C59 /* Same_Side.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Same_Side.h; sourceTree = "<group>"; };
+		EE20D73C22144C6600168C59 /* Correct_Side_Of_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Correct_Side_Of_Cell.h; sourceTree = "<group>"; };
+		EE2CFB9121F87C9600270503 /* Concave_Cone_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Concave_Cone_Area.h; sourceTree = "<group>"; };
+		EE2CFB9521F8837400270503 /* Circle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
+		EE2CFB9621F8838100270503 /* Circle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Circle.cpp; sourceTree = "<group>"; };
+		EE2CFB9821F8DEEF00270503 /* Intersection_Of_Two_Circles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Intersection_Of_Two_Circles.h; sourceTree = "<group>"; };
+		EE368DE622427DB0003A9AFD /* Interior_Pts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interior_Pts.h; sourceTree = "<group>"; };
+		EE368DE722427DC5003A9AFD /* Interior_Pts.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Interior_Pts.cpp; sourceTree = "<group>"; };
+		EE379183222EFF3F000B57C8 /* Frame.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Frame.cpp; sourceTree = "<group>"; };
+		EE379185222EFF57000B57C8 /* Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Frame.h; sourceTree = "<group>"; };
+		EE379186222F02C9000B57C8 /* Cell_Circle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cell_Circle.h; sourceTree = "<group>"; };
+		EE379187222F02D8000B57C8 /* Cell_Circle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cell_Circle.cpp; sourceTree = "<group>"; };
+		EE37ACDF21EE48EB0001A43B /* Line_Circle_Intersections.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Line_Circle_Intersections.h; sourceTree = "<group>"; };
+		EE38F42122031EF600A6825D /* Non_Inclusion_Four_Circle_Intersection_Area_Within_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Non_Inclusion_Four_Circle_Intersection_Area_Within_Cell.h; sourceTree = "<group>"; };
+		EE38F4232203212F00A6825D /* Fourth_Order_Total_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fourth_Order_Total_Area.h; sourceTree = "<group>"; };
+		EE38F4282203272900A6825D /* Extract_Data_Pts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Extract_Data_Pts.h; sourceTree = "<group>"; };
+		EE38F42922032A0D00A6825D /* Two_Circle_Intersection_Area_Within_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Two_Circle_Intersection_Area_Within_Cell.h; sourceTree = "<group>"; };
+		EE38FED421F1E521001CAFA6 /* Norm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Norm.h; sourceTree = "<group>"; };
+		EE38FED521F1F3CF001CAFA6 /* Circle_Area_Within_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Circle_Area_Within_Cell.h; sourceTree = "<group>"; };
+		EE3924292212E3D70045488D /* Three_Circle_Intersection_Area_Excluded_By_Exterior_Edge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Three_Circle_Intersection_Area_Excluded_By_Exterior_Edge.h; sourceTree = "<group>"; };
+		EE39242A221302370045488D /* Three_Circle_Intersection_Irregular_Sector_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Three_Circle_Intersection_Irregular_Sector_Area.h; sourceTree = "<group>"; };
+		EE392E0D22007CE9007E8E31 /* First_Order_Total_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = First_Order_Total_Area.h; sourceTree = "<group>"; };
+		EE392E0E22007D95007E8E31 /* Second_Order_Total_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Second_Order_Total_Area.h; sourceTree = "<group>"; };
+		EE392E0F22007DFD007E8E31 /* Third_Order_Total_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Third_Order_Total_Area.h; sourceTree = "<group>"; };
+		EE392E10220086C9007E8E31 /* Non_Trivial_Four_Circle_Intersection_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Non_Trivial_Four_Circle_Intersection_Area.h; sourceTree = "<group>"; };
+		EE39999F2239814000083354 /* Cell_4Circles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cell_4Circles.h; sourceTree = "<group>"; };
+		EE3999A02239815800083354 /* Cell_4Circles.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cell_4Circles.cpp; sourceTree = "<group>"; };
+		EE3999A22239818400083354 /* Four_Circles.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Four_Circles.cpp; sourceTree = "<group>"; };
+		EE3999A42239819100083354 /* Four_Circles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Four_Circles.h; sourceTree = "<group>"; };
+		EE3A142E220C60EA001484AF /* Two_Circle_Intersection_Irregular_Sector_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Two_Circle_Intersection_Irregular_Sector_Area.h; sourceTree = "<group>"; };
+		EE3A142F220C9503001484AF /* Two_Circle_Intersection_Concave_Cone_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Two_Circle_Intersection_Concave_Cone_Area.h; sourceTree = "<group>"; };
+		EE3A1430220C9E3F001484AF /* Make_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Make_Cell.h; sourceTree = "<group>"; };
+		EE3AA60621B848710088403C /* Crystal_Density */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Crystal_Density; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE3AA60921B848710088403C /* Crystal_Density.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Crystal_Density.cpp; sourceTree = "<group>"; };
+		EE3AADBB2228157100E1FAE5 /* Two_Circle_Intersection_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Two_Circle_Intersection_Area.cpp; sourceTree = "<group>"; };
+		EE3AADBD2228170A00E1FAE5 /* Norm.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Norm.cpp; sourceTree = "<group>"; };
+		EE3AADBF2228186700E1FAE5 /* Angle_Between_Vectors.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Angle_Between_Vectors.cpp; sourceTree = "<group>"; };
+		EE3AADC3222819CE00E1FAE5 /* Segment_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Segment_Area.cpp; sourceTree = "<group>"; };
+		EE3AADC5222819FE00E1FAE5 /* Intersection_Of_Two_Circles.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Intersection_Of_Two_Circles.cpp; sourceTree = "<group>"; };
+		EE3C50EB2204604A00E18906 /* Two_Circle_Intersection_Area_Excluded_By_Exterior_Edge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Two_Circle_Intersection_Area_Excluded_By_Exterior_Edge.h; sourceTree = "<group>"; };
+		EE3CC3E922021F81002366A3 /* Non_Trivial_Three_Circle_Intersection_Pts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Non_Trivial_Three_Circle_Intersection_Pts.h; sourceTree = "<group>"; };
+		EE3D8F3421F9DF0F00D8E9DC /* Triangle_Circumcentre.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Triangle_Circumcentre.h; sourceTree = "<group>"; };
+		EE3D8F3521F9DFCA00D8E9DC /* Rotation_About_Pt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rotation_About_Pt.h; sourceTree = "<group>"; };
+		EE43D59B220DA2F70079D8E7 /* Two_Circle_Intersection_Interior_Edge_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Two_Circle_Intersection_Interior_Edge_Area.h; sourceTree = "<group>"; };
+		EE46B9942215A3F400ABD017 /* Four_Circle_Intersection_Area_Within_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Four_Circle_Intersection_Area_Within_Cell.h; sourceTree = "<group>"; };
+		EE46B9952215AA2300ABD017 /* Non_Trivial_Four_Circle_Intersection_Area_Within_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Non_Trivial_Four_Circle_Intersection_Area_Within_Cell.h; sourceTree = "<group>"; };
+		EE46B9962215B00F00ABD017 /* Four_Circle_Intersection_Area_Excluded_By_Exterior_Edge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Four_Circle_Intersection_Area_Excluded_By_Exterior_Edge.h; sourceTree = "<group>"; };
+		EE46B9982215C97B00ABD017 /* Non_Trivial_Four_Circle_Intersection_Pts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Non_Trivial_Four_Circle_Intersection_Pts.h; sourceTree = "<group>"; };
+		EE4A32AA21EF929100092424 /* Change_Cloud_Type.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Change_Cloud_Type.h; sourceTree = "<group>"; };
+		EE4A32AB21EF954E00092424 /* Triangle_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Triangle_Area.h; sourceTree = "<group>"; };
+		EE4A32AE21EF9C0E00092424 /* Pt_Within_Convex_Hull.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pt_Within_Convex_Hull.h; sourceTree = "<group>"; };
+		EE4A32AF21EF9E1200092424 /* Plot_Graph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Plot_Graph.h; sourceTree = "<group>"; };
+		EE4A32B021EF9EEA00092424 /* Edge_Circle_Intersections.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Edge_Circle_Intersections.h; sourceTree = "<group>"; };
+		EE4A32B121EFA48200092424 /* Cell_Circle_Intersections.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cell_Circle_Intersections.h; sourceTree = "<group>"; };
+		EE4FF5472236A90D008E25F0 /* Three_Circles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Three_Circles.h; sourceTree = "<group>"; };
+		EE4FF54A2236A9E7008E25F0 /* Three_Circles.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Three_Circles.cpp; sourceTree = "<group>"; };
+		EE4FF54C2236AA83008E25F0 /* Cell_3Circles.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cell_3Circles.cpp; sourceTree = "<group>"; };
+		EE4FF54E2236AA92008E25F0 /* Cell_3Circles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cell_3Circles.h; sourceTree = "<group>"; };
+		EE4FF54F2236AF6F008E25F0 /* Areas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Areas.h; sourceTree = "<group>"; };
+		EE4FF5502236AF7C008E25F0 /* Areas.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Areas.cpp; sourceTree = "<group>"; };
+		EE52D62221F5F49200ED45E2 /* Irregular_Sector_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Irregular_Sector_Area.h; sourceTree = "<group>"; };
+		EE63830E2211C2940088E8AE /* Three_Circle_Intersection_Area_Within_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Three_Circle_Intersection_Area_Within_Cell.h; sourceTree = "<group>"; };
+		EE63830F2211C7710088E8AE /* Non_Inclusion_Three_Circle_Intersection_Area_Within_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Non_Inclusion_Three_Circle_Intersection_Area_Within_Cell.h; sourceTree = "<group>"; };
+		EE6383112211DDC40088E8AE /* Non_Trivial_Three_Circle_Intersection_Area_Within_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Non_Trivial_Three_Circle_Intersection_Area_Within_Cell.h; sourceTree = "<group>"; };
+		EE6FE9EB2226FA2F006B4477 /* Spare_Code.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spare_Code.h; sourceTree = "<group>"; };
+		EE6FE9EC2226FD6A006B4477 /* Two_Circles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Two_Circles.h; sourceTree = "<group>"; };
+		EE6FE9ED2226FD7E006B4477 /* Two_Circles.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Two_Circles.cpp; sourceTree = "<group>"; };
+		EE79336521FF6D2700D6758E /* Non_Trivial_Three_Circle_Intersection_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Non_Trivial_Three_Circle_Intersection_Area.h; sourceTree = "<group>"; };
+		EE79336621FF6E8600D6758E /* Order_Circles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Order_Circles.h; sourceTree = "<group>"; };
+		EE79CED7224162BB0077AFFE /* Deformation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Deformation.h; sourceTree = "<group>"; };
+		EE79CED8224162E30077AFFE /* Deformation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Deformation.cpp; sourceTree = "<group>"; };
+		EE95BA3C221C251B0010DB57 /* Three_Circle_Intersection_Interior_Edge_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Three_Circle_Intersection_Interior_Edge_Area.h; sourceTree = "<group>"; };
+		EE95BA3D221C36820010DB57 /* Three_Circle_Intersection_Concave_Cone_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Three_Circle_Intersection_Concave_Cone_Area.h; sourceTree = "<group>"; };
+		EECF3558222D79FF0079CD62 /* Cell_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cell_Area.cpp; sourceTree = "<group>"; };
+		EECF355A222D7A4F0079CD62 /* Cell_Data.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cell_Data.cpp; sourceTree = "<group>"; };
+		EECF355C222D7AA80079CD62 /* Line_Circle_Intersections.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Line_Circle_Intersections.cpp; sourceTree = "<group>"; };
+		EECF355E222D7ADB0079CD62 /* Edge_Circle_Intersections.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Edge_Circle_Intersections.cpp; sourceTree = "<group>"; };
+		EECF3560222D7B4E0079CD62 /* Triangle_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Triangle_Area.cpp; sourceTree = "<group>"; };
+		EECF3562222D7BA20079CD62 /* Cell_Circle_Intersections.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cell_Circle_Intersections.cpp; sourceTree = "<group>"; };
+		EECF3564222D7BD10079CD62 /* Num_Vertices_Within_Circle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Num_Vertices_Within_Circle.cpp; sourceTree = "<group>"; };
+		EECF3566222D7CCB0079CD62 /* Make_Cell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Make_Cell.cpp; sourceTree = "<group>"; };
+		EECF3568222D7D070079CD62 /* Pt_Within_Convex_Hull.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Pt_Within_Convex_Hull.cpp; sourceTree = "<group>"; };
+		EECF356A222D7D570079CD62 /* Same_Side.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Same_Side.cpp; sourceTree = "<group>"; };
+		EECF356C222D7D7D0079CD62 /* Correct_Side_Of_Cell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Correct_Side_Of_Cell.cpp; sourceTree = "<group>"; };
+		EECF356E222D7DA70079CD62 /* Area_Excluded_By_Exterior_Edge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Area_Excluded_By_Exterior_Edge.cpp; sourceTree = "<group>"; };
+		EECF3570222D7DE70079CD62 /* Irregular_Sector_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Irregular_Sector_Area.cpp; sourceTree = "<group>"; };
+		EECF3572222D7E130079CD62 /* Interior_Edge_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Interior_Edge_Area.cpp; sourceTree = "<group>"; };
+		EECF3574222D7E6C0079CD62 /* Concave_Cone_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Concave_Cone_Area.cpp; sourceTree = "<group>"; };
+		EECF3576222D7EBA0079CD62 /* Circle_Area_Within_Cell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Circle_Area_Within_Cell.cpp; sourceTree = "<group>"; };
+		EECF3578222D7F050079CD62 /* First_Order_Total_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = First_Order_Total_Area.cpp; sourceTree = "<group>"; };
+		EECF357A222D7F700079CD62 /* Two_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Two_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp; sourceTree = "<group>"; };
+		EECF357C222D7F9F0079CD62 /* Two_Circle_Intersection_Irregular_Sector_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Two_Circle_Intersection_Irregular_Sector_Area.cpp; sourceTree = "<group>"; };
+		EECF357E222D7FDE0079CD62 /* Two_Circle_Intersection_Concave_Cone_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Two_Circle_Intersection_Concave_Cone_Area.cpp; sourceTree = "<group>"; };
+		EECF3580222D80300079CD62 /* Two_Circle_Intersection_Interior_Edge_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Two_Circle_Intersection_Interior_Edge_Area.cpp; sourceTree = "<group>"; };
+		EECF3582222D81CF0079CD62 /* Two_Circle_Intersection_Area_Within_Cell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Two_Circle_Intersection_Area_Within_Cell.cpp; sourceTree = "<group>"; };
+		EECF3584222D824A0079CD62 /* Second_Order_Total_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Second_Order_Total_Area.cpp; sourceTree = "<group>"; };
+		EECF3586222D828A0079CD62 /* Order_Circles.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Order_Circles.cpp; sourceTree = "<group>"; };
+		EECF3588222D82EE0079CD62 /* Non_Trivial_Three_Circle_Intersection_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Non_Trivial_Three_Circle_Intersection_Area.cpp; sourceTree = "<group>"; };
+		EECF358A222D83130079CD62 /* Non_Trivial_Three_Circle_Intersection_Pts.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Non_Trivial_Three_Circle_Intersection_Pts.cpp; sourceTree = "<group>"; };
+		EECF358C222D83690079CD62 /* Three_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Three_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp; sourceTree = "<group>"; };
+		EECF358E222D839C0079CD62 /* Three_Circle_Intersection_Concave_Cone_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Three_Circle_Intersection_Concave_Cone_Area.cpp; sourceTree = "<group>"; };
+		EECF3590222D83C80079CD62 /* Three_Circle_Intersection_Irregular_Sector_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Three_Circle_Intersection_Irregular_Sector_Area.cpp; sourceTree = "<group>"; };
+		EECF3592222D84200079CD62 /* Three_Circle_Intersection_Interior_Edge_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Three_Circle_Intersection_Interior_Edge_Area.cpp; sourceTree = "<group>"; };
+		EECF3594222D84BC0079CD62 /* Non_Trivial_Three_Circle_Intersection_Area_Within_Cell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Non_Trivial_Three_Circle_Intersection_Area_Within_Cell.cpp; sourceTree = "<group>"; };
+		EECF3596222D84F50079CD62 /* Non_Inclusion_Three_Circle_Intersection_Area_Within_Cell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Non_Inclusion_Three_Circle_Intersection_Area_Within_Cell.cpp; sourceTree = "<group>"; };
+		EECF3598222D854B0079CD62 /* Three_Circle_Intersection_Area_Within_Cell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Three_Circle_Intersection_Area_Within_Cell.cpp; sourceTree = "<group>"; };
+		EECF359A222D85AC0079CD62 /* Third_Order_Total_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Third_Order_Total_Area.cpp; sourceTree = "<group>"; };
+		EECF359C222D864F0079CD62 /* Non_Trivial_Four_Circle_Intersection_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Non_Trivial_Four_Circle_Intersection_Area.cpp; sourceTree = "<group>"; };
+		EECF359E222D86900079CD62 /* Non_Trivial_Four_Circle_Intersection_Pts.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Non_Trivial_Four_Circle_Intersection_Pts.cpp; sourceTree = "<group>"; };
+		EECF35A0222D86EF0079CD62 /* Four_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Four_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp; sourceTree = "<group>"; };
+		EECF35A2222D87D00079CD62 /* Non_Trivial_Four_Circle_Intersection_Area_Within_Cell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Non_Trivial_Four_Circle_Intersection_Area_Within_Cell.cpp; sourceTree = "<group>"; };
+		EECF35A4222D88290079CD62 /* Non_Inclusion_Four_Circle_Intersection_Area_Within_Cell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Non_Inclusion_Four_Circle_Intersection_Area_Within_Cell.cpp; sourceTree = "<group>"; };
+		EECF35A6222D88600079CD62 /* Four_Circle_Intersection_Area_Within_Cell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Four_Circle_Intersection_Area_Within_Cell.cpp; sourceTree = "<group>"; };
+		EECF35A8222D89570079CD62 /* Fourth_Order_Total_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Fourth_Order_Total_Area.cpp; sourceTree = "<group>"; };
+		EECF35B2222D89F00079CD62 /* Extract_Data_Pts.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Extract_Data_Pts.cpp; sourceTree = "<group>"; };
+		EECF35B4222D8C320079CD62 /* Derivatives.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Derivatives.cpp; sourceTree = "<group>"; };
+		EECF35B8222D8CA70079CD62 /* Plot_Graph.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Plot_Graph.cpp; sourceTree = "<group>"; };
+		EECF35BA222D8CC80079CD62 /* Print_Info.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Print_Info.cpp; sourceTree = "<group>"; };
+		EECF35C1222D92FC0079CD62 /* gnuplot-iostream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "gnuplot-iostream.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE3AA60321B848710088403C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE03E129223AC3A20010BC95 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EE0794A921ECC751002669B6 /* Cell_Area.h */,
+				EE0794A821ECC586002669B6 /* Cell_Data.h */,
+				EE09749021F0F071006A34D3 /* Cell.h */,
+				EE368DE622427DB0003A9AFD /* Interior_Pts.h */,
+				EE3A1430220C9E3F001484AF /* Make_Cell.h */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EE03E12A223AC4120010BC95 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EECF3558222D79FF0079CD62 /* Cell_Area.cpp */,
+				EECF355A222D7A4F0079CD62 /* Cell_Data.cpp */,
+				EE09748E21F0F060006A34D3 /* Cell.cpp */,
+				EE368DE722427DC5003A9AFD /* Interior_Pts.cpp */,
+				EECF3566222D7CCB0079CD62 /* Make_Cell.cpp */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EE03E12B223AC5160010BC95 /* Frame */ = {
+			isa = PBXGroup;
+			children = (
+				EE05192322318EF70091755F /* Cell_2Circles.h */,
+				EE4FF54E2236AA92008E25F0 /* Cell_3Circles.h */,
+				EE39999F2239814000083354 /* Cell_4Circles.h */,
+				EE379186222F02C9000B57C8 /* Cell_Circle.h */,
+				EE3999A42239819100083354 /* Four_Circles.h */,
+				EE379185222EFF57000B57C8 /* Frame.h */,
+				EE2CFB9821F8DEEF00270503 /* Intersection_Of_Two_Circles.h */,
+				EE4FF5472236A90D008E25F0 /* Three_Circles.h */,
+				EE03E12F223ACE570010BC95 /* Two_Circle_Intersection_Area.h */,
+				EE6FE9EC2226FD6A006B4477 /* Two_Circles.h */,
+			);
+			path = Frame;
+			sourceTree = "<group>";
+		};
+		EE03E12C223AC54D0010BC95 /* Frame */ = {
+			isa = PBXGroup;
+			children = (
+				EE05192122318EE50091755F /* Cell_2Circles.cpp */,
+				EE4FF54C2236AA83008E25F0 /* Cell_3Circles.cpp */,
+				EE3999A02239815800083354 /* Cell_4Circles.cpp */,
+				EE379187222F02D8000B57C8 /* Cell_Circle.cpp */,
+				EE3999A22239818400083354 /* Four_Circles.cpp */,
+				EE379183222EFF3F000B57C8 /* Frame.cpp */,
+				EE3AADC5222819FE00E1FAE5 /* Intersection_Of_Two_Circles.cpp */,
+				EE4FF54A2236A9E7008E25F0 /* Three_Circles.cpp */,
+				EE03C345223825B200C19AC5 /* Three_Circle_Intersection_Area.cpp */,
+				EE3AADBB2228157100E1FAE5 /* Two_Circle_Intersection_Area.cpp */,
+				EE6FE9ED2226FD7E006B4477 /* Two_Circles.cpp */,
+			);
+			path = Frame;
+			sourceTree = "<group>";
+		};
+		EE03E12D223AC9AD0010BC95 /* Circle_Area_Within_Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EECF356E222D7DA70079CD62 /* Area_Excluded_By_Exterior_Edge.cpp */,
+				EECF3562222D7BA20079CD62 /* Cell_Circle_Intersections.cpp */,
+				EECF3576222D7EBA0079CD62 /* Circle_Area_Within_Cell.cpp */,
+				EECF3574222D7E6C0079CD62 /* Concave_Cone_Area.cpp */,
+				EECF355E222D7ADB0079CD62 /* Edge_Circle_Intersections.cpp */,
+				EECF3572222D7E130079CD62 /* Interior_Edge_Area.cpp */,
+				EECF3570222D7DE70079CD62 /* Irregular_Sector_Area.cpp */,
+				EECF355C222D7AA80079CD62 /* Line_Circle_Intersections.cpp */,
+				EECF3564222D7BD10079CD62 /* Num_Vertices_Within_Circle.cpp */,
+				EECF3568222D7D070079CD62 /* Pt_Within_Convex_Hull.cpp */,
+			);
+			path = Circle_Area_Within_Cell;
+			sourceTree = "<group>";
+		};
+		EE03E12E223ACA760010BC95 /* Circle_Area_Within_Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EE09748D21F0C2FB006A34D3 /* Area_Excluded_By_Exterior_Edge.h */,
+				EE4A32B121EFA48200092424 /* Cell_Circle_Intersections.h */,
+				EE38FED521F1F3CF001CAFA6 /* Circle_Area_Within_Cell.h */,
+				EE2CFB9121F87C9600270503 /* Concave_Cone_Area.h */,
+				EE4A32B021EF9EEA00092424 /* Edge_Circle_Intersections.h */,
+				EE0379CE21F77DEC00DC08A2 /* Interior_Edge_Area.h */,
+				EE52D62221F5F49200ED45E2 /* Irregular_Sector_Area.h */,
+				EE37ACDF21EE48EB0001A43B /* Line_Circle_Intersections.h */,
+				EE09748A21F0A51C006A34D3 /* Num_Vertices_Within_Circle.h */,
+				EE4A32AE21EF9C0E00092424 /* Pt_Within_Convex_Hull.h */,
+			);
+			path = Circle_Area_Within_Cell;
+			sourceTree = "<group>";
+		};
+		EE03E130223AD09E0010BC95 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				EE09748C21F0AB0A006A34D3 /* Angle_Between_Vectors.h */,
+				EE38FED421F1E521001CAFA6 /* Norm.h */,
+				EE79336621FF6E8600D6758E /* Order_Circles.h */,
+				EE3D8F3521F9DFCA00D8E9DC /* Rotation_About_Pt.h */,
+				EE09748B21F0AA92006A34D3 /* Segment_Area.h */,
+				EE4A32AB21EF954E00092424 /* Triangle_Area.h */,
+				EE3D8F3421F9DF0F00D8E9DC /* Triangle_Circumcentre.h */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		EE03E131223AD0ED0010BC95 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				EE3AADBF2228186700E1FAE5 /* Angle_Between_Vectors.cpp */,
+				EE3AADBD2228170A00E1FAE5 /* Norm.cpp */,
+				EECF3586222D828A0079CD62 /* Order_Circles.cpp */,
+				EE3AADC3222819CE00E1FAE5 /* Segment_Area.cpp */,
+				EECF3560222D7B4E0079CD62 /* Triangle_Area.cpp */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		EE03E132223AD4D90010BC95 /* Two_Circle_Area_Within_Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EECF357A222D7F700079CD62 /* Two_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp */,
+				EECF3582222D81CF0079CD62 /* Two_Circle_Intersection_Area_Within_Cell.cpp */,
+				EECF357E222D7FDE0079CD62 /* Two_Circle_Intersection_Concave_Cone_Area.cpp */,
+				EECF3580222D80300079CD62 /* Two_Circle_Intersection_Interior_Edge_Area.cpp */,
+				EECF357C222D7F9F0079CD62 /* Two_Circle_Intersection_Irregular_Sector_Area.cpp */,
+			);
+			path = Two_Circle_Area_Within_Cell;
+			sourceTree = "<group>";
+		};
+		EE03E133223AD50A0010BC95 /* Two_Circle_Area_Within_Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EE3C50EB2204604A00E18906 /* Two_Circle_Intersection_Area_Excluded_By_Exterior_Edge.h */,
+				EE38F42922032A0D00A6825D /* Two_Circle_Intersection_Area_Within_Cell.h */,
+				EE3A142F220C9503001484AF /* Two_Circle_Intersection_Concave_Cone_Area.h */,
+				EE43D59B220DA2F70079D8E7 /* Two_Circle_Intersection_Interior_Edge_Area.h */,
+				EE3A142E220C60EA001484AF /* Two_Circle_Intersection_Irregular_Sector_Area.h */,
+			);
+			path = Two_Circle_Area_Within_Cell;
+			sourceTree = "<group>";
+		};
+		EE03E134223ADD350010BC95 /* Three_Circle_Area_Within_Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EECF3596222D84F50079CD62 /* Non_Inclusion_Three_Circle_Intersection_Area_Within_Cell.cpp */,
+				EECF3594222D84BC0079CD62 /* Non_Trivial_Three_Circle_Intersection_Area_Within_Cell.cpp */,
+				EECF3588222D82EE0079CD62 /* Non_Trivial_Three_Circle_Intersection_Area.cpp */,
+				EECF358A222D83130079CD62 /* Non_Trivial_Three_Circle_Intersection_Pts.cpp */,
+				EECF358C222D83690079CD62 /* Three_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp */,
+				EECF3598222D854B0079CD62 /* Three_Circle_Intersection_Area_Within_Cell.cpp */,
+				EECF358E222D839C0079CD62 /* Three_Circle_Intersection_Concave_Cone_Area.cpp */,
+				EECF3592222D84200079CD62 /* Three_Circle_Intersection_Interior_Edge_Area.cpp */,
+				EECF3590222D83C80079CD62 /* Three_Circle_Intersection_Irregular_Sector_Area.cpp */,
+			);
+			path = Three_Circle_Area_Within_Cell;
+			sourceTree = "<group>";
+		};
+		EE03E135223ADD610010BC95 /* Three_Circle_Area_Within_Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EE63830F2211C7710088E8AE /* Non_Inclusion_Three_Circle_Intersection_Area_Within_Cell.h */,
+				EE6383112211DDC40088E8AE /* Non_Trivial_Three_Circle_Intersection_Area_Within_Cell.h */,
+				EE79336521FF6D2700D6758E /* Non_Trivial_Three_Circle_Intersection_Area.h */,
+				EE3CC3E922021F81002366A3 /* Non_Trivial_Three_Circle_Intersection_Pts.h */,
+				EE3924292212E3D70045488D /* Three_Circle_Intersection_Area_Excluded_By_Exterior_Edge.h */,
+				EE63830E2211C2940088E8AE /* Three_Circle_Intersection_Area_Within_Cell.h */,
+				EE95BA3D221C36820010DB57 /* Three_Circle_Intersection_Concave_Cone_Area.h */,
+				EE95BA3C221C251B0010DB57 /* Three_Circle_Intersection_Interior_Edge_Area.h */,
+				EE39242A221302370045488D /* Three_Circle_Intersection_Irregular_Sector_Area.h */,
+			);
+			path = Three_Circle_Area_Within_Cell;
+			sourceTree = "<group>";
+		};
+		EE03E136223ADDFA0010BC95 /* Derivatives */ = {
+			isa = PBXGroup;
+			children = (
+				EE051914223148B10091755F /* Derivatives_At_Pt.cpp */,
+				EE05191B2231552D0091755F /* Derivatives_Of_Data.cpp */,
+				EECF35B4222D8C320079CD62 /* Derivatives.cpp */,
+				EE05191922314C300091755F /* Discontinuity.cpp */,
+			);
+			path = Derivatives;
+			sourceTree = "<group>";
+		};
+		EE03E137223ADE0A0010BC95 /* Derivatives */ = {
+			isa = PBXGroup;
+			children = (
+				EE051917223149EE0091755F /* Derivatives_At_Pt.h */,
+				EE05191D2231554B0091755F /* Derivatives_Of_Data.h */,
+				EE01B6D72209B1D200EDFA6E /* Derivatives.h */,
+				EE05191822314C180091755F /* Discontinuity.h */,
+			);
+			path = Derivatives;
+			sourceTree = "<group>";
+		};
+		EE03E138223ADE2D0010BC95 /* Global Functions */ = {
+			isa = PBXGroup;
+			children = (
+				EE4FF54F2236AF6F008E25F0 /* Areas.h */,
+				EE79CED7224162BB0077AFFE /* Deformation.h */,
+				EE38F4282203272900A6825D /* Extract_Data_Pts.h */,
+				EE392E0D22007CE9007E8E31 /* First_Order_Total_Area.h */,
+				EE38F4232203212F00A6825D /* Fourth_Order_Total_Area.h */,
+				EE05191E223182B60091755F /* Packing_Functions.h */,
+				EE4A32AF21EF9E1200092424 /* Plot_Graph.h */,
+				EE01B6DA2209F07200EDFA6E /* Print_Info.h */,
+				EE392E0E22007D95007E8E31 /* Second_Order_Total_Area.h */,
+				EE392E0F22007DFD007E8E31 /* Third_Order_Total_Area.h */,
+			);
+			path = "Global Functions";
+			sourceTree = "<group>";
+		};
+		EE03E139223ADE550010BC95 /* Global Functions */ = {
+			isa = PBXGroup;
+			children = (
+				EE4FF5502236AF7C008E25F0 /* Areas.cpp */,
+				EE79CED8224162E30077AFFE /* Deformation.cpp */,
+				EECF35B2222D89F00079CD62 /* Extract_Data_Pts.cpp */,
+				EECF3578222D7F050079CD62 /* First_Order_Total_Area.cpp */,
+				EECF35A8222D89570079CD62 /* Fourth_Order_Total_Area.cpp */,
+				EE05191F223182C70091755F /* Packing_Functions.cpp */,
+				EECF35B8222D8CA70079CD62 /* Plot_Graph.cpp */,
+				EECF35BA222D8CC80079CD62 /* Print_Info.cpp */,
+				EECF3584222D824A0079CD62 /* Second_Order_Total_Area.cpp */,
+				EECF359A222D85AC0079CD62 /* Third_Order_Total_Area.cpp */,
+			);
+			path = "Global Functions";
+			sourceTree = "<group>";
+		};
+		EE3AA5FD21B848710088403C = {
+			isa = PBXGroup;
+			children = (
+				EE3AA60821B848710088403C /* Crystal_Density */,
+				EE3AA60721B848710088403C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE3AA60721B848710088403C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE3AA60621B848710088403C /* Crystal_Density */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE3AA60821B848710088403C /* Crystal_Density */ = {
+			isa = PBXGroup;
+			children = (
+				EE3AADBA2228131100E1FAE5 /* Header Files */,
+				EECF35BE222D91100079CD62 /* Source Files */,
+			);
+			path = Crystal_Density;
+			sourceTree = "<group>";
+		};
+		EE3AADBA2228131100E1FAE5 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE4A32AA21EF929100092424 /* Change_Cloud_Type.h */,
+				EE2CFB9521F8837400270503 /* Circle.h */,
+				EE20D73C22144C6600168C59 /* Correct_Side_Of_Cell.h */,
+				EE09749321F0F1E5006A34D3 /* Edge.h */,
+				EE20D73B221449E600168C59 /* Same_Side.h */,
+				EE6FE9EB2226FA2F006B4477 /* Spare_Code.h */,
+				EE03E130223AD09E0010BC95 /* Basic */,
+				EE03E129223AC3A20010BC95 /* Cell */,
+				EE03E12E223ACA760010BC95 /* Circle_Area_Within_Cell */,
+				EE03E137223ADE0A0010BC95 /* Derivatives */,
+				EE79CED5224130100077AFFE /* Four_Circle_Area_Within_Cell */,
+				EE03E12B223AC5160010BC95 /* Frame */,
+				EE03E138223ADE2D0010BC95 /* Global Functions */,
+				EE03E135223ADD610010BC95 /* Three_Circle_Area_Within_Cell */,
+				EE03E133223AD50A0010BC95 /* Two_Circle_Area_Within_Cell */,
+			);
+			path = "Header Files";
+			sourceTree = "<group>";
+		};
+		EE79CED422412FD20077AFFE /* Four_Circle_Area_Within_Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EECF35A0222D86EF0079CD62 /* Four_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp */,
+				EECF35A6222D88600079CD62 /* Four_Circle_Intersection_Area_Within_Cell.cpp */,
+				EECF35A4222D88290079CD62 /* Non_Inclusion_Four_Circle_Intersection_Area_Within_Cell.cpp */,
+				EECF35A2222D87D00079CD62 /* Non_Trivial_Four_Circle_Intersection_Area_Within_Cell.cpp */,
+				EECF359C222D864F0079CD62 /* Non_Trivial_Four_Circle_Intersection_Area.cpp */,
+				EECF359E222D86900079CD62 /* Non_Trivial_Four_Circle_Intersection_Pts.cpp */,
+			);
+			path = Four_Circle_Area_Within_Cell;
+			sourceTree = "<group>";
+		};
+		EE79CED5224130100077AFFE /* Four_Circle_Area_Within_Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EE46B9962215B00F00ABD017 /* Four_Circle_Intersection_Area_Excluded_By_Exterior_Edge.h */,
+				EE46B9942215A3F400ABD017 /* Four_Circle_Intersection_Area_Within_Cell.h */,
+				EE38F42122031EF600A6825D /* Non_Inclusion_Four_Circle_Intersection_Area_Within_Cell.h */,
+				EE46B9952215AA2300ABD017 /* Non_Trivial_Four_Circle_Intersection_Area_Within_Cell.h */,
+				EE392E10220086C9007E8E31 /* Non_Trivial_Four_Circle_Intersection_Area.h */,
+				EE46B9982215C97B00ABD017 /* Non_Trivial_Four_Circle_Intersection_Pts.h */,
+			);
+			path = Four_Circle_Area_Within_Cell;
+			sourceTree = "<group>";
+		};
+		EECF35BE222D91100079CD62 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE2CFB9621F8838100270503 /* Circle.cpp */,
+				EECF356C222D7D7D0079CD62 /* Correct_Side_Of_Cell.cpp */,
+				EE3AA60921B848710088403C /* Crystal_Density.cpp */,
+				EE09749121F0F1DD006A34D3 /* Edge.cpp */,
+				EECF356A222D7D570079CD62 /* Same_Side.cpp */,
+				EECF35C1222D92FC0079CD62 /* gnuplot-iostream.h */,
+				EE03E131223AD0ED0010BC95 /* Basic */,
+				EE03E12A223AC4120010BC95 /* Cell */,
+				EE03E12D223AC9AD0010BC95 /* Circle_Area_Within_Cell */,
+				EE03E136223ADDFA0010BC95 /* Derivatives */,
+				EE79CED422412FD20077AFFE /* Four_Circle_Area_Within_Cell */,
+				EE03E12C223AC54D0010BC95 /* Frame */,
+				EE03E139223ADE550010BC95 /* Global Functions */,
+				EE03E134223ADD350010BC95 /* Three_Circle_Area_Within_Cell */,
+				EE03E132223AD4D90010BC95 /* Two_Circle_Area_Within_Cell */,
+			);
+			path = "Source Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE3AA60521B848710088403C /* Crystal_Density */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE3AA60D21B848710088403C /* Build configuration list for PBXNativeTarget "Crystal_Density" */;
+			buildPhases = (
+				EE3AA60221B848710088403C /* Sources */,
+				EE3AA60321B848710088403C /* Frameworks */,
+				EE3AA60421B848710088403C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Crystal_Density;
+			productName = Crystal_Density;
+			productReference = EE3AA60621B848710088403C /* Crystal_Density */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE3AA5FE21B848710088403C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Phil Smith";
+				TargetAttributes = {
+					EE3AA60521B848710088403C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EE3AA60121B848710088403C /* Build configuration list for PBXProject "Crystal_Density" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EE3AA5FD21B848710088403C;
+			productRefGroup = EE3AA60721B848710088403C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE3AA60521B848710088403C /* Crystal_Density */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE3AA60221B848710088403C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EECF3561222D7B4E0079CD62 /* Triangle_Area.cpp in Sources */,
+				EECF3595222D84BC0079CD62 /* Non_Trivial_Three_Circle_Intersection_Area_Within_Cell.cpp in Sources */,
+				EE4FF5512236AF7C008E25F0 /* Areas.cpp in Sources */,
+				EECF359B222D85AC0079CD62 /* Third_Order_Total_Area.cpp in Sources */,
+				EECF35A3222D87D00079CD62 /* Non_Trivial_Four_Circle_Intersection_Area_Within_Cell.cpp in Sources */,
+				EECF359F222D86900079CD62 /* Non_Trivial_Four_Circle_Intersection_Pts.cpp in Sources */,
+				EE379188222F02D8000B57C8 /* Cell_Circle.cpp in Sources */,
+				EECF3567222D7CCB0079CD62 /* Make_Cell.cpp in Sources */,
+				EECF35A9222D89570079CD62 /* Fourth_Order_Total_Area.cpp in Sources */,
+				EECF3573222D7E130079CD62 /* Interior_Edge_Area.cpp in Sources */,
+				EECF35A5222D88290079CD62 /* Non_Inclusion_Four_Circle_Intersection_Area_Within_Cell.cpp in Sources */,
+				EE051916223148B10091755F /* Derivatives_At_Pt.cpp in Sources */,
+				EECF356D222D7D7D0079CD62 /* Correct_Side_Of_Cell.cpp in Sources */,
+				EECF358D222D83690079CD62 /* Three_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp in Sources */,
+				EE05191C2231552D0091755F /* Derivatives_Of_Data.cpp in Sources */,
+				EECF3577222D7EBA0079CD62 /* Circle_Area_Within_Cell.cpp in Sources */,
+				EE09749221F0F1DD006A34D3 /* Edge.cpp in Sources */,
+				EE2CFB9721F8838100270503 /* Circle.cpp in Sources */,
+				EE05192222318EE50091755F /* Cell_2Circles.cpp in Sources */,
+				EECF356F222D7DA70079CD62 /* Area_Excluded_By_Exterior_Edge.cpp in Sources */,
+				EECF358B222D83130079CD62 /* Non_Trivial_Three_Circle_Intersection_Pts.cpp in Sources */,
+				EECF3571222D7DE70079CD62 /* Irregular_Sector_Area.cpp in Sources */,
+				EE3AADBC2228157100E1FAE5 /* Two_Circle_Intersection_Area.cpp in Sources */,
+				EE368DE822427DC5003A9AFD /* Interior_Pts.cpp in Sources */,
+				EE6FE9EE2226FD7E006B4477 /* Two_Circles.cpp in Sources */,
+				EECF35B3222D89F00079CD62 /* Extract_Data_Pts.cpp in Sources */,
+				EECF35BB222D8CC80079CD62 /* Print_Info.cpp in Sources */,
+				EECF3569222D7D070079CD62 /* Pt_Within_Convex_Hull.cpp in Sources */,
+				EECF3591222D83C80079CD62 /* Three_Circle_Intersection_Irregular_Sector_Area.cpp in Sources */,
+				EE4FF54D2236AA83008E25F0 /* Cell_3Circles.cpp in Sources */,
+				EE3AA60A21B848710088403C /* Crystal_Density.cpp in Sources */,
+				EECF35A1222D86EF0079CD62 /* Four_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp in Sources */,
+				EECF357F222D7FDE0079CD62 /* Two_Circle_Intersection_Concave_Cone_Area.cpp in Sources */,
+				EE3AADC6222819FE00E1FAE5 /* Intersection_Of_Two_Circles.cpp in Sources */,
+				EE051920223182C70091755F /* Packing_Functions.cpp in Sources */,
+				EECF3587222D828A0079CD62 /* Order_Circles.cpp in Sources */,
+				EE3AADBE2228170B00E1FAE5 /* Norm.cpp in Sources */,
+				EECF3563222D7BA20079CD62 /* Cell_Circle_Intersections.cpp in Sources */,
+				EE3999A32239818400083354 /* Four_Circles.cpp in Sources */,
+				EE3AADC4222819CE00E1FAE5 /* Segment_Area.cpp in Sources */,
+				EECF3599222D854B0079CD62 /* Three_Circle_Intersection_Area_Within_Cell.cpp in Sources */,
+				EECF35B5222D8C320079CD62 /* Derivatives.cpp in Sources */,
+				EECF3579222D7F050079CD62 /* First_Order_Total_Area.cpp in Sources */,
+				EE09748F21F0F060006A34D3 /* Cell.cpp in Sources */,
+				EECF3585222D824A0079CD62 /* Second_Order_Total_Area.cpp in Sources */,
+				EE05191A22314C300091755F /* Discontinuity.cpp in Sources */,
+				EECF3589222D82EE0079CD62 /* Non_Trivial_Three_Circle_Intersection_Area.cpp in Sources */,
+				EECF357B222D7F700079CD62 /* Two_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp in Sources */,
+				EECF3565222D7BD10079CD62 /* Num_Vertices_Within_Circle.cpp in Sources */,
+				EECF3597222D84F50079CD62 /* Non_Inclusion_Three_Circle_Intersection_Area_Within_Cell.cpp in Sources */,
+				EECF3581222D80300079CD62 /* Two_Circle_Intersection_Interior_Edge_Area.cpp in Sources */,
+				EECF3575222D7E6C0079CD62 /* Concave_Cone_Area.cpp in Sources */,
+				EECF3583222D81CF0079CD62 /* Two_Circle_Intersection_Area_Within_Cell.cpp in Sources */,
+				EECF35A7222D88600079CD62 /* Four_Circle_Intersection_Area_Within_Cell.cpp in Sources */,
+				EECF355D222D7AA80079CD62 /* Line_Circle_Intersections.cpp in Sources */,
+				EECF359D222D864F0079CD62 /* Non_Trivial_Four_Circle_Intersection_Area.cpp in Sources */,
+				EECF3559222D79FF0079CD62 /* Cell_Area.cpp in Sources */,
+				EECF35B9222D8CA70079CD62 /* Plot_Graph.cpp in Sources */,
+				EE379184222EFF3F000B57C8 /* Frame.cpp in Sources */,
+				EECF356B222D7D570079CD62 /* Same_Side.cpp in Sources */,
+				EECF355F222D7ADB0079CD62 /* Edge_Circle_Intersections.cpp in Sources */,
+				EECF355B222D7A500079CD62 /* Cell_Data.cpp in Sources */,
+				EE79CED9224162E30077AFFE /* Deformation.cpp in Sources */,
+				EECF3593222D84200079CD62 /* Three_Circle_Intersection_Interior_Edge_Area.cpp in Sources */,
+				EECF357D222D7F9F0079CD62 /* Two_Circle_Intersection_Irregular_Sector_Area.cpp in Sources */,
+				EE3AADC02228186700E1FAE5 /* Angle_Between_Vectors.cpp in Sources */,
+				EE4FF54B2236A9E7008E25F0 /* Three_Circles.cpp in Sources */,
+				EECF358F222D839C0079CD62 /* Three_Circle_Intersection_Concave_Cone_Area.cpp in Sources */,
+				EE3999A12239815800083354 /* Cell_4Circles.cpp in Sources */,
+				EE03C346223825B200C19AC5 /* Three_Circle_Intersection_Area.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EE3AA60B21B848710088403C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EE3AA60C21B848710088403C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EE3AA60E21B848710088403C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/boost/1.65.1/include,
+					/usr/local/Cellar/opencv/3.3.0_3/include,
+					/usr/local/Cellar/cgal/4.11/include,
+					/usr/local/Cellar/gmp/6.1.2_1/include,
+					/usr/local/Cellar/mpfr/3.1.6/include,
+					/usr/local/Cellar/gemmi/third_party,
+					/usr/local/Cellar/gemmi/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/boost/1.65.1/lib,
+					/usr/local/Cellar/opencv/3.3.0_3/lib,
+					/usr/local/Cellar/cgal/4.11/lib,
+					/usr/local/Cellar/gmp/6.1.2_1/lib,
+					/usr/local/Cellar/mpfr/3.1.6/lib,
+				);
+				OTHER_LDFLAGS = (
+					"-lCGAL",
+					"-lCGAL_Core",
+					"-lgmp",
+					"-lmpfr",
+					"-lopencv_calib3d",
+					"-lopencv_core",
+					"-lopencv_features2d",
+					"-lopencv_flann",
+					"-lopencv_highgui",
+					"-lopencv_imgcodecs",
+					"-lopencv_imgproc",
+					"-lopencv_ml",
+					"-lopencv_objdetect",
+					"-lopencv_photo",
+					"-lopencv_shape",
+					"-lopencv_stitching",
+					"-lopencv_superres",
+					"-lopencv_video",
+					"-lopencv_videoio",
+					"-lopencv_videostab",
+					"-lboost_system",
+					"-lboost_filesystem",
+					"-lboost_iostreams",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EE3AA60F21B848710088403C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/boost/1.65.1/include,
+					/usr/local/Cellar/opencv/3.3.0_3/include,
+					/usr/local/Cellar/cgal/4.11/include,
+					/usr/local/Cellar/gmp/6.1.2_1/include,
+					/usr/local/Cellar/mpfr/3.1.6/include,
+					/usr/local/Cellar/gemmi/third_party,
+					/usr/local/Cellar/gemmi/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/boost/1.65.1/lib,
+					/usr/local/Cellar/opencv/3.3.0_3/lib,
+					/usr/local/Cellar/cgal/4.11/lib,
+					/usr/local/Cellar/gmp/6.1.2_1/lib,
+					/usr/local/Cellar/mpfr/3.1.6/lib,
+				);
+				OTHER_LDFLAGS = (
+					"-lCGAL",
+					"-lCGAL_Core",
+					"-lgmp",
+					"-lmpfr",
+					"-lopencv_calib3d",
+					"-lopencv_core",
+					"-lopencv_features2d",
+					"-lopencv_flann",
+					"-lopencv_highgui",
+					"-lopencv_imgcodecs",
+					"-lopencv_imgproc",
+					"-lopencv_ml",
+					"-lopencv_objdetect",
+					"-lopencv_photo",
+					"-lopencv_shape",
+					"-lopencv_stitching",
+					"-lopencv_superres",
+					"-lopencv_video",
+					"-lopencv_videoio",
+					"-lopencv_videostab",
+					"-lboost_system",
+					"-lboost_filesystem",
+					"-lboost_iostreams",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE3AA60121B848710088403C /* Build configuration list for PBXProject "Crystal_Density" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE3AA60B21B848710088403C /* Debug */,
+				EE3AA60C21B848710088403C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE3AA60D21B848710088403C /* Build configuration list for PBXNativeTarget "Crystal_Density" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE3AA60E21B848710088403C /* Debug */,
+				EE3AA60F21B848710088403C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE3AA5FE21B848710088403C /* Project object */;
+}
