@@ -155,7 +155,7 @@ double Three_Circle_Intersection_Area_Excluded_By_Exterior_Edge( Cell_3Circles c
         {
             if ((Norm( e3.i1, c1.c ) < c1.r - tiny_num && Norm( e3.i1, c2.c ) < c2.r - tiny_num) || (Norm( e3.i2, c1.c ) < c1.r - tiny_num && Norm( e3.i2, c2.c ) < c2.r - tiny_num))
             {
-                double area = Two_Circle_Intersection_Area_Excluded_By_Exterior_Edge( c1, c3, e1, e3, cell );
+                double area = Two_Circle_Intersection_Area_Excluded_By_Exterior_Edge( c3c.c2c[1], e1, e3 );
                 
                 if (!Correct_Side_Of_Cell( cell, e1, i1 )) return area;
                 
@@ -206,7 +206,7 @@ double Three_Circle_Intersection_Area_Excluded_By_Exterior_Edge( Cell_3Circles c
         {
             if (((Norm( e1.i1, c2.c ) < c2.r - tiny_num && Norm( e1.i1, c3.c ) < c3.r - tiny_num) || (Norm( e1.i2, c2.c ) < c2.r - tiny_num && Norm( e1.i2, c3.c ) < c3.r - tiny_num)) && ((Norm( e2.i1, c1.c ) < c1.r - tiny_num && Norm( e2.i1, c3.c ) < c3.r - tiny_num) || (Norm( e2.i2, c1.c ) < c1.r - tiny_num && Norm( e2.i2, c3.c ) < c3.r - tiny_num)))
             {
-                double area = Two_Circle_Intersection_Area_Excluded_By_Exterior_Edge( c1, c2, e1, e2, cell );
+                double area = Two_Circle_Intersection_Area_Excluded_By_Exterior_Edge( c3c.c2c[0], e1, e2 );
                 
                 if (!Correct_Side_Of_Cell( cell, e1, i3 )) return area;
                 
@@ -218,7 +218,7 @@ double Three_Circle_Intersection_Area_Excluded_By_Exterior_Edge( Cell_3Circles c
         {
             if (((Norm( e1.i1, c2.c ) < c2.r - tiny_num && Norm( e1.i1, c3.c ) < c3.r - tiny_num) || (Norm( e1.i2, c2.c ) < c2.r - tiny_num && Norm( e1.i2, c3.c ) < c3.r - tiny_num)) && ((Norm( e3.i1, c1.c ) < c1.r - tiny_num && Norm( e3.i1, c2.c ) < c2.r - tiny_num) || (Norm( e3.i2, c1.c ) < c1.r - tiny_num && Norm( e3.i2, c2.c ) < c2.r - tiny_num)))
             {
-                double area = Two_Circle_Intersection_Area_Excluded_By_Exterior_Edge( c1, c3, e1, e3, cell );
+                double area = Two_Circle_Intersection_Area_Excluded_By_Exterior_Edge( c3c.c2c[1], e1, e3 );
                 
                 if (!Correct_Side_Of_Cell( cell, e1, i2 )) return area;
                 
@@ -230,7 +230,7 @@ double Three_Circle_Intersection_Area_Excluded_By_Exterior_Edge( Cell_3Circles c
         {
             if (((Norm( e2.i1, c1.c ) < c1.r - tiny_num && Norm( e2.i1, c3.c ) < c3.r - tiny_num) || (Norm( e2.i2, c1.c ) < c1.r - tiny_num && Norm( e2.i2, c3.c ) < c3.r - tiny_num)) && ((Norm( e3.i1, c1.c ) < c1.r - tiny_num && Norm( e3.i1, c2.c ) < c2.r - tiny_num) || (Norm( e3.i2, c1.c ) < c1.r - tiny_num && Norm( e3.i2, c2.c ) < c2.r - tiny_num)))
             {
-                double area = Two_Circle_Intersection_Area_Excluded_By_Exterior_Edge( c2, c3, e2, e3, cell );
+                double area = Two_Circle_Intersection_Area_Excluded_By_Exterior_Edge( c3c.c2c[2], e2, e3 );
                 
                 if (!Correct_Side_Of_Cell( cell, e1, i1 )) return area;
                 

@@ -8,6 +8,4 @@
 #include "Interior_Edge_Area.h"
 #include "Concave_Cone_Area.h"
 
-double Circle_Area_Within_Cell ( Cell& cell, Circle const& circle );
-
 double Circle_Area_Within_Cell ( Cell_Circle& cc );

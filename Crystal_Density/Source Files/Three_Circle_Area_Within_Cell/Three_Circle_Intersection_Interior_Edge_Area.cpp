@@ -14,6 +14,54 @@ double Three_Circle_Intersection_Interior_Edge_Area ( Cell_3Circles const& c3c, 
     
     Circle c1 = c3c.cc[0].c, c2 = c3c.cc[1].c, c3 = c3c.cc[2].c;
     
+    if (cell_1.edges[index_1].intersection_type == 5 && Norm( cell_1.edges[index_1].i1, c2.c ) < c2.r && Norm( cell_1.edges[index_1].i1, c3.c ) < c3.r)
+    {
+        int index_3 = (index_1 + 1) % 4;
+        int index_4 = (index_1 + 2) % 4;
+        
+        return Three_Circle_Intersection_Concave_Cone_Area( c3c, cell_1.edges[index_3], cell_2.edges[index_3], cell_3.edges[index_3], cell_1.edges[index_4], cell_2.edges[index_4], cell_3.edges[index_4] );
+    }
+    
+    else if (cell_1.edges[index_2].intersection_type == 5 && Norm( cell_1.edges[index_2].i1, c2.c ) < c2.r && Norm( cell_1.edges[index_2].i1, c3.c ) < c3.r)
+    {
+        int index_3 = (index_2 + 1) % 4;
+        int index_4 = (index_2 + 2) % 4;
+        
+        return Three_Circle_Intersection_Concave_Cone_Area( c3c, cell_1.edges[index_3], cell_2.edges[index_3], cell_3.edges[index_3], cell_1.edges[index_4], cell_2.edges[index_4], cell_3.edges[index_4] );
+    }
+    
+    else if (cell_2.edges[index_1].intersection_type == 5 && Norm( cell_2.edges[index_1].i1, c1.c ) < c1.r && Norm( cell_2.edges[index_1].i1, c3.c ) < c3.r)
+    {
+        int index_3 = (index_1 + 1) % 4;
+        int index_4 = (index_1 + 2) % 4;
+        
+        return Three_Circle_Intersection_Concave_Cone_Area( c3c, cell_1.edges[index_3], cell_2.edges[index_3], cell_3.edges[index_3], cell_1.edges[index_4], cell_2.edges[index_4], cell_3.edges[index_4] );
+    }
+    
+    else if (cell_2.edges[index_2].intersection_type == 5 && Norm( cell_2.edges[index_2].i1, c1.c ) < c1.r && Norm( cell_2.edges[index_2].i1, c3.c ) < c3.r)
+    {
+        int index_3 = (index_2 + 1) % 4;
+        int index_4 = (index_2 + 2) % 4;
+        
+        return Three_Circle_Intersection_Concave_Cone_Area( c3c, cell_1.edges[index_3], cell_2.edges[index_3], cell_3.edges[index_3], cell_1.edges[index_4], cell_2.edges[index_4], cell_3.edges[index_4] );
+    }
+    
+    else if (cell_3.edges[index_1].intersection_type == 5 && Norm( cell_3.edges[index_1].i1, c1.c ) < c1.r && Norm( cell_3.edges[index_1].i1, c2.c ) < c2.r)
+    {
+        int index_3 = (index_1 + 1) % 4;
+        int index_4 = (index_1 + 2) % 4;
+        
+        return Three_Circle_Intersection_Concave_Cone_Area( c3c, cell_1.edges[index_3], cell_2.edges[index_3], cell_3.edges[index_3], cell_1.edges[index_4], cell_2.edges[index_4], cell_3.edges[index_4] );
+    }
+    
+    else if (cell_3.edges[index_2].intersection_type == 5 && Norm( cell_3.edges[index_2].i1, c1.c ) < c1.r && Norm( cell_3.edges[index_2].i1, c2.c ) < c2.r)
+    {
+        int index_3 = (index_2 + 1) % 4;
+        int index_4 = (index_2 + 2) % 4;
+        
+        return Three_Circle_Intersection_Concave_Cone_Area( c3c, cell_1.edges[index_3], cell_2.edges[index_3], cell_3.edges[index_3], cell_1.edges[index_4], cell_2.edges[index_4], cell_3.edges[index_4] );
+    }
+    
     P2 p1, p2, p3, p4;
     
     p2 = e.startpt;
@@ -52,17 +100,12 @@ double Three_Circle_Intersection_Interior_Edge_Area ( Cell_3Circles const& c3c, 
     
     else if (e.index == 3) Make_Cell( p4, cell_1.vertices[1], cell_1.vertices[2], p1, cell_4 );
     
-    vector<double> r = { c1.r, c1.r, c1.r, c1.r, c1.r, c1.r, c1.r };
+    vector<double> r = { c1.r, c1.r, c1.r };
     
     Cell cell_5 = c3c.cell;
-    cell_5.edges[0] = cell_4.edges[0];
-    cell_5.edges[1] = cell_4.edges[1];
-    cell_5.edges[2] = cell_4.edges[2];
-    cell_5.edges[3] = cell_4.edges[3];
-    cell_5.vertices[0] = cell_4.vertices[0];
-    cell_5.vertices[1] = cell_4.vertices[1];
-    cell_5.vertices[2] = cell_4.vertices[2];
-    cell_5.vertices[3] = cell_4.vertices[3];
+    
+    cell_5.edges = cell_4.edges;
+    cell_5.vertices = cell_4.vertices;
     
     cell_5.pts.clear();
     cell_5.pts.push_back( c1.c );
