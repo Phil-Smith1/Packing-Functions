@@ -1256,8 +1256,8 @@ dependencies: \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Four_Circle_Area_Within_Cell/Four_Circle_Intersection_Area_Within_Cell.h \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Four_Circle_Area_Within_Cell/Non_Inclusion_Four_Circle_Intersection_Area_Within_Cell.h \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Four_Circle_Area_Within_Cell/Non_Trivial_Four_Circle_Intersection_Area_Within_Cell.h \
+  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Four_Circle_Area_Within_Cell/Non_Trivial_Four_Circle_Intersection_Pts.h \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Four_Circle_Area_Within_Cell/Non_Trivial_Four_Circle_Intersection_Area.h \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Four_Circle_Area_Within_Cell/Four_Circle_Intersection_Area_Excluded_By_Exterior_Edge.h \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Three_Circle_Area_Within_Cell/Non_Trivial_Three_Circle_Intersection_Area.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Four_Circle_Area_Within_Cell/Non_Trivial_Four_Circle_Intersection_Pts.h \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Global\ Functions/Areas.h

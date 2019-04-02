@@ -43,4 +43,9 @@ void Areas ( Frame& f )
     f.area_exact[1] = f.area_at_least[1] - f.area_at_least[2];
     f.area_exact[2] = f.area_at_least[2] - f.area_at_least[3];
     f.area_exact[3] = f.area_at_least[3];
+    
+    if (f.area_exact[0] < 0 && f.area_exact[0] > -tiny_num) f.area_exact[0] = 0;
+    if (f.area_exact[1] < 0 && f.area_exact[1] > -tiny_num) f.area_exact[1] = 0;
+    if (f.area_exact[2] < 0 && f.area_exact[2] > -tiny_num) f.area_exact[2] = 0;
+    if (f.area_exact[3] < 0 && f.area_exact[3] > -tiny_num) f.area_exact[3] = 0;
 }

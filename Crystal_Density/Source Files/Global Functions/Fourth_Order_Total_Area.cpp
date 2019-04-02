@@ -48,4 +48,6 @@ void Fourth_Order_Total_Area ( Frame& f )
         
         f.total_area[3] += c4c.area;
     }
+    
+    if (f.total_area[3] < 0 && f.total_area[3] > -tiny_num) f.total_area[3] = 0;
 }

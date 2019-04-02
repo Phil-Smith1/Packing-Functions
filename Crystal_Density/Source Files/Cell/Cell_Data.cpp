@@ -1,39 +1,27 @@
-#include <string>
-
+#include "Input.h"
 #include "Make_Cell.h"
 #include "Interior_Pts.h"
 
-void Cell_Data ( string const& lattice_type, P2 const& pt1, P2 const& pt2, P2 const& pt3, P2 const& pt4, bool interior_points, vector<P2>const& interior_pts, Cell& cell )
+void Cell_Data ( Input& input, Cell& cell )
 {
-    P2 p1, p2, p3, p4;
-    
-    if (lattice_type == "Square")
+    if (input.lattice_type == "Square")
     {
-        p1 = P2( 0, 0 );
-        p2 = P2( 0, 1 );
-        p3 = P2( 1, 1 );
-        p4 = P2( 1, 0 );
+        input.pts[0] = P2( 0, 1 );
+        input.pts[1] = P2( 1, 0 );
     }
     
-    else if (lattice_type == "Triangular")
+    else if (input.lattice_type == "Triangular")
     {
-        p1 = P2( 0, 0 );
-        p2 = P2( 0.5, 0.5 * sqrt( (double)3 ) );
-        p3 = P2( 1.5, 0.5 * sqrt( (double)3 ) );
-        p4 = P2( 1, 0 );
+        input.pts[0] = P2( 0.5, 0.5 * sqrt( (double)3 ) );
+        input.pts[1] = P2( 1, 0 );
     }
     
-    else
-    {
-        p1 = pt1;
-        p2 = pt2;
-        p3 = pt3;
-        p4 = pt4;
-    }
+    input.pts[0] = P2( input.pts[0].x() * input.scale[0], input.pts[0].y() * input.scale[0] );
+    input.pts[1] = P2( input.pts[1].x() * input.scale[1], input.pts[1].y() * input.scale[1] );
     
-    Make_Cell( p1, p2, p3, p4, cell );
+    Make_Cell( input.pts, cell );
     
-    if (interior_points) Interior_Pts( cell, interior_pts );
+    if (input.interior_points) Interior_Pts( cell, input.interior_pts );
     
     else cell.num_pts = 4;
 }

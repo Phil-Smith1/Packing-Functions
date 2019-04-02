@@ -31,4 +31,6 @@ void Third_Order_Total_Area ( Frame& f )
         
         f.total_area[2] += c3c.area;
     }
+    
+    if (f.total_area[2] < 0 && f.total_area[2] > -tiny_num) f.total_area[2] = 0;
 }

@@ -9,4 +9,6 @@ void First_Order_Total_Area ( Frame& f )
         
         f.total_area[0] += cc.area;
     }
+    
+    if (f.total_area[0] < 0 && f.total_area[0] > -tiny_num) f.total_area[0] = 0;
 }

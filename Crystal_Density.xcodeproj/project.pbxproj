@@ -30,6 +30,13 @@
 		EE4FF54B2236A9E7008E25F0 /* Three_Circles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE4FF54A2236A9E7008E25F0 /* Three_Circles.cpp */; };
 		EE4FF54D2236AA83008E25F0 /* Cell_3Circles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE4FF54C2236AA83008E25F0 /* Cell_3Circles.cpp */; };
 		EE4FF5512236AF7C008E25F0 /* Areas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE4FF5502236AF7C008E25F0 /* Areas.cpp */; };
+		EE55F2CE22537D1100B8CA0B /* Sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE55F2CD22537D1100B8CA0B /* Sphere.cpp */; };
+		EE55F2D122537FB400B8CA0B /* Cell3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE55F2D022537FB400B8CA0B /* Cell3D.cpp */; };
+		EE55F2D3225380BE00B8CA0B /* Make_Cell3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE55F2D2225380BE00B8CA0B /* Make_Cell3D.cpp */; };
+		EE55F2D6225383EB00B8CA0B /* Input3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE55F2D5225383EB00B8CA0B /* Input3D.cpp */; };
+		EE55F2DA225385B700B8CA0B /* Edge3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE55F2D9225385B700B8CA0B /* Edge3D.cpp */; };
+		EE55F2DD2253903B00B8CA0B /* Cell_Volume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE55F2DC2253903B00B8CA0B /* Cell_Volume.cpp */; };
+		EE55F2DF2253AE6F00B8CA0B /* Input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE55F2DE2253AE6F00B8CA0B /* Input.cpp */; };
 		EE6FE9EE2226FD7E006B4477 /* Two_Circles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE6FE9ED2226FD7E006B4477 /* Two_Circles.cpp */; };
 		EE79CED9224162E30077AFFE /* Deformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE79CED8224162E30077AFFE /* Deformation.cpp */; };
 		EECF3559222D79FF0079CD62 /* Cell_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3558222D79FF0079CD62 /* Cell_Area.cpp */; };
@@ -178,6 +185,20 @@
 		EE4FF54F2236AF6F008E25F0 /* Areas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Areas.h; sourceTree = "<group>"; };
 		EE4FF5502236AF7C008E25F0 /* Areas.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Areas.cpp; sourceTree = "<group>"; };
 		EE52D62221F5F49200ED45E2 /* Irregular_Sector_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Irregular_Sector_Area.h; sourceTree = "<group>"; };
+		EE55F2CC22537C8F00B8CA0B /* Sphere.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sphere.h; sourceTree = "<group>"; };
+		EE55F2CD22537D1100B8CA0B /* Sphere.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sphere.cpp; sourceTree = "<group>"; };
+		EE55F2CF22537F9D00B8CA0B /* Cell3D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cell3D.h; sourceTree = "<group>"; };
+		EE55F2D022537FB400B8CA0B /* Cell3D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cell3D.cpp; sourceTree = "<group>"; };
+		EE55F2D2225380BE00B8CA0B /* Make_Cell3D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Make_Cell3D.cpp; sourceTree = "<group>"; };
+		EE55F2D4225380DE00B8CA0B /* Make_Cell3D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Make_Cell3D.h; sourceTree = "<group>"; };
+		EE55F2D5225383EB00B8CA0B /* Input3D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Input3D.cpp; sourceTree = "<group>"; };
+		EE55F2D7225383FB00B8CA0B /* Input3D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Input3D.h; sourceTree = "<group>"; };
+		EE55F2D8225385A300B8CA0B /* Edge3D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Edge3D.h; sourceTree = "<group>"; };
+		EE55F2D9225385B700B8CA0B /* Edge3D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Edge3D.cpp; sourceTree = "<group>"; };
+		EE55F2DB2253902A00B8CA0B /* Cell_Volume.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cell_Volume.h; sourceTree = "<group>"; };
+		EE55F2DC2253903B00B8CA0B /* Cell_Volume.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cell_Volume.cpp; sourceTree = "<group>"; };
+		EE55F2DE2253AE6F00B8CA0B /* Input.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Input.cpp; sourceTree = "<group>"; };
+		EE55F2E02253AE7800B8CA0B /* Input.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Input.h; sourceTree = "<group>"; };
 		EE63830E2211C2940088E8AE /* Three_Circle_Intersection_Area_Within_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Three_Circle_Intersection_Area_Within_Cell.h; sourceTree = "<group>"; };
 		EE63830F2211C7710088E8AE /* Non_Inclusion_Three_Circle_Intersection_Area_Within_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Non_Inclusion_Three_Circle_Intersection_Area_Within_Cell.h; sourceTree = "<group>"; };
 		EE6383112211DDC40088E8AE /* Non_Trivial_Three_Circle_Intersection_Area_Within_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Non_Trivial_Three_Circle_Intersection_Area_Within_Cell.h; sourceTree = "<group>"; };
@@ -508,10 +529,12 @@
 		EE3AADBA2228131100E1FAE5 /* Header Files */ = {
 			isa = PBXGroup;
 			children = (
+				EE55F2C922537C3800B8CA0B /* 3D */,
 				EE4A32AA21EF929100092424 /* Change_Cloud_Type.h */,
 				EE2CFB9521F8837400270503 /* Circle.h */,
 				EE20D73C22144C6600168C59 /* Correct_Side_Of_Cell.h */,
 				EE09749321F0F1E5006A34D3 /* Edge.h */,
+				EE55F2E02253AE7800B8CA0B /* Input.h */,
 				EE20D73B221449E600168C59 /* Same_Side.h */,
 				EE6FE9EB2226FA2F006B4477 /* Spare_Code.h */,
 				EE03E130223AD09E0010BC95 /* Basic */,
@@ -525,6 +548,32 @@
 				EE03E133223AD50A0010BC95 /* Two_Circle_Area_Within_Cell */,
 			);
 			path = "Header Files";
+			sourceTree = "<group>";
+		};
+		EE55F2C922537C3800B8CA0B /* 3D */ = {
+			isa = PBXGroup;
+			children = (
+				EE55F2CC22537C8F00B8CA0B /* Sphere.h */,
+				EE55F2CF22537F9D00B8CA0B /* Cell3D.h */,
+				EE55F2D4225380DE00B8CA0B /* Make_Cell3D.h */,
+				EE55F2D8225385A300B8CA0B /* Edge3D.h */,
+				EE55F2D7225383FB00B8CA0B /* Input3D.h */,
+				EE55F2DB2253902A00B8CA0B /* Cell_Volume.h */,
+			);
+			path = 3D;
+			sourceTree = "<group>";
+		};
+		EE55F2CA22537C4800B8CA0B /* 3D */ = {
+			isa = PBXGroup;
+			children = (
+				EE55F2CD22537D1100B8CA0B /* Sphere.cpp */,
+				EE55F2D022537FB400B8CA0B /* Cell3D.cpp */,
+				EE55F2D2225380BE00B8CA0B /* Make_Cell3D.cpp */,
+				EE55F2D9225385B700B8CA0B /* Edge3D.cpp */,
+				EE55F2D5225383EB00B8CA0B /* Input3D.cpp */,
+				EE55F2DC2253903B00B8CA0B /* Cell_Volume.cpp */,
+			);
+			path = 3D;
 			sourceTree = "<group>";
 		};
 		EE79CED422412FD20077AFFE /* Four_Circle_Area_Within_Cell */ = {
@@ -556,10 +605,12 @@
 		EECF35BE222D91100079CD62 /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
+				EE55F2CA22537C4800B8CA0B /* 3D */,
 				EE2CFB9621F8838100270503 /* Circle.cpp */,
 				EECF356C222D7D7D0079CD62 /* Correct_Side_Of_Cell.cpp */,
 				EE3AA60921B848710088403C /* Crystal_Density.cpp */,
 				EE09749121F0F1DD006A34D3 /* Edge.cpp */,
+				EE55F2DE2253AE6F00B8CA0B /* Input.cpp */,
 				EECF356A222D7D570079CD62 /* Same_Side.cpp */,
 				EECF35C1222D92FC0079CD62 /* gnuplot-iostream.h */,
 				EE03E131223AD0ED0010BC95 /* Basic */,
@@ -635,6 +686,7 @@
 				EECF3561222D7B4E0079CD62 /* Triangle_Area.cpp in Sources */,
 				EECF3595222D84BC0079CD62 /* Non_Trivial_Three_Circle_Intersection_Area_Within_Cell.cpp in Sources */,
 				EE4FF5512236AF7C008E25F0 /* Areas.cpp in Sources */,
+				EE55F2DF2253AE6F00B8CA0B /* Input.cpp in Sources */,
 				EECF359B222D85AC0079CD62 /* Third_Order_Total_Area.cpp in Sources */,
 				EECF35A3222D87D00079CD62 /* Non_Trivial_Four_Circle_Intersection_Area_Within_Cell.cpp in Sources */,
 				EECF359F222D86900079CD62 /* Non_Trivial_Four_Circle_Intersection_Pts.cpp in Sources */,
@@ -663,12 +715,17 @@
 				EECF3591222D83C80079CD62 /* Three_Circle_Intersection_Irregular_Sector_Area.cpp in Sources */,
 				EE4FF54D2236AA83008E25F0 /* Cell_3Circles.cpp in Sources */,
 				EE3AA60A21B848710088403C /* Crystal_Density.cpp in Sources */,
+				EE55F2DD2253903B00B8CA0B /* Cell_Volume.cpp in Sources */,
 				EECF35A1222D86EF0079CD62 /* Four_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp in Sources */,
 				EECF357F222D7FDE0079CD62 /* Two_Circle_Intersection_Concave_Cone_Area.cpp in Sources */,
+				EE55F2D3225380BE00B8CA0B /* Make_Cell3D.cpp in Sources */,
 				EE3AADC6222819FE00E1FAE5 /* Intersection_Of_Two_Circles.cpp in Sources */,
+				EE55F2D122537FB400B8CA0B /* Cell3D.cpp in Sources */,
 				EE051920223182C70091755F /* Packing_Functions.cpp in Sources */,
 				EECF3587222D828A0079CD62 /* Order_Circles.cpp in Sources */,
 				EE3AADBE2228170B00E1FAE5 /* Norm.cpp in Sources */,
+				EE55F2CE22537D1100B8CA0B /* Sphere.cpp in Sources */,
+				EE55F2D6225383EB00B8CA0B /* Input3D.cpp in Sources */,
 				EECF3563222D7BA20079CD62 /* Cell_Circle_Intersections.cpp in Sources */,
 				EE3999A32239818400083354 /* Four_Circles.cpp in Sources */,
 				EE3AADC4222819CE00E1FAE5 /* Segment_Area.cpp in Sources */,
@@ -686,6 +743,7 @@
 				EECF3575222D7E6C0079CD62 /* Concave_Cone_Area.cpp in Sources */,
 				EECF3583222D81CF0079CD62 /* Two_Circle_Intersection_Area_Within_Cell.cpp in Sources */,
 				EECF35A7222D88600079CD62 /* Four_Circle_Intersection_Area_Within_Cell.cpp in Sources */,
+				EE55F2DA225385B700B8CA0B /* Edge3D.cpp in Sources */,
 				EECF355D222D7AA80079CD62 /* Line_Circle_Intersections.cpp in Sources */,
 				EECF359D222D864F0079CD62 /* Non_Trivial_Four_Circle_Intersection_Area.cpp in Sources */,
 				EECF3559222D79FF0079CD62 /* Cell_Area.cpp in Sources */,

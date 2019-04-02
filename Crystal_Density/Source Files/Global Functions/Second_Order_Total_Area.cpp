@@ -31,4 +31,6 @@ void Second_Order_Total_Area ( Frame& f )
         
         f.total_area[1] += c2c.area;
     }
+    
+    if (f.total_area[1] < 0 && f.total_area[1] > -tiny_num) f.total_area[1] = 0;
 }

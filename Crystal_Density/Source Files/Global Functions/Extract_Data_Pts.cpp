@@ -6,10 +6,13 @@
 #include "Fourth_Order_Total_Area.h"
 #include "Areas.h"
 
-void Extract_Data_Pts ( string const& directory, Cell& cell, int sample_rate, double max_radius )
+void Extract_Data_Pts ( string const& directory, Cell& cell, int sample_rate, double& max_radius )
 {
     ofstream ofs_1( directory + "Data/Results_At_Least.txt" );
     ofstream ofs_2( directory + "Data/Results_Exact.txt" );
+    
+    max_radius = (Norm( cell.vertices[0], cell.vertices[2] ) > Norm( cell.vertices[1], cell.vertices[3] )) ? Norm( cell.vertices[0], cell.vertices[2] ) : Norm( cell.vertices[1], cell.vertices[3] );
+    max_radius += 0.01;
     
     double num_pts = max_radius * sample_rate + 1;
     
