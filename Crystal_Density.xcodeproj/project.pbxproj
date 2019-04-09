@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EE03C346223825B200C19AC5 /* Three_Circle_Intersection_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE03C345223825B200C19AC5 /* Three_Circle_Intersection_Area.cpp */; };
+		EE040A12225D121B00839DC0 /* GIF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE040A11225D121B00839DC0 /* GIF.cpp */; };
 		EE051916223148B10091755F /* Derivatives_At_Pt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE051914223148B10091755F /* Derivatives_At_Pt.cpp */; };
 		EE05191A22314C300091755F /* Discontinuity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE05191922314C300091755F /* Discontinuity.cpp */; };
 		EE05191C2231552D0091755F /* Derivatives_Of_Data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE05191B2231552D0091755F /* Derivatives_Of_Data.cpp */; };
@@ -104,6 +105,8 @@
 		EE0379CE21F77DEC00DC08A2 /* Interior_Edge_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interior_Edge_Area.h; sourceTree = "<group>"; };
 		EE03C345223825B200C19AC5 /* Three_Circle_Intersection_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Three_Circle_Intersection_Area.cpp; sourceTree = "<group>"; };
 		EE03E12F223ACE570010BC95 /* Two_Circle_Intersection_Area.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Two_Circle_Intersection_Area.h; sourceTree = "<group>"; };
+		EE040A10225D120900839DC0 /* GIF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIF.h; sourceTree = "<group>"; };
+		EE040A11225D121B00839DC0 /* GIF.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GIF.cpp; sourceTree = "<group>"; };
 		EE051914223148B10091755F /* Derivatives_At_Pt.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Derivatives_At_Pt.cpp; sourceTree = "<group>"; };
 		EE051917223149EE0091755F /* Derivatives_At_Pt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Derivatives_At_Pt.h; sourceTree = "<group>"; };
 		EE05191822314C180091755F /* Discontinuity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Discontinuity.h; sourceTree = "<group>"; };
@@ -475,6 +478,7 @@
 				EE38F4282203272900A6825D /* Extract_Data_Pts.h */,
 				EE392E0D22007CE9007E8E31 /* First_Order_Total_Area.h */,
 				EE38F4232203212F00A6825D /* Fourth_Order_Total_Area.h */,
+				EE040A10225D120900839DC0 /* GIF.h */,
 				EE05191E223182B60091755F /* Packing_Functions.h */,
 				EE4A32AF21EF9E1200092424 /* Plot_Graph.h */,
 				EE01B6DA2209F07200EDFA6E /* Print_Info.h */,
@@ -492,6 +496,7 @@
 				EECF35B2222D89F00079CD62 /* Extract_Data_Pts.cpp */,
 				EECF3578222D7F050079CD62 /* First_Order_Total_Area.cpp */,
 				EECF35A8222D89570079CD62 /* Fourth_Order_Total_Area.cpp */,
+				EE040A11225D121B00839DC0 /* GIF.cpp */,
 				EE05191F223182C70091755F /* Packing_Functions.cpp */,
 				EECF35B8222D8CA70079CD62 /* Plot_Graph.cpp */,
 				EECF35BA222D8CC80079CD62 /* Print_Info.cpp */,
@@ -695,6 +700,7 @@
 				EECF35A9222D89570079CD62 /* Fourth_Order_Total_Area.cpp in Sources */,
 				EECF3573222D7E130079CD62 /* Interior_Edge_Area.cpp in Sources */,
 				EECF35A5222D88290079CD62 /* Non_Inclusion_Four_Circle_Intersection_Area_Within_Cell.cpp in Sources */,
+				EE040A12225D121B00839DC0 /* GIF.cpp in Sources */,
 				EE051916223148B10091755F /* Derivatives_At_Pt.cpp in Sources */,
 				EECF356D222D7D7D0079CD62 /* Correct_Side_Of_Cell.cpp in Sources */,
 				EECF358D222D83690079CD62 /* Three_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp in Sources */,
@@ -876,20 +882,21 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = (
-					/usr/local/Cellar/boost/1.65.1/include,
-					/usr/local/Cellar/opencv/3.3.0_3/include,
-					/usr/local/Cellar/cgal/4.11/include,
-					/usr/local/Cellar/gmp/6.1.2_1/include,
-					/usr/local/Cellar/mpfr/3.1.6/include,
+					/usr/local/Cellar/boost/1.69.0/include,
+					/usr/local/Cellar/opencv/4.0.1/include/opencv4,
+					/usr/local/Cellar/cgal/4.14/include,
+					/usr/local/Cellar/gmp/6.1.2_2/include,
+					/usr/local/Cellar/mpfr/4.0.2/include,
 					/usr/local/Cellar/gemmi/third_party,
 					/usr/local/Cellar/gemmi/include,
+					"/usr/local/Cellar/imagemagick/7.0.8-35/include/ImageMagick-7",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					/usr/local/Cellar/boost/1.65.1/lib,
-					/usr/local/Cellar/opencv/3.3.0_3/lib,
-					/usr/local/Cellar/cgal/4.11/lib,
-					/usr/local/Cellar/gmp/6.1.2_1/lib,
-					/usr/local/Cellar/mpfr/3.1.6/lib,
+					/usr/local/Cellar/boost/1.69.0/lib,
+					/usr/local/Cellar/opencv/4.0.1/lib,
+					/usr/local/Cellar/cgal/4.14/lib,
+					/usr/local/Cellar/gmp/6.1.2_2/lib,
+					/usr/local/Cellar/mpfr/4.0.2/lib,
 				);
 				OTHER_LDFLAGS = (
 					"-lCGAL",
@@ -915,6 +922,28 @@
 					"-lboost_system",
 					"-lboost_filesystem",
 					"-lboost_iostreams",
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-I/opt/local/include/ImageMagick-6",
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-I/opt/local/include/ImageMagick-6",
+					"-L/opt/local/lib",
+					"-lMagick++-6.Q16",
+					"-lMagickWand-6.Q16",
+					"-lMagickCore-6.Q16",
+					"-L/opt/local/lib",
+					"-lMagick++-6.Q16",
+					"-lMagickWand-6.Q16",
+					"-lMagickCore-6.Q16",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -927,20 +956,21 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = (
-					/usr/local/Cellar/boost/1.65.1/include,
-					/usr/local/Cellar/opencv/3.3.0_3/include,
-					/usr/local/Cellar/cgal/4.11/include,
-					/usr/local/Cellar/gmp/6.1.2_1/include,
-					/usr/local/Cellar/mpfr/3.1.6/include,
+					/usr/local/Cellar/boost/1.69.0/include,
+					/usr/local/Cellar/opencv/4.0.1/include/opencv4,
+					/usr/local/Cellar/cgal/4.14/include,
+					/usr/local/Cellar/gmp/6.1.2_2/include,
+					/usr/local/Cellar/mpfr/4.0.2/include,
 					/usr/local/Cellar/gemmi/third_party,
 					/usr/local/Cellar/gemmi/include,
+					"/usr/local/Cellar/imagemagick/7.0.8-35/include/ImageMagick-7",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					/usr/local/Cellar/boost/1.65.1/lib,
-					/usr/local/Cellar/opencv/3.3.0_3/lib,
-					/usr/local/Cellar/cgal/4.11/lib,
-					/usr/local/Cellar/gmp/6.1.2_1/lib,
-					/usr/local/Cellar/mpfr/3.1.6/lib,
+					/usr/local/Cellar/boost/1.69.0/lib,
+					/usr/local/Cellar/opencv/4.0.1/lib,
+					/usr/local/Cellar/cgal/4.14/lib,
+					/usr/local/Cellar/gmp/6.1.2_2/lib,
+					/usr/local/Cellar/mpfr/4.0.2/lib,
 				);
 				OTHER_LDFLAGS = (
 					"-lCGAL",
@@ -966,6 +996,28 @@
 					"-lboost_system",
 					"-lboost_filesystem",
 					"-lboost_iostreams",
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-I/opt/local/include/ImageMagick-6",
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-I/opt/local/include/ImageMagick-6",
+					"-L/opt/local/lib",
+					"-lMagick++-6.Q16",
+					"-lMagickWand-6.Q16",
+					"-lMagickCore-6.Q16",
+					"-L/opt/local/lib",
+					"-lMagick++-6.Q16",
+					"-lMagickWand-6.Q16",
+					"-lMagickCore-6.Q16",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

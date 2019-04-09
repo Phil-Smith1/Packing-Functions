@@ -1,3 +1,4 @@
+#include "GIF.h"
 #include "Make_Cell3D.h"
 #include "Input3D.h"
 #include "Sphere.h"
@@ -22,19 +23,17 @@ vector<P3> pts3D = { P3( 1, 0, 0 ), P3( 0, 1, 0 ), P3( 0, 0, 1 ) };
 
 vector<double> scale = { 1, 1, 1 };
 
-bool interior_points = false;
+bool interior_points = true;
 
-vector<P2> interior_pts = { P2( 0.25, 0.25 ), P2( 0.75, 0.75 ) };
+vector<P2> interior_pts = { P2( 0.5, 0.5 )/*P2( 0.25, 0.25 ), P2( 0.75, 0.75 )*/ };
 
 vector<P3> interior_pts3D;
 
-int deformation_type = 1; // 0: No deformation; 1: Square to Triangular; 2: Interior point maps out semicircle; 3: Interior point maps out diagonal 1; 4: Interior point maps out diagonal 2.
+int deformation_type = 2; // 0: No deformation; 1: Square to Triangular; 2: Interior point maps out semicircle; 3: Interior point maps out diagonal 1; 4: Interior point maps out diagonal 2.
 
 int iterations = 101;
 
 int sample_rate = 300;
-
-double max_radius = 1.5; // If Square: 1.5; Triangular: 1.8.
 
 Input3D input3D( function_type, lattice_type, pts3D, scale, interior_points, interior_pts3D, deformation_type, iterations, sample_rate );
 
@@ -49,14 +48,18 @@ int main ( int, char*[] )
     {
         for (int counter = 0; counter < iterations; ++counter)
         {
+            cout << "Iteration: " << counter << "." << endl;
+            
             Deformation( input, counter );
             
             Cell cell;
             
             Cell_Data( input, cell );
             
-            Packing_Functions( directory, function_type, cell, lattice_type, sample_rate, max_radius, counter );
+            Packing_Functions( directory, input, cell, counter );
         }
+        
+        GIF( input.iterations );
     }
     
     if (threeD)

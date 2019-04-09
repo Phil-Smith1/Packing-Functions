@@ -20,6 +20,8 @@ bool Deformation ( Input& input, int counter )
             input.pts[0] = P2( cos( angle ), sin( angle ) );
             input.pts[1] = P2( 1, 0 );
         }
+        
+        input.max_radius = sqrt( (double)3 );
     }
     
     else if (input.deformation_type == 2)
@@ -48,8 +50,6 @@ bool Deformation ( Input& input, int counter )
         
         input.interior_pts.push_back( P2( 0.05 + param, 0.95 - param ) );
     }
-    
-    cout << "Iteration: " << counter << "." << endl;
     
     return true;
 }

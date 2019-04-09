@@ -16,6 +16,7 @@ class Input
     
     bool interior_points;
     int sample_rate, deformation_type, iterations;
+    double max_radius;
     string function_type, lattice_type;
     vector<double> scale;
     vector<P2> pts, interior_pts;

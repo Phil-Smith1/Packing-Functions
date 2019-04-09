@@ -24,6 +24,8 @@ void Derivatives_Of_Data ( vector<double>const& x, vector<double> const& y, vect
         
         if (!start_pt && !discontinuity) discontinuity = Discontinuity( second_deriv.back().second, trend, second_der );
         
+        if (discontinuity && discontinuity_counter == 0) second_deriv.push_back( pair<double, double>( -1, 0 ) );
+        
         if (!discontinuity) second_deriv.push_back( pair<double, double>( x[counter + 1], second_der ) );
         
         if (discontinuity && discontinuity_counter == 0) disc_pts.push_back( pair<double, double>( x[counter + 1], y[counter + 1] ) );

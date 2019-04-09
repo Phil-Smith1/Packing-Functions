@@ -2,11 +2,11 @@
 #include "Derivatives.h"
 #include "Plot_Graph.h"
 
-void Packing_Functions ( string const& directory, string const& function_type, Cell& cell, string const& lattice_type, int sample_rate, double max_radius, int iter )
+void Packing_Functions ( string const& directory, Input const& input, Cell& cell, int iter )
 {
-    Extract_Data_Pts( directory, cell, sample_rate, max_radius );
+    Extract_Data_Pts( directory, cell, input.sample_rate, input.max_radius );
     
-    Derivatives( directory, "Data/Results_" + function_type + ".txt" );
+    Derivatives( directory, "Data/Results_" + input.function_type + ".txt" );
     
-    Plot_Graph( directory, function_type, lattice_type, max_radius, iter );
+    Plot_Graph( directory, input, iter );
 }

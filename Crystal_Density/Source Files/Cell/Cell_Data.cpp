@@ -1,4 +1,5 @@
 #include "Input.h"
+#include "Norm.h"
 #include "Make_Cell.h"
 #include "Interior_Pts.h"
 
@@ -24,4 +25,11 @@ void Cell_Data ( Input& input, Cell& cell )
     if (input.interior_points) Interior_Pts( cell, input.interior_pts );
     
     else cell.num_pts = 4;
+    
+    if (input.deformation_type != 1)
+    {
+        input.max_radius = (Norm( cell.vertices[0], cell.vertices[2] ) > Norm( cell.vertices[1], cell.vertices[3] )) ? Norm( cell.vertices[0], cell.vertices[2] ) : Norm( cell.vertices[1], cell.vertices[3] );
+    }
+    
+    input.max_radius += 0.02;
 }

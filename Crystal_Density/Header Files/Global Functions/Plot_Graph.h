@@ -2,8 +2,6 @@
 
 #include "gnuplot-iostream.h"
 
-#include <string>
+#include "Input.h"
 
-using namespace std;
-
-void Plot_Graph ( string const& directory, string const& function_type, string const& lattice_type, double max_radius, int iter );
+void Plot_Graph ( string const& directory, Input const& input, int iter );

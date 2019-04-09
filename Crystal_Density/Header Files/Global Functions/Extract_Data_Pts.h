@@ -8,4 +8,4 @@
 #include "Fourth_Order_Total_Area.h"
 #include "Areas.h"
 
-void Extract_Data_Pts ( string const& directory, Cell& cell, int sample_rate, double& max_radius );
+void Extract_Data_Pts ( string const& directory, Cell& cell, int sample_rate, double max_radius );
