@@ -2,4 +2,4 @@
 
 using namespace std;
 
-void GIF ( int iterations );
+void GIF ( string const& directory, string const& type, int iterations );

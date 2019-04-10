@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EE03C346223825B200C19AC5 /* Three_Circle_Intersection_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE03C345223825B200C19AC5 /* Three_Circle_Intersection_Area.cpp */; };
+		EE03C5F8225E470800486026 /* Draw_Cells.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE03C5F7225E470800486026 /* Draw_Cells.cpp */; };
 		EE040A12225D121B00839DC0 /* GIF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE040A11225D121B00839DC0 /* GIF.cpp */; };
 		EE051916223148B10091755F /* Derivatives_At_Pt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE051914223148B10091755F /* Derivatives_At_Pt.cpp */; };
 		EE05191A22314C300091755F /* Discontinuity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE05191922314C300091755F /* Discontinuity.cpp */; };
@@ -104,6 +105,8 @@
 		EE01B6DA2209F07200EDFA6E /* Print_Info.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Print_Info.h; sourceTree = "<group>"; };
 		EE0379CE21F77DEC00DC08A2 /* Interior_Edge_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interior_Edge_Area.h; sourceTree = "<group>"; };
 		EE03C345223825B200C19AC5 /* Three_Circle_Intersection_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Three_Circle_Intersection_Area.cpp; sourceTree = "<group>"; };
+		EE03C5F6225E46FC00486026 /* Draw_Cells.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Draw_Cells.h; sourceTree = "<group>"; };
+		EE03C5F7225E470800486026 /* Draw_Cells.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Draw_Cells.cpp; sourceTree = "<group>"; };
 		EE03E12F223ACE570010BC95 /* Two_Circle_Intersection_Area.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Two_Circle_Intersection_Area.h; sourceTree = "<group>"; };
 		EE040A10225D120900839DC0 /* GIF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIF.h; sourceTree = "<group>"; };
 		EE040A11225D121B00839DC0 /* GIF.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GIF.cpp; sourceTree = "<group>"; };
@@ -475,6 +478,7 @@
 			children = (
 				EE4FF54F2236AF6F008E25F0 /* Areas.h */,
 				EE79CED7224162BB0077AFFE /* Deformation.h */,
+				EE03C5F6225E46FC00486026 /* Draw_Cells.h */,
 				EE38F4282203272900A6825D /* Extract_Data_Pts.h */,
 				EE392E0D22007CE9007E8E31 /* First_Order_Total_Area.h */,
 				EE38F4232203212F00A6825D /* Fourth_Order_Total_Area.h */,
@@ -493,6 +497,7 @@
 			children = (
 				EE4FF5502236AF7C008E25F0 /* Areas.cpp */,
 				EE79CED8224162E30077AFFE /* Deformation.cpp */,
+				EE03C5F7225E470800486026 /* Draw_Cells.cpp */,
 				EECF35B2222D89F00079CD62 /* Extract_Data_Pts.cpp */,
 				EECF3578222D7F050079CD62 /* First_Order_Total_Area.cpp */,
 				EECF35A8222D89570079CD62 /* Fourth_Order_Total_Area.cpp */,
@@ -708,6 +713,7 @@
 				EECF3577222D7EBA0079CD62 /* Circle_Area_Within_Cell.cpp in Sources */,
 				EE09749221F0F1DD006A34D3 /* Edge.cpp in Sources */,
 				EE2CFB9721F8838100270503 /* Circle.cpp in Sources */,
+				EE03C5F8225E470800486026 /* Draw_Cells.cpp in Sources */,
 				EE05192222318EE50091755F /* Cell_2Circles.cpp in Sources */,
 				EECF356F222D7DA70079CD62 /* Area_Excluded_By_Exterior_Edge.cpp in Sources */,
 				EECF358B222D83130079CD62 /* Non_Trivial_Three_Circle_Intersection_Pts.cpp in Sources */,
