@@ -86,6 +86,7 @@
 		EECF35B5222D8C320079CD62 /* Derivatives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF35B4222D8C320079CD62 /* Derivatives.cpp */; };
 		EECF35B9222D8CA70079CD62 /* Plot_Graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF35B8222D8CA70079CD62 /* Plot_Graph.cpp */; };
 		EECF35BB222D8CC80079CD62 /* Print_Info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF35BA222D8CC80079CD62 /* Print_Info.cpp */; };
+		EEFEC13622DCDDE500F02A23 /* Sphere_Area_Within_Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EEFEC13522DCDDE500F02A23 /* Sphere_Area_Within_Cell.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -263,6 +264,8 @@
 		EECF35B8222D8CA70079CD62 /* Plot_Graph.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Plot_Graph.cpp; sourceTree = "<group>"; };
 		EECF35BA222D8CC80079CD62 /* Print_Info.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Print_Info.cpp; sourceTree = "<group>"; };
 		EECF35C1222D92FC0079CD62 /* gnuplot-iostream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "gnuplot-iostream.h"; sourceTree = "<group>"; };
+		EEFEC13422DCDDC900F02A23 /* Sphere_Area_Within_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sphere_Area_Within_Cell.h; sourceTree = "<group>"; };
+		EEFEC13522DCDDE500F02A23 /* Sphere_Area_Within_Cell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sphere_Area_Within_Cell.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -564,6 +567,7 @@
 			isa = PBXGroup;
 			children = (
 				EE55F2CC22537C8F00B8CA0B /* Sphere.h */,
+				EEFEC13422DCDDC900F02A23 /* Sphere_Area_Within_Cell.h */,
 				EE55F2CF22537F9D00B8CA0B /* Cell3D.h */,
 				EE55F2D4225380DE00B8CA0B /* Make_Cell3D.h */,
 				EE55F2D8225385A300B8CA0B /* Edge3D.h */,
@@ -577,6 +581,7 @@
 			isa = PBXGroup;
 			children = (
 				EE55F2CD22537D1100B8CA0B /* Sphere.cpp */,
+				EEFEC13522DCDDE500F02A23 /* Sphere_Area_Within_Cell.cpp */,
 				EE55F2D022537FB400B8CA0B /* Cell3D.cpp */,
 				EE55F2D2225380BE00B8CA0B /* Make_Cell3D.cpp */,
 				EE55F2D9225385B700B8CA0B /* Edge3D.cpp */,
@@ -705,6 +710,7 @@
 				EECF35A9222D89570079CD62 /* Fourth_Order_Total_Area.cpp in Sources */,
 				EECF3573222D7E130079CD62 /* Interior_Edge_Area.cpp in Sources */,
 				EECF35A5222D88290079CD62 /* Non_Inclusion_Four_Circle_Intersection_Area_Within_Cell.cpp in Sources */,
+				EEFEC13622DCDDE500F02A23 /* Sphere_Area_Within_Cell.cpp in Sources */,
 				EE040A12225D121B00839DC0 /* GIF.cpp in Sources */,
 				EE051916223148B10091755F /* Derivatives_At_Pt.cpp in Sources */,
 				EECF356D222D7D7D0079CD62 /* Correct_Side_Of_Cell.cpp in Sources */,
