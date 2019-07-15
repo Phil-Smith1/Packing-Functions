@@ -86,15 +86,16 @@ void Plot_PDF ( string const& directory, double max_radius )
     
     gp << "set key horizontal tmargin c font ', 18'\n";
     
-    gp << "set style line 1 lc rgb '#0d61ec' lw 2\n";
-    gp << "set style line 2 lc rgb '#24ae1d' lw 2\n";
-    gp << "set style line 3 lc rgb '#ffae00' lw 2\n";
-    gp << "set style line 4 lc rgb '#e70000' lw 2\n";
+    gp << "set style line 1 lc rgb '#0d61ec' lw 3\n";
+    gp << "set style line 2 lc rgb '#24ae1d' lw 3\n";
+    gp << "set style line 3 lc rgb '#ffae00' lw 3\n";
+    gp << "set style line 4 lc rgb '#e70000' lw 3\n";
+    gp << "set style line 6 lc rgb '#d500ff' lw 3\n";
     gp << "set style line 5 lc rgb '#000000' pt 7 ps 0.5\n";
     
     gp << "set output \"Graphs/Packing Functions Exact.pdf\"\n";
     
-    gp << "plot 'Data/Results_Exact.txt' using 1:2 smooth csplines ls 1 title '1', 'Data/Results_Exact.txt' using 1:3 smooth csplines ls 2 title '2', 'Data/Results_Exact.txt' using 1:4 smooth csplines ls 3 title '3', 'Data/Results_Exact.txt' using 1:5 smooth csplines ls 4 title '4', 'Data/Derivative_Critical_Pts.txt' using 1:2 notitle ls 5\n";
+    gp << "plot 'Data/Results_Exact.txt' using 1:2 smooth csplines ls 1 title '1', 'Data/Results_Exact.txt' using 1:3 smooth csplines ls 2 title '2', 'Data/Results_Exact.txt' using 1:4 smooth csplines ls 3 title '3', NaN ls 4 title '4', 'Data/Results_Exact.txt' using 1:5 smooth csplines ls 6 title '5', 'Data/Derivative_Critical_Pts.txt' using 1:2 notitle ls 5\n";
 }
 
 void Plot_PNG ( string const& directory, double max_radius, int iter )
@@ -103,7 +104,7 @@ void Plot_PNG ( string const& directory, double max_radius, int iter )
     
     gp << "cd \"" << directory << "\"\n";
     
-    gp << "set terminal pngcairo size 500,350\n";
+    gp << "set terminal pngcairo size 600,350\n";
     
     gp << "set border 3\n";
     gp << "set grid\n";
@@ -126,11 +127,12 @@ void Plot_PNG ( string const& directory, double max_radius, int iter )
     gp << "set style line 2 lc rgb '#24ae1d' lw 2\n";
     gp << "set style line 3 lc rgb '#ffae00' lw 2\n";
     gp << "set style line 4 lc rgb '#e70000' lw 2\n";
+    gp << "set style line 6 lc rgb '#d500ff' lw 3\n";
     gp << "set style line 5 lc rgb '#000000' pt 7 ps 0.5\n";
     
     gp << "set output \"Graphs/Deformation/Deform" << iter << ".png\"\n";
     
-    gp << "plot 'Data/Results_Exact.txt' using 1:2 smooth csplines ls 1 title '1', 'Data/Results_Exact.txt' using 1:3 smooth csplines ls 2 title '2', 'Data/Results_Exact.txt' using 1:4 smooth csplines ls 3 title '3', 'Data/Results_Exact.txt' using 1:5 smooth csplines ls 4 title '4', 'Data/Derivative_Critical_Pts.txt' using 1:2 notitle ls 5\n";
+    gp << "plot 'Data/Results_Exact.txt' using 1:2 smooth csplines ls 1 title '1', 'Data/Results_Exact.txt' using 1:3 smooth csplines ls 2 title '2', 'Data/Results_Exact.txt' using 1:4 smooth csplines ls 3 title '3', NaN ls 4 title '4', 'Data/Results_Exact.txt' using 1:5 smooth csplines ls 6 title '5', 'Data/Derivative_Critical_Pts.txt' using 1:2 notitle ls 5\n";
 }
 
 void Plot_Derivatives ( string const& directory, double max_radius )
