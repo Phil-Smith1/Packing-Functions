@@ -33,5 +33,14 @@ void Make_Cell3D ( Input3D const& input, Cell3D& cell )
     cell.edges.push_back( Edge3D( L3( cell.vertices[2], cell.vertices[6] ), cell.vertices[2], cell.vertices[6], 10 ) );
     cell.edges.push_back( Edge3D( L3( cell.vertices[3], cell.vertices[7] ), cell.vertices[3], cell.vertices[7], 11 ) );
     
+    cell.planes.reserve( 8 );
+    
+    cell.planes.push_back( Plane( cell.vertices[0], cell.vertices[1], cell.vertices[2] ) );
+    cell.planes.push_back( Plane( cell.vertices[0], cell.vertices[1], cell.vertices[4] ) );
+    cell.planes.push_back( Plane( cell.vertices[4], cell.vertices[5], cell.vertices[6] ) );
+    cell.planes.push_back( Plane( cell.vertices[2], cell.vertices[3], cell.vertices[6] ) );
+    cell.planes.push_back( Plane( cell.vertices[0], cell.vertices[3], cell.vertices[4] ) );
+    cell.planes.push_back( Plane( cell.vertices[1], cell.vertices[2], cell.vertices[5] ) );
+    
     Cell_Volume( cell );
 }

@@ -1,6 +1,7 @@
+#include "Intersection_Pts_Of_Plane_And_Circle.h"
 #include "Make_Cell3D.h"
 #include "Input3D.h"
-#include "Sphere.h"
+#include "Spherical_Cap.h"
 #include "Deformation.h"
 #include "Cell_Data.h"
 #include "Draw_Cells.h"
@@ -10,9 +11,9 @@
 
 const string directory = "/Users/philsmith/Documents/Xcode Projects/Crystal_Density/";
 
-bool twoD = true;
+bool twoD = false;
 
-bool threeD = false;
+bool threeD = true;
 
 const string function_type = "Exact"; // Exact, At_Least.
 
@@ -94,6 +95,23 @@ int main ( int, char*[] )
         Cell3D cell;
         
         Make_Cell3D( input3D, cell );
+        
+        Sphere s( cell.vertices[0], 1 );
+        
+        Pl3 p( cell.vertices[0], cell.vertices[1], cell.vertices[2] );
+        
+        cout << Spherical_Cap( s, p ) << endl;
+        
+        Circle3D c = Circular_Intersection_Of_Sphere_And_Plane( s, p );
+        
+        Pl3 pl2( cell.vertices[0], cell.vertices[3], cell.vertices[4] );
+        
+        P3 p1, p2;
+        
+        Intersection_Pts_Of_Plane_And_Circle( pl2, c, p1, p2 );
+        
+        cout << p1 << endl;
+        cout << p2 << endl;
     }
     
     Print_Info( start_time, start );
