@@ -1,7 +1,8 @@
 dependencies: \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Source\ Files/Crystal_Density.cpp \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Intersection_Pts_Of_Plane_And_Circle.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle.h \
+  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/General_Spherical_Wedge.h \
+  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Spherical_Wedge.h \
+  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Sphere.h \
   /usr/local/Cellar/cgal/4.14/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
   /usr/local/Cellar/cgal/4.14/include/CGAL/Simple_cartesian.h \
   /usr/local/Cellar/cgal/4.14/include/CGAL/Cartesian/Cartesian_base.h \
@@ -1555,6 +1556,16 @@ dependencies: \
   /usr/local/Cellar/boost/1.69.0/include/boost/type_traits/integral_promotion.hpp \
   /usr/local/Cellar/boost/1.69.0/include/boost/type_traits/promote.hpp \
   /usr/local/Cellar/cgal/4.14/include/CGAL/Triangulation_structural_filtering_traits.h \
+  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Angle_Between_Vectors3D.h \
+  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Norm3D.h \
+  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Regularised_Spherical_Wedge.h \
+  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Line_Of_Intersection_Of_Two_Planes.h \
+  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Partial_Cone.h \
+  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Circular_Intersection_Of_Sphere_And_Plane.h \
+  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Sphere_Plane_Distance.h \
+  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle.h \
+  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Intersection_Pts_Of_Plane_And_Circle.h \
+  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Cone.h \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Make_Cell3D.h \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Input3D.h \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Cell_Volume.h \
@@ -1562,10 +1573,6 @@ dependencies: \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Edge3D.h \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Plane.h \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Spherical_Cap.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Circular_Intersection_Of_Sphere_And_Plane.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Sphere_Plane_Distance.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Norm3D.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Sphere.h \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Global\ Functions/Deformation.h \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Input.h \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Cell/Cell_Data.h \

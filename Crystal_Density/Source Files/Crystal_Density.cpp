@@ -1,3 +1,6 @@
+#include "General_Spherical_Wedge.h"
+#include "Partial_Cone.h"
+#include "Cone.h"
 #include "Intersection_Pts_Of_Plane_And_Circle.h"
 #include "Make_Cell3D.h"
 #include "Input3D.h"
@@ -98,20 +101,17 @@ int main ( int, char*[] )
         
         Sphere s( cell.vertices[0], 1 );
         
-        Pl3 p( cell.vertices[0], cell.vertices[1], cell.vertices[2] );
+        Pl3 p1( cell.vertices[0] + V3( 0, 0, 0.5 ), cell.vertices[1] + V3( 0, 0, 0.5 ), cell.vertices[2] + V3( 0, 0, 0.5 ) );
         
-        cout << Spherical_Cap( s, p ) << endl;
+        Pl3 p2( cell.vertices[0] + V3( 0, 0.5, 0 ), cell.vertices[1] + V3( 0, 0.5, 0 ), cell.vertices[4] + V3( 0, 0.5, 0 ) );
         
-        Circle3D c = Circular_Intersection_Of_Sphere_And_Plane( s, p );
+        Pl3 p3( cell.vertices[0], cell.vertices[1], cell.vertices[2] );
         
-        Pl3 pl2( cell.vertices[0], cell.vertices[3], cell.vertices[4] );
+        cout << Spherical_Cap( s, p1 ) << endl;
         
-        P3 p1, p2;
+        Pl3 p4( cell.vertices[0], cell.vertices[1], cell.vertices[4] );
         
-        Intersection_Pts_Of_Plane_And_Circle( pl2, c, p1, p2 );
-        
-        cout << p1 << endl;
-        cout << p2 << endl;
+        cout << General_Spherical_Wedge( s, p1, p2 ) << endl;
     }
     
     Print_Info( start_time, start );

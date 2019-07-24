@@ -25,6 +25,10 @@
 		EE0AFD1F22E76DFC00174226 /* Circular_Intersection_Of_Sphere_And_Plane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE0AFD1E22E76DFC00174226 /* Circular_Intersection_Of_Sphere_And_Plane.cpp */; };
 		EE0AFD2122E7715300174226 /* Partial_Cone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE0AFD2022E7715300174226 /* Partial_Cone.cpp */; };
 		EE0AFD2522E7721100174226 /* Intersection_Pts_Of_Plane_And_Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE0AFD2422E7721100174226 /* Intersection_Pts_Of_Plane_And_Circle.cpp */; };
+		EE113FE122E8783B000A75AC /* Angle_Between_Vectors3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE113FE022E8783B000A75AC /* Angle_Between_Vectors3D.cpp */; };
+		EE113FE522E89EF4000A75AC /* Spherical_Wedge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE113FE422E89EF4000A75AC /* Spherical_Wedge.cpp */; };
+		EE113FE722E8B6D7000A75AC /* General_Spherical_Wedge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE113FE622E8B6D7000A75AC /* General_Spherical_Wedge.cpp */; };
+		EE113FEB22E8B991000A75AC /* Regularised_Spherical_Wedge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE113FEA22E8B991000A75AC /* Regularised_Spherical_Wedge.cpp */; };
 		EE2CFB9721F8838100270503 /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE2CFB9621F8838100270503 /* Circle.cpp */; };
 		EE368DE822427DC5003A9AFD /* Interior_Pts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE368DE722427DC5003A9AFD /* Interior_Pts.cpp */; };
 		EE379184222EFF3F000B57C8 /* Frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE379183222EFF3F000B57C8 /* Frame.cpp */; };
@@ -157,6 +161,14 @@
 		EE0AFD2222E7716200174226 /* Partial_Cone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Partial_Cone.h; sourceTree = "<group>"; };
 		EE0AFD2322E771F900174226 /* Intersection_Pts_Of_Plane_And_Circle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Intersection_Pts_Of_Plane_And_Circle.h; sourceTree = "<group>"; };
 		EE0AFD2422E7721100174226 /* Intersection_Pts_Of_Plane_And_Circle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Intersection_Pts_Of_Plane_And_Circle.cpp; sourceTree = "<group>"; };
+		EE113FE022E8783B000A75AC /* Angle_Between_Vectors3D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Angle_Between_Vectors3D.cpp; sourceTree = "<group>"; };
+		EE113FE222E8784E000A75AC /* Angle_Between_Vectors3D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Angle_Between_Vectors3D.h; sourceTree = "<group>"; };
+		EE113FE322E89EE4000A75AC /* Spherical_Wedge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spherical_Wedge.h; sourceTree = "<group>"; };
+		EE113FE422E89EF4000A75AC /* Spherical_Wedge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Spherical_Wedge.cpp; sourceTree = "<group>"; };
+		EE113FE622E8B6D7000A75AC /* General_Spherical_Wedge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = General_Spherical_Wedge.cpp; sourceTree = "<group>"; };
+		EE113FE822E8B6E9000A75AC /* General_Spherical_Wedge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = General_Spherical_Wedge.h; sourceTree = "<group>"; };
+		EE113FE922E8B980000A75AC /* Regularised_Spherical_Wedge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Regularised_Spherical_Wedge.h; sourceTree = "<group>"; };
+		EE113FEA22E8B991000A75AC /* Regularised_Spherical_Wedge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Regularised_Spherical_Wedge.cpp; sourceTree = "<group>"; };
 		EE20D73B221449E600168C59 /* Same_Side.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Same_Side.h; sourceTree = "<group>"; };
 		EE20D73C22144C6600168C59 /* Correct_Side_Of_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Correct_Side_Of_Cell.h; sourceTree = "<group>"; };
 		EE2CFB9121F87C9600270503 /* Concave_Cone_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Concave_Cone_Area.h; sourceTree = "<group>"; };
@@ -596,10 +608,14 @@
 		EE55F2C922537C3800B8CA0B /* 3D */ = {
 			isa = PBXGroup;
 			children = (
+				EE113FE922E8B980000A75AC /* Regularised_Spherical_Wedge.h */,
+				EE113FE822E8B6E9000A75AC /* General_Spherical_Wedge.h */,
+				EE113FE222E8784E000A75AC /* Angle_Between_Vectors3D.h */,
 				EE0AFD2322E771F900174226 /* Intersection_Pts_Of_Plane_And_Circle.h */,
 				EE0AFD2222E7716200174226 /* Partial_Cone.h */,
 				EE0AFD1D22E76DE400174226 /* Circular_Intersection_Of_Sphere_And_Plane.h */,
 				EE0AFD1C22E76D9200174226 /* Cone.h */,
+				EE113FE322E89EE4000A75AC /* Spherical_Wedge.h */,
 				EE0AFD1722E7601200174226 /* Line_Of_Intersection_Of_Two_Planes.h */,
 				EE0AFD1622E75DFC00174226 /* Non_Centred_Spherical_Wedge.h */,
 				EE97B9FD22E611D5000F624F /* Sphere_Plane_Distance.h */,
@@ -620,6 +636,9 @@
 		EE55F2CA22537C4800B8CA0B /* 3D */ = {
 			isa = PBXGroup;
 			children = (
+				EE113FEA22E8B991000A75AC /* Regularised_Spherical_Wedge.cpp */,
+				EE113FE422E89EF4000A75AC /* Spherical_Wedge.cpp */,
+				EE113FE022E8783B000A75AC /* Angle_Between_Vectors3D.cpp */,
 				EE0AFD2422E7721100174226 /* Intersection_Pts_Of_Plane_And_Circle.cpp */,
 				EE0AFD2022E7715300174226 /* Partial_Cone.cpp */,
 				EE0AFD1E22E76DFC00174226 /* Circular_Intersection_Of_Sphere_And_Plane.cpp */,
@@ -629,6 +648,7 @@
 				EEFEC13522DCDDE500F02A23 /* Sphere_Area_Within_Cell.cpp */,
 				EE05803522E0CB3400254ED5 /* Spherical_Cap.cpp */,
 				EE0AFD1422E75DEB00174226 /* Non_Centred_Spherical_Wedge.cpp */,
+				EE113FE622E8B6D7000A75AC /* General_Spherical_Wedge.cpp */,
 				EE0AFD1A22E76D8800174226 /* Cone.cpp */,
 				EE97B9FE22E6120D000F624F /* Sphere_Plane_Distance.cpp */,
 				EE05803922E0CBB100254ED5 /* Plane.cpp */,
@@ -771,6 +791,7 @@
 				EECF358D222D83690079CD62 /* Three_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp in Sources */,
 				EE05191C2231552D0091755F /* Derivatives_Of_Data.cpp in Sources */,
 				EECF3577222D7EBA0079CD62 /* Circle_Area_Within_Cell.cpp in Sources */,
+				EE113FE122E8783B000A75AC /* Angle_Between_Vectors3D.cpp in Sources */,
 				EE09749221F0F1DD006A34D3 /* Edge.cpp in Sources */,
 				EE2CFB9721F8838100270503 /* Circle.cpp in Sources */,
 				EE03C5F8225E470800486026 /* Draw_Cells.cpp in Sources */,
@@ -797,7 +818,9 @@
 				EE55F2D122537FB400B8CA0B /* Cell3D.cpp in Sources */,
 				EE051920223182C70091755F /* Packing_Functions.cpp in Sources */,
 				EECF3587222D828A0079CD62 /* Order_Circles.cpp in Sources */,
+				EE113FE522E89EF4000A75AC /* Spherical_Wedge.cpp in Sources */,
 				EE3AADBE2228170B00E1FAE5 /* Norm.cpp in Sources */,
+				EE113FEB22E8B991000A75AC /* Regularised_Spherical_Wedge.cpp in Sources */,
 				EE55F2CE22537D1100B8CA0B /* Sphere.cpp in Sources */,
 				EE55F2D6225383EB00B8CA0B /* Input3D.cpp in Sources */,
 				EECF3563222D7BA20079CD62 /* Cell_Circle_Intersections.cpp in Sources */,
@@ -815,6 +838,7 @@
 				EECF357B222D7F700079CD62 /* Two_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp in Sources */,
 				EECF3565222D7BD10079CD62 /* Num_Vertices_Within_Circle.cpp in Sources */,
 				EECF3597222D84F50079CD62 /* Non_Inclusion_Three_Circle_Intersection_Area_Within_Cell.cpp in Sources */,
+				EE113FE722E8B6D7000A75AC /* General_Spherical_Wedge.cpp in Sources */,
 				EECF3581222D80300079CD62 /* Two_Circle_Intersection_Interior_Edge_Area.cpp in Sources */,
 				EECF3575222D7E6C0079CD62 /* Concave_Cone_Area.cpp in Sources */,
 				EECF3583222D81CF0079CD62 /* Two_Circle_Intersection_Area_Within_Cell.cpp in Sources */,

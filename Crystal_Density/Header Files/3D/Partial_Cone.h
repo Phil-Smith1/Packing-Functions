@@ -1,13 +1,5 @@
-//
-//  Partial_Cone.h
-//  Crystal_Density
-//
-//  Created by Phil Smith on 23/07/2019.
-//  Copyright © 2019 Phil Smith. All rights reserved.
-//
+#include "Circular_Intersection_Of_Sphere_And_Plane.h"
+#include "Intersection_Pts_Of_Plane_And_Circle.h"
+#include "Angle_Between_Vectors3D.h"
 
-#ifndef Partial_Cone_h
-#define Partial_Cone_h
-
-
-#endif /* Partial_Cone_h */
+double Partial_Cone ( Sphere const& s, Pl3 const& p1, Pl3 const& p2 );

@@ -21,6 +21,7 @@
 /Users/philsmith/Documents/Xcode Projects/Crystal_Density/build/Crystal_Density.build/Debug/Crystal_Density.build/Objects-normal/x86_64/Three_Circle_Intersection_Area_Excluded_By_Exterior_Edge.o
 /Users/philsmith/Documents/Xcode Projects/Crystal_Density/build/Crystal_Density.build/Debug/Crystal_Density.build/Objects-normal/x86_64/Derivatives_Of_Data.o
 /Users/philsmith/Documents/Xcode Projects/Crystal_Density/build/Crystal_Density.build/Debug/Crystal_Density.build/Objects-normal/x86_64/Circle_Area_Within_Cell.o
+/Users/philsmith/Documents/Xcode Projects/Crystal_Density/build/Crystal_Density.build/Debug/Crystal_Density.build/Objects-normal/x86_64/Angle_Between_Vectors3D.o
 /Users/philsmith/Documents/Xcode Projects/Crystal_Density/build/Crystal_Density.build/Debug/Crystal_Density.build/Objects-normal/x86_64/Edge.o
 /Users/philsmith/Documents/Xcode Projects/Crystal_Density/build/Crystal_Density.build/Debug/Crystal_Density.build/Objects-normal/x86_64/Circle.o
 /Users/philsmith/Documents/Xcode Projects/Crystal_Density/build/Crystal_Density.build/Debug/Crystal_Density.build/Objects-normal/x86_64/Draw_Cells.o
@@ -47,7 +48,9 @@
 /Users/philsmith/Documents/Xcode Projects/Crystal_Density/build/Crystal_Density.build/Debug/Crystal_Density.build/Objects-normal/x86_64/Cell3D.o
 /Users/philsmith/Documents/Xcode Projects/Crystal_Density/build/Crystal_Density.build/Debug/Crystal_Density.build/Objects-normal/x86_64/Packing_Functions.o
 /Users/philsmith/Documents/Xcode Projects/Crystal_Density/build/Crystal_Density.build/Debug/Crystal_Density.build/Objects-normal/x86_64/Order_Circles.o
+/Users/philsmith/Documents/Xcode Projects/Crystal_Density/build/Crystal_Density.build/Debug/Crystal_Density.build/Objects-normal/x86_64/Spherical_Wedge.o
 /Users/philsmith/Documents/Xcode Projects/Crystal_Density/build/Crystal_Density.build/Debug/Crystal_Density.build/Objects-normal/x86_64/Norm.o
+/Users/philsmith/Documents/Xcode Projects/Crystal_Density/build/Crystal_Density.build/Debug/Crystal_Density.build/Objects-normal/x86_64/Regularised_Spherical_Wedge.o
 /Users/philsmith/Documents/Xcode Projects/Crystal_Density/build/Crystal_Density.build/Debug/Crystal_Density.build/Objects-normal/x86_64/Sphere.o
 /Users/philsmith/Documents/Xcode Projects/Crystal_Density/build/Crystal_Density.build/Debug/Crystal_Density.build/Objects-normal/x86_64/Input3D.o
 /Users/philsmith/Documents/Xcode Projects/Crystal_Density/build/Crystal_Density.build/Debug/Crystal_Density.build/Objects-normal/x86_64/Cell_Circle_Intersections.o
@@ -65,6 +68,7 @@
 /Users/philsmith/Documents/Xcode Projects/Crystal_Density/build/Crystal_Density.build/Debug/Crystal_Density.build/Objects-normal/x86_64/Two_Circle_Intersection_Area_Excluded_By_Exterior_Edge.o
 /Users/philsmith/Documents/Xcode Projects/Crystal_Density/build/Crystal_Density.build/Debug/Crystal_Density.build/Objects-normal/x86_64/Num_Vertices_Within_Circle.o
 /Users/philsmith/Documents/Xcode Projects/Crystal_Density/build/Crystal_Density.build/Debug/Crystal_Density.build/Objects-normal/x86_64/Non_Inclusion_Three_Circle_Intersection_Area_Within_Cell.o
+/Users/philsmith/Documents/Xcode Projects/Crystal_Density/build/Crystal_Density.build/Debug/Crystal_Density.build/Objects-normal/x86_64/General_Spherical_Wedge.o
 /Users/philsmith/Documents/Xcode Projects/Crystal_Density/build/Crystal_Density.build/Debug/Crystal_Density.build/Objects-normal/x86_64/Two_Circle_Intersection_Interior_Edge_Area.o
 /Users/philsmith/Documents/Xcode Projects/Crystal_Density/build/Crystal_Density.build/Debug/Crystal_Density.build/Objects-normal/x86_64/Concave_Cone_Area.o
 /Users/philsmith/Documents/Xcode Projects/Crystal_Density/build/Crystal_Density.build/Debug/Crystal_Density.build/Objects-normal/x86_64/Two_Circle_Intersection_Area_Within_Cell.o
