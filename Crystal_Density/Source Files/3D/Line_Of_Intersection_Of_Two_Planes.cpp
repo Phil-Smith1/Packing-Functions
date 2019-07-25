@@ -13,7 +13,7 @@ L3 Line_Of_Intersection_Of_Two_Planes ( Pl3 const& p1, Pl3 const& p2 )
     double a, b, c;
     
     a = p1.b() * p2.c() - p1.c() * p2.b();
-    b = p1.a() * p2.c() - p1.c() * p2.a();
+    b = p1.c() * p2.a() - p1.a() * p2.c();
     c = p1.a() * p2.b() - p1.b() * p2.a();
     
     V3 v( a, b, c );

@@ -1,3 +1,4 @@
+#include "General_Spherical_Cone.h"
 #include "General_Spherical_Wedge.h"
 #include "Partial_Cone.h"
 #include "Cone.h"
@@ -105,13 +106,21 @@ int main ( int, char*[] )
         
         Pl3 p2( cell.vertices[0] + V3( 0, 0.5, 0 ), cell.vertices[1] + V3( 0, 0.5, 0 ), cell.vertices[4] + V3( 0, 0.5, 0 ) );
         
-        Pl3 p3( cell.vertices[0], cell.vertices[1], cell.vertices[2] );
+        Pl3 p3( cell.vertices[0], V3( 1, 0, 0 ) );
         
-        cout << Spherical_Cap( s, p1 ) << endl;
+        if (p3.oriented_side( P3( 1, 0, 0 ) ) != ON_POSITIVE_SIDE) p3 = p3.opposite();
         
-        Pl3 p4( cell.vertices[0], cell.vertices[1], cell.vertices[4] );
+        Pl3 p4( cell.vertices[0], V3( 0, 1, 0 ) );
         
-        cout << General_Spherical_Wedge( s, p1, p2 ) << endl;
+        if (p4.oriented_side( P3( 0, 1, 0 ) ) != ON_POSITIVE_SIDE) p4 = p4.opposite();
+        
+        Pl3 p5( cell.vertices[0], V3( 0, 0, 1 ) );
+        
+        if (p5.oriented_side( P3( 0, 0, 2 ) ) != ON_POSITIVE_SIDE) p5 = p5.opposite();
+        
+        cout << General_Spherical_Wedge( s, p3, p4 ) << endl;
+        
+        cout << General_Spherical_Cone( s, p3, p4, p5 ) << endl;
     }
     
     Print_Info( start_time, start );

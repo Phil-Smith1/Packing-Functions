@@ -33,14 +33,20 @@ void Make_Cell3D ( Input3D const& input, Cell3D& cell )
     cell.edges.push_back( Edge3D( L3( cell.vertices[2], cell.vertices[6] ), cell.vertices[2], cell.vertices[6], 10 ) );
     cell.edges.push_back( Edge3D( L3( cell.vertices[3], cell.vertices[7] ), cell.vertices[3], cell.vertices[7], 11 ) );
     
-    cell.planes.reserve( 8 );
+    cell.planes.reserve( 6 );
     
-    cell.planes.push_back( Plane( cell.vertices[0], cell.vertices[1], cell.vertices[2] ) );
-    cell.planes.push_back( Plane( cell.vertices[0], cell.vertices[1], cell.vertices[4] ) );
-    cell.planes.push_back( Plane( cell.vertices[4], cell.vertices[5], cell.vertices[6] ) );
-    cell.planes.push_back( Plane( cell.vertices[2], cell.vertices[3], cell.vertices[6] ) );
-    cell.planes.push_back( Plane( cell.vertices[0], cell.vertices[3], cell.vertices[4] ) );
-    cell.planes.push_back( Plane( cell.vertices[1], cell.vertices[2], cell.vertices[5] ) );
+    cell.planes.push_back( Pl3( cell.vertices[0], cell.vertices[1], cell.vertices[2] ) );
+    if (cell.planes[0].oriented_side( cell.vertices[4] ) == ON_NEGATIVE_SIDE) cell.planes[0] = cell.planes[0].opposite();
+    cell.planes.push_back( Pl3( cell.vertices[0], cell.vertices[1], cell.vertices[4] ) );
+    if (cell.planes[1].oriented_side( cell.vertices[3] ) == ON_NEGATIVE_SIDE) cell.planes[1] = cell.planes[1].opposite();
+    cell.planes.push_back( Pl3( cell.vertices[4], cell.vertices[5], cell.vertices[6] ) );
+    if (cell.planes[2].oriented_side( cell.vertices[0] ) == ON_NEGATIVE_SIDE) cell.planes[2] = cell.planes[2].opposite();
+    cell.planes.push_back( Pl3( cell.vertices[2], cell.vertices[3], cell.vertices[6] ) );
+    if (cell.planes[3].oriented_side( cell.vertices[0] ) == ON_NEGATIVE_SIDE) cell.planes[3] = cell.planes[3].opposite();
+    cell.planes.push_back( Pl3( cell.vertices[0], cell.vertices[3], cell.vertices[4] ) );
+    if (cell.planes[4].oriented_side( cell.vertices[1] ) == ON_NEGATIVE_SIDE) cell.planes[4] = cell.planes[4].opposite();
+    cell.planes.push_back( Pl3( cell.vertices[1], cell.vertices[2], cell.vertices[5] ) );
+    if (cell.planes[5].oriented_side( cell.vertices[0] ) == ON_NEGATIVE_SIDE) cell.planes[5] = cell.planes[5].opposite();
     
     Cell_Volume( cell );
 }
