@@ -14,7 +14,7 @@ double Tetrahedron_Volume ( P3 const& p1, P3 const& p2, P3 const& p3, P3 const& 
     
     double volume = v1.y() * v2.z() * v3.x() - v1.z() * v2.y() * v3.x() + v1.z() * v2.x() * v3.y() - v1.x() * v2.z() * v3.y() + v1.x() * v2.y() * v3.z() - v1.y() * v2.x() * v3.z();
     
-    volume = volume / (double)6;
+    volume = abs( volume / (double)6 );
     
     return volume;
 }

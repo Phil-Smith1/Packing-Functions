@@ -1,3 +1,4 @@
+#include "Sphere_Volume_Within_Cell.h"
 #include "General_Spherical_Cone.h"
 #include "General_Spherical_Wedge.h"
 #include "Partial_Cone.h"
@@ -100,27 +101,41 @@ int main ( int, char*[] )
         
         Make_Cell3D( input3D, cell );
         
-        Sphere s( cell.vertices[0], 1 );
+        double ab = 1;
+        
+        Sphere s( cell.vertices[0] + V3( ab, ab, ab ), 1 );
         
         Pl3 p1( cell.vertices[0] + V3( 0, 0, 0.5 ), cell.vertices[1] + V3( 0, 0, 0.5 ), cell.vertices[2] + V3( 0, 0, 0.5 ) );
         
         Pl3 p2( cell.vertices[0] + V3( 0, 0.5, 0 ), cell.vertices[1] + V3( 0, 0.5, 0 ), cell.vertices[4] + V3( 0, 0.5, 0 ) );
         
-        Pl3 p3( cell.vertices[0], V3( 1, 0, 0 ) );
+        double aa = 0.576;
+        
+        Pl3 p3( cell.vertices[0] + V3( aa, 0, 0 ), V3( 1, 0, 0 ) );
         
         if (p3.oriented_side( P3( 1, 0, 0 ) ) != ON_POSITIVE_SIDE) p3 = p3.opposite();
         
-        Pl3 p4( cell.vertices[0], V3( 0, 1, 0 ) );
+        Pl3 p4( cell.vertices[0] + V3( 0, aa, 0 ), V3( 0, 1, 0 ) );
         
         if (p4.oriented_side( P3( 0, 1, 0 ) ) != ON_POSITIVE_SIDE) p4 = p4.opposite();
         
-        Pl3 p5( cell.vertices[0], V3( 0, 0, 1 ) );
+        Pl3 p5( cell.vertices[0] + V3( 0, 0, aa ), V3( 0, 0, 1 ) );
         
-        if (p5.oriented_side( P3( 0, 0, 2 ) ) != ON_POSITIVE_SIDE) p5 = p5.opposite();
+        if (p5.oriented_side( P3( 0, 0, 1 ) ) != ON_POSITIVE_SIDE) p5 = p5.opposite();
         
-        cout << General_Spherical_Wedge( s, p3, p4 ) << endl;
+        //cout << General_Spherical_Wedge( s, p3, p4 ) << endl;
         
-        cout << General_Spherical_Cone( s, p3, p4, p5 ) << endl;
+        //cout << General_Spherical_Cone( s, p3, p4, p5 ) << endl;
+        
+        cout << Sphere_Volume_Within_Cell( cell, s ) << endl << endl;
+        
+        //cout << General_Spherical_Cone( s, cell.planes[0].opposite(), cell.planes[1].opposite(), cell.planes[4].opposite() ) << endl;
+        
+        //cout << General_Spherical_Cone( s, cell.planes[0].opposite(), cell.planes[1].opposite(), cell.planes[5].opposite() ) << endl;
+        
+        std::cout << General_Spherical_Wedge( s, cell.planes[0].opposite(), cell.planes[1].opposite() ) << std::endl;
+        
+        std::cout << General_Spherical_Cone( s, cell.planes[0].opposite(), cell.planes[1].opposite(), cell.planes[4].opposite() ) << std::endl;
     }
     
     Print_Info( start_time, start );

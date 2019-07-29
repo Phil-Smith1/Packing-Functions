@@ -12,6 +12,8 @@ double General_Spherical_Cone ( Sphere const& s, Pl3 const& p1, Pl3 const& p2, P
     
     P3 vertex = Intersection_Of_Two_Lines3D( l1, l2 );
     
+    if (Norm( s.c, vertex) >= s.r) return 0;
+    
     Circle3D c = Circular_Intersection_Of_Sphere_And_Plane( s, p1 );
     
     P3 pt1, pt2, pt3, i1, i2;
