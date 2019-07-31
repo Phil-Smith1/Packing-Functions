@@ -8,12 +8,43 @@ double General_Spherical_Wedge ( Sphere const& s, Pl3 const& p1, Pl3 const& p2 )
     
     double d = sqrt( squared_distance( s.c, l ) );
     
-    if (d >= s.r) return 0;
+    if (d >= s.r - 1e-6)
+    {
+        double sp1 = Sphere_Plane_Distance( s, p1 ), sp2 = Sphere_Plane_Distance( s, p2 );
+        
+        if (sp1 <= -s.r || sp2 <= -s.r) return 0;
+        
+        else if (sp1 >= s.r && sp2 >= s.r) return s.vol;
+        
+        else if (sp1 >= s.r) return Spherical_Cap( s, p2 );
+        
+        else if (sp2 >= s.r) return Spherical_Cap( s, p1 );
+        
+        else
+        {
+            double volume = Spherical_Cap( s, p1 ) + Spherical_Cap( s, p2 ) - s.vol;
+            
+            if (volume < 0) return 0;
+            
+            return volume;
+        }
+    }
     
     if (d < tiny_num) return Spherical_Wedge( s, p1, p2 );
     
-    else if (squared_distance( s.c, p1 ) < tiny_num) return Regularised_Spherical_Wedge( s, p2, p1 );
-    else if (squared_distance( s.c, p2 ) < tiny_num) return Regularised_Spherical_Wedge( s, p1, p2 );
+    else if (squared_distance( s.c, p1 ) < tiny_num)
+    {
+        if (p2.oriented_side( s.c ) == ON_POSITIVE_SIDE) return 0.5 * s.vol - Regularised_Spherical_Wedge( s, p2.opposite(), p1 );
+        
+        else return Regularised_Spherical_Wedge( s, p2, p1 );
+    }
+    
+    else if (squared_distance( s.c, p2 ) < tiny_num)
+    {
+        if (p1.oriented_side( s.c ) == ON_POSITIVE_SIDE) return 0.5 * s.vol - Regularised_Spherical_Wedge( s, p1.opposite(), p2 );
+        
+        else return Regularised_Spherical_Wedge( s, p1, p2 );
+    }
     
     P3 pt1, pt2;
     

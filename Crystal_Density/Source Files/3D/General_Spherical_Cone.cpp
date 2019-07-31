@@ -12,7 +12,45 @@ double General_Spherical_Cone ( Sphere const& s, Pl3 const& p1, Pl3 const& p2, P
     
     P3 vertex = Intersection_Of_Two_Lines3D( l1, l2 );
     
-    if (Norm( s.c, vertex) >= s.r) return 0;
+    if (Norm( s.c, vertex) >= s.r)
+    {
+        double sp1 = Sphere_Plane_Distance( s, p1 ), sp2 = Sphere_Plane_Distance( s, p2 ), sp3 = Sphere_Plane_Distance( s, p3 );
+        
+        if (sp1 <= -s.r || sp2 <= -s.r || sp3 <= -s.r) return 0;
+        
+        else if (sp1 >= s.r && sp2 >= s.r && sp3 >= s.r) return s.vol;
+        
+        else if (sp1 >= s.r && sp2 >= s.r) return Spherical_Cap( s, p3 );
+        
+        else if (sp1 >= s.r && sp3 >= s.r) return Spherical_Cap( s, p2 );
+        
+        else if (sp2 >= s.r && sp3 >= s.r) return Spherical_Cap( s, p1 );
+        
+        else if (sp1 >= s.r) return General_Spherical_Wedge( s, p2, p3 );
+        
+        else if (sp2 >= s.r) return General_Spherical_Wedge( s, p1, p3 );
+        
+        else if (sp3 >= s.r) return General_Spherical_Wedge( s, p1, p2 );
+        
+        else
+        {
+            Circle3D c = Circular_Intersection_Of_Sphere_And_Plane( s, p1 );
+            
+            if (p2.oriented_side( c.c ) == ON_NEGATIVE_SIDE || p3.oriented_side( c.c ) == ON_NEGATIVE_SIDE) return 0;
+            
+            c = Circular_Intersection_Of_Sphere_And_Plane( s, p2 );
+            
+            if (p1.oriented_side( c.c ) == ON_NEGATIVE_SIDE || p3.oriented_side( c.c ) == ON_NEGATIVE_SIDE) return 0;
+            
+            c = Circular_Intersection_Of_Sphere_And_Plane( s, p3 );
+            
+            if (p1.oriented_side( c.c ) == ON_NEGATIVE_SIDE || p2.oriented_side( c.c ) == ON_NEGATIVE_SIDE) return 0;
+            
+            double volume = s.vol - Spherical_Cap( s, p1.opposite() ) - Spherical_Cap( s, p2.opposite() ) - Spherical_Cap( s, p3.opposite() ) + General_Spherical_Wedge( s, p1.opposite(), p2.opposite() ) + General_Spherical_Wedge( s, p1.opposite(), p3.opposite() ) + General_Spherical_Wedge( s, p2.opposite(), p3.opposite() );
+            
+            return volume;
+        }
+    }
     
     Circle3D c = Circular_Intersection_Of_Sphere_And_Plane( s, p1 );
     

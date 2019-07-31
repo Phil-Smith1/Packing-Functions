@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Sphere.h"
 #include "Angle_Between_Vectors3D.h"
 

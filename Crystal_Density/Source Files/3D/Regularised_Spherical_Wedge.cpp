@@ -4,6 +4,8 @@
 
 #include <CGAL/squared_distance_3.h>
 
+// p2 plane goes through s.c.
+
 double Regularised_Spherical_Wedge ( Sphere const& s, Pl3 const& p1, Pl3 const& p2 )
 {
     L3 l = Line_Of_Intersection_Of_Two_Planes( p1, p2 );

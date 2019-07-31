@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Spherical_Wedge.h"
 #include "Regularised_Spherical_Wedge.h"
 #include "Intersection_Of_Line_And_Plane.h"

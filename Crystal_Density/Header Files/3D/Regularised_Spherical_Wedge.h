@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Line_Of_Intersection_Of_Two_Planes.h"
 #include "Angle_Between_Vectors3D.h"
 #include "Spherical_Cap.h"

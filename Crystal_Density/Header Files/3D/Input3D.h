@@ -16,6 +16,7 @@ class Input3D
     
     bool interior_points;
     int sample_rate, deformation_type, iterations;
+    double max_radius;
     string function_type, lattice_type;
     vector<double> scale;
     vector<P3> pts, interior_pts;

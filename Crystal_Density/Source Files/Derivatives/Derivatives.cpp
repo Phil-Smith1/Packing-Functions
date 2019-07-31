@@ -1,9 +1,7 @@
-#include <sstream>
 #include <fstream>
+#include <sstream>
 
 #include "Derivatives_Of_Data.h"
-
-#include <iostream>
 
 void Derivatives ( string const& directory, string const& filename )
 {
