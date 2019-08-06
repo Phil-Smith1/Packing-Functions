@@ -1,4 +1,5 @@
 #include "Circle.h"
+#include "Norm3D.h"
 
 typedef K::Plane_3 Pl3;
 
@@ -10,7 +11,7 @@ const double tiny_num = 1e-10;
 void Intersection_Pts_Of_Plane_And_Circle ( Pl3 const& p, Circle3D const& c, P3& pt1, P3& pt2 )
 {
     P3 pt = p.point();
-    V3 v = p.orthogonal_vector();
+    V3 v = p.orthogonal_vector() / (double)Norm( p.orthogonal_vector() );
     V3 b1 = c.v1;
     V3 b2 = c.v2;
     

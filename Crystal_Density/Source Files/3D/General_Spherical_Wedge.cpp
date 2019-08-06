@@ -1,6 +1,8 @@
 #include "Spherical_Wedge.h"
 #include "Regularised_Spherical_Wedge.h"
 #include "Intersection_Of_Line_And_Plane.h"
+#include "Circular_Intersection_Of_Sphere_And_Plane.h"
+#include "Intersection_Of_Plane_And_Circle.h"
 
 double General_Spherical_Wedge ( Sphere const& s, Pl3 const& p1, Pl3 const& p2 )
 {
@@ -22,11 +24,16 @@ double General_Spherical_Wedge ( Sphere const& s, Pl3 const& p1, Pl3 const& p2 )
         
         else
         {
-            double volume = Spherical_Cap( s, p1 ) + Spherical_Cap( s, p2 ) - s.vol;
+            Circle3D c1 = Circular_Intersection_Of_Sphere_And_Plane( s, p1 );
+            Circle3D c2 = Circular_Intersection_Of_Sphere_And_Plane( s, p2 );
             
-            if (volume < 0) return 0;
+            if (p2.oriented_side( c1.c ) == ON_NEGATIVE_SIDE && p1.oriented_side( c2.c ) == ON_NEGATIVE_SIDE) return 0;
             
-            return volume;
+            else if (p2.oriented_side( c1.c ) == ON_NEGATIVE_SIDE) return Spherical_Cap( s, p2 );
+            
+            else if (p1.oriented_side( c2.c ) == ON_NEGATIVE_SIDE) return Spherical_Cap( s, p1 );
+            
+            else return Spherical_Cap( s, p1 ) + Spherical_Cap( s, p2 ) - s.vol;
         }
     }
     

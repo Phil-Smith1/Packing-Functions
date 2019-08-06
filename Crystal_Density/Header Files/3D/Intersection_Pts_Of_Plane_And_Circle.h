@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Circle.h"
+#include "Norm3D.h"
 
 typedef K::Plane_3 Pl3;
 

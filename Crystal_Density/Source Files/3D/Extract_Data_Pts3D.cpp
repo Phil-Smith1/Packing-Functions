@@ -12,7 +12,7 @@ void Extract_Data_Pts3D ( string const& directory, Cell3D const& cell, int sampl
     {
         double radius = counter / (double)sample_rate;
         
-        ofs << setprecision( 10 ) << radius << " " << First_Order_Total_Volume( cell, radius ) << endl;
+        ofs << setprecision( 10 ) << radius << " " << First_Order_Total_Volume( cell, radius ) / (double)cell.vol << endl;
     }
     
     ofs.close();

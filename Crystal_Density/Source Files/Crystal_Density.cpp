@@ -21,7 +21,7 @@ const string lattice_type = "Square"; // Square, Triangular, Custom.
 
 vector<P2> pts = { P2( 0, 1 ), P2( 1, 0 ) };
 
-vector<P3> pts3D = { P3( 1, 0, 0 ), P3( 0, 1, 0 ), P3( 0, 0, 1 ) };
+vector<P3> pts3D = { P3( 1, 0, 0 ), P3( 0, 1, 0 ), P3( 0.5, 0, 0.5 * sqrt( (double)3 ) ) };
 
 vector<double> scale = { 1, 1, 1 };
 
