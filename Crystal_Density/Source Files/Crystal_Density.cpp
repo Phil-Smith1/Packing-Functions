@@ -1,47 +1,13 @@
+#include "Parameters.h"
+#include "Volume_Of_Intersection_Of_Two_Spheres.h"
 #include "Packing_Functions3D.h"
-#include "Make_Cell3D.h"
+#include "Make_Cells3D.h"
 #include "Deformation.h"
 #include "Cell_Data.h"
 #include "Draw_Cells.h"
 #include "Packing_Functions.h"
 #include "GIF.h"
 #include "Print_Info.h"
-
-const string directory = "/Users/philsmith/Documents/Xcode Projects/Crystal_Density/2D/";
-
-const string directory3D = "/Users/philsmith/Documents/Xcode Projects/Crystal_Density/3D/";
-
-bool twoD = false;
-
-bool threeD = true;
-
-const string function_type = "Exact"; // Exact, At_Least.
-
-const string lattice_type = "Square"; // Square, Triangular, Custom.
-
-vector<P2> pts = { P2( 0, 1 ), P2( 1, 0 ) };
-
-vector<P3> pts3D = { P3( 1, 0, 0 ), P3( 0, 1, 0 ), P3( 0.5, 0, 0.5 * sqrt( (double)3 ) ) };
-
-vector<double> scale = { 1, 1, 1 };
-
-bool interior_points = true;
-
-vector<P2> interior_pts = { /*P2( 0.5, 0.5 )*//*P2( 0.25, 0.25 ), P2( 0.75, 0.75 )*/ };
-
-vector<P3> interior_pts3D;
-
-int deformation_type = 2; // 0: No deformation; 1: Square to Triangular; 2: Interior point maps out semicircle; 3: Interior point maps out diagonal 1; 4: Interior point maps out diagonal 2.
-
-int iterations = 101;
-
-int sample_rate = 300;
-
-bool draw_cell = true;
-
-Input3D input3D( function_type, lattice_type, pts3D, scale, interior_points, interior_pts3D, deformation_type, iterations, sample_rate );
-
-Input input( function_type, lattice_type, pts, scale, interior_points, interior_pts, deformation_type, iterations, sample_rate );
 
 int main ( int, char*[] )
 {
@@ -92,11 +58,18 @@ int main ( int, char*[] )
     
     if (threeD)
     {
-        Cell3D cell;
+        vector<Cell3D> cells;
         
-        Make_Cell3D( input3D, cell );
+        Make_Cells3D( input3D, cells );
         
-        Packing_Functions3D( directory3D, input3D, cell );
+        for (int counter = 0; counter < cells.size(); ++counter)
+        {
+            cout << "Iteration: " << counter << "." << endl;
+            
+            //Packing_Functions3D( directory3D, input3D, cells[counter], counter );
+        }
+        
+        if (input3D.deformation_type != 0) GIF( directory3D + "Graphs/Deformation", "Deform", input3D.iterations );
     }
     
     Print_Info( start_time, start );

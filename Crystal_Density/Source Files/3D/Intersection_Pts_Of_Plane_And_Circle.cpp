@@ -34,6 +34,13 @@ void Intersection_Pts_Of_Plane_And_Circle ( Pl3 const& p, Circle3D const& c, P3&
     
     double theta2 = pow( -1, n ) * PI - thetaplusalpha - alpha;
     
+    if (abs( k2 * sin( theta2 ) + k3 * cos( theta2 ) + k1 ) > tiny_num)
+    {
+        alpha *= -1;
+        theta1 = thetaplusalpha - alpha;
+        theta2 = pow( -1, n ) * PI - thetaplusalpha - alpha;
+    }
+    
     pt1 = c.c + sin( theta1 ) * b1 + cos( -theta1 ) * b2;
     pt2 = c.c + sin( theta2 ) * b1 + cos( -theta2 ) * b2;
 }

@@ -11,6 +11,7 @@ Input3D::Input3D ( string const& f_t, string const& l_t, vector<P3>const& p, vec
     deformation_type = d_t;
     iterations = i;
     sample_rate = s_r;
+    max_radius = 0;
 }
 
 

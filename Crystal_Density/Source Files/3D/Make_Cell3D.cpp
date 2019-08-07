@@ -1,6 +1,5 @@
 #include "Input3D.h"
 #include "Cell_Volume.h"
-#include "Norm3D.h"
 
 void Make_Cell3D ( Input3D& input, Cell3D& cell )
 {
@@ -18,6 +17,16 @@ void Make_Cell3D ( Input3D& input, Cell3D& cell )
     cell.pts.reserve( 8 );
     
     cell.pts = cell.vertices;
+    
+    if (input.interior_points)
+    {
+        cell.pts.reserve( 8 + input.interior_pts.size() );
+        
+        for (int counter = 0; counter < input.interior_pts.size(); ++counter)
+        {
+            cell.pts.push_back( input.interior_pts[counter] );
+        }
+    }
     
     cell.edges.reserve( 12 );
     
@@ -50,6 +59,4 @@ void Make_Cell3D ( Input3D& input, Cell3D& cell )
     if (cell.planes[5].oriented_side( cell.vertices[0] ) == ON_NEGATIVE_SIDE) cell.planes[5] = cell.planes[5].opposite();
     
     Cell_Volume( cell );
-    
-    input.max_radius = Norm( cell.vertices[0], cell.vertices[6] );
 }

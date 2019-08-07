@@ -4,6 +4,11 @@
 
 #include <CGAL/squared_distance_3.h>
 
+#ifndef tiny_number
+#define tiny_number
+const double tiny_num = 1e-10;
+#endif
+
 // p2 plane goes through s.c.
 
 double Regularised_Spherical_Wedge ( Sphere const& s, Pl3 const& p1, Pl3 const& p2 )
@@ -17,13 +22,15 @@ double Regularised_Spherical_Wedge ( Sphere const& s, Pl3 const& p1, Pl3 const& 
     
     double angle = Angle_Between_Vectors( pt1, pt2 );
     
-    if (angle <= 0.5 * PI)
+    if (abs( angle - 0.5 * PI ) < tiny_num) return 0.5 * Spherical_Cap( s, p1 );
+    
+    if (angle < 0.5 * PI)
     {
         double a = d * sin( angle );
         double b = sqrt( s.r * s.r - d * d );
         double c = d * cos( angle );
         
-        double volume = a * b * c / (double)3 + a * (a * a / (double)3 - s.r * s.r) * atan( b / (double)c) + 2 * s.r * s.r * s.r * atan( b * sin( angle ) / (double)(s.r * cos( angle ))) / (double)3;
+        double volume = a * b * c / (double)3 + a * (a * a / (double)3 - s.r * s.r) * atan( b / (double)c ) + 2 * s.r * s.r * s.r * atan( b * sin( angle ) / (double)(s.r * cos( angle )) ) / (double)3;
         
         return volume;
     }
@@ -36,7 +43,7 @@ double Regularised_Spherical_Wedge ( Sphere const& s, Pl3 const& p1, Pl3 const& 
         double b = sqrt( s.r * s.r - d * d );
         double c = d * cos( angle );
         
-        double volume = a * b * c / (double)3 + a * (a * a / (double)3 - s.r * s.r) * atan( b / (double)c) + 2 * s.r * s.r * s.r * atan( b * sin( angle ) / (double)(s.r * cos( angle ))) / (double)3;
+        double volume = a * b * c / (double)3 + a * (a * a / (double)3 - s.r * s.r) * atan( b / (double)c ) + 2 * s.r * s.r * s.r * atan( b * sin( angle ) / (double)(s.r * cos( angle )) ) / (double)3;
         
         return Spherical_Cap( s, p1 ) - volume;
     }

@@ -18,7 +18,7 @@ L3 Line_Of_Intersection_Of_Two_Planes ( Pl3 const& p1, Pl3 const& p2 )
     
     V3 v( a, b, c );
     
-    if (abs( v.z() ) > abs( v.y() ) && abs( v.z() ) > abs( v.x() ))
+    if (abs( v.z() ) >= abs( v.y() ) && abs( v.z() ) >= abs( v.x() ))
     {
         a = (p1.b() * p2.d() - p2.b() * p1.d()) / (double)(p1.a() * p2.b() - p2.a() * p1.b());
         b = (p1.d() * p2.a() - p2.d() * p1.a()) / (double)(p1.a() * p2.b() - p2.a() * p1.b());
@@ -30,7 +30,7 @@ L3 Line_Of_Intersection_Of_Two_Planes ( Pl3 const& p1, Pl3 const& p2 )
         return l;
     }
     
-    else if (abs( v.y() ) > abs( v.z() ) && abs( v.y() ) > abs( v.x() ))
+    else if (abs( v.y() ) >= abs( v.z() ) && abs( v.y() ) >= abs( v.x() ))
     {
         a = (p1.c() * p2.d() - p2.c() * p1.d()) / (double)(p1.a() * p2.c() - p2.a() * p1.c());
         c = (p1.d() * p2.a() - p2.d() * p1.a()) / (double)(p1.a() * p2.c() - p2.a() * p1.c());

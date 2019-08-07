@@ -41,9 +41,10 @@ void Plot_Derivatives3D ( string const& directory, double max_radius )
     gp << "set rmargin 2\n";
     
     gp << "set ylabel 'f_1\u2032(r)' font ', 20' offset -1.5, 0\n";
-    gp << "set xlabel 'Radius of Disks' font ', 20' offset 0, -0.3\n";
+    gp << "set xlabel 'Radius of Balls' font ', 20' offset 0, -0.3\n";
     
     gp << "set xrange [0: " << max_radius << "]\n";
+    
     gp << "set xtics font ', 18'\n";
     gp << "set ytics font ', 18'\n";
     
@@ -74,7 +75,43 @@ void Plot_Derivatives3D ( string const& directory, double max_radius )
     gp << "plot 'Data/F_1_Second_Derivs.txt' using 1:2 notitle smooth csplines ls 1\n";
 }
 
-void Plot_Graph3D ( string const& directory, Input3D const& input )
+void Plot_PNG3D ( string const& directory, double max_radius, int iter )
+{
+    Gnuplot gp;
+    
+    gp << "cd \"" << directory << "\"\n";
+    
+    gp << "set terminal pngcairo size 600,350\n";
+    
+    gp << "set border 3\n";
+    gp << "set grid\n";
+    gp << "set bmargin 4.5\n";
+    gp << "set lmargin 8.5\n";
+    gp << "set tmargin 2\n";
+    gp << "set rmargin 2\n";
+    
+    gp << "set ylabel 'f_n(r)' font ', 20' offset -0.5, 0\n";
+    gp << "set xlabel 'Radius of Balls' font ', 20' offset 0, -0.3\n";
+    
+    gp << "set xrange [0: " << max_radius << "]\n";
+    gp << "set yrange [0: 9.01]\n";
+    gp << "set xtics font ', 18'\n";
+    gp << "set ytics font ', 18'\n";
+    
+    gp << "set key horizontal tmargin c font ', 18'\n";
+    
+    gp << "set style line 1 lc rgb '#0d61ec' lw 2\n";
+    gp << "set style line 2 lc rgb '#24ae1d' lw 2\n";
+    gp << "set style line 3 lc rgb '#ffae00' lw 2\n";
+    gp << "set style line 4 lc rgb '#e70000' lw 2\n";
+    gp << "set style line 5 lc rgb '#000000' pt 7 ps 0.5\n";
+    
+    gp << "set output \"Graphs/Deformation/Deform" << iter << ".png\"\n";
+    
+    gp << "plot 'Data/Results.txt' using 1:2 smooth csplines ls 1 title '1', 'Data/Derivative_Critical_Pts.txt' using 1:2 notitle ls 5\n";
+}
+
+void Plot_PDF3D ( string const& directory, double max_radius )
 {
     Gnuplot gp;
     
@@ -92,8 +129,8 @@ void Plot_Graph3D ( string const& directory, Input3D const& input )
     gp << "set ylabel 'f_n(r)' font ', 20' offset -0.5, 0\n";
     gp << "set xlabel 'Radius of Balls' font ', 20' offset 0, -0.3\n";
     
-    gp << "set xrange [0: " << input.max_radius << "]\n";
-    gp << "set yrange [0: 8.01]\n";
+    gp << "set xrange [0: " << max_radius << "]\n";
+    gp << "set yrange [0: 9.01]\n";
     gp << "set xtics font ', 18'\n";
     gp << "set ytics font ', 18'\n";
     
@@ -103,12 +140,21 @@ void Plot_Graph3D ( string const& directory, Input3D const& input )
     gp << "set style line 2 lc rgb '#24ae1d' lw 3\n";
     gp << "set style line 3 lc rgb '#ffae00' lw 3\n";
     gp << "set style line 4 lc rgb '#e70000' lw 3\n";
-    gp << "set style line 6 lc rgb '#d500ff' lw 3\n";
     gp << "set style line 5 lc rgb '#000000' pt 7 ps 0.5\n";
     
     gp << "set output \"Graphs/Packing Functions.pdf\"\n";
     
     gp << "plot 'Data/Results.txt' using 1:2 smooth csplines ls 1 title '1','Data/Derivative_Critical_Pts.txt' using 1:2 notitle ls 5\n";
+}
+
+void Plot_Graph3D ( string const& directory, Input3D const& input, int iter )
+{
+    if (input.deformation_type != 0) Plot_PNG3D( directory, input.max_radius, iter );
     
-    Plot_Derivatives3D( directory, input.max_radius );
+    else
+    {
+        Plot_PDF3D( directory, input.max_radius );
+        
+        Plot_Derivatives3D( directory, input.max_radius );
+    }
 }
