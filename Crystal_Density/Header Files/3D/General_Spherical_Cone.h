@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Spherical_Cap.h"
+#include "Parallel_Lines.h"
 #include "General_Spherical_Wedge.h"
 #include "Intersection_Of_Two_Lines3D.h"
 #include "Circular_Intersection_Of_Sphere_And_Plane.h"

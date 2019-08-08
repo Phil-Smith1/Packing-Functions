@@ -1,6 +1,7 @@
 #include <fstream>
 
 #include "First_Order_Total_Volume.h"
+#include "Second_Order_Total_Volume.h"
 
 void Extract_Data_Pts3D ( string const& directory, Cell3D const& cell, int sample_rate, double max_radius )
 {
@@ -12,7 +13,11 @@ void Extract_Data_Pts3D ( string const& directory, Cell3D const& cell, int sampl
     {
         double radius = counter / (double)sample_rate;
         
-        ofs << setprecision( 10 ) << radius << " " << First_Order_Total_Volume( cell, radius ) / (double)cell.vol << endl;
+        double first_order_total_volume = First_Order_Total_Volume( cell, radius );
+        
+        double second_order_total_volume = Second_Order_Total_Volume( cell, radius );
+        
+        ofs << setprecision( 10 ) << radius << " " << second_order_total_volume / (double)cell.vol << endl;
     }
     
     ofs.close();

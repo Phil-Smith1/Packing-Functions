@@ -19,7 +19,7 @@ bool Intersection_Of_Line_And_Plane ( Pl3 const& p, L3 const& l, P3& pt )
     
     double dot_product = n.x() * d.x() + n.y() * d.y() + n.z() * d.z();
     
-    if (dot_product < tiny_num) return false;
+    if (abs( dot_product ) < tiny_num) return false;
     
     else
     {

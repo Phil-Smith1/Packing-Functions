@@ -1,3 +1,4 @@
+#include "Parallel_Planes.h"
 #include "Spherical_Wedge.h"
 #include "Regularised_Spherical_Wedge.h"
 #include "Intersection_Of_Line_And_Plane.h"
@@ -6,6 +7,26 @@
 
 double General_Spherical_Wedge ( Sphere const& s, Pl3 const& p1, Pl3 const& p2 )
 {
+    if (Parallel_Planes( p1, p2 ))
+    {
+        if (p2.oriented_side( p1.point() ) == ON_ORIENTED_BOUNDARY)
+        {
+            P3 pt = P3( 0, 0, 0 ) + p1.orthogonal_vector();
+            
+            if (p2.oriented_side( pt ) == ON_NEGATIVE_SIDE) return 0;
+            
+            else return Spherical_Cap( s, p1 );
+        }
+        
+        else if (p2.oriented_side( p1.point() ) == ON_NEGATIVE_SIDE && p1.oriented_side( p2.point() ) == ON_NEGATIVE_SIDE) return 0;
+        
+        else if (p2.oriented_side( p1.point() ) == ON_NEGATIVE_SIDE) return Spherical_Cap( s, p2 );
+        
+        else if (p1.oriented_side( p2.point() ) == ON_NEGATIVE_SIDE) return Spherical_Cap( s, p1 );
+        
+        else return Spherical_Cap( s, p1 ) + Spherical_Cap( s, p2 ) - s.vol;
+    }
+    
     L3 l = Line_Of_Intersection_Of_Two_Planes( p1, p2 );
     
     double d = sqrt( squared_distance( s.c, l ) );

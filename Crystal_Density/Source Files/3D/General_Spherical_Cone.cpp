@@ -1,4 +1,4 @@
-#include "Spherical_Cap.h"
+#include "Parallel_Lines.h"
 #include "General_Spherical_Wedge.h"
 #include "Intersection_Of_Two_Lines3D.h"
 #include "Circular_Intersection_Of_Sphere_And_Plane.h"
@@ -8,8 +8,291 @@
 
 double General_Spherical_Cone ( Sphere const& s, Pl3 const& p1, Pl3 const& p2, Pl3 const& p3 )
 {
+    if (Parallel_Planes( p1, p2 ) || Parallel_Planes( p1, p3) || Parallel_Planes( p2, p3 ))
+    {
+        if (Parallel_Planes( p1, p2 ))
+        {
+            if (p2.oriented_side( p1.point() ) == ON_ORIENTED_BOUNDARY)
+            {
+                P3 pt = P3( 0, 0, 0 ) + p1.orthogonal_vector();
+                
+                if (p2.oriented_side( pt ) == ON_NEGATIVE_SIDE) return 0;
+                
+                else return General_Spherical_Wedge( s, p1, p3 );
+            }
+            
+            else if (p2.oriented_side( p1.point() ) == ON_NEGATIVE_SIDE && p1.oriented_side( p2.point() ) == ON_NEGATIVE_SIDE) return 0;
+            
+            else if (p2.oriented_side( p1.point() ) == ON_NEGATIVE_SIDE) return General_Spherical_Wedge( s, p2, p3 );
+            
+            else if (p1.oriented_side( p2.point() ) == ON_NEGATIVE_SIDE) return General_Spherical_Wedge( s, p1, p3 );
+            
+            else return Spherical_Cap( s, p1 ) + Spherical_Cap( s, p2 ) - s.vol - Spherical_Cap( s, p3 ) + General_Spherical_Wedge( s, p1, p3 ) + General_Spherical_Wedge( s, p2, p3 );
+        }
+        
+        else if (Parallel_Planes( p1, p3 ))
+        {
+            if (p3.oriented_side( p1.point() ) == ON_ORIENTED_BOUNDARY)
+            {
+                P3 pt = P3( 0, 0, 0 ) + p1.orthogonal_vector();
+                
+                if (p3.oriented_side( pt ) == ON_NEGATIVE_SIDE) return 0;
+                
+                else return General_Spherical_Wedge( s, p1, p2 );
+            }
+            
+            else if (p3.oriented_side( p1.point() ) == ON_NEGATIVE_SIDE && p1.oriented_side( p3.point() ) == ON_NEGATIVE_SIDE) return 0;
+            
+            else if (p3.oriented_side( p1.point() ) == ON_NEGATIVE_SIDE) return General_Spherical_Wedge( s, p2, p3 );
+            
+            else if (p1.oriented_side( p3.point() ) == ON_NEGATIVE_SIDE) return General_Spherical_Wedge( s, p1, p2 );
+            
+            else return Spherical_Cap( s, p1 ) + Spherical_Cap( s, p3 ) - s.vol - Spherical_Cap( s, p2 ) + General_Spherical_Wedge( s, p1, p2 ) + General_Spherical_Wedge( s, p2, p3 );
+        }
+        
+        else if (Parallel_Planes( p2, p3 ))
+        {
+            if (p3.oriented_side( p2.point() ) == ON_ORIENTED_BOUNDARY)
+            {
+                P3 pt = P3( 0, 0, 0 ) + p2.orthogonal_vector();
+                
+                if (p3.oriented_side( pt ) == ON_NEGATIVE_SIDE) return 0;
+                
+                else return General_Spherical_Wedge( s, p1, p2 );
+            }
+            
+            else if (p3.oriented_side( p2.point() ) == ON_NEGATIVE_SIDE && p2.oriented_side( p3.point() ) == ON_NEGATIVE_SIDE) return 0;
+            
+            else if (p3.oriented_side( p2.point() ) == ON_NEGATIVE_SIDE) return General_Spherical_Wedge( s, p1, p3 );
+            
+            else if (p2.oriented_side( p3.point() ) == ON_NEGATIVE_SIDE) return General_Spherical_Wedge( s, p1, p2 );
+            
+            else return Spherical_Cap( s, p2 ) + Spherical_Cap( s, p3 ) - s.vol - Spherical_Cap( s, p1 ) + General_Spherical_Wedge( s, p1, p2 ) + General_Spherical_Wedge( s, p1, p3 );
+        }
+    }
+    
     L3 l1 = Line_Of_Intersection_Of_Two_Planes( p1, p2 );
     L3 l2 = Line_Of_Intersection_Of_Two_Planes( p1, p3 );
+    
+    if (Parallel_Lines( l1, l2 ))
+    {
+        if (squared_distance( l1.point(), p3 ) < tiny_num)
+        {
+            P3 pt = p3.point();
+            
+            if (squared_distance( pt, l1 ) < tiny_num) pt += p3.base1();
+            if (squared_distance( pt, l1 ) < tiny_num) pt += p3.base2();
+            
+            L3 l3( pt, p3.orthogonal_vector() );
+            
+            bool intersection1, intersection2;
+            P3 i1, i2;
+            
+            intersection1 = Intersection_Of_Line_And_Plane( p1, l3, i1 );
+            intersection2 = Intersection_Of_Line_And_Plane( p2, l3, i2 );
+            
+            if (!intersection1)
+            {
+                if (p1.oriented_side( pt ) == ON_POSITIVE_SIDE)
+                {
+                    if (p3.oriented_side( i2 ) == ON_POSITIVE_SIDE)
+                    {
+                        if (p2.oriented_side( pt ) == ON_POSITIVE_SIDE) return General_Spherical_Wedge( s, p2, p3 );
+                        
+                        else return General_Spherical_Wedge( s, p1, p2 );
+                    }
+                    
+                    else
+                    {
+                        if (p2.oriented_side( pt ) == ON_POSITIVE_SIDE) return General_Spherical_Wedge( s, p1, p3 );
+                        
+                        else return 0;
+                    }
+                }
+                
+                else
+                {
+                    if (p3.oriented_side( i2 ) == ON_POSITIVE_SIDE)
+                    {
+                        if (p2.oriented_side( pt ) == ON_POSITIVE_SIDE) return 0;
+                        
+                        else return General_Spherical_Wedge( s, p1, p3 );
+                    }
+                    
+                    else
+                    {
+                        if (p2.oriented_side( pt ) == ON_POSITIVE_SIDE) return General_Spherical_Wedge( s, p1, p2 );
+                        
+                        else return General_Spherical_Wedge( s, p2, p3 );
+                    }
+                }
+            }
+                
+            else if (!intersection2)
+            {
+                if (p2.oriented_side( pt ) == ON_POSITIVE_SIDE)
+                {
+                    if (p3.oriented_side( i1 ) == ON_POSITIVE_SIDE)
+                    {
+                        if (p1.oriented_side( pt ) == ON_POSITIVE_SIDE) return General_Spherical_Wedge( s, p1, p3 );
+                        
+                        else return General_Spherical_Wedge( s, p1, p2 );
+                    }
+                    
+                    else
+                    {
+                        if (p1.oriented_side( pt ) == ON_POSITIVE_SIDE) return General_Spherical_Wedge( s, p2, p3 );
+                        
+                        else return 0;
+                    }
+                }
+                
+                else
+                {
+                    if (p3.oriented_side( i1 ) == ON_POSITIVE_SIDE)
+                    {
+                        if (p1.oriented_side( pt ) == ON_POSITIVE_SIDE) return 0;
+                        
+                        else return General_Spherical_Wedge( s, p2, p3 );
+                    }
+                    
+                    else
+                    {
+                        if (p1.oriented_side( pt ) == ON_POSITIVE_SIDE) return General_Spherical_Wedge( s, p1, p2 );
+                        
+                        else return General_Spherical_Wedge( s, p1, p3 );
+                    }
+                }
+            }
+            
+            else
+            {
+                if (p3.oriented_side( i1 ) == ON_POSITIVE_SIDE)
+                {
+                    if (p3.oriented_side( i2 ) == ON_POSITIVE_SIDE)
+                    {
+                        if (p1.oriented_side( pt ) == ON_POSITIVE_SIDE)
+                        {
+                            if (p2.oriented_side( pt ) == ON_POSITIVE_SIDE)
+                            {
+                                if (p1.oriented_side( i2 ) == ON_POSITIVE_SIDE) return General_Spherical_Wedge( s, p2, p3 );
+                                
+                                else return General_Spherical_Wedge( s, p1, p3 );
+                            }
+                            
+                            else
+                            {
+                                if (p1.oriented_side( i2 ) == ON_POSITIVE_SIDE) return General_Spherical_Wedge( s, p1, p2 );
+                                
+                                else return 0;
+                            }
+                        }
+                        
+                        else
+                        {
+                            if (p2.oriented_side( pt ) == ON_POSITIVE_SIDE)
+                            {
+                                if (p1.oriented_side( i2 ) == ON_POSITIVE_SIDE) return General_Spherical_Wedge( s, p1, p2 );
+                                
+                                else return 0;
+                            }
+                            
+                            else
+                            {
+                                if (p1.oriented_side( i2 ) == ON_POSITIVE_SIDE) return General_Spherical_Wedge( s, p2, p3 );
+                                
+                                else return General_Spherical_Wedge( s, p1, p3 );
+                            }
+                        }
+                    }
+                    
+                    else
+                    {
+                        if (p1.oriented_side( pt ) == ON_POSITIVE_SIDE)
+                        {
+                            if (p2.oriented_side( pt ) == ON_POSITIVE_SIDE) return General_Spherical_Wedge( s, p1, p3 );
+                            
+                            else return 0;
+                        }
+                        
+                        else
+                        {
+                            if (p2.oriented_side( pt ) == ON_POSITIVE_SIDE) return General_Spherical_Wedge( s, p1, p2 );
+                            
+                            else return General_Spherical_Wedge( s, p2, p3 );
+                        }
+                    }
+                }
+                
+                else
+                {
+                    if (p3.oriented_side( i2 ) == ON_POSITIVE_SIDE)
+                    {
+                        if (p1.oriented_side( pt ) == ON_POSITIVE_SIDE)
+                        {
+                            if (p2.oriented_side( pt ) == ON_POSITIVE_SIDE) return General_Spherical_Wedge( s, p2, p3 );
+                            
+                            else return General_Spherical_Wedge( s, p1, p2 );
+                        }
+                        
+                        else
+                        {
+                            if (p2.oriented_side( pt ) == ON_POSITIVE_SIDE) return 0;
+                            
+                            else return General_Spherical_Wedge( s, p1, p3 );
+                        }
+                    }
+                    
+                    else
+                    {
+                        if (p1.oriented_side( pt ) == ON_POSITIVE_SIDE)
+                        {
+                            if (p2.oriented_side( pt ) == ON_POSITIVE_SIDE)
+                            {
+                                if (p1.oriented_side( i2 ) == ON_POSITIVE_SIDE) return General_Spherical_Wedge( s, p1, p3 );
+                            
+                                else return General_Spherical_Wedge( s, p2, p3 );
+                            }
+                            
+                            else
+                            {
+                                if (p1.oriented_side( i2 ) == ON_POSITIVE_SIDE) return General_Spherical_Wedge( s, p1, p2 );
+                                
+                                else return 0;
+                            }
+                        }
+                        
+                        else
+                        {
+                            if (p2.oriented_side( pt ) == ON_POSITIVE_SIDE)
+                            {
+                                if (p1.oriented_side( i2 ) == ON_POSITIVE_SIDE) return General_Spherical_Wedge( s, p1, p3 );
+                                
+                                else return 0;
+                            }
+                            
+                            else
+                            {
+                                if (p1.oriented_side( i2 ) == ON_POSITIVE_SIDE) return General_Spherical_Wedge( s, p1, p3 );
+                                
+                                else return General_Spherical_Wedge( s, p2, p3 );
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        else if (p3.oriented_side( l1.point() ) == ON_NEGATIVE_SIDE) return 0;
+        
+        else if (p2.oriented_side( l2.point() ) == ON_NEGATIVE_SIDE) return 0;
+        
+        L3 l3 = Line_Of_Intersection_Of_Two_Planes( p2, p3 );
+        
+        if (p1.oriented_side( l3.point() ) == ON_NEGATIVE_SIDE) return 0;
+        
+        else return s.vol - Spherical_Cap( s, p1.opposite() ) - Spherical_Cap( s, p2.opposite() ) - Spherical_Cap( s, p3.opposite() ) + Spherical_Wedge( s, p1.opposite(), p2.opposite() ) + Spherical_Wedge( s, p1.opposite(), p3.opposite() ) + Spherical_Wedge( s, p2.opposite(), p3.opposite() );
+    }
     
     P3 vertex = Intersection_Of_Two_Lines3D( l1, l2 );
     

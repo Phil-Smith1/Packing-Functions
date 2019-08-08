@@ -1,12 +1,8 @@
 #include "Sphere_Ordering.h"
-#include "Spherical_Cap.h"
+#include "Sphere_Volume_Within_Cell.h"
+#include "Spherical_Cap_Volume_Within_Cell.h"
 
-#ifndef tiny_number
-#define tiny_number
-const double tiny_num = 1e-10;
-#endif
-
-double Volume_Of_Intersection_Of_Two_Spheres ( Sphere const& s1, Sphere const& s2 )
+double Two_Sphere_Intersection_Volume_Within_Cell ( Cell3D const& cell, Sphere const& s1, Sphere const& s2 )
 {
     vector<Sphere> spheres = { s1, s2 };
     
@@ -16,7 +12,7 @@ double Volume_Of_Intersection_Of_Two_Spheres ( Sphere const& s1, Sphere const& s
     
     if (d >= s1.r + s2.r - tiny_num) return 0;
     
-    else if (d <= spheres[1].r - spheres[0].r + tiny_num) return spheres[0].vol;
+    else if (d <= spheres[1].r - spheres[0].r + tiny_num) return Sphere_Volume_Within_Cell( cell, spheres[0] );
     
     else
     {
@@ -29,12 +25,12 @@ double Volume_Of_Intersection_Of_Two_Spheres ( Sphere const& s1, Sphere const& s
         
         Pl3 p( pt, v );
         
-        double spherical_cap1 = Spherical_Cap( s2, p );
+        double volume1 = Spherical_Cap_Volume_Within_Cell( cell, s2, p );
         
         p = p.opposite();
         
-        double spherical_cap2 = Spherical_Cap( s1, p );
+        double volume2 = Spherical_Cap_Volume_Within_Cell( cell, s1, p );
         
-        return spherical_cap1 + spherical_cap2;
+        return volume1 + volume2;
     }
 }

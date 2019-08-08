@@ -21,7 +21,7 @@ vector<P3> pts3D = { P3( 1, 0, 0 ), P3( 0, 1, 0 ), P3( 0, 0, 1 ) }; // Input vec
 
 vector<double> scale = { 1, 1, 1 }; // Scale factors of input vectors.
 
-bool interior_points = true; // Run code with interior points.
+bool interior_points = false; // Run code with interior points.
 
 vector<P2> interior_pts = { /*P2( 0.5, 0.5 )*//*P2( 0.25, 0.25 ), P2( 0.75, 0.75 )*/ }; // 2D interior points.
 
