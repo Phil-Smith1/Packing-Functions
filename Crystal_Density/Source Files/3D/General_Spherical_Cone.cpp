@@ -283,15 +283,41 @@ double General_Spherical_Cone ( Sphere const& s, Pl3 const& p1, Pl3 const& p2, P
             }
         }
         
-        else if (p3.oriented_side( l1.point() ) == ON_NEGATIVE_SIDE) return 0;
-        
-        else if (p2.oriented_side( l2.point() ) == ON_NEGATIVE_SIDE) return 0;
-        
         L3 l3 = Line_Of_Intersection_Of_Two_Planes( p2, p3 );
         
-        if (p1.oriented_side( l3.point() ) == ON_NEGATIVE_SIDE) return 0;
+        if (p3.oriented_side( l1.point() ) == ON_NEGATIVE_SIDE)
+        {
+            if (p2.oriented_side( l2.point() ) == ON_NEGATIVE_SIDE)
+            {
+                if (p1.oriented_side( l3.point() ) == ON_NEGATIVE_SIDE) return 0;
+                
+                else return General_Spherical_Wedge( s, p2, p3 );
+            }
+            
+            else
+            {
+                if (p1.oriented_side( l3.point() ) == ON_NEGATIVE_SIDE) return General_Spherical_Wedge( s, p1, p3 );
+                
+                else return Spherical_Cap( s, p3 ) - General_Spherical_Wedge( s, p1, p3 ) - General_Spherical_Wedge( s, p2, p3 );
+            }
+        }
         
-        else return s.vol - Spherical_Cap( s, p1.opposite() ) - Spherical_Cap( s, p2.opposite() ) - Spherical_Cap( s, p3.opposite() ) + Spherical_Wedge( s, p1.opposite(), p2.opposite() ) + Spherical_Wedge( s, p1.opposite(), p3.opposite() ) + Spherical_Wedge( s, p2.opposite(), p3.opposite() );
+        else
+        {
+            if (p2.oriented_side( l2.point() ) == ON_NEGATIVE_SIDE)
+            {
+                if (p1.oriented_side( l3.point() ) == ON_NEGATIVE_SIDE) return General_Spherical_Wedge( s, p1, p2 );
+                
+                else return Spherical_Cap( s, p2 ) - General_Spherical_Wedge( s, p1, p2 ) - General_Spherical_Wedge( s, p2, p3 );
+            }
+            
+            else
+            {
+                if (p1.oriented_side( l3.point() ) == ON_NEGATIVE_SIDE) return Spherical_Cap( s, p1 ) - General_Spherical_Wedge( s, p1, p2 ) - General_Spherical_Wedge( s, p1, p3 );
+                
+                else return s.vol - Spherical_Cap( s, p1.opposite() ) - Spherical_Cap( s, p2.opposite() ) - Spherical_Cap( s, p3.opposite() ) + Spherical_Wedge( s, p1.opposite(), p2.opposite() ) + Spherical_Wedge( s, p1.opposite(), p3.opposite() ) + Spherical_Wedge( s, p2.opposite(), p3.opposite() );
+            }
+        }
     }
     
     P3 vertex = Intersection_Of_Two_Lines3D( l1, l2 );
@@ -386,13 +412,13 @@ double General_Spherical_Cone ( Sphere const& s, Pl3 const& p1, Pl3 const& p2, P
                 
                 bool positive_side1, positive_side2, positive_side3;
                 
-                if (p1.oriented_side( i5 ) == ON_NEGATIVE_SIDE || p1.oriented_side( i6 ) == ON_NEGATIVE_SIDE) positive_side1 = false;
+                if ((p1.oriented_side( i5 ) == ON_NEGATIVE_SIDE && squared_distance( i5, p1 ) > tiny_num) || (p1.oriented_side( i6 ) == ON_NEGATIVE_SIDE && squared_distance( i6, p1 ) > tiny_num)) positive_side1 = false;
                 else positive_side1 = true;
                 
-                if (p2.oriented_side( i3 ) == ON_NEGATIVE_SIDE || p2.oriented_side( i4 ) == ON_NEGATIVE_SIDE) positive_side2 = false;
+                if ((p2.oriented_side( i3 ) == ON_NEGATIVE_SIDE && squared_distance( i3, p2 ) > tiny_num) || (p2.oriented_side( i4 ) == ON_NEGATIVE_SIDE && squared_distance( i4, p2 ) > tiny_num)) positive_side2 = false;
                 else positive_side2 = true;
                 
-                if (p3.oriented_side( i1 ) == ON_NEGATIVE_SIDE || p3.oriented_side( i2 ) == ON_NEGATIVE_SIDE) positive_side3 = false;
+                if ((p3.oriented_side( i1 ) == ON_NEGATIVE_SIDE && squared_distance( i1, p3 ) > tiny_num) || (p3.oriented_side( i2 ) == ON_NEGATIVE_SIDE && squared_distance( i2, p3 ) > tiny_num)) positive_side3 = false;
                 else positive_side3 = true;
                 
                 int num_pos = 0;

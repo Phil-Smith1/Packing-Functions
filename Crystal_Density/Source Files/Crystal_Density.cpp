@@ -66,12 +66,10 @@ int main ( int, char*[] )
         {
             cout << "Iteration: " << counter << "." << endl;
             
-            //Packing_Functions3D( directory3D, input3D, cells[counter], counter );
+            Packing_Functions3D( directory3D, input3D, cells[counter], counter );
         }
         
         if (input3D.deformation_type != 0) GIF( directory3D + "Graphs/Deformation", "Deform", input3D.iterations );
-        
-        cout << Two_Sphere_Intersection_Volume_Within_Cell( cells[0], Sphere( cells[0].vertices[0], 2 ), Sphere( cells[0].vertices[1], 2 ) ) << endl;
     }
     
     Print_Info( start_time, start );
