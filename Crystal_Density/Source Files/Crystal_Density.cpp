@@ -66,10 +66,18 @@ int main ( int, char*[] )
         {
             cout << "Iteration: " << counter << "." << endl;
             
-            Packing_Functions3D( directory3D, input3D, cells[counter], counter );
+            //Packing_Functions3D( directory3D, input3D, cells[counter], counter );
         }
         
         if (input3D.deformation_type != 0) GIF( directory3D + "Graphs/Deformation", "Deform", input3D.iterations );
+        
+        //cout << Second_Order_Total_Volume( cells[0], 0.866667 ) << std::endl;
+        
+        //cout << Two_Sphere_Intersection_Volume_Within_Cell( cells[1], Sphere( cells[1].vertices[0], 0.71 ), Sphere( cells[1].vertices[2], 0.71 ) ) << endl;
+        
+        Pl3 p( P3( 0.5, 0.5, 0 ), V3( 0.5 * sqrt( (double)2 ), 0.5 * sqrt( (double)2 ), 0 ) );
+        
+        cout << Sphere_Four_Plane_Intersection_Volume( Sphere( cells[0].vertices[0], 0.866667 ), p.opposite(), cells[0].planes[1].opposite(), cells[0].planes[2].opposite(), cells[0].planes[4].opposite() ) << endl;
     }
     
     Print_Info( start_time, start );
