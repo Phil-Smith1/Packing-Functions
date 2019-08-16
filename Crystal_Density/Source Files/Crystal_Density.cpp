@@ -66,18 +66,22 @@ int main ( int, char*[] )
         {
             cout << "Iteration: " << counter << "." << endl;
             
-            //Packing_Functions3D( directory3D, input3D, cells[counter], counter );
+            Packing_Functions3D( directory3D, input3D, cells[counter], counter );
         }
         
         if (input3D.deformation_type != 0) GIF( directory3D + "Graphs/Deformation", "Deform", input3D.iterations );
         
-        //cout << Second_Order_Total_Volume( cells[0], 0.866667 ) << std::endl;
+        //cout << Second_Order_Total_Volume( cells[0], 0.51010001 ) << std::endl;
         
-        //cout << Two_Sphere_Intersection_Volume_Within_Cell( cells[1], Sphere( cells[1].vertices[0], 0.71 ), Sphere( cells[1].vertices[2], 0.71 ) ) << endl;
+        //cout << Two_Sphere_Intersection_Volume_Within_Cell( cells[0], Sphere( cells[0].vertices[0], 0.50000001 ), Sphere( cells[0].vertices[1], 0.50000001 ) ) << endl;
         
-        Pl3 p( P3( 0.5, 0.5, 0 ), V3( 0.5 * sqrt( (double)2 ), 0.5 * sqrt( (double)2 ), 0 ) );
+        //Pl3 p( P3( 0.5, 0, 0 ), V3( -1, 0, 0 ) );
         
-        cout << Sphere_Four_Plane_Intersection_Volume( Sphere( cells[0].vertices[0], 0.866667 ), p.opposite(), cells[0].planes[1].opposite(), cells[0].planes[2].opposite(), cells[0].planes[4].opposite() ) << endl;
+        //cout << Spherical_Cap_Volume_Within_Cell( cells[0], Sphere( cells[0].vertices[1], 0.5 ), p ) << endl;
+        
+        //cout << Sphere_Four_Plane_Intersection_Volume( Sphere( cells[0].vertices[1], 0.5 ), p.opposite(), cells[0].planes[0].opposite(), cells[0].planes[1].opposite(), cells[0].planes[5].opposite() ) << endl;
+        
+        //cout << General_Spherical_Cone( Sphere( cells[0].vertices[1], 0.5 ), p.opposite(), cells[0].planes[0].opposite(), cells[0].planes[5].opposite() ) << endl;
     }
     
     Print_Info( start_time, start );

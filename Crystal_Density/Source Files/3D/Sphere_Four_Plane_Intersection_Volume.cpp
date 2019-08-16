@@ -80,7 +80,7 @@ double Fourth_Plane_Parallel_To_Line ( Sphere const& s, L3 const& l, P3 const& i
         {
             if (p5.oriented_side( i2 ) == ON_POSITIVE_SIDE)
             {
-                return Spherical_Cap( s, p4 ) - General_Spherical_Wedge( s, p1, p4 ) - General_Spherical_Wedge( s, p2, p4.opposite() ) - General_Spherical_Wedge( s, p3, p4 ) + General_Spherical_Cone( s, p2, p3, p4 ) + General_Spherical_Cone( s, p1, p3, p4 );
+                return Spherical_Cap( s, p4 ) - General_Spherical_Wedge( s, p1.opposite(), p4 ) - General_Spherical_Wedge( s, p2.opposite(), p4 ) - General_Spherical_Wedge( s, p3.opposite(), p4 ) + General_Spherical_Cone( s, p2.opposite(), p3.opposite(), p4 ) + General_Spherical_Cone( s, p1.opposite(), p3.opposite(), p4 );
             }
             
             else return General_Spherical_Cone( s, p1, p3, p4 );
