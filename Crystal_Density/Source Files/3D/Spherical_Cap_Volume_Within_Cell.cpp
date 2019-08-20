@@ -1,5 +1,4 @@
 #include "Cell3D.h"
-#include "General_Spherical_Cone.h"
 #include "Sphere_Four_Plane_Intersection_Volume.h"
 
 double Cap_Volume_By_Exclusion3 ( Cell3D const& cell, Pl3 const& p, Sphere const& s )

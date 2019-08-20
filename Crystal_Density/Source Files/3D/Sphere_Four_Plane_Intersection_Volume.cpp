@@ -127,7 +127,44 @@ double Non_Parallel_Lines_Case ( Sphere const& s, L3 const& l1, L3 const& l2, Pl
     
     else
     {
-        if (p4.oriented_side( vertex ) == ON_POSITIVE_SIDE)
+        if (squared_distance( vertex, p4 ) < tiny_num)
+        {
+            if (p4.oriented_side( pt1 ) == ON_POSITIVE_SIDE)
+            {
+                if (p4.oriented_side( pt2 ) == ON_POSITIVE_SIDE)
+                {
+                    if (p4.oriented_side( pt3 ) == ON_POSITIVE_SIDE) return General_Spherical_Cone( s, p1, p2, p3 );
+                    
+                    else return General_Spherical_Cone( s, p1, p2, p3 ) - General_Spherical_Cone( s, p4.opposite(), p2, p3 );
+                }
+                
+                else
+                {
+                    if (p4.oriented_side( pt3 ) == ON_POSITIVE_SIDE) return General_Spherical_Cone( s, p1, p2, p3 ) - General_Spherical_Cone( s, p4.opposite(), p1, p3 );
+                    
+                    else return General_Spherical_Cone( s, p1, p2, p4 );
+                }
+            }
+            
+            else
+            {
+                if (p4.oriented_side( pt2 ) == ON_POSITIVE_SIDE)
+                {
+                    if (p4.oriented_side( pt3 ) == ON_POSITIVE_SIDE) return General_Spherical_Cone( s, p1, p2, p3 ) - General_Spherical_Cone( s, p4.opposite(), p1, p2 );
+                    
+                    else return General_Spherical_Cone( s, p1, p3, p4 );
+                }
+                
+                else
+                {
+                    if (p4.oriented_side( pt3 ) == ON_POSITIVE_SIDE) return General_Spherical_Cone( s, p2, p3, p4 );
+                    
+                    else return 0;
+                }
+            }
+        }
+        
+        else if (p4.oriented_side( vertex ) == ON_POSITIVE_SIDE)
         {
             if (p5.oriented_side( i1 ) == ON_POSITIVE_SIDE)
             {

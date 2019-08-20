@@ -94,7 +94,7 @@ void Plot_PNG3D ( string const& directory, double max_radius, int iter )
     gp << "set xlabel 'Radius of Balls' font ', 20' offset 0, -0.3\n";
     
     gp << "set xrange [0: " << max_radius << "]\n";
-    gp << "set yrange [0: 9.01]\n";
+    gp << "set yrange [0: 28.01]\n";
     gp << "set xtics font ', 18'\n";
     gp << "set ytics font ', 18'\n";
     
@@ -108,7 +108,7 @@ void Plot_PNG3D ( string const& directory, double max_radius, int iter )
     
     gp << "set output \"Graphs/Deformation/Deform" << iter << ".png\"\n";
     
-    gp << "plot 'Data/Results.txt' using 1:2 smooth csplines ls 1 title '1', 'Data/Derivative_Critical_Pts.txt' using 1:2 notitle ls 5\n";
+    gp << "plot 'Data/Results.txt' using 1:2 smooth csplines ls 1 title '1','Data/Results.txt' using 1:3 smooth csplines ls 2 title '2', 'Data/Derivative_Critical_Pts.txt' using 1:2 notitle ls 5\n";
 }
 
 void Plot_PDF3D ( string const& directory, double max_radius )

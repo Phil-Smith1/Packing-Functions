@@ -208,9 +208,9 @@ double Cone_Parallel_Lines ( Sphere const& s, L3 const& l1, L3 const& l2, Pl3 co
                         
                         else
                         {
-                            if (p1.oriented_side( i2 ) == ON_POSITIVE_SIDE) return General_Spherical_Wedge( s, p1, p2 );
+                            if (p1.oriented_side( i2 ) == ON_POSITIVE_SIDE) return 0;
                             
-                            else return 0;
+                            else return General_Spherical_Wedge( s, p1, p2 );
                         }
                     }
                     
@@ -218,9 +218,9 @@ double Cone_Parallel_Lines ( Sphere const& s, L3 const& l1, L3 const& l2, Pl3 co
                     {
                         if (p2.oriented_side( pt ) == ON_POSITIVE_SIDE)
                         {
-                            if (p1.oriented_side( i2 ) == ON_POSITIVE_SIDE) return General_Spherical_Wedge( s, p1, p3 );
+                            if (p1.oriented_side( i2 ) == ON_POSITIVE_SIDE) return 0;
                             
-                            else return 0;
+                            else return General_Spherical_Wedge( s, p1, p2 );
                         }
                         
                         else
@@ -409,7 +409,16 @@ double General_Spherical_Cone ( Sphere const& s, Pl3 const& p1, Pl3 const& p2, P
                     
                     else if (positive_side2) return General_Spherical_Wedge( s, p1, p3 );
                     
-                    else if (positive_side3) return General_Spherical_Wedge( s, p1, p2 );
+                    else return General_Spherical_Wedge( s, p1, p2 );
+                }
+                
+                else if (num_pos == 2)
+                {
+                    if (!positive_side1) return Spherical_Cap( s, p1 ) - General_Spherical_Wedge( s, p1, p2.opposite() ) - General_Spherical_Wedge( s, p1, p3.opposite() );
+                    
+                    else if (!positive_side2) return Spherical_Cap( s, p2 ) - General_Spherical_Wedge( s, p1.opposite(), p2 ) - General_Spherical_Wedge( s, p2, p3.opposite() );
+                    
+                    else return Spherical_Cap( s, p3 ) - General_Spherical_Wedge( s, p1.opposite(), p3 ) - General_Spherical_Wedge( s, p2.opposite(), p3 );
                 }
                 
                 else

@@ -102,16 +102,34 @@ double General_Spherical_Wedge ( Sphere const& s, Pl3 const& p1, Pl3 const& p2 )
         {
             if (p3.oriented_side( i1 ) == p3.oriented_side( i2 ))
             {
-                if (Norm( i1, pt4 ) > Norm( i2, pt4 ))
+                if (p3.oriented_side( i1 ) == ON_POSITIVE_SIDE)
                 {
-                    p4 = p1;
-                    p5 = p2.opposite();
+                    if (Norm( i1, pt4 ) > Norm( i2, pt4 ))
+                    {
+                        p4 = p1;
+                        p5 = p2.opposite();
+                    }
+                    
+                    else
+                    {
+                        p4 = p2;
+                        p5 = p1.opposite();
+                    }
                 }
                 
                 else
                 {
-                    p4 = p2;
-                    p5 = p1.opposite();
+                    if (Norm( i1, pt4 ) > Norm( i2, pt4 ))
+                    {
+                        p4 = p2;
+                        p5 = p1.opposite();
+                    }
+                    
+                    else
+                    {
+                        p4 = p1;
+                        p5 = p2.opposite();
+                    }
                 }
             }
             
