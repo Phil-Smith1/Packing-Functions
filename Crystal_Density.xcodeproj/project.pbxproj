@@ -47,6 +47,7 @@
 		EE113FE522E89EF4000A75AC /* Spherical_Wedge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE113FE422E89EF4000A75AC /* Spherical_Wedge.cpp */; };
 		EE113FE722E8B6D7000A75AC /* General_Spherical_Wedge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE113FE622E8B6D7000A75AC /* General_Spherical_Wedge.cpp */; };
 		EE113FEB22E8B991000A75AC /* Regularised_Spherical_Wedge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE113FEA22E8B991000A75AC /* Regularised_Spherical_Wedge.cpp */; };
+		EE1927EC230EBCA1005337EF /* Third_Order_Total_Volume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE1927EB230EBCA1005337EF /* Third_Order_Total_Volume.cpp */; };
 		EE197E25230C4443002CEA92 /* Three_Sphere_Intersection_Volume_Within_Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE197E24230C4443002CEA92 /* Three_Sphere_Intersection_Volume_Within_Cell.cpp */; };
 		EE197E27230C532F002CEA92 /* Spherical_Wedge_Volume_Within_Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE197E26230C532F002CEA92 /* Spherical_Wedge_Volume_Within_Cell.cpp */; };
 		EE197E2C230C63EB002CEA92 /* Sphere_Five_Plane_Intersection_Volume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE197E2B230C63EB002CEA92 /* Sphere_Five_Plane_Intersection_Volume.cpp */; };
@@ -228,6 +229,8 @@
 		EE113FE822E8B6E9000A75AC /* General_Spherical_Wedge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = General_Spherical_Wedge.h; sourceTree = "<group>"; };
 		EE113FE922E8B980000A75AC /* Regularised_Spherical_Wedge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Regularised_Spherical_Wedge.h; sourceTree = "<group>"; };
 		EE113FEA22E8B991000A75AC /* Regularised_Spherical_Wedge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Regularised_Spherical_Wedge.cpp; sourceTree = "<group>"; };
+		EE1927EB230EBCA1005337EF /* Third_Order_Total_Volume.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Third_Order_Total_Volume.cpp; sourceTree = "<group>"; };
+		EE1927ED230EBCB2005337EF /* Third_Order_Total_Volume.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Third_Order_Total_Volume.h; sourceTree = "<group>"; };
 		EE197E23230C442C002CEA92 /* Three_Sphere_Intersection_Volume_Within_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Three_Sphere_Intersection_Volume_Within_Cell.h; sourceTree = "<group>"; };
 		EE197E24230C4443002CEA92 /* Three_Sphere_Intersection_Volume_Within_Cell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Three_Sphere_Intersection_Volume_Within_Cell.cpp; sourceTree = "<group>"; };
 		EE197E26230C532F002CEA92 /* Spherical_Wedge_Volume_Within_Cell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Spherical_Wedge_Volume_Within_Cell.cpp; sourceTree = "<group>"; };
@@ -675,6 +678,7 @@
 		EE55F2C922537C3800B8CA0B /* 3D */ = {
 			isa = PBXGroup;
 			children = (
+				EE1927ED230EBCB2005337EF /* Third_Order_Total_Volume.h */,
 				EE197E2A230C63D7002CEA92 /* Sphere_Five_Plane_Intersection_Volume.h */,
 				EE197E29230C5363002CEA92 /* Spherical_Wedge_Volume_Within_Cell.h */,
 				EE197E23230C442C002CEA92 /* Three_Sphere_Intersection_Volume_Within_Cell.h */,
@@ -741,6 +745,7 @@
 				EE03933F22F1D778000927BF /* First_Order_Total_Volume.cpp */,
 				EE067CD822FB4243007F45AB /* Volume_Of_Intersection_Of_Two_Spheres.cpp */,
 				EE03933D22F1D0F0000927BF /* Extract_Data_Pts3D.cpp */,
+				EE1927EB230EBCA1005337EF /* Third_Order_Total_Volume.cpp */,
 				EE03933922F1D048000927BF /* Packing_Functions3D.cpp */,
 				EE0889A522EF612E005CD5A4 /* Sphere_Volume_Within_Cell.cpp */,
 				EE0889A222EF3A97005CD5A4 /* Intersection_Of_Line_And_Plane.cpp */,
@@ -937,6 +942,7 @@
 				EE4FF54D2236AA83008E25F0 /* Cell_3Circles.cpp in Sources */,
 				EE3AA60A21B848710088403C /* Crystal_Density.cpp in Sources */,
 				EE55F2DD2253903B00B8CA0B /* Cell_Volume.cpp in Sources */,
+				EE1927EC230EBCA1005337EF /* Third_Order_Total_Volume.cpp in Sources */,
 				EECF35A1222D86EF0079CD62 /* Four_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp in Sources */,
 				EECF357F222D7FDE0079CD62 /* Two_Circle_Intersection_Concave_Cone_Area.cpp in Sources */,
 				EE55F2D3225380BE00B8CA0B /* Make_Cell3D.cpp in Sources */,

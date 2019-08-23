@@ -37,6 +37,10 @@ int sample_rate = 300; // Sample rate.
 
 bool draw_cell = true; // True to draw cell.
 
-Input3D input3D( function_type, lattice_type, pts3D, scale, interior_points, interior_pts3D, deformation_type3D, iterations, sample_rate );
+bool auto_max_radius = false;
+
+double max_radius = 1;
+
+Input3D input3D( function_type, lattice_type, pts3D, scale, interior_points, interior_pts3D, deformation_type3D, iterations, sample_rate, auto_max_radius, max_radius );
 
 Input input( function_type, lattice_type, pts, scale, interior_points, interior_pts, deformation_type, iterations, sample_rate );

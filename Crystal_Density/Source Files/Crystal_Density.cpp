@@ -1,4 +1,4 @@
-#include "Three_Sphere_Intersection_Volume_Within_Cell.h"
+//#include "Three_Sphere_Intersection_Volume_Within_Cell.h"
 #include "Parameters.h"
 #include "Volume_Of_Intersection_Of_Two_Spheres.h"
 #include "Packing_Functions3D.h"
@@ -67,14 +67,24 @@ int main ( int, char*[] )
         {
             cout << "Iteration: " << counter << "." << endl;
             
-            //Packing_Functions3D( directory3D, input3D, cells[counter], counter );
+            Packing_Functions3D( directory3D, input3D, cells[counter], counter );
         }
         
         if (input3D.deformation_type != 0) GIF( directory3D + "Graphs/Deformation", "Deform", input3D.iterations );
         
-        double r = 2;
+        //double r = 0.708;
         
-        cout << Three_Sphere_Intersection_Volume_Within_Cell( cells[0], Sphere( cells[0].vertices[0], r ), Sphere( cells[0].vertices[1], r ), Sphere( cells[0].vertices[2], r ) ) << endl;
+        //Pl3 p1( P3( 0.5, 0.5, 0 ), V3( -0.5 * sqrt( (double)2 ), -0.5 * sqrt( (double)2 ), 0 ) );
+        //Pl3 p2( P3( 0.5, 0.5, 0.5 ), V3( -0.5 * sqrt( (double)3 ), -0.5 * sqrt( (double)3 ), 0.5 * sqrt( (double)3 ) ) );
+        
+        //cout << Third_Order_Total_Volume( cells[0], r ) << endl;
+        
+        //cout << Three_Sphere_Intersection_Volume_Within_Cell( cells[0], Sphere( cells[0].vertices[0], r ), Sphere( cells[0].vertices[2], r ), Sphere( cells[0].vertices[5], r ) ) << endl;
+        
+        //cout << General_Spherical_Cone( Sphere( cells[0].vertices[2], r ), p1.opposite(), p2.opposite(), cells[0].planes[2].opposite() ) << endl;
+        
+        double a;
+        
     }
     
     Print_Info( start_time, start );

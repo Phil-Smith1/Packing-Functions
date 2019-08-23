@@ -43,6 +43,6 @@ void Make_Cells3D ( Input3D& input3D, vector<Cell3D>& cells )
         
         cells.push_back( cell );
         
-        input3D.max_radius = Norm( cell.vertices[0], cell.vertices[6] );
+        if (input3D.auto_max_radius) input3D.max_radius = Norm( cell.vertices[0], cell.vertices[6] );
     }
 }

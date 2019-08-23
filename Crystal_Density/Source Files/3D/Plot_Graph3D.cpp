@@ -130,7 +130,7 @@ void Plot_PDF3D ( string const& directory, double max_radius )
     gp << "set xlabel 'Radius of Balls' font ', 20' offset 0, -0.3\n";
     
     gp << "set xrange [0: " << max_radius << "]\n";
-    gp << "set yrange [0: 28.01]\n";
+    gp << "set yrange [0: 1.501]\n";
     gp << "set xtics font ', 18'\n";
     gp << "set ytics font ', 18'\n";
     
@@ -144,7 +144,7 @@ void Plot_PDF3D ( string const& directory, double max_radius )
     
     gp << "set output \"Graphs/Packing Functions.pdf\"\n";
     
-    gp << "plot 'Data/Results.txt' using 1:2 smooth csplines ls 1 title '1','Data/Results.txt' using 1:3 smooth csplines ls 2 title '2', 'Data/Derivative_Critical_Pts.txt' using 1:2 notitle ls 5\n";
+    gp << "plot 'Data/Results.txt' using 1:2 smooth csplines ls 1 title '1','Data/Results.txt' using 1:3 smooth csplines ls 2 title '2', 'Data/Results.txt' using 1:4 smooth csplines ls 3 title '3', 'Data/Results.txt' using 1:5 smooth csplines ls 4 title '1 - 2 + 3', 'Data/Derivative_Critical_Pts.txt' using 1:2 notitle ls 5\n";
 }
 
 void Plot_Graph3D ( string const& directory, Input3D const& input, int iter )

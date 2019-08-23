@@ -46,17 +46,22 @@ double Three_Sphere_Intersection_Volume_Within_Cell ( Cell3D const& cell, Sphere
         
         Pl3 p1( pt, v );
         
-        //double volume1 = Spherical_Cap_Volume_Within_Cell( cell, spheres[0], p3.opposite() );
+        //*****************
+        
+        Circle3D c1 = Circular_Intersection_Of_Sphere_And_Plane( spheres[0], p3 );
+        
+        if (!Intersection_Of_Plane_And_Circle( p2, c1 ))
+        {
+            return 0;
+        }
+        
+        //*******************
+        
         double volume1 = Spherical_Wedge_Volume_Within_Cell( cell, spheres[0], p3.opposite(), p2.opposite() );
-        //double volume2 = Spherical_Wedge_Volume_Within_Cell( cell, spheres[2], p3.opposite(), p2 );
-        //double volume3 = Spherical_Wedge_Volume_Within_Cell( cell, spheres[1], p3, p1.opposite() );
-        //double volume4 = Spherical_Wedge_Volume_Within_Cell( cell, spheres[2], p3, p1 );
+        double volume2 = Spherical_Wedge_Volume_Within_Cell( cell, spheres[2], p3.opposite(), p2 );
+        double volume3 = Spherical_Wedge_Volume_Within_Cell( cell, spheres[1], p3, p1.opposite() );
+        double volume4 = Spherical_Wedge_Volume_Within_Cell( cell, spheres[2], p3, p1 );
         
-        std::cout << volume1 << std::endl;
-        //std::cout << volume2 << std::endl;
-        //std::cout << volume3 << std::endl;
-        //std::cout << volume4 << std::endl;
-        
-        return volume1;// + volume2 + volume3 + volume4;
+        return volume1 + volume2 + volume3 + volume4;
     }
 }
