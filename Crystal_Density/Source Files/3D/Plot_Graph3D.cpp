@@ -130,7 +130,7 @@ void Plot_PDF3D ( string const& directory, double max_radius )
     gp << "set xlabel 'Radius of Balls' font ', 20' offset 0, -0.3\n";
     
     gp << "set xrange [0: " << max_radius << "]\n";
-    gp << "set yrange [0: 1.501]\n";
+    gp << "set yrange [0: 58.01]\n";
     gp << "set xtics font ', 18'\n";
     gp << "set ytics font ', 18'\n";
     

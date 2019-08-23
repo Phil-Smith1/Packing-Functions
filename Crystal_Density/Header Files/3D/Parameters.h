@@ -37,7 +37,7 @@ int sample_rate = 300; // Sample rate.
 
 bool draw_cell = true; // True to draw cell.
 
-bool auto_max_radius = false;
+bool auto_max_radius = true;
 
 double max_radius = 1;
 

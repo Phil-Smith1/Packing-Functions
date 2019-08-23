@@ -214,7 +214,7 @@ double Wedge_Volume_By_Exclusion2 ( vector<pair<Pl3, int>>const& planes, Pl3 con
             if ((*it_1).second == 1 && (*it_2).second == 3) continue;
             if ((*it_1).second == 4 && (*it_2).second == 5) continue;
             
-            volume -= Sphere_Four_Plane_Intersection_Volume( s, p1.opposite(), p2.opposite(), (*it_1).first.opposite(), (*it_2).first.opposite() );
+            volume += Sphere_Four_Plane_Intersection_Volume( s, p1.opposite(), p2.opposite(), (*it_1).first.opposite(), (*it_2).first.opposite() );
         }
     }
     

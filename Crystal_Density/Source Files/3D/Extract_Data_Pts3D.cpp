@@ -13,7 +13,7 @@ void Extract_Data_Pts3D ( string const& directory, Cell3D const& cell, int sampl
     for (double counter = 0; counter < num_pts; ++counter)
     {
         double radius = counter / (double)sample_rate;
-        std::cout << radius << std::endl;
+        
         double first_order_total_volume = First_Order_Total_Volume( cell, radius );
         
         double second_order_total_volume = Second_Order_Total_Volume( cell, radius );

@@ -123,7 +123,7 @@ double Non_Parallel_Lines_Case ( Sphere const& s, L3 const& l1, L3 const& l2, Pl
     
     if (!intersection1) return Fourth_Plane_Parallel_To_Line( s, l1, i2, i3, p1, p2, p3, p4, p5 );
     else if (!intersection2) return Fourth_Plane_Parallel_To_Line( s, l2, i1, i3, p1, p3, p2, p4, p5 );
-    else if (!intersection3) return Fourth_Plane_Parallel_To_Line( s, l3, i1, i2, p3, p2, p1, p4, p5 );
+    else if (!intersection3) return Fourth_Plane_Parallel_To_Line( s, l3, i1, i2, p2, p3, p1, p4, p5 );
     
     else
     {
@@ -259,10 +259,7 @@ double Non_Parallel_Lines_Case ( Sphere const& s, L3 const& l1, L3 const& l2, Pl
                 
                 else
                 {
-                    if (p5.oriented_side( i3 ) == ON_POSITIVE_SIDE)
-                    {
-                        return General_Spherical_Cone( s, p2, p3, p4 );
-                    }
+                    if (p5.oriented_side( i3 ) == ON_POSITIVE_SIDE) return General_Spherical_Cone( s, p2, p3, p4 );
                     
                     else return 0;
                 }
