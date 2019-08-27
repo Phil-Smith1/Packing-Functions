@@ -4,9 +4,9 @@
 
 typedef K::Plane_3 Pl3;
 
-#ifndef tiny_number
-#define tiny_number
-const double tiny_num = 1e-10;
+#ifndef Pi
+#define Pi
+const double PI = 3.14159265359;
 #endif
 
 bool Parallel_Planes ( Pl3 const& p1, Pl3 const& p2 );

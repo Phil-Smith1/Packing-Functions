@@ -24,6 +24,8 @@ void Extract_Data_Pts3D ( string const& directory, Cell3D const& cell, int sampl
         
         if (abs( second_order_total_volume ) < tiny_num) second_order_total_volume = tiny_num;
         
+        if (abs( third_order_total_volume ) < tiny_num) third_order_total_volume = tiny_num;
+        
         ofs << setprecision( 10 ) << radius << " " << first_order_total_volume / (double)cell.vol << " " << second_order_total_volume / (double)cell.vol << " " << third_order_total_volume / (double)cell.vol << " " << (first_order_total_volume - second_order_total_volume + third_order_total_volume) / (double)cell.vol << endl;
     }
     

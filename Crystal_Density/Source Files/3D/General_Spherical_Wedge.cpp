@@ -80,13 +80,17 @@ double General_Spherical_Wedge ( Sphere const& s, Pl3 const& p1, Pl3 const& p2 )
     
     Pl3 p3( pt1, pt2, s.c );
     
+    P3 pt3 = p1.point();
+    
+    if (squared_distance( pt3, l ) < tiny_num)
+    {
+        pt3 += p1.base1();
+        
+        if (squared_distance( pt3, l ) < tiny_num) pt3 += p1.base2();
+    }
+    
     if (p1.oriented_side( s.c ) != p2.oriented_side( s.c ))
     {
-        P3 pt3 = p1.point();
-        
-        if (squared_distance( pt3, l ) < tiny_num) pt3 += p1.base1();
-        if (squared_distance( pt3, l ) < tiny_num) pt3 += p1.base2();
-        
         if (p2.oriented_side( pt3 ) != p3.oriented_side( pt3 )) p3 = p3.opposite();
         
         V3 v = pt1 - s.c;
@@ -97,7 +101,10 @@ double General_Spherical_Wedge ( Sphere const& s, Pl3 const& p1, Pl3 const& p2 )
         P3 i1, i2;
         Pl3 p4, p5;
         
-        if (Intersection_Of_Line_And_Plane( p1, l2, i1 ) && Intersection_Of_Line_And_Plane( p2, l2, i2 ))
+        bool intersect_1 = Intersection_Of_Line_And_Plane( p1, l2, i1 );
+        bool intersect_2 = Intersection_Of_Line_And_Plane( p2, l2, i2 );
+        
+        if (intersect_1 && intersect_2)
         {
             if (p3.oriented_side( i1 ) == p3.oriented_side( i2 ))
             {
@@ -148,7 +155,7 @@ double General_Spherical_Wedge ( Sphere const& s, Pl3 const& p1, Pl3 const& p2 )
             }
         }
         
-        else if (Intersection_Of_Line_And_Plane( p1, l2, i1 ))
+        else if (intersect_1)
         {
             if (p3.oriented_side( i1 ) == ON_POSITIVE_SIDE)
             {
@@ -165,8 +172,6 @@ double General_Spherical_Wedge ( Sphere const& s, Pl3 const& p1, Pl3 const& p2 )
         
         else
         {
-            Intersection_Of_Line_And_Plane( p2, l2, i2 );
-            
             if (p3.oriented_side( i2 ) == ON_POSITIVE_SIDE)
             {
                 p4 = p1;
@@ -188,39 +193,20 @@ double General_Spherical_Wedge ( Sphere const& s, Pl3 const& p1, Pl3 const& p2 )
     
     else if (p1.oriented_side( s.c ) == ON_POSITIVE_SIDE)
     {
-        P3 pt3 = p1.point();
-        
-        if (squared_distance( pt3, l ) < tiny_num) pt3 += p1.base1();
-        if (squared_distance( pt3, l ) < tiny_num) pt3 += p1.base2();
-        
         if (p2.oriented_side( pt3 ) != p3.oriented_side( pt3 )) p3 = p3.opposite();
         
-        Pl3 p4 = p1.opposite();
-        
-        double volume1 = Regularised_Spherical_Wedge ( s, p4, p3 );
-        
-        p3 = p3.opposite();
-        p4 = p2.opposite();
-        
-        double volume2 = Regularised_Spherical_Wedge ( s, p4, p3 );
+        double volume1 = Regularised_Spherical_Wedge( s, p1.opposite(), p3 );
+        double volume2 = Regularised_Spherical_Wedge( s, p2.opposite(), p3.opposite() );
         
         return s.vol - volume1 - volume2;
     }
     
     else
     {
-        P3 pt3 = p1.point();
-        
-        if (squared_distance( pt3, l ) < tiny_num) pt3 += p1.base1();
-        if (squared_distance( pt3, l ) < tiny_num) pt3 += p1.base2();
-        
         if (p2.oriented_side( pt3 ) != p3.oriented_side( pt3 )) p3 = p3.opposite();
         
-        double volume1 = Regularised_Spherical_Wedge ( s, p1, p3 );
-        
-        p3 = p3.opposite();
-        
-        double volume2 = Regularised_Spherical_Wedge ( s, p2, p3 );
+        double volume1 = Regularised_Spherical_Wedge( s, p1, p3 );
+        double volume2 = Regularised_Spherical_Wedge( s, p2, p3.opposite() );
         
         return volume1 + volume2;
     }

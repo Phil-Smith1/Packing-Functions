@@ -1,11 +1,10 @@
-#include "Sphere_Plane_Distance.h"
 #include "Circle.h"
+#include "Sphere_Plane_Distance.h"
+#include "Norm3D.h"
 
 Circle3D Circular_Intersection_Of_Sphere_And_Plane ( Sphere const& s, Pl3 const& p )
 {
     double sphere_plane_distance = Sphere_Plane_Distance( s, p );
-    
-    //if (sphere_plane_distance >= s.r || sphere_plane_distance <= -s.r) return 0;
     
     double r = sqrt( s.r * s.r - sphere_plane_distance * sphere_plane_distance );
     P3 c = s.c - sphere_plane_distance * p.orthogonal_vector() / (double)Norm( p.orthogonal_vector() );

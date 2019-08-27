@@ -1575,8 +1575,8 @@ dependencies: \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Line_Of_Intersection_Of_Two_Planes.h \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Spherical_Cap.h \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Circular_Intersection_Of_Sphere_And_Plane.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Sphere_Plane_Distance.h \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle.h \
+  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Sphere_Plane_Distance.h \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Intersection_Of_Line_And_Plane.h \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Intersection_Of_Plane_And_Circle.h \
   /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Parallel_Lines.h \

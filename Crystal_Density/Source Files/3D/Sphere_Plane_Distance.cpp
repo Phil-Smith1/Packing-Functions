@@ -1,4 +1,3 @@
-#include "Norm3D.h"
 #include "Sphere.h"
 
 typedef K::Plane_3 Pl3;

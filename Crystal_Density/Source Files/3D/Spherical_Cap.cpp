@@ -7,6 +7,7 @@ double Spherical_Cap ( Sphere const& s, Pl3 const& p )
     if (sphere_plane_distance >= s.r || sphere_plane_distance <= -s.r)
     {
         if (p.oriented_side( s.c ) == ON_POSITIVE_SIDE) return s.vol;
+        
         else return 0;
     }
     
