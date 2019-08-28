@@ -27,9 +27,7 @@ double Two_Sphere_Intersection_Volume_Within_Cell ( Cell3D const& cell, Sphere c
         
         double volume1 = Spherical_Cap_Volume_Within_Cell( cell, s2, p );
         
-        p = p.opposite();
-        
-        double volume2 = Spherical_Cap_Volume_Within_Cell( cell, s1, p );
+        double volume2 = Spherical_Cap_Volume_Within_Cell( cell, s1, p.opposite() );
         
         return volume1 + volume2;
     }

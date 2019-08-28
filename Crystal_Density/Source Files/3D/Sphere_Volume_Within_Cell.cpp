@@ -26,7 +26,5 @@ double Sphere_Volume_Within_Cell ( Cell3D const& cell, Sphere const& s )
         else planes.push_back( pair<Pl3, int>( cell.planes[counter], counter ) );
     }
     
-    if (num_vertices_contained == 0) return Sphere_Volume_By_Exclusion_2( planes, s );
-    
     return Sphere_Volume_By_Exclusion( planes, s );
 }
