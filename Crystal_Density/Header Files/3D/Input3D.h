@@ -14,14 +14,14 @@ class Input3D
 {
     public:
     
-    bool interior_points, auto_max_radius;
+    bool T2, pts_at_vertices, interior_points, auto_max_radius, parallelepiped;
     int sample_rate, deformation_type, iterations;
     double max_radius;
     string function_type, lattice_type;
     vector<double> scale;
-    vector<P3> pts, interior_pts;
+    vector<P3> parallelepiped_vectors, interior_pts;
     
-    Input3D ( string const& f_t, string const& l_t, vector<P3>const& p, vector<double>const& s, bool int_p, vector<P3> i_p, int d_t, int i, int s_r, bool a_m_r, double m_r );
+    Input3D ( bool t, string const& f_t, string const& l_t, vector<P3>const& p_v, bool p_a_v, vector<double>const& s, bool int_p, vector<P3> i_p, int d_t, int i, int s_r, bool a_m_r, double m_r, bool par );
     
     Input3D();
     ~Input3D();

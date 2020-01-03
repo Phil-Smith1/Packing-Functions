@@ -7,7 +7,7 @@ void Areas ( Frame& f )
     f.area_at_least[2] = (f.total_area[2] - 3 * f.total_area[3]) / (double)f.cell.area;
     f.area_at_least[3] = f.total_area[3] / (double)f.cell.area;
     
-    if (f.cell.interior_pts)
+    /*if (f.cell.interior_pts)
     {
         if (f.cell.num_pts == 5)
         {
@@ -37,7 +37,7 @@ void Areas ( Frame& f )
             f.area_at_least[2] += (6 * f.total_area[4] - 10 * f.total_area[5]) / (double)f.cell.area;
             f.area_at_least[3] -= (4 * f.total_area[4] - 10 * f.total_area[5]) / (double)f.cell.area;
         }
-    }
+    }*/
     
     f.area_exact[0] = f.area_at_least[0] - f.area_at_least[1];
     f.area_exact[1] = f.area_at_least[1] - f.area_at_least[2];

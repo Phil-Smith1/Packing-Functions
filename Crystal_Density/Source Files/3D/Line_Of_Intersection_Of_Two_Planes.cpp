@@ -1,10 +1,5 @@
-#include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
+#include "Norm3D.h"
 
-using namespace CGAL;
-
-typedef Exact_predicates_inexact_constructions_kernel K;
-typedef K::Point_3 P3;
-typedef K::Vector_3 V3;
 typedef K::Line_3 L3;
 typedef K::Plane_3 Pl3;
 
@@ -25,6 +20,8 @@ L3 Line_Of_Intersection_Of_Two_Planes ( Pl3 const& p1, Pl3 const& p2 )
         
         P3 p( a, b, 0 );
         
+        v = v / (double)Norm( v );
+        
         L3 l( p, v );
         
         return l;
@@ -37,6 +34,8 @@ L3 Line_Of_Intersection_Of_Two_Planes ( Pl3 const& p1, Pl3 const& p2 )
         
         P3 p( a, 0, c );
         
+        v = v / (double)Norm( v );
+        
         L3 l( p, v );
         
         return l;
@@ -48,6 +47,8 @@ L3 Line_Of_Intersection_Of_Two_Planes ( Pl3 const& p1, Pl3 const& p2 )
         c = (p1.d() * p2.b() - p2.d() * p1.b()) / (double)(p1.b() * p2.c() - p2.b() * p1.c());
         
         P3 p( 0, b, c );
+        
+        v = v / (double)Norm( v );
         
         L3 l( p, v );
         

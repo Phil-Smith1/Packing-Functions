@@ -1,13 +1,13 @@
 dependencies: \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Source\ Files/Global\ Functions/Extract_Data_Pts.cpp \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Global\ Functions/First_Order_Total_Area.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Frame/Frame.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Frame/Cell_4Circles.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Frame/Cell_3Circles.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Frame/Cell_2Circles.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Frame/Cell_Circle.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Cell/Cell.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Edge.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Source\ Files/Global\ Functions/Extract_Data_Pts.cpp \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Global\ Functions/First_Order_Total_Area.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Frame/Frame.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Frame/Cell_4Circles.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Frame/Cell_3Circles.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Frame/Cell_2Circles.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Frame/Cell_Circle.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Cell/Cell.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Edge.h \
   /usr/local/Cellar/cgal/4.14/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
   /usr/local/Cellar/cgal/4.14/include/CGAL/Simple_cartesian.h \
   /usr/local/Cellar/cgal/4.14/include/CGAL/Cartesian/Cartesian_base.h \
@@ -955,6 +955,7 @@ dependencies: \
   /usr/local/Cellar/boost/1.69.0/include/boost/integer/integer_log2.hpp \
   /usr/local/Cellar/boost/1.69.0/include/boost/config/header_deprecated.hpp \
   /usr/local/Cellar/boost/1.69.0/include/boost/config/pragma_message.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/config/helper_macros.hpp \
   /usr/local/Cellar/boost/1.69.0/include/boost/random/detail/seed_impl.hpp \
   /usr/local/Cellar/boost/1.69.0/include/boost/integer/integer_mask.hpp \
   /usr/local/Cellar/boost/1.69.0/include/boost/random/discard_block.hpp \
@@ -1561,51 +1562,51 @@ dependencies: \
   /usr/local/Cellar/boost/1.69.0/include/boost/type_traits/integral_promotion.hpp \
   /usr/local/Cellar/boost/1.69.0/include/boost/type_traits/promote.hpp \
   /usr/local/Cellar/cgal/4.14/include/CGAL/Triangulation_structural_filtering_traits.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Frame/Two_Circles.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Frame/Two_Circle_Intersection_Area.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Frame/Intersection_Of_Two_Circles.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Basic/Norm.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Basic/Segment_Area.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Basic/Angle_Between_Vectors.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Frame/Three_Circles.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Basic/Triangle_Area.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Frame/Four_Circles.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Basic/Order_Circles.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle_Area_Within_Cell/Circle_Area_Within_Cell.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle_Area_Within_Cell/Cell_Circle_Intersections.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle_Area_Within_Cell/Edge_Circle_Intersections.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle_Area_Within_Cell/Line_Circle_Intersections.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle_Area_Within_Cell/Num_Vertices_Within_Circle.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle_Area_Within_Cell/Pt_Within_Convex_Hull.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle_Area_Within_Cell/Area_Excluded_By_Exterior_Edge.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Correct_Side_Of_Cell.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Same_Side.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle_Area_Within_Cell/Irregular_Sector_Area.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle_Area_Within_Cell/Interior_Edge_Area.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle_Area_Within_Cell/Concave_Cone_Area.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Global\ Functions/Second_Order_Total_Area.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Two_Circle_Area_Within_Cell/Two_Circle_Intersection_Area_Within_Cell.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Two_Circle_Area_Within_Cell/Two_Circle_Intersection_Area_Excluded_By_Exterior_Edge.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Two_Circle_Area_Within_Cell/Two_Circle_Intersection_Irregular_Sector_Area.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Two_Circle_Area_Within_Cell/Two_Circle_Intersection_Interior_Edge_Area.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Cell/Make_Cell.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Cell/Cell_Area.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Two_Circle_Area_Within_Cell/Two_Circle_Intersection_Concave_Cone_Area.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Global\ Functions/Third_Order_Total_Area.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Three_Circle_Area_Within_Cell/Three_Circle_Intersection_Area_Within_Cell.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Three_Circle_Area_Within_Cell/Non_Inclusion_Three_Circle_Intersection_Area_Within_Cell.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Three_Circle_Area_Within_Cell/Non_Trivial_Three_Circle_Intersection_Area_Within_Cell.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Three_Circle_Area_Within_Cell/Three_Circle_Intersection_Area_Excluded_By_Exterior_Edge.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Three_Circle_Area_Within_Cell/Three_Circle_Intersection_Irregular_Sector_Area.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Three_Circle_Area_Within_Cell/Three_Circle_Intersection_Interior_Edge_Area.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Three_Circle_Area_Within_Cell/Three_Circle_Intersection_Concave_Cone_Area.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Global\ Functions/Fourth_Order_Total_Area.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Four_Circle_Area_Within_Cell/Four_Circle_Intersection_Area_Within_Cell.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Four_Circle_Area_Within_Cell/Non_Inclusion_Four_Circle_Intersection_Area_Within_Cell.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Four_Circle_Area_Within_Cell/Non_Trivial_Four_Circle_Intersection_Area_Within_Cell.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Four_Circle_Area_Within_Cell/Non_Trivial_Four_Circle_Intersection_Pts.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Four_Circle_Area_Within_Cell/Non_Trivial_Four_Circle_Intersection_Area.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Four_Circle_Area_Within_Cell/Four_Circle_Intersection_Area_Excluded_By_Exterior_Edge.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Three_Circle_Area_Within_Cell/Non_Trivial_Three_Circle_Intersection_Area.h \
-  /Users/philsmith/Documents/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Global\ Functions/Areas.h
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Frame/Two_Circles.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Frame/Two_Circle_Intersection_Area.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Frame/Intersection_Of_Two_Circles.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Basic/Norm.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Basic/Segment_Area.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Basic/Angle_Between_Vectors.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Frame/Three_Circles.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Basic/Triangle_Area.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Frame/Four_Circles.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Basic/Order_Circles.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle_Area_Within_Cell/Circle_Area_Within_Cell.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle_Area_Within_Cell/Cell_Circle_Intersections.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle_Area_Within_Cell/Edge_Circle_Intersections.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle_Area_Within_Cell/Line_Circle_Intersections.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle_Area_Within_Cell/Num_Vertices_Within_Circle.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle_Area_Within_Cell/Pt_Within_Convex_Hull.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle_Area_Within_Cell/Area_Excluded_By_Exterior_Edge.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Correct_Side_Of_Cell.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Same_Side.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle_Area_Within_Cell/Irregular_Sector_Area.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle_Area_Within_Cell/Interior_Edge_Area.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Circle_Area_Within_Cell/Concave_Cone_Area.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Global\ Functions/Second_Order_Total_Area.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Two_Circle_Area_Within_Cell/Two_Circle_Intersection_Area_Within_Cell.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Two_Circle_Area_Within_Cell/Two_Circle_Intersection_Area_Excluded_By_Exterior_Edge.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Two_Circle_Area_Within_Cell/Two_Circle_Intersection_Irregular_Sector_Area.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Two_Circle_Area_Within_Cell/Two_Circle_Intersection_Interior_Edge_Area.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Cell/Make_Cell.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Cell/Cell_Area.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Two_Circle_Area_Within_Cell/Two_Circle_Intersection_Concave_Cone_Area.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Global\ Functions/Third_Order_Total_Area.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Three_Circle_Area_Within_Cell/Three_Circle_Intersection_Area_Within_Cell.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Three_Circle_Area_Within_Cell/Non_Inclusion_Three_Circle_Intersection_Area_Within_Cell.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Three_Circle_Area_Within_Cell/Non_Trivial_Three_Circle_Intersection_Area_Within_Cell.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Three_Circle_Area_Within_Cell/Three_Circle_Intersection_Area_Excluded_By_Exterior_Edge.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Three_Circle_Area_Within_Cell/Three_Circle_Intersection_Irregular_Sector_Area.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Three_Circle_Area_Within_Cell/Three_Circle_Intersection_Interior_Edge_Area.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Three_Circle_Area_Within_Cell/Three_Circle_Intersection_Concave_Cone_Area.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Global\ Functions/Fourth_Order_Total_Area.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Four_Circle_Area_Within_Cell/Four_Circle_Intersection_Area_Within_Cell.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Four_Circle_Area_Within_Cell/Non_Inclusion_Four_Circle_Intersection_Area_Within_Cell.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Four_Circle_Area_Within_Cell/Non_Trivial_Four_Circle_Intersection_Area_Within_Cell.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Four_Circle_Area_Within_Cell/Non_Trivial_Four_Circle_Intersection_Pts.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Four_Circle_Area_Within_Cell/Non_Trivial_Four_Circle_Intersection_Area.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Four_Circle_Area_Within_Cell/Four_Circle_Intersection_Area_Excluded_By_Exterior_Edge.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Three_Circle_Area_Within_Cell/Non_Trivial_Three_Circle_Intersection_Area.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Global\ Functions/Areas.h

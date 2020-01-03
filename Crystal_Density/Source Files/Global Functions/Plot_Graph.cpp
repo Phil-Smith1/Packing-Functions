@@ -73,10 +73,11 @@ void Plot_PDF ( string const& directory, double max_radius )
     gp << "set grid\n";
     gp << "set bmargin 4.5\n";
     gp << "set lmargin 8.5\n";
-    gp << "set tmargin 2\n";
+    gp << "set tmargin 3\n";
     gp << "set rmargin 2\n";
     
-    gp << "set ylabel 'f_n(r)' font ', 20' offset -0.5, 0\n";
+    //gp << "set title 'Packing Functions for the Hexagonal Lattice' font ', 20' offset 0, 2\n";
+    gp << "set ylabel '{/Symbol p}_n(r)' font ', 20' offset -0.5, 0\n";
     gp << "set xlabel 'Radius of Disks' font ', 20' offset 0, -0.3\n";
     
     gp << "set xrange [0: " << max_radius << "]\n";
@@ -84,7 +85,7 @@ void Plot_PDF ( string const& directory, double max_radius )
     gp << "set xtics font ', 18'\n";
     gp << "set ytics font ', 18'\n";
     
-    gp << "set key horizontal tmargin c font ', 18'\n";
+    gp << "set key horizontal at graph 0.5, graph 1.04 center bottom font ', 14'\n";
     
     gp << "set style line 1 lc rgb '#0d61ec' lw 3\n";
     gp << "set style line 2 lc rgb '#24ae1d' lw 3\n";
@@ -92,10 +93,14 @@ void Plot_PDF ( string const& directory, double max_radius )
     gp << "set style line 4 lc rgb '#e70000' lw 3\n";
     gp << "set style line 6 lc rgb '#d500ff' lw 3\n";
     gp << "set style line 5 lc rgb '#000000' pt 7 ps 0.5\n";
+    gp << "set style line 7 dt 2 lc rgb '#0d61ec' lw 3\n";
+    gp << "set style line 8 dt 2 lc rgb '#24ae1d' lw 3\n";
+    gp << "set style line 9 dt 2 lc rgb '#ffae00' lw 3\n";
+    gp << "set style line 10 dt 2 lc rgb '#e70000' lw 3\n";
     
     gp << "set output \"Graphs/Packing Functions Exact.pdf\"\n";
     
-    gp << "plot 'Data/Results_Exact.txt' using 1:2 smooth csplines ls 1 title '1', 'Data/Results_Exact.txt' using 1:3 smooth csplines ls 2 title '2', 'Data/Results_Exact.txt' using 1:4 smooth csplines ls 3 title '3', NaN ls 4 title '4', 'Data/Results_Exact.txt' using 1:5 smooth csplines ls 6 title '5', 'Data/Derivative_Critical_Pts.txt' using 1:2 notitle ls 5\n";
+    gp << "plot 'Data/2D_Cloud2.txt' using 1:2 smooth csplines ls 1 title '{/Symbol p}_1(r)', 'Data/2D_Cloud2.txt' using 1:3 smooth csplines ls 2 title '{/Symbol p}_2(r)', 'Data/2D_Cloud2.txt' using 1:4 smooth csplines ls 3 title '{/Symbol p}_3(r)', 'Data/2D_Cloud2.txt' using 1:5 smooth csplines ls 4 title '{/Symbol p}_4(r)', 'Data/2D_Cloud2.txt' using 1:6 smooth csplines ls 7 notitle, 'Data/2D_Cloud2.txt' using 1:7 smooth csplines ls 8 notitle, 'Data/2D_Cloud2.txt' using 1:8 smooth csplines ls 9 notitle, 'Data/2D_Cloud2.txt' using 1:9 smooth csplines ls 10 notitle'\n";
 }
 
 void Plot_PNG ( string const& directory, double max_radius, int iter )

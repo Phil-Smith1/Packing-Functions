@@ -17,5 +17,5 @@ double Cone_Parallel_Planes ( Sphere const& s, Pl3 const& p1, Pl3 const& p2, Pl3
     
     else if (p1.oriented_side( p2.point() ) == ON_NEGATIVE_SIDE) return General_Spherical_Wedge( s, p1, p3 );
     
-    else return Spherical_Cap( s, p1 ) + Spherical_Cap( s, p2 ) - s.vol - Spherical_Cap( s, p3 ) + General_Spherical_Wedge( s, p1, p3 ) + General_Spherical_Wedge( s, p2, p3 );
+    else return Spherical_Cap( s, p1 ) + Spherical_Cap( s, p2 ) - s.vol - Spherical_Cap( s, p3.opposite() ) + General_Spherical_Wedge( s, p1.opposite(), p3.opposite() ) + General_Spherical_Wedge( s, p2.opposite(), p3.opposite() );
 }

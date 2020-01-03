@@ -17,7 +17,7 @@ void Extract_Data_Pts ( string const& directory, Cell& cell, int sample_rate, do
     {
         double radius = counter / (double)sample_rate;
         
-        vector<double> r = { radius, radius, radius, radius, radius, radius };
+        vector<double> r = { radius, radius, radius, radius, radius, radius, radius, radius, radius, radius, radius, radius };
         
         Frame f( cell, r );
         
@@ -30,6 +30,8 @@ void Extract_Data_Pts ( string const& directory, Cell& cell, int sample_rate, do
         Fourth_Order_Total_Area( f );
         
         Areas( f );
+        
+        if (f.area_exact[3] < tiny_num) f.area_exact[3] = tiny_num;
         
         ofs_1 << setprecision( 10 ) << radius << " " << f.area_at_least[0] << " " << f.area_at_least[1] << " " << f.area_at_least[2] << " " << f.area_at_least[3] << endl;
         

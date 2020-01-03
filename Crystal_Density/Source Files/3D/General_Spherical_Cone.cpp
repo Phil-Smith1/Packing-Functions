@@ -18,7 +18,7 @@ double General_Spherical_Cone ( Sphere const& s, Pl3 const& p1, Pl3 const& p2, P
     
     P3 vertex = Intersection_Of_Two_Lines3D( l2, l3 );
     
-    if (Norm( s.c, vertex) >= s.r - tiny_num) return General_Spherical_Cone_Exterior_Vertex( s, p1, p2, p3 );
+    if (Norm( s.c, vertex ) >= s.r - 0.002) return General_Spherical_Cone_Exterior_Vertex( s, vertex, p1, p2, p3 ); // Changed for T2 dataset: 0.002 or 0.0005 or 0.00005.
     
     Circle3D c = Circular_Intersection_Of_Sphere_And_Plane( s, p1 );
     
@@ -26,19 +26,22 @@ double General_Spherical_Cone ( Sphere const& s, Pl3 const& p1, Pl3 const& p2, P
     
     Intersection_Pts_Of_Plane_And_Circle( p2, c, i1, i2 );
     
-    if (p3.oriented_side( i1 ) == ON_POSITIVE_SIDE) pt3 = i1;
+    if (Norm( i1, i2 ) < tiny_num) return General_Spherical_Cone_Exterior_Vertex( s, vertex, p1, p2, p3 );
+    else if (p3.oriented_side( i1 ) == ON_POSITIVE_SIDE) pt3 = i1;
     else pt3 = i2;
     
     Intersection_Pts_Of_Plane_And_Circle( p3, c, i1, i2 );
     
-    if (p2.oriented_side( i1 ) == ON_POSITIVE_SIDE) pt2 = i1;
+    if (Norm( i1, i2 ) < tiny_num) return General_Spherical_Cone_Exterior_Vertex( s, vertex, p1, p2, p3 );
+    else if (p2.oriented_side( i1 ) == ON_POSITIVE_SIDE) pt2 = i1;
     else pt2 = i2;
     
     c = Circular_Intersection_Of_Sphere_And_Plane( s, p2 );
     
     Intersection_Pts_Of_Plane_And_Circle( p3, c, i1, i2 );
     
-    if (p1.oriented_side( i1 ) == ON_POSITIVE_SIDE) pt1 = i1;
+    if (Norm( i1, i2 ) < tiny_num) return General_Spherical_Cone_Exterior_Vertex( s, vertex, p1, p2, p3 );
+    else if (p1.oriented_side( i1 ) == ON_POSITIVE_SIDE) pt1 = i1;
     else pt1 = i2;
     
     double tet_volume = Tetrahedron_Volume( vertex, pt1, pt2, pt3 );

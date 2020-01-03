@@ -210,7 +210,7 @@ double Cone_Parallel_Lines ( Sphere const& s, L3 const& l3, L3 const& l2, Pl3 co
         {
             if (p1.oriented_side( l1.point() ) == ON_NEGATIVE_SIDE) return Spherical_Cap( s, p1 ) - General_Spherical_Wedge( s, p1, p2.opposite() ) - General_Spherical_Wedge( s, p1, p3.opposite() );
             
-            else return s.vol - Spherical_Cap( s, p1.opposite() ) - Spherical_Cap( s, p2.opposite() ) - Spherical_Cap( s, p3.opposite() ) + Spherical_Wedge( s, p1.opposite(), p2.opposite() ) + Spherical_Wedge( s, p1.opposite(), p3.opposite() ) + Spherical_Wedge( s, p2.opposite(), p3.opposite() );
+            else return s.vol - Spherical_Cap( s, p1.opposite() ) - Spherical_Cap( s, p2.opposite() ) - Spherical_Cap( s, p3.opposite() ) + General_Spherical_Wedge( s, p1.opposite(), p2.opposite() ) + General_Spherical_Wedge( s, p1.opposite(), p3.opposite() ) + General_Spherical_Wedge( s, p2.opposite(), p3.opposite() );
         }
     }
 }
