@@ -1,12 +1,7 @@
 #pragma once
 
-#include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
+#include "Norm3D.h"
 
-using namespace CGAL;
-
-typedef Exact_predicates_inexact_constructions_kernel K;
-typedef K::Point_3 P3;
-typedef K::Vector_3 V3;
 typedef K::Line_3 L3;
 typedef K::Plane_3 Pl3;
 
