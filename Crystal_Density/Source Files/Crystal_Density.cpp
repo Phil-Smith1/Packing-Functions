@@ -9,6 +9,7 @@
 #include "Draw_Cells.h"
 #include "Packing_Functions.h"
 #include "GIF.h"
+#include "Comparing_Entries.h"
 #include "Print_Info.h"
 
 #include "Obtain_T2_Centres.h"
@@ -171,383 +172,111 @@ int main ( int, char*[] )
         }
     }
     
-    if (false)
+    if (comparing)
     {
-        for (int counter_1 = 99; counter_1 < 100; ++counter_1)
+        vector<int> length_diff;
+        length_diff.reserve( 5688 );
+        vector<double> pi_1, pi_2, pi_3;
+        pi_1.reserve( 5688 );
+        pi_2.reserve( 5688 );
+        pi_3.reserve( 5688 );
+        
+        for (int counter = 0; counter < 5688; ++counter)
         {
-            /*cell_shape.push_back( pair<string, double>( "_cell_length_a", 7.2523 ) );
-            cell_shape.push_back( pair<string, double>( "_cell_length_b", 13.033 ) );
-            cell_shape.push_back( pair<string, double>( "_cell_length_c", 20.693 ) );
-            cell_shape.push_back( pair<string, double>( "_cell_angle_alpha", 72.701 ) );
-            cell_shape.push_back( pair<string, double>( "_cell_angle_beta", 86.552 ) );
-            cell_shape.push_back( pair<string, double>( "_cell_angle_gamma", 73.915 ) );
+            string filename_1 = directory3D + "Data/T2 Packing Functions/Dataset/" + to_string( counter + 1 ) + ".txt";
+            string filename_2 = directory3D + "Data/T2 Packing Functions/Dataset Copy/" + to_string( counter + 1 ) + ".txt";
+            filename_1 = directory3D + "Data/T2 Packing Functions/alphaex.txt";
             
-            P3 p = P3( 0.7707, 0.33245, 0.34045 );
-            Frac_To_Cart_Coords( matrix, p );
-            T2_centres.push_back( p );
+            int difference_in_length;
+            double max_diff_pi_1, max_diff_pi_2, max_diff_pi_3;
             
-            p = P3( 0.2293, 0.66755, 0.65955 );
-            Frac_To_Cart_Coords( matrix, p );
-            T2_centres.push_back( p );
+            Comparing_Entries( filename_1, filename_2, max_diff_pi_1, max_diff_pi_2, max_diff_pi_3, difference_in_length );
             
-            p = P3( 0.81344, 0.76646, 0.5 );
-            Frac_To_Cart_Coords( matrix, p );
-            T2_centres.push_back( p );
+            length_diff.push_back( difference_in_length );
+            pi_1.push_back( max_diff_pi_1 );
+            pi_2.push_back( max_diff_pi_2 );
+            pi_3.push_back( max_diff_pi_3 );
+        }
+        
+        ofstream ofs( directory3D + "Data/T2 Packing Functions/Dataset_Comparison.txt" );
+        
+        for (int counter = 0; counter < 5688; ++counter)
+        {
+            ofs << counter + 1 << " " << pi_1[counter] << " " << pi_2[counter] << " " << pi_3[counter] << " " << pi_1[counter] + pi_2[counter] + pi_3[counter] << " " << length_diff[counter] << endl;
+        }
+        
+        int entry_1 = 0, entry_2 = 0, entry_3 = 0;
+        double overall_max_pi_1 = 0, overall_max_pi_2 = 0, overall_max_pi_3 = 0;
+        
+        for (int counter = 0; counter < 5688; ++counter)
+        {
+            if (overall_max_pi_1 < pi_1[counter])
+            {
+                overall_max_pi_1 = pi_1[counter];
+                entry_1 = counter;
+            }
             
-            p = P3( 0.23354, 0.81344, 0 );
-            Frac_To_Cart_Coords( matrix, p );
-            T2_centres.push_back( p );*/
+            if (overall_max_pi_2 < pi_2[counter])
+            {
+                overall_max_pi_2 = pi_2[counter];
+                entry_2 = counter;
+            }
+            
+            if (overall_max_pi_3 < pi_3[counter])
+            {
+                overall_max_pi_3 = pi_3[counter];
+                entry_3 = counter;
+            }
+        }
+        
+        //cout << entry_1 << " " << overall_max_pi_1 << endl;
+        //cout << entry_2 << " " << overall_max_pi_2 << endl;
+        //cout << entry_3 << " " << overall_max_pi_3 << endl;
+        
+        entry_1 = entry_2 = entry_3 = 0;
+        int entry = 0;
+        overall_max_pi_1 = overall_max_pi_2 = overall_max_pi_3 = big_num;
+        double sum_error = big_num;
+        
+        for (int counter = 0; counter < 5688; ++counter)
+        {
+            if (overall_max_pi_1 > pi_1[counter] && length_diff[counter] < 2)
+            {
+                overall_max_pi_1 = pi_1[counter];
+                entry_1 = counter;
+            }
+            
+            if (overall_max_pi_2 > pi_2[counter] && length_diff[counter] < 2)
+            {
+                overall_max_pi_2 = pi_2[counter];
+                entry_2 = counter;
+            }
+            
+            if (overall_max_pi_3 > pi_3[counter] && length_diff[counter] < 2)
+            {
+                overall_max_pi_3 = pi_3[counter];
+                entry_3 = counter;
+            }
+            
+            if (sum_error > pi_1[counter] + pi_2[counter] + pi_3[counter] && length_diff[counter] < 2)
+            {
+                sum_error = pi_1[counter] + pi_2[counter] + pi_3[counter];
+                entry = counter;
+            }
+        }
+        
+        cout << entry_1 + 1 << " " << overall_max_pi_1 << endl;
+        cout << entry_2 + 1 << " " << overall_max_pi_2 << endl;
+        cout << entry_3 + 1 << " " << overall_max_pi_3 << endl;
+        cout << entry + 1 << " " << sum_error << endl;
+        
+        cout << endl;
+        
+        for (int counter = 0; counter < 5688; ++counter)
+        {
+            if (pi_1[counter] + pi_2[counter] + pi_3[counter] < sum_error + 0.01 && length_diff[counter] < 2) cout << counter + 1 << " " << pi_1[counter] + pi_2[counter] + pi_3[counter] << endl;
         }
     }
-    
-    ifstream ifs_1( directory3D + "Data/T2 Packing Functions/delta.txt" );
-    ifstream ifs_2( directory3D + "Data/T2 Packing Functions/deltaex.txt" );
-    ifstream ifs_3( directory3D + "Data/T2 Packing Functions/gamma.txt" );
-    ifstream ifs_4( directory3D + "Data/T2 Packing Functions/delta.txt" );
-    ifstream ifs_5( directory3D + "Data/T2 Packing Functions/epsilon.txt" );
-    
-    string line_data;
-    stringstream stream;
-    vector<vector<double>> af, bf, cf, df, ef;
-    
-    vector<double> f1, f2, f3;
-    
-    while (getline( ifs_1, line_data ))
-    {
-        double rad, fn1, fn2, fn3;
-        stringstream stream;
-        
-        stream << line_data;
-        stream >> rad >> fn1 >> fn2 >> fn3;
-        
-        f1.push_back( fn1 );
-        f2.push_back( fn2 );
-        f3.push_back( fn3 );
-    }
-    
-    af.push_back( f1 );
-    f1.clear();
-    af.push_back( f2 );
-    f2.clear();
-    af.push_back( f3 );
-    f3.clear();
-    
-    ifs_1.close();
-    
-    while (getline( ifs_2, line_data ))
-    {
-        double rad, fn1, fn2, fn3;
-        stringstream stream;
-        
-        stream << line_data;
-        stream >> rad >> fn1 >> fn2 >> fn3;
-        
-        f1.push_back( fn1 );
-        f2.push_back( fn2 );
-        f3.push_back( fn3 );
-    }
-    
-    bf.push_back( f1 );
-    f1.clear();
-    bf.push_back( f2 );
-    f2.clear();
-    bf.push_back( f3 );
-    f3.clear();
-    
-    ifs_2.close();
-    
-    while (getline( ifs_3, line_data ))
-    {
-        double rad, fn1, fn2, fn3;
-        stringstream stream;
-        
-        stream << line_data;
-        stream >> rad >> fn1 >> fn2 >> fn3;
-        
-        f1.push_back( fn1 );
-        f2.push_back( fn2 );
-        f3.push_back( fn3 );
-    }
-    
-    cf.push_back( f1 );
-    f1.clear();
-    cf.push_back( f2 );
-    f2.clear();
-    cf.push_back( f3 );
-    f3.clear();
-    
-    ifs_3.close();
-    
-    while (getline( ifs_4, line_data ))
-    {
-        double rad, fn1, fn2, fn3;
-        stringstream stream;
-        
-        stream << line_data;
-        stream >> rad >> fn1 >> fn2 >> fn3;
-        
-        f1.push_back( fn1 );
-        f2.push_back( fn2 );
-        f3.push_back( fn3 );
-    }
-    
-    df.push_back( f1 );
-    f1.clear();
-    df.push_back( f2 );
-    f2.clear();
-    df.push_back( f3 );
-    f3.clear();
-    
-    ifs_4.close();
-    
-    while (getline( ifs_5, line_data ))
-    {
-        double rad, fn1, fn2, fn3;
-        stringstream stream;
-        
-        stream << line_data;
-        stream >> rad >> fn1 >> fn2 >> fn3;
-        
-        f1.push_back( fn1 );
-        f2.push_back( fn2 );
-        f3.push_back( fn3 );
-    }
-    
-    ef.push_back( f1 );
-    f1.clear();
-    ef.push_back( f2 );
-    f2.clear();
-    ef.push_back( f3 );
-    f3.clear();
-    
-    ifs_5.close();
-    
-    /*double ** matrix_1;
-    matrix_1 = new double *[5];
-    for (int counter_2 = 0; counter_2 < 5; ++counter_2)
-    {
-        matrix_1[counter_2] = new double [5];
-    }
-    
-    matrix_1[0][0] = 0;
-    matrix_1[1][1] = 0;
-    matrix_1[2][2] = 0;
-    matrix_1[3][3] = 0;
-    matrix_1[4][4] = 0;
-    
-    int function = 2;
-    
-    double max_r = (int)af[function].size();
-    
-    if (max_r > (int)bf[function].size()) max_r = (int)bf[function].size();
-    
-    double max_diff = 0;
-    
-    for (int counter = 0; counter < max_r; ++counter)
-    {
-        double diff = abs( af[function][counter] - bf[function][counter] );
-        
-        if (diff > max_diff) max_diff = diff;
-    }
-    
-    matrix_1[0][1] = matrix_1[1][0] = max_diff;
-    
-    max_r = (int)af[function].size();
-    
-    if (max_r > (int)cf[function].size()) max_r = (int)cf[function].size();
-    
-    max_diff = 0;
-    
-    for (int counter = 0; counter < max_r; ++counter)
-    {
-        double diff = abs( af[function][counter] - cf[function][counter] );
-        
-        if (diff > max_diff) max_diff = diff;
-    }
-    
-    matrix_1[0][2] = matrix_1[2][0] = max_diff;
-    
-    max_r = (int)af[function].size();
-    
-    if (max_r > (int)df[function].size()) max_r = (int)df[function].size();
-    
-    max_diff = 0;
-    
-    for (int counter = 0; counter < max_r; ++counter)
-    {
-        double diff = abs( af[function][counter] - df[function][counter] );
-        
-        if (diff > max_diff) max_diff = diff;
-    }
-    
-    matrix_1[0][3] = matrix_1[3][0] = max_diff;
-    
-    max_r = (int)af[function].size();
-    
-    if (max_r > (int)ef[function].size()) max_r = (int)ef[function].size();
-    
-    max_diff = 0;
-    
-    for (int counter = 0; counter < max_r; ++counter)
-    {
-        double diff = abs( af[function][counter] - ef[function][counter] );
-        
-        if (diff > max_diff) max_diff = diff;
-    }
-    
-    matrix_1[0][4] = matrix_1[4][0] = max_diff;
-    
-    max_r = (int)bf[function].size();
-    
-    if (max_r > (int)cf[function].size()) max_r = (int)cf[function].size();
-    
-    max_diff = 0;
-    
-    for (int counter = 0; counter < max_r; ++counter)
-    {
-        double diff = abs( bf[function][counter] - cf[function][counter] );
-        
-        if (diff > max_diff) max_diff = diff;
-    }
-    
-    matrix_1[1][2] = matrix_1[2][1] = max_diff;
-    
-    max_r = (int)bf[function].size();
-    
-    if (max_r > (int)df[function].size()) max_r = (int)df[function].size();
-    
-    max_diff = 0;
-    
-    for (int counter = 0; counter < max_r; ++counter)
-    {
-        double diff = abs( bf[function][counter] - df[function][counter] );
-        
-        if (diff > max_diff) max_diff = diff;
-    }
-    
-    matrix_1[1][3] = matrix_1[3][1] = max_diff;
-    
-    max_r = (int)bf[function].size();
-    
-    if (max_r > (int)ef[function].size()) max_r = (int)ef[function].size();
-    
-    max_diff = 0;
-    
-    for (int counter = 0; counter < max_r; ++counter)
-    {
-        double diff = abs( bf[function][counter] - ef[function][counter] );
-        
-        if (diff > max_diff) max_diff = diff;
-    }
-    
-    matrix_1[1][4] = matrix_1[4][1] = max_diff;
-    
-    max_r = (int)cf[function].size();
-    
-    if (max_r > (int)df[function].size()) max_r = (int)df[function].size();
-    
-    max_diff = 0;
-    
-    for (int counter = 0; counter < max_r; ++counter)
-    {
-        double diff = abs( cf[function][counter] - df[function][counter] );
-        
-        if (diff > max_diff) max_diff = diff;
-    }
-    
-    matrix_1[2][3] = matrix_1[3][2] = max_diff;
-    
-    max_r = (int)cf[function].size();
-    
-    if (max_r > (int)ef[function].size()) max_r = (int)ef[function].size();
-    
-    max_diff = 0;
-    
-    for (int counter = 0; counter < max_r; ++counter)
-    {
-        double diff = abs( cf[function][counter] - ef[function][counter] );
-        
-        if (diff > max_diff) max_diff = diff;
-    }
-    
-    matrix_1[2][4] = matrix_1[4][2] = max_diff;
-    
-    max_r = (int)df[function].size();
-    
-    if (max_r > (int)ef[function].size()) max_r = (int)ef[function].size();
-    
-    max_diff = 0;
-    
-    for (int counter = 0; counter < max_r; ++counter)
-    {
-        double diff = abs( df[function][counter] - ef[function][counter] );
-        
-        if (diff > max_diff) max_diff = diff;
-    }
-    
-    matrix_1[3][4] = matrix_1[4][3] = max_diff;
-    
-    cout << matrix_1[0][0] << " " << matrix_1[0][1] << " " << matrix_1[0][2] << " " << matrix_1[0][3] << " " << matrix_1[0][4] << endl;
-    cout << matrix_1[1][0] << " " << matrix_1[1][1] << " " << matrix_1[1][2] << " " << matrix_1[1][3] << " " << matrix_1[1][4] << endl;
-    cout << matrix_1[2][0] << " " << matrix_1[2][1] << " " << matrix_1[2][2] << " " << matrix_1[2][3] << " " << matrix_1[2][4] << endl;
-    cout << matrix_1[3][0] << " " << matrix_1[3][1] << " " << matrix_1[3][2] << " " << matrix_1[3][3] << " " << matrix_1[3][4] << endl;
-    cout << matrix_1[4][0] << " " << matrix_1[4][1] << " " << matrix_1[4][2] << " " << matrix_1[4][3] << " " << matrix_1[4][4] << endl;*/
-    
-    /*double ** matrix_1;
-    matrix_1 = new double *[4];
-    for (int counter_2 = 0; counter_2 < 4; ++counter_2)
-    {
-        matrix_1[counter_2] = new double [3];
-    }
-    
-    double max_r = (int)af[0].size();
-    
-    if (max_r > (int)bf[0].size()) max_r = (int)bf[0].size();
-    
-    double max_diff = 0;
-    
-    for (int counter = 0; counter < max_r; ++counter)
-    {
-        double diff = abs( af[0][counter] - bf[0][counter] );
-        
-        if (diff > max_diff) max_diff = diff;
-    }
-    
-    matrix_1[0][0] = max_diff;
-    
-    max_r = (int)af[1].size();
-    
-    if (max_r > (int)bf[1].size()) max_r = (int)bf[1].size();
-    
-    max_diff = 0;
-    
-    for (int counter = 0; counter < max_r; ++counter)
-    {
-        double diff = abs( af[1][counter] - bf[1][counter] );
-        
-        if (diff > max_diff) max_diff = diff;
-    }
-    
-    matrix_1[0][1] = max_diff;
-    
-    max_r = (int)af[2].size();
-    
-    if (max_r > (int)bf[2].size()) max_r = (int)bf[2].size();
-    
-    max_diff = 0;
-    
-    for (int counter = 0; counter < max_r; ++counter)
-    {
-        double diff = abs( af[2][counter] - bf[2][counter] );
-        
-        if (diff > max_diff) max_diff = diff;
-    }
-    
-    matrix_1[0][2] = max_diff;
-    
-    cout << matrix_1[0][0] << endl;
-    cout << matrix_1[0][1] << endl;
-    cout << matrix_1[0][2] << endl;*/
     
     Print_Info( start_time, start );
     

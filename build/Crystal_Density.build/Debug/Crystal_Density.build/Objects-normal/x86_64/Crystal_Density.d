@@ -1689,8 +1689,12 @@ dependencies: \
   /usr/local/Cellar/boost/1.69.0/include/boost/type_traits/promote.hpp \
   /usr/local/Cellar/cgal/4.14/include/CGAL/Triangulation_structural_filtering_traits.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Input3D.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Graph_Parameters.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Packing_Functions3D.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Extract_Data_Pts3D.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Circumradius.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Angle_Between_Vectors3D.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Norm3D.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/First_Order_Total_Volume.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Sphere_Volume_Within_Cell.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Cell3D.h \
@@ -1700,8 +1704,6 @@ dependencies: \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Cone_Parallel_Planes.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/General_Spherical_Wedge.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Parallel_Planes.h \
-  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Angle_Between_Vectors3D.h \
-  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Norm3D.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Spherical_Wedge.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Sphere.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Regularised_Spherical_Wedge.h \
@@ -1842,6 +1844,18 @@ dependencies: \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Make_Cells3D.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Make_Cell3D.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Cell_Volume.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Make_T2_Cells.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Read_Cell_Shape.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Transformation_Matrix.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Make_T2_Cell.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Frac_To_Cart_Coords.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Read_Atom_Coords.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Obtain_T2_Centres.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Translate_Centres.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Centres_In_Cell.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Distance_To_Cell.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Add_Surrounding_Pts.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Fourth_Order_Radius.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Global\ Functions/Deformation.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Cell/Cell_Data.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Basic/Norm.h \
@@ -1938,8 +1952,5 @@ dependencies: \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Derivatives/Derivatives.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Global\ Functions/Plot_Graph.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Global\ Functions/GIF.h \
-  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Global\ Functions/Print_Info.h \
-  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Transformation_Matrix.h \
-  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Make_T2_Cell.h \
-  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Frac_To_Cart_Coords.h \
-  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Obtain_T2_Centres.h
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Comparing_Entries.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Global\ Functions/Print_Info.h

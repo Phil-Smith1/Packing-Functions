@@ -152,8 +152,11 @@ void Plot_PDF3D_T2 ( string const& directory, double max_radius, Graph_Parameter
     gp << "set style line 5 lc rgb '#000000' pt 7 ps 0.5\n";
     
     gp << "set output \"Graphs/T2 Packing Functions/Dataset/" << to_string( index ) << ".pdf\"\n";
+    //gp << "set output \"Graphs/T2 Packing Functions/Synthesised Crystals/beta2.pdf\"\n";
     
     gp << "plot 'Data/T2 Packing Functions/Dataset/" << to_string( index ) << ".txt' using 1:2 smooth csplines ls 1 title '{/Symbol p}_1(r)', 'Data/T2 Packing Functions/Dataset/" << to_string( index ) << ".txt' using 1:3 smooth csplines ls 2 title '{/Symbol p}_2(r)', 'Data/T2 Packing Functions/Dataset/" << to_string( index ) << ".txt' using 1:4 smooth csplines ls 3 title '{/Symbol p}_3(r)'\n";
+    
+    //gp << "plot 'Data/T2 Packing Functions/betaex2.txt' using 1:2 smooth csplines ls 1 title '{/Symbol p}_1(r)', 'Data/T2 Packing Functions/betaex2.txt' using 1:3 smooth csplines ls 2 title '{/Symbol p}_2(r)', 'Data/T2 Packing Functions/betaex2.txt' using 1:4 smooth csplines ls 3 title '{/Symbol p}_3(r)'\n";
 }
 
 void Plot_PDF3D ( string const& directory, double max_radius, Graph_Parameters const& graph_params )

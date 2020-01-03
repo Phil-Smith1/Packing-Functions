@@ -12,9 +12,11 @@ const string dataset_directory = "/Users/philsmith/Documents/Work/Xcode Projects
 
 bool twoD = false; // Run code for 2D.
 
-bool threeD = true; // Run code for 3D.
+bool threeD = false; // Run code for 3D.
 
 bool T2 = true;
+
+bool comparing = true;
 
 const string function_type = "Exact"; // Exact, At_Least.
 
@@ -46,7 +48,7 @@ int deformation_type = 0; // 0: No deformation; 1: Square to Triangular; 2: Inte
 
 int deformation_type3D = 0; // 0: No deformation; 1: Cube to slanted z-plane in the x-direction (upto angle 80 degrees).
 
-int iterations = 5688; // Number of iterations.
+int iterations = 1; // Number of iterations.
 
 int sample_rate = 10; // Sample rate.
 

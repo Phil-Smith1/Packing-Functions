@@ -14,6 +14,8 @@ void Extract_Data_Pts3D ( string const& directory, Input3D const& input, Cell3D 
     if (input.T2) dir = directory + "Data/T2 Packing Functions/Dataset/" + to_string( index ) + ".txt";
     else dir = directory + "Data/Results.txt";
     
+    //dir = directory + "Data/T2 Packing Functions/betaex2.txt";
+    
     ofstream ofs( dir );
     
     double num_pts = input.max_radius * input.sample_rate + 1;
