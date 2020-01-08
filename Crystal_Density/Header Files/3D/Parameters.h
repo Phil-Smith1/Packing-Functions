@@ -62,7 +62,7 @@ bool parallelepiped = false;
 
 bool title = false;
 
-string title_str = "Packing Functions for the BCC Lattice";
+string title_str = "Packing Functions for T2-{/Symbol a}";
 
 double yrange = 1.01;
 

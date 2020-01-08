@@ -1,6 +1,7 @@
 #include "Read_Cell_Shape.h"
 #include "Transformation_Matrix.h"
 #include "Make_T2_Cell.h"
+#include "Assign_Experimental_data.h"
 #include "Read_Atom_Coords.h"
 #include "Obtain_T2_Centres.h"
 #include "Translate_Centres.h"
@@ -20,13 +21,10 @@ void Make_T2_Cells ( string const& dataset_directory, Input3D& input3D, vector<C
     
     Read_Cell_Shape( block, cell_shape ); // Reading cell shape.
     
-    /*cell_shape.clear();
-    cell_shape.push_back( pair<string, double>( "_cell_length_a", 7.246 ) );
-    cell_shape.push_back( pair<string, double>( "_cell_length_b", 13.0328 ) );
-    cell_shape.push_back( pair<string, double>( "_cell_length_c", 20.66 ) );
-    cell_shape.push_back( pair<string, double>( "_cell_angle_alpha", 72.464 ) );
-    cell_shape.push_back( pair<string, double>( "_cell_angle_beta", 86.349 ) );
-    cell_shape.push_back( pair<string, double>( "_cell_angle_gamma", 74.035 ) );*/
+    bool experimental = false;
+    string label = "d";
+    
+    if (experimental) Assign_Experimental_Cell_Shape( cell_shape, label );
     
     double ** matrix;
     matrix = new double *[3];
@@ -49,23 +47,7 @@ void Make_T2_Cells ( string const& dataset_directory, Input3D& input3D, vector<C
     
     Obtain_T2_Centres( atom_cloud, T2_centres );
     
-    /*T2_centres.clear();
-    
-    P3 p = P3( 0.7349, 0.66898, 0.158815 );
-    Frac_To_Cart_Coords( matrix, p );
-    T2_centres.push_back( p );
-    
-    p = P3( 0.2651, 0.33102, 0.841185 );
-    Frac_To_Cart_Coords( matrix, p );
-    T2_centres.push_back( p );*/
-    
-    /*p = P3( 0.81344, 0.76646, 0.5 );
-    Frac_To_Cart_Coords( matrix, p );
-    T2_centres.push_back( p );
-    
-    p = P3( 0.23354, 0.81344, 0 );
-    Frac_To_Cart_Coords( matrix, p );
-    T2_centres.push_back( p );*/
+    if (experimental) Assign_Experimental_Centres( T2_centres, matrix, label );
     
     cell.pts = T2_centres;
     

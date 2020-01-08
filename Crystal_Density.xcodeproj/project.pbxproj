@@ -91,6 +91,7 @@
 		EE9CE491231048AB0039CF0A /* Cone_Parallel_Planes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE9CE490231048AB0039CF0A /* Cone_Parallel_Planes.cpp */; };
 		EE9CE49523104CFB0039CF0A /* Cone_Parallel_Lines.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE9CE49423104CFB0039CF0A /* Cone_Parallel_Lines.cpp */; };
 		EE9CE497231056240039CF0A /* General_Spherical_Cone_Exterior_Vertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE9CE496231056240039CF0A /* General_Spherical_Cone_Exterior_Vertex.cpp */; };
+		EEC76BAE23C3520200E6C190 /* Assign_Experimental_Data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EEC76BAD23C3520200E6C190 /* Assign_Experimental_Data.cpp */; };
 		EECF3559222D79FF0079CD62 /* Cell_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3558222D79FF0079CD62 /* Cell_Area.cpp */; };
 		EECF355B222D7A500079CD62 /* Cell_Data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF355A222D7A4F0079CD62 /* Cell_Data.cpp */; };
 		EECF355D222D7AA80079CD62 /* Line_Circle_Intersections.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF355C222D7AA80079CD62 /* Line_Circle_Intersections.cpp */; };
@@ -378,6 +379,8 @@
 		EE9CE49423104CFB0039CF0A /* Cone_Parallel_Lines.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cone_Parallel_Lines.cpp; sourceTree = "<group>"; };
 		EE9CE496231056240039CF0A /* General_Spherical_Cone_Exterior_Vertex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = General_Spherical_Cone_Exterior_Vertex.cpp; sourceTree = "<group>"; };
 		EE9CE498231056390039CF0A /* General_Spherical_Cone_Exterior_Vertex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = General_Spherical_Cone_Exterior_Vertex.h; sourceTree = "<group>"; };
+		EEC76BAC23C351F000E6C190 /* Assign_Experimental_Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Assign_Experimental_Data.h; sourceTree = "<group>"; };
+		EEC76BAD23C3520200E6C190 /* Assign_Experimental_Data.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Assign_Experimental_Data.cpp; sourceTree = "<group>"; };
 		EECF3558222D79FF0079CD62 /* Cell_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cell_Area.cpp; sourceTree = "<group>"; };
 		EECF355A222D7A4F0079CD62 /* Cell_Data.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cell_Data.cpp; sourceTree = "<group>"; };
 		EECF355C222D7AA80079CD62 /* Line_Circle_Intersections.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Line_Circle_Intersections.cpp; sourceTree = "<group>"; };
@@ -742,6 +745,7 @@
 		EE55F2C922537C3800B8CA0B /* 3D */ = {
 			isa = PBXGroup;
 			children = (
+				EEC76BAC23C351F000E6C190 /* Assign_Experimental_Data.h */,
 				EE1C33D623A123B70008CAF2 /* Add_Surrounding_Pts.h */,
 				EE113FE222E8784E000A75AC /* Angle_Between_Vectors3D.h */,
 				EE1BA8522316D95700BC6133 /* Cap_Volume_By_Exclusion.h */,
@@ -816,6 +820,7 @@
 		EE55F2CA22537C4800B8CA0B /* 3D */ = {
 			isa = PBXGroup;
 			children = (
+				EEC76BAD23C3520200E6C190 /* Assign_Experimental_Data.cpp */,
 				EE1C33D423A1239E0008CAF2 /* Add_Surrounding_Pts.cpp */,
 				EE113FE022E8783B000A75AC /* Angle_Between_Vectors3D.cpp */,
 				EE1BA8532316D96700BC6133 /* Cap_Volume_By_Exclusion.cpp */,
@@ -1111,6 +1116,7 @@
 				EECF359D222D864F0079CD62 /* Non_Trivial_Four_Circle_Intersection_Area.cpp in Sources */,
 				EECF3559222D79FF0079CD62 /* Cell_Area.cpp in Sources */,
 				EECF35B9222D8CA70079CD62 /* Plot_Graph.cpp in Sources */,
+				EEC76BAE23C3520200E6C190 /* Assign_Experimental_Data.cpp in Sources */,
 				EE379184222EFF3F000B57C8 /* Frame.cpp in Sources */,
 				EECF356B222D7D570079CD62 /* Same_Side.cpp in Sources */,
 				EE067CDD22FB4CE0007F45AB /* Sphere_Ordering.cpp in Sources */,

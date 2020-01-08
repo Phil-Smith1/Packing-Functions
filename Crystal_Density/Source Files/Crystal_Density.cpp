@@ -174,18 +174,21 @@ int main ( int, char*[] )
     
     if (comparing)
     {
-        vector<int> length_diff;
+        /*vector<int> length_diff;
+        vector<double> pi_1, pi_2, pi_3, sum, metric;
+        
         length_diff.reserve( 5688 );
-        vector<double> pi_1, pi_2, pi_3;
         pi_1.reserve( 5688 );
         pi_2.reserve( 5688 );
         pi_3.reserve( 5688 );
+        sum.reserve( 5688 );
+        metric.reserve( 5688 );
+        
+        string filename_1 = directory3D + "Data/T2 Packing Functions/Synthesised Crystals/delta.txt";
         
         for (int counter = 0; counter < 5688; ++counter)
         {
-            string filename_1 = directory3D + "Data/T2 Packing Functions/Dataset/" + to_string( counter + 1 ) + ".txt";
-            string filename_2 = directory3D + "Data/T2 Packing Functions/Dataset Copy/" + to_string( counter + 1 ) + ".txt";
-            filename_1 = directory3D + "Data/T2 Packing Functions/alphaex.txt";
+            string filename_2 = directory3D + "Data/T2 Packing Functions/Dataset/" + to_string( counter + 1 ) + ".txt";
             
             int difference_in_length;
             double max_diff_pi_1, max_diff_pi_2, max_diff_pi_3;
@@ -196,86 +199,269 @@ int main ( int, char*[] )
             pi_1.push_back( max_diff_pi_1 );
             pi_2.push_back( max_diff_pi_2 );
             pi_3.push_back( max_diff_pi_3 );
+            sum.push_back( max_diff_pi_1 + max_diff_pi_2 + max_diff_pi_3 );
+            
+            double met = pi_1[counter] + pi_2[counter] + pi_3[counter];
+            
+            //met *= pow( 2, difference_in_length );
+            
+            metric.push_back( met );
+        }
+        
+        multimap<double, int> list;
+        
+        for (int counter = 0; counter < 5688; ++counter)
+        {
+            list.insert( pair<double, int>( metric[counter], counter ) );
         }
         
         ofstream ofs( directory3D + "Data/T2 Packing Functions/Dataset_Comparison.txt" );
         
-        for (int counter = 0; counter < 5688; ++counter)
+        for (int counter_1 = 0; counter_1 < 5688; ++counter_1)
         {
-            ofs << counter + 1 << " " << pi_1[counter] << " " << pi_2[counter] << " " << pi_3[counter] << " " << pi_1[counter] + pi_2[counter] + pi_3[counter] << " " << length_diff[counter] << endl;
-        }
-        
-        int entry_1 = 0, entry_2 = 0, entry_3 = 0;
-        double overall_max_pi_1 = 0, overall_max_pi_2 = 0, overall_max_pi_3 = 0;
-        
-        for (int counter = 0; counter < 5688; ++counter)
-        {
-            if (overall_max_pi_1 < pi_1[counter])
-            {
-                overall_max_pi_1 = pi_1[counter];
-                entry_1 = counter;
-            }
+            auto iter = next( list.begin(), counter_1 );
             
-            if (overall_max_pi_2 < pi_2[counter])
+            for (int counter_2 = 0; counter_2 < 5688; ++counter_2)
             {
-                overall_max_pi_2 = pi_2[counter];
-                entry_2 = counter;
-            }
-            
-            if (overall_max_pi_3 < pi_3[counter])
-            {
-                overall_max_pi_3 = pi_3[counter];
-                entry_3 = counter;
+                if (counter_2 == (*iter).second)
+                {
+                    ofs << counter_2 + 1 << " " << length_diff[counter_2] << " " << pi_1[counter_2] << " " << pi_2[counter_2] << " " << pi_3[counter_2] << " " << sum[counter_2] << " " << metric[counter_2] << endl;
+                    
+                    break;
+                }
             }
         }
         
-        //cout << entry_1 << " " << overall_max_pi_1 << endl;
-        //cout << entry_2 << " " << overall_max_pi_2 << endl;
-        //cout << entry_3 << " " << overall_max_pi_3 << endl;
+        ofs.close();*/
         
-        entry_1 = entry_2 = entry_3 = 0;
-        int entry = 0;
-        overall_max_pi_1 = overall_max_pi_2 = overall_max_pi_3 = big_num;
-        double sum_error = big_num;
+        /*vector<double> A;
+        vector<double> B;
+        vector<double> C;
+        vector<int> D;
         
-        for (int counter = 0; counter < 5688; ++counter)
+        ofstream ofs_2( directory3D + "Data/T2 Packing Functions/Whole_Dataset_Comparison1.txt" );
+        ofstream ofs_3( directory3D + "Data/T2 Packing Functions/Whole_Dataset_Comparison2.txt" );
+        ofstream ofs_4( directory3D + "Data/T2 Packing Functions/Whole_Dataset_Comparison3.txt" );
+        ofstream ofs_5( directory3D + "Data/T2 Packing Functions/Whole_Dataset_Comparison4.txt" );
+        
+        for (int counter_1 = 0; counter_1 < 5688; ++counter_1)
         {
-            if (overall_max_pi_1 > pi_1[counter] && length_diff[counter] < 2)
+            cout << counter_1 << endl;
+            string filename_3 = directory3D + "Data/T2 Packing Functions/Dataset/" + to_string( counter_1 + 1 ) + ".txt";
+            
+            A.clear();
+            B.clear();
+            C.clear();
+            D.clear();
+            
+            for (int counter_2 = counter_1; counter_2 < 5688; ++counter_2)
             {
-                overall_max_pi_1 = pi_1[counter];
-                entry_1 = counter;
+                string filename_4 = directory3D + "Data/T2 Packing Functions/Dataset/" + to_string( counter_2 + 1 ) + ".txt";
+                
+                int difference_in_length;
+                double max_diff_pi_1, max_diff_pi_2, max_diff_pi_3;
+                
+                Comparing_Entries( filename_3, filename_4, max_diff_pi_1, max_diff_pi_2, max_diff_pi_3, difference_in_length );
+                
+                //double met = max_diff_pi_1 * 3 + max_diff_pi_2 * 2 + max_diff_pi_3;
+                
+                //met *= pow( 2, difference_in_length );
+                
+                A.push_back( max_diff_pi_1 );
+                B.push_back( max_diff_pi_2 );
+                C.push_back( max_diff_pi_3 );
+                D.push_back( difference_in_length );
             }
             
-            if (overall_max_pi_2 > pi_2[counter] && length_diff[counter] < 2)
+            ofs_2 << A[0];
+            ofs_3 << B[0];
+            ofs_4 << C[0];
+            ofs_5 << D[0];
+            
+            for (int counter_2 = 1; counter_2 < 5688 - counter_1; ++counter_2)
             {
-                overall_max_pi_2 = pi_2[counter];
-                entry_2 = counter;
+                ofs_2 << " " << A[counter_2];
+                ofs_3 << " " << B[counter_2];
+                ofs_4 << " " << C[counter_2];
+                ofs_5 << " " << D[counter_2];
             }
             
-            if (overall_max_pi_3 > pi_3[counter] && length_diff[counter] < 2)
-            {
-                overall_max_pi_3 = pi_3[counter];
-                entry_3 = counter;
-            }
-            
-            if (sum_error > pi_1[counter] + pi_2[counter] + pi_3[counter] && length_diff[counter] < 2)
-            {
-                sum_error = pi_1[counter] + pi_2[counter] + pi_3[counter];
-                entry = counter;
-            }
+            ofs_2 << endl;
+            ofs_3 << endl;
+            ofs_4 << endl;
+            ofs_5 << endl;
         }
         
-        cout << entry_1 + 1 << " " << overall_max_pi_1 << endl;
-        cout << entry_2 + 1 << " " << overall_max_pi_2 << endl;
-        cout << entry_3 + 1 << " " << overall_max_pi_3 << endl;
-        cout << entry + 1 << " " << sum_error << endl;
+        ofs_2.close();
+        ofs_3.close();
+        ofs_4.close();
+        ofs_5.close();*/
         
-        cout << endl;
+        vector<double> E;
+        E.reserve( 5688 );
         
-        for (int counter = 0; counter < 5688; ++counter)
+        ofstream ofs_2( directory3D + "Data/T2 Packing Functions/Whole_Dataset_Comparison1.txt" );
+        
+        ifstream ifs1( directory3D + "Data/T2 Packing Functions/Whole_Dataset_Comparison/Pi_1.txt" );
+        ifstream ifs2( directory3D + "Data/T2 Packing Functions/Whole_Dataset_Comparison/Pi_2.txt" );
+        ifstream ifs3( directory3D + "Data/T2 Packing Functions/Whole_Dataset_Comparison/Pi_3.txt" );
+        ifstream ifs4( directory3D + "Data/T2 Packing Functions/Whole_Dataset_Comparison/Diff_Lengths.txt" );
+        
+        for (int counter_1 = 0; counter_1 < 5688; ++counter_1)
         {
-            if (pi_1[counter] + pi_2[counter] + pi_3[counter] < sum_error + 0.01 && length_diff[counter] < 2) cout << counter + 1 << " " << pi_1[counter] + pi_2[counter] + pi_3[counter] << endl;
+            cout << counter_1 << endl;
+            
+            string line_data;
+            stringstream stream;
+            
+            vector<double> B;
+            vector<double> C;
+            vector<double> D;
+            vector<int> F;
+            
+            getline( ifs1, line_data );
+            stream << line_data;
+            
+            for (int counter = 0; counter < 5688 - counter_1; ++counter)
+            {
+                double val;
+                
+                stream >> val;
+                
+                B.push_back( val );
+            }
+            
+            getline( ifs2, line_data );
+            stream.clear();
+            stream << line_data;
+            
+            for (int counter = 0; counter < 5688 - counter_1; ++counter)
+            {
+                double val;
+                
+                stream >> val;
+                
+                C.push_back( val );
+            }
+            
+            getline( ifs3, line_data );
+            stream.clear();
+            stream << line_data;
+            
+            for (int counter = 0; counter < 5688 - counter_1; ++counter)
+            {
+                double val;
+                
+                stream >> val;
+                
+                D.push_back( val );
+            }
+            
+            getline( ifs4, line_data );
+            stream.clear();
+            stream << line_data;
+            
+            for (int counter = 0; counter < 5688 - counter_1; ++counter)
+            {
+                double val;
+                
+                stream >> val;
+                
+                F.push_back( val );
+            }
+            
+            for (int counter_2 = counter_1; counter_2 < 5688; ++counter_2)
+            {
+                double val = 3 * B[counter_2 - counter_1] + 2 * C[counter_2 - counter_1] + D[counter_2 - counter_1];
+                
+                val *= pow( 2, F[counter_2 - counter_1] );
+                
+                E.push_back( val );
+            }
+            
+            ofs_2 << E[0];
+            
+            for (int counter_2 = 1; counter_2 < 5688 - counter_1; ++counter_2)
+            {
+                ofs_2 << " " << E[counter_2];
+            }
+            
+            ofs_2 << endl;
+            
+            E.clear();
         }
+        
+        ifs1.close();
+        ifs2.close();
+        ifs3.close();
+        ofs_2.close();
+        
+        /*ifstream ifs1( directory3D + "Data/T2 Packing Functions/Whole_Dataset_Comparison/Pi_1.txt" );
+        ifstream ifs2( directory3D + "Data/T2 Packing Functions/Whole_Dataset_Comparison/Pi_2.txt" );
+        ifstream ifs3( directory3D + "Data/T2 Packing Functions/Whole_Dataset_Comparison/Pi_3.txt" );
+        
+        int row = 2;
+        int column = 3;
+        string line_data;
+        stringstream stream;
+        
+        vector<double> B;
+        vector<double> C;
+        vector<double> D;
+        
+        for (int counter = 0; counter < row; ++counter)
+        {
+            getline( ifs1, line_data );
+        }
+        
+        stream << line_data;
+        
+        for (int counter = 0; counter < 5688 + 1 - row; ++counter)
+        {
+            double val;
+            
+            stream >> val;
+            
+            B.push_back( val );
+        }
+        
+        for (int counter = 0; counter < row; ++counter)
+        {
+            getline( ifs2, line_data );
+        }
+        
+        stream.clear();
+        stream << line_data;
+        
+        for (int counter = 0; counter < 5688 + 1 - row; ++counter)
+        {
+            double val;
+            
+            stream >> val;
+            
+            C.push_back( val );
+        }
+        
+        for (int counter = 0; counter < row; ++counter)
+        {
+            getline( ifs3, line_data );
+        }
+        
+        stream.clear();
+        stream << line_data;
+        
+        for (int counter = 0; counter < 5688 + 1 - row; ++counter)
+        {
+            double val;
+            
+            stream >> val;
+            
+            D.push_back( val );
+        }
+        
+        ifs1.close();
+        ifs2.close();
+        ifs3.close();*/
     }
     
     Print_Info( start_time, start );
