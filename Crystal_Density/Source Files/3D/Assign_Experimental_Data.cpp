@@ -56,7 +56,7 @@ void Assign_Experimental_Centres ( vector<P3>& T2_centres, double ** matrix, str
     
     if (label == "a")
     {
-        P3 p = P3( 0.76646, 0.18656, 0 );
+        /*P3 p = P3( 0.76646, 0.18656, 0 );
         Frac_To_Cart_Coords( matrix, p );
         T2_centres.push_back( p );
         
@@ -70,40 +70,78 @@ void Assign_Experimental_Centres ( vector<P3>& T2_centres, double ** matrix, str
         
         p = P3( 0.23354, 0.81344, 0 );
         Frac_To_Cart_Coords( matrix, p );
+        T2_centres.push_back( p );*/
+        
+        P3 p = P3( 0.764, 0.187, 0 );
+        Frac_To_Cart_Coords( matrix, p );
+        T2_centres.push_back( p );
+        
+        p = P3( 0.187, 0.236, 0.5 );
+        Frac_To_Cart_Coords( matrix, p );
+        T2_centres.push_back( p );
+        
+        p = P3( 0.813, 0.764, 0.5 );
+        Frac_To_Cart_Coords( matrix, p );
+        T2_centres.push_back( p );
+        
+        p = P3( 0.236, 0.813, 0 );
+        Frac_To_Cart_Coords( matrix, p );
         T2_centres.push_back( p );
     }
     
     else if (label == "b")
     {
-        P3 p = P3( 0.7349, 0.66898, 0.158815 );
+        /*P3 p = P3( 0.7349, 0.66898, 0.158815 );
         Frac_To_Cart_Coords( matrix, p );
         T2_centres.push_back( p );
         
         p = P3( 0.2651, 0.33102, 0.841185 );
+        Frac_To_Cart_Coords( matrix, p );
+        T2_centres.push_back( p );*/
+        
+        P3 p = P3( 0.736, 0.663, 0.172 );
+        Frac_To_Cart_Coords( matrix, p );
+        T2_centres.push_back( p );
+        
+        p = P3( 0.264, 0.337, 0.828 );
         Frac_To_Cart_Coords( matrix, p );
         T2_centres.push_back( p );
     }
     
     else if (label == "c")
     {
-        P3 p = P3( 0.33333, 0.66667, 0.75 );
+        /*P3 p = P3( 0.33333, 0.66667, 0.75 );
         Frac_To_Cart_Coords( matrix, p );
         T2_centres.push_back( p );
         
         p = P3( 0.66667, 0.33333, 0.25 );
         Frac_To_Cart_Coords( matrix, p );
+        T2_centres.push_back( p );*/
+        
+        P3 p = P3( 0.333, 0.667, 0.75 );
+        Frac_To_Cart_Coords( matrix, p );
         T2_centres.push_back( p );
         
-
+        p = P3( 0.667, 0.333, 0.25 );
+        Frac_To_Cart_Coords( matrix, p );
+        T2_centres.push_back( p );
     }
     
     else if (label == "d")
     {
-        P3 p = P3( 0.7707, 0.33245, 0.34045 );
+        /*P3 p = P3( 0.7707, 0.33245, 0.34045 );
         Frac_To_Cart_Coords( matrix, p );
         T2_centres.push_back( p );
         
         p = P3( 0.2293, 0.66755, 0.65955 );
+        Frac_To_Cart_Coords( matrix, p );
+        T2_centres.push_back( p );*/
+        
+        P3 p = P3( 0.769, 0.338, 0.328 );
+        Frac_To_Cart_Coords( matrix, p );
+        T2_centres.push_back( p );
+        
+        p = P3( 0.231, 0.662, 0.672 );
         Frac_To_Cart_Coords( matrix, p );
         T2_centres.push_back( p );
     }

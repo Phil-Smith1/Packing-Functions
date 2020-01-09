@@ -60,9 +60,9 @@ double max_radius = 6;
 
 bool parallelepiped = false;
 
-bool title = false;
+bool title = true;
 
-string title_str = "Packing Functions for T2-{/Symbol a}";
+string title_str = "Packing Functions for T2-{/Symbol d}";
 
 double yrange = 1.01;
 

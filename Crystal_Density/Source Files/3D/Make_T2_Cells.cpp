@@ -22,7 +22,7 @@ void Make_T2_Cells ( string const& dataset_directory, Input3D& input3D, vector<C
     Read_Cell_Shape( block, cell_shape ); // Reading cell shape.
     
     bool experimental = false;
-    string label = "d";
+    string label = "a";
     
     if (experimental) Assign_Experimental_Cell_Shape( cell_shape, label );
     
