@@ -1,8 +1,10 @@
 #include "Input3D.h"
 
-Input3D::Input3D ( bool t, string const& f_t, string const& l_t, vector<P3>const& p_v, bool p_a_v, vector<double>const& s, bool int_p, vector<P3> i_p, int d_t, int i, int s_r, bool a_m_r, double m_r, bool par )
+Input3D::Input3D ( bool t, bool e_T2, string const& e_T2_l, string const& f_t, string const& l_t, vector<P3>const& p_v, bool p_a_v, vector<double>const& s, bool int_p, vector<P3> i_p, int d_t, int i, int s_r, bool a_m_r, double m_r, bool par )
 {
     T2 = t;
+    experimental_T2 = e_T2;
+    experimental_T2_label = e_T2_l;
     function_type = f_t;
     lattice_type = l_t;
     parallelepiped_vectors = p_v;

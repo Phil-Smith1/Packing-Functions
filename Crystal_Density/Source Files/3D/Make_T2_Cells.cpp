@@ -21,10 +21,7 @@ void Make_T2_Cells ( string const& dataset_directory, Input3D& input3D, vector<C
     
     Read_Cell_Shape( block, cell_shape ); // Reading cell shape.
     
-    bool experimental = false;
-    string label = "a";
-    
-    if (experimental) Assign_Experimental_Cell_Shape( cell_shape, label );
+    if (input3D.experimental_T2) Assign_Experimental_Cell_Shape( cell_shape, input3D.experimental_T2_label );
     
     double ** matrix;
     matrix = new double *[3];
@@ -47,7 +44,7 @@ void Make_T2_Cells ( string const& dataset_directory, Input3D& input3D, vector<C
     
     Obtain_T2_Centres( atom_cloud, T2_centres );
     
-    if (experimental) Assign_Experimental_Centres( T2_centres, matrix, label );
+    if (input3D.experimental_T2) Assign_Experimental_Centres( T2_centres, matrix, input3D.experimental_T2_label );
     
     cell.pts = T2_centres;
     

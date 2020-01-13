@@ -1,16 +1,29 @@
 /*double r = 1.225;
 int c = 0;
 
-//cout << Second_Order_Total_Volume( cells[c], r ) << endl;
+ //cout << Second_Order_Total_Volume( cells[c], r - 0.001, false ) / (double)cells[c].vol << endl;
+ //cout << Second_Order_Total_Volume( cells[c], r, false ) / (double)cells[c].vol << endl;
+ //cout << Second_Order_Total_Volume( cells[c], r + 0.001, false ) / (double)cells[c].vol << endl;
+ //cout << Second_Order_Total_Volume( cells[c], r + 0.002, false ) / (double)cells[c].vol << endl;
+ 
+ //cout << Third_Order_Total_Volume( cells[c], r - 0.001 ) / (double)cells[c].vol << endl;
+ //cout << Third_Order_Total_Volume( cells[c], r ) / (double)cells[c].vol << endl;
+ //cout << Third_Order_Total_Volume( cells[c], r + 0.001 ) / (double)cells[c].vol << endl;
+ //cout << Third_Order_Total_Volume( cells[c], r + 0.002 ) / (double)cells[c].vol << endl;
 
-//cout << Third_Order_Total_Volume( cells[c], r ) / (double)cells[c].vol << endl;
+ vector<Sphere> spheres;
+ spheres.push_back( Sphere( cells[c].pts[30], r ) ); // 15 35
+ spheres.push_back( Sphere( cells[c].pts[34], r ) );
+ spheres.push_back( Sphere( cells[c].pts[39], r ) );
+ spheres.push_back( Sphere( cells[c].pts[30], r + 0.001 ) );
+ spheres.push_back( Sphere( cells[c].pts[34], r + 0.001 ) );
+ spheres.push_back( Sphere( cells[c].pts[39], r + 0.001 ) );
 
-vector<Sphere> spheres;
-spheres.push_back( Sphere( cells[c].pts[1], r ) );
-spheres.push_back( Sphere( cells[c].pts[2], r ) );
-spheres.push_back( Sphere( cells[c].pts[5], r ) );
-
-//cout << Three_Sphere_Intersection_Volume_Within_Cell( cells[c], spheres[0], spheres[1], spheres[2] ) / (double)cells[c].vol << endl;
+ //cout << Two_Sphere_Intersection_Volume_Within_Cell( cells[c], spheres[0], spheres[1] ) << endl;
+ //cout << Two_Sphere_Intersection_Volume_Within_Cell( cells[c], spheres[3], spheres[4] ) << endl;
+ 
+ //cout << Three_Sphere_Intersection_Volume_Within_Cell( cells[c], spheres[3], spheres[4], spheres[5] ) / (double)cells[c].vol << endl;
+ //cout << Three_Sphere_Intersection_Volume_Within_Cell( cells[c], spheres[0], spheres[1], spheres[2] ) / (double)cells[c].vol << endl;
 
 double d1 = Norm( spheres[1].c, spheres[2].c ), d2 = Norm( spheres[0].c, spheres[2].c ), d3 = Norm( spheres[0].c, spheres[1].c );
 
@@ -82,3 +95,27 @@ Pl3 p1( pt, v );
 //cout << squared_distance( vertex, p4 ) << endl;
 
 //cout << General_Spherical_Wedge( spheres[0], p3.opposite(), p4 ) << endl;
+
+//cout << Spherical_Cap_Volume_Within_Cell( cells[c], spheres[0], p3.opposite() ) << endl;
+
+//cout << Spherical_Wedge_Volume_Within_Cell( cells[c], spheres[2], p3.opposite(), p2 ) << endl;
+
+//cout << Sphere_Five_Plane_Intersection_Volume( spheres[2], p3.opposite(), p2, cells[c].planes[0].opposite(), cells[c].planes[1].opposite(), cells[c].planes[5].opposite(), 0 ) << endl;
+
+//cout << Sphere_Five_Plane_Intersection_Volume( spheres[2], cells[c].planes[1].opposite(), p2, p3.opposite(), cells[c].planes[2].opposite(), cells[c].planes[4].opposite(), 11 ) << endl;
+
+//cout << Non_Parallel_Lines_Case5B( spheres[2], cells[c].planes[4].opposite(), p3.opposite(), p2, cells[c].planes[2].opposite(), cells[c].planes[3].opposite(), 15 ) << endl;
+
+//cout << Non_Parallel_Lines_Case5B( spheres[2], cells[c].planes[0].opposite(), p3.opposite(), cells[c].planes[1].opposite(), p2, cells[c].planes[5].opposite(), 15 ) << endl;
+
+//cout << Sphere_Four_Plane_Intersection_Volume( spheres[2], cells[c].planes[5], p3, cells[c].planes[0], cells[c].planes[1] ) << endl;
+
+//cout << General_Spherical_Cone( spheres[0], p3, cells[c].planes[2], cells[c].planes[4] ) << endl;
+
+//cout << Parallel_Planes_Case5( spheres[1], p3, cells[c].planes[1].opposite(), p1.opposite(), cells[c].planes[0].opposite(), cells[c].planes[5].opposite() ) << endl;
+//cout << Parallel_Planes_Case5( spheres[3], p3, cells[c].planes[1].opposite(), p1.opposite(), cells[c].planes[0].opposite(), cells[c].planes[5].opposite() ) << endl;
+
+//cout << General_Spherical_Cone( spheres[0], p3.opposite(), cells[c].planes[0].opposite(), cells[c].planes[4].opposite() ) << endl;
+//cout << Circumradius( spheres[0].c, spheres[1].c, spheres[2].c ) << endl;
+//cout << General_Spherical_Wedge( spheres[2], p3.opposite(), p2 ) << endl;
+//cout << General_Spherical_Wedge( spheres[2], p3, p1 ) << endl;
