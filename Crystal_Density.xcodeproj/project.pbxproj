@@ -92,6 +92,11 @@
 		EE9CE49523104CFB0039CF0A /* Cone_Parallel_Lines.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE9CE49423104CFB0039CF0A /* Cone_Parallel_Lines.cpp */; };
 		EE9CE497231056240039CF0A /* General_Spherical_Cone_Exterior_Vertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE9CE496231056240039CF0A /* General_Spherical_Cone_Exterior_Vertex.cpp */; };
 		EEC76BAE23C3520200E6C190 /* Assign_Experimental_Data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EEC76BAD23C3520200E6C190 /* Assign_Experimental_Data.cpp */; };
+		EECBD2DC23CCEB47000614C7 /* Dataset_Dataset_Analysis.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECBD2DB23CCEB47000614C7 /* Dataset_Dataset_Analysis.cpp */; };
+		EECBD2DE23CCEEBA000614C7 /* Manipulate_Dataset_Dataset_Analysis.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECBD2DD23CCEEBA000614C7 /* Manipulate_Dataset_Dataset_Analysis.cpp */; };
+		EECBD2E223CCF1A8000614C7 /* File_Dataset_Analysis.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECBD2E123CCF1A8000614C7 /* File_Dataset_Analysis.cpp */; };
+		EECBD2E523CCF375000614C7 /* Manipulate_File_Analysis.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECBD2E423CCF375000614C7 /* Manipulate_File_Analysis.cpp */; };
+		EECBD2E723CCF4CA000614C7 /* Read_Dataset_Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECBD2E623CCF4CA000614C7 /* Read_Dataset_Matrix.cpp */; };
 		EECF3559222D79FF0079CD62 /* Cell_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF3558222D79FF0079CD62 /* Cell_Area.cpp */; };
 		EECF355B222D7A500079CD62 /* Cell_Data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF355A222D7A4F0079CD62 /* Cell_Data.cpp */; };
 		EECF355D222D7AA80079CD62 /* Line_Circle_Intersections.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECF355C222D7AA80079CD62 /* Line_Circle_Intersections.cpp */; };
@@ -382,6 +387,16 @@
 		EEC76BAC23C351F000E6C190 /* Assign_Experimental_Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Assign_Experimental_Data.h; sourceTree = "<group>"; };
 		EEC76BAD23C3520200E6C190 /* Assign_Experimental_Data.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Assign_Experimental_Data.cpp; sourceTree = "<group>"; };
 		EECBD2D923CCC1B3000614C7 /* Further_Parameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Further_Parameters.h; sourceTree = "<group>"; };
+		EECBD2DA23CCEB33000614C7 /* Dataset_Dataset_Analysis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dataset_Dataset_Analysis.h; sourceTree = "<group>"; };
+		EECBD2DB23CCEB47000614C7 /* Dataset_Dataset_Analysis.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Dataset_Dataset_Analysis.cpp; sourceTree = "<group>"; };
+		EECBD2DD23CCEEBA000614C7 /* Manipulate_Dataset_Dataset_Analysis.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Manipulate_Dataset_Dataset_Analysis.cpp; sourceTree = "<group>"; };
+		EECBD2DF23CCEED1000614C7 /* Manipulate_Dataset_Dataset_Analysis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Manipulate_Dataset_Dataset_Analysis.h; sourceTree = "<group>"; };
+		EECBD2E023CCF197000614C7 /* File_Dataset_Analysis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = File_Dataset_Analysis.h; sourceTree = "<group>"; };
+		EECBD2E123CCF1A8000614C7 /* File_Dataset_Analysis.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = File_Dataset_Analysis.cpp; sourceTree = "<group>"; };
+		EECBD2E323CCF365000614C7 /* Manipulate_File_Analysis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Manipulate_File_Analysis.h; sourceTree = "<group>"; };
+		EECBD2E423CCF375000614C7 /* Manipulate_File_Analysis.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Manipulate_File_Analysis.cpp; sourceTree = "<group>"; };
+		EECBD2E623CCF4CA000614C7 /* Read_Dataset_Matrix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Read_Dataset_Matrix.cpp; sourceTree = "<group>"; };
+		EECBD2E823CCF4E9000614C7 /* Read_Dataset_Matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Read_Dataset_Matrix.h; sourceTree = "<group>"; };
 		EECF3558222D79FF0079CD62 /* Cell_Area.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cell_Area.cpp; sourceTree = "<group>"; };
 		EECF355A222D7A4F0079CD62 /* Cell_Data.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cell_Data.cpp; sourceTree = "<group>"; };
 		EECF355C222D7AA80079CD62 /* Line_Circle_Intersections.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Line_Circle_Intersections.cpp; sourceTree = "<group>"; };
@@ -746,6 +761,11 @@
 		EE55F2C922537C3800B8CA0B /* 3D */ = {
 			isa = PBXGroup;
 			children = (
+				EECBD2E823CCF4E9000614C7 /* Read_Dataset_Matrix.h */,
+				EECBD2E323CCF365000614C7 /* Manipulate_File_Analysis.h */,
+				EECBD2E023CCF197000614C7 /* File_Dataset_Analysis.h */,
+				EECBD2DF23CCEED1000614C7 /* Manipulate_Dataset_Dataset_Analysis.h */,
+				EECBD2DA23CCEB33000614C7 /* Dataset_Dataset_Analysis.h */,
 				EE1C33D623A123B70008CAF2 /* Add_Surrounding_Pts.h */,
 				EE113FE222E8784E000A75AC /* Angle_Between_Vectors3D.h */,
 				EEC76BAC23C351F000E6C190 /* Assign_Experimental_Data.h */,
@@ -822,6 +842,11 @@
 		EE55F2CA22537C4800B8CA0B /* 3D */ = {
 			isa = PBXGroup;
 			children = (
+				EECBD2E623CCF4CA000614C7 /* Read_Dataset_Matrix.cpp */,
+				EECBD2E423CCF375000614C7 /* Manipulate_File_Analysis.cpp */,
+				EECBD2E123CCF1A8000614C7 /* File_Dataset_Analysis.cpp */,
+				EECBD2DD23CCEEBA000614C7 /* Manipulate_Dataset_Dataset_Analysis.cpp */,
+				EECBD2DB23CCEB47000614C7 /* Dataset_Dataset_Analysis.cpp */,
 				EE1C33D423A1239E0008CAF2 /* Add_Surrounding_Pts.cpp */,
 				EE113FE022E8783B000A75AC /* Angle_Between_Vectors3D.cpp */,
 				EEC76BAD23C3520200E6C190 /* Assign_Experimental_Data.cpp */,
@@ -1026,7 +1051,9 @@
 				EECF3573222D7E130079CD62 /* Interior_Edge_Area.cpp in Sources */,
 				EECF35A5222D88290079CD62 /* Non_Inclusion_Four_Circle_Intersection_Area_Within_Cell.cpp in Sources */,
 				EE067CD922FB4243007F45AB /* Volume_Of_Intersection_Of_Two_Spheres.cpp in Sources */,
+				EECBD2E523CCF375000614C7 /* Manipulate_File_Analysis.cpp in Sources */,
 				EEFEC13622DCDDE500F02A23 /* Sphere_Area_Within_Cell.cpp in Sources */,
+				EECBD2E723CCF4CA000614C7 /* Read_Dataset_Matrix.cpp in Sources */,
 				EE040A12225D121B00839DC0 /* GIF.cpp in Sources */,
 				EE0889A622EF612E005CD5A4 /* Sphere_Volume_Within_Cell.cpp in Sources */,
 				EE03933E22F1D0F0000927BF /* Extract_Data_Pts3D.cpp in Sources */,
@@ -1055,6 +1082,7 @@
 				EEDADBBE239687350065101B /* Transformation_Matrix.cpp in Sources */,
 				EE04BE1722E9F27200CAE1E3 /* Intersection_Of_Two_Lines3D.cpp in Sources */,
 				EE830BA822F32B2600E42258 /* Intersection_Of_Plane_And_Circle.cpp in Sources */,
+				EECBD2DE23CCEEBA000614C7 /* Manipulate_Dataset_Dataset_Analysis.cpp in Sources */,
 				EE05803622E0CB3500254ED5 /* Spherical_Cap.cpp in Sources */,
 				EE045D8F22FCA5FE00EDA7BD /* Sphere_Four_Plane_Intersection_Volume.cpp in Sources */,
 				EE197E2C230C63EB002CEA92 /* Sphere_Five_Plane_Intersection_Volume.cpp in Sources */,
@@ -1076,6 +1104,7 @@
 				EE55F2D122537FB400B8CA0B /* Cell3D.cpp in Sources */,
 				EEFCD5E1239EB6A500D9CB4F /* Graph_Parameters.cpp in Sources */,
 				EE051920223182C70091755F /* Packing_Functions.cpp in Sources */,
+				EECBD2E223CCF1A8000614C7 /* File_Dataset_Analysis.cpp in Sources */,
 				EECF3587222D828A0079CD62 /* Order_Circles.cpp in Sources */,
 				EE045D8122FC422200EDA7BD /* Spherical_Cap_Volume_Within_Cell.cpp in Sources */,
 				EE113FE522E89EF4000A75AC /* Spherical_Wedge.cpp in Sources */,
@@ -1098,6 +1127,7 @@
 				EE05191A22314C300091755F /* Discontinuity.cpp in Sources */,
 				EE0AFD1F22E76DFC00174226 /* Circular_Intersection_Of_Sphere_And_Plane.cpp in Sources */,
 				EECF3589222D82EE0079CD62 /* Non_Trivial_Three_Circle_Intersection_Area.cpp in Sources */,
+				EECBD2DC23CCEB47000614C7 /* Dataset_Dataset_Analysis.cpp in Sources */,
 				EECF357B222D7F700079CD62 /* Two_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp in Sources */,
 				EECF3565222D7BD10079CD62 /* Num_Vertices_Within_Circle.cpp in Sources */,
 				EECF3597222D84F50079CD62 /* Non_Inclusion_Three_Circle_Intersection_Area_Within_Cell.cpp in Sources */,
