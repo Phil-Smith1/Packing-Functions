@@ -151,13 +151,13 @@ void Plot_PDF3D_T2 ( string const& directory, bool experimental, double max_radi
     gp << "set style line 4 lc rgb '#e70000' lw 3\n";
     gp << "set style line 5 lc rgb '#000000' pt 7 ps 0.5\n";
     
-    if (experimental) gp << "set output \"Graphs/T2 Packing Functions/Synthesised Crystals/experimental.pdf\"\n";
+    if (experimental) gp << "set output \"Graphs/T2 Packing Functions/Oxygens/Synthesised Crystals/experimental.pdf\"\n";
     
-    else gp << "set output \"Graphs/T2 Packing Functions/Dataset/" << to_string( index ) << ".pdf\"\n";
+    else gp << "set output \"Graphs/T2 Packing Functions/Oxygens/Dataset/" << to_string( index ) << ".pdf\"\n";
     
-    if (experimental) gp << "plot 'Data/T2 Packing Functions/Synthesised Crystals/experimental.txt' using 1:2 smooth csplines ls 1 title '{/Symbol p}_1(r)', 'Data/T2 Packing Functions/Synthesised Crystals/experimental.txt' using 1:3 smooth csplines ls 2 title '{/Symbol p}_2(r)', 'Data/T2 Packing Functions/Synthesised Crystals/experimental.txt' using 1:4 smooth csplines ls 3 title '{/Symbol p}_3(r)'\n";
+    if (experimental) gp << "plot 'Data/T2 Packing Functions/Oxygens/Synthesised Crystals/experimental.txt' using 1:2 smooth csplines ls 1 title '{/Symbol p}_1(r)', 'Data/T2 Packing Functions/Oxygens/Synthesised Crystals/experimental.txt' using 1:3 smooth csplines ls 2 title '{/Symbol p}_2(r)', 'Data/T2 Packing Functions/Oxygens/Synthesised Crystals/experimental.txt' using 1:4 smooth csplines ls 3 title '{/Symbol p}_3(r)'\n";
     
-    else gp << "plot 'Data/T2 Packing Functions/Dataset/" << to_string( index ) << ".txt' using 1:2 smooth csplines ls 1 title '{/Symbol p}_1(r)', 'Data/T2 Packing Functions/Dataset/" << to_string( index ) << ".txt' using 1:3 smooth csplines ls 2 title '{/Symbol p}_2(r)', 'Data/T2 Packing Functions/Dataset/" << to_string( index ) << ".txt' using 1:4 smooth csplines ls 3 title '{/Symbol p}_3(r)'\n";
+    else gp << "plot 'Data/T2 Packing Functions/Oxygens/Dataset/" << to_string( index ) << ".txt' using 1:2 smooth csplines ls 1 title '{/Symbol p}_1(r)', 'Data/T2 Packing Functions/Oxygens/Dataset/" << to_string( index ) << ".txt' using 1:3 smooth csplines ls 2 title '{/Symbol p}_2(r)', 'Data/T2 Packing Functions/Oxygens/Dataset/" << to_string( index ) << ".txt' using 1:4 smooth csplines ls 3 title '{/Symbol p}_3(r)'\n";
 }
 
 void Plot_PDF3D ( string const& directory, double max_radius, Graph_Parameters const& graph_params )

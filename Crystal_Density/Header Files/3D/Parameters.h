@@ -15,7 +15,7 @@ bool twoD = false; // Run code for 2D.
 
 bool threeD = true; // Run code for 3D.
 
-bool T2 = false; // Run code for T2 crystals.
+bool T2 = true; // Run code for T2 crystals.
 
 bool experimental_T2 = false;
 
@@ -33,13 +33,13 @@ vector<P3> interior_pts3D = { P3( 1, 1, -1 ) }; // 3D interior points.
 
 int deformation_type3D = 0; // 0: No deformation; 1: Cube to slanted z-plane in the x-direction (upto angle 80 degrees).
 
-int iterations = 1; // Number of iterations.
+int iterations = 5688; // Number of iterations.
 
-int sample_rate = 300; // Sample rate.
+int sample_rate = 10; // Sample rate.
 
 bool auto_max_radius = true; // The code automatically produces the maximum radius.
 
-bool title = true; // Adds title to output graph.
+bool title = false; // Adds title to output graph.
 
 string title_str = "Packing Functions for the BCC Lattice"; // Title of output graph.
 

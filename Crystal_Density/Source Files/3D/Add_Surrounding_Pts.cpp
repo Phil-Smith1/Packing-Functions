@@ -42,7 +42,11 @@ void Add_Surrounding_Pts( Input3D& input3D, Cell3D& cell )
     {
         for (int counter_2 = 0; counter_2 < num_molecules; ++counter_2)
         {
-            cell.pts.push_back( P3( cell.pts[counter_2].x() + translations[counter_1].x() * cell.vertices[1].x() + translations[counter_1].y() * cell.vertices[3].x() + translations[counter_1].z() * cell.vertices[4].x(), cell.pts[counter_2].y() + translations[counter_1].x() * cell.vertices[1].y() + translations[counter_1].y() * cell.vertices[3].y() + translations[counter_1].z() * cell.vertices[4].y(), cell.pts[counter_2].z() + translations[counter_1].x() * cell.vertices[1].z() + translations[counter_1].y() * cell.vertices[3].z() + translations[counter_1].z() * cell.vertices[4].z() ) );
+            P3 pt = P3( cell.pts[counter_2].x() + translations[counter_1].x() * cell.vertices[1].x() + translations[counter_1].y() * cell.vertices[3].x() + translations[counter_1].z() * cell.vertices[4].x(), cell.pts[counter_2].y() + translations[counter_1].x() * cell.vertices[1].y() + translations[counter_1].y() * cell.vertices[3].y() + translations[counter_1].z() * cell.vertices[4].y(), cell.pts[counter_2].z() + translations[counter_1].x() * cell.vertices[1].z() + translations[counter_1].y() * cell.vertices[3].z() + translations[counter_1].z() * cell.vertices[4].z() );
+            
+            if (Distance_To_Cell( cell, pt ) > 7.2) continue;
+            
+            else cell.pts.push_back( pt );
         }
     }
     

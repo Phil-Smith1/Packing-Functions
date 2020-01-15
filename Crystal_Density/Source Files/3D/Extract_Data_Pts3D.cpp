@@ -11,10 +11,10 @@ void Extract_Data_Pts3D ( string const& directory, Input3D const& input, Cell3D 
 {
     string dir;
     
-    if (input.T2) dir = directory + "Data/T2 Packing Functions/Dataset/" + to_string( index ) + ".txt";
+    if (input.T2) dir = directory + "Data/T2 Packing Functions/Oxygens/Dataset/" + to_string( index ) + ".txt";
     else dir = directory + "Data/Results.txt";
     
-    if (input.experimental_T2) dir = directory + "Data/T2 Packing Functions/Synthesised Crystals/experimental.txt";
+    if (input.experimental_T2) dir = directory + "Data/T2 Packing Functions/Oxygens/Synthesised Crystals/experimental.txt";
     
     ofstream ofs( dir );
     
