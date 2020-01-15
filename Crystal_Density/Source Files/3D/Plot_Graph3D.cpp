@@ -135,7 +135,7 @@ void Plot_PDF3D_T2 ( string const& directory, bool experimental, double max_radi
     
     gp << "set rmargin 2\n";
     
-    gp << "set ylabel '{/Symbol p}_n(r)' font ', 20' offset -0.5, 0\n";
+    gp << "set ylabel '{/Symbol p}_i(r)' font ', 20' offset -0.5, 0\n";
     gp << "set xlabel 'Radius of Balls' font ', 20' offset 0, -0.3\n";
     
     gp << "set xrange [0: " << max_radius << "]\n";
@@ -183,7 +183,7 @@ void Plot_PDF3D ( string const& directory, double max_radius, Graph_Parameters c
     
     gp << "set rmargin 2\n";
     
-    gp << "set ylabel '{/Symbol p}_n(r)' font ', 20' offset -0.5, 0\n";
+    gp << "set ylabel '{/Symbol p}_i(r)' font ', 20' offset -0.5, 0\n";
     gp << "set xlabel 'Radius of Balls' font ', 20' offset 0, -0.3\n";
     
     gp << "set xrange [0: " << max_radius << "]\n";

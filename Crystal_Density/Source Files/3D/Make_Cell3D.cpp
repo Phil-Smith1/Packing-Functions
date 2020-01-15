@@ -3,7 +3,7 @@
 
 typedef K::Vector_3 V3;
 
-void Make_Cell3D ( Input3D& input, Cell3D& cell )
+void Make_Cell3D ( Input3D const& input, Cell3D& cell )
 {
     cell.vertices.reserve( 8 );
     

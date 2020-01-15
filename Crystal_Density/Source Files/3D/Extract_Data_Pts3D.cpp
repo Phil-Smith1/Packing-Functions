@@ -43,8 +43,6 @@ void Extract_Data_Pts3D ( string const& directory, Input3D const& input, Cell3D 
         
         Volumes3D( first_order_total_volume, second_order_total_volume, third_order_total_volume, volumes_at_least, volumes_exact );
         
-        //ofs << setprecision( 10 ) << radius << " " << first_order_total_volume / (double)cell.vol << " " << second_order_total_volume / (double)cell.vol << " " << third_order_total_volume / (double)cell.vol << " " << (first_order_total_volume - second_order_total_volume + third_order_total_volume) / (double)cell.vol << endl;
-        
         ofs << setprecision( 10 ) << radius << " " << volumes_exact[0] / (double)cell.vol << " " << volumes_exact[1] / (double)cell.vol << " " << volumes_exact[2] / (double)cell.vol << " " << endl;
     }
     

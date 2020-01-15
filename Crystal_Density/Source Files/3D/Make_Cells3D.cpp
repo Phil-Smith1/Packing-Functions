@@ -1,10 +1,5 @@
 #include "Make_Cell3D.h"
-#include "Norm3D.h"
-
-#ifndef Pi
-#define Pi
-const double PI = 3.14159265359;
-#endif
+#include "Fourth_Order_Radius.h"
 
 void Make_Cells3D ( Input3D& input3D, vector<Cell3D>& cells )
 {
@@ -43,19 +38,7 @@ void Make_Cells3D ( Input3D& input3D, vector<Cell3D>& cells )
         
         cells.push_back( cell );
         
-        double max_radius = Norm( cell.vertices[0], cell.vertices[6] );
-        
-        double dist = Norm( cell.vertices[1], cell.vertices[7] );
-        
-        if (max_radius < dist) max_radius = dist;
-        
-        dist = Norm( cell.vertices[2], cell.vertices[4] );
-        
-        if (max_radius < dist) max_radius = dist;
-        
-        dist = Norm( cell.vertices[3], cell.vertices[5] );
-        
-        if (max_radius < dist) max_radius = dist;
+        double max_radius = Fourth_Order_Radius( cell );
         
         if (input3D.auto_max_radius) input3D.max_radius = max_radius;
     }

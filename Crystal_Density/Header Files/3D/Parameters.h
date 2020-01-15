@@ -13,15 +13,15 @@ const string dataset_directory = "/Users/philsmith/Documents/Work/Xcode Projects
 
 bool twoD = false; // Run code for 2D.
 
-bool threeD = false; // Run code for 3D.
+bool threeD = true; // Run code for 3D.
 
-bool T2 = true; // Run code for T2 crystals.
+bool T2 = false; // Run code for T2 crystals.
 
 bool experimental_T2 = false;
 
 string experimental_T2_label = "a";
 
-bool analysis = true; // Perform Analysis.
+bool analysis = false; // Perform Analysis.
 
 vector<P3> parallelepiped_vectors = BCC; //{ P3( 1, 0, 0 ), P3( 0, 1, 0 ), P3( 0.5, 0, 0.5 * sqrt( (double)3 ) ) }; // Input vectors for 3D case.
 
@@ -35,13 +35,13 @@ int deformation_type3D = 0; // 0: No deformation; 1: Cube to slanted z-plane in 
 
 int iterations = 1; // Number of iterations.
 
-int sample_rate = 10; // Sample rate.
+int sample_rate = 300; // Sample rate.
 
 bool auto_max_radius = true; // The code automatically produces the maximum radius.
 
 bool title = true; // Adds title to output graph.
 
-string title_str = "Packing Functions for T2-{/Symbol d}"; // Title of output graph.
+string title_str = "Packing Functions for the BCC Lattice"; // Title of output graph.
 
 Graph_Parameters graph_params( title, yrange, title_str );
 
