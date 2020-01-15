@@ -15,6 +15,7 @@
 #include "Draw_Cells.h"
 #include "Packing_Functions.h"
 #include "GIF.h"
+#include "Compare_Two_Files.h"
 #include "Dataset_Dataset_Analysis.h"
 #include "Manipulate_Dataset_Dataset_Analysis.h"
 #include "File_Dataset_Analysis.h"
@@ -105,7 +106,10 @@ int main ( int, char*[] )
     
     if (analysis)
     {
-        Read_Dataset_Matrix( directory3D );
+        string filename_1 = directory3D + "Data/T2 Packing Functions/Synthesised Crystals/beta.txt";
+        string filename_2 = directory3D + "Data/T2 Packing Functions/Synthesised Crystals/delta.txt";
+        
+        Compare_Two_Files( filename_1, filename_2 );
     }
     
     Print_Info( start_time, start );
