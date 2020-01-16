@@ -42,9 +42,9 @@ void Make_T2_Cells ( string const& dataset_directory, Input3D& input3D, vector<C
     
     vector<P3> T2_centres;
     
-    Obtain_T2_Centres( atom_cloud, T2_centres );
+    Obtain_T2_Centres( atom_cloud, input3D.type_of_experiment, T2_centres );
     
-    if (input3D.experimental_T2) Assign_Experimental_Centres( T2_centres, matrix, input3D.experimental_T2_label );
+    if (input3D.experimental_T2) Assign_Experimental_Centres( T2_centres, matrix, input3D.experimental_T2_label, input3D.type_of_experiment );
     
     cell.pts = T2_centres;
     

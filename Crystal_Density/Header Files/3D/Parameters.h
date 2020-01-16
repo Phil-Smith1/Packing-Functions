@@ -17,9 +17,11 @@ bool threeD = true; // Run code for 3D.
 
 bool T2 = true; // Run code for T2 crystals.
 
-bool experimental_T2 = false;
+string type_of_experiment = "Oxygens"; // Molecule_Centres, Molecule_Centres_with_Oxygens, Oxygens
 
-string experimental_T2_label = "a";
+bool experimental_T2 = true;
+
+string experimental_T2_label = "d";
 
 bool analysis = false; // Perform Analysis.
 
@@ -33,7 +35,7 @@ vector<P3> interior_pts3D = { P3( 1, 1, -1 ) }; // 3D interior points.
 
 int deformation_type3D = 0; // 0: No deformation; 1: Cube to slanted z-plane in the x-direction (upto angle 80 degrees).
 
-int iterations = 5688; // Number of iterations.
+int iterations = 1; // Number of iterations.
 
 int sample_rate = 10; // Sample rate.
 
@@ -45,6 +47,6 @@ string title_str = "Packing Functions for the BCC Lattice"; // Title of output g
 
 Graph_Parameters graph_params( title, yrange, title_str );
 
-Input3D input3D( T2, experimental_T2, experimental_T2_label, function_type, lattice_type, parallelepiped_vectors, pts_at_vertices, scale, interior_points, interior_pts3D, deformation_type3D, iterations, sample_rate, auto_max_radius, max_radius, parallelepiped );
+Input3D input3D( T2, type_of_experiment, experimental_T2, experimental_T2_label, function_type, lattice_type, parallelepiped_vectors, pts_at_vertices, scale, interior_points, interior_pts3D, deformation_type3D, iterations, sample_rate, auto_max_radius, max_radius, parallelepiped );
 
 Input input( function_type, lattice_type, pts, scale, interior_points, interior_pts, deformation_type, iterations, sample_rate );

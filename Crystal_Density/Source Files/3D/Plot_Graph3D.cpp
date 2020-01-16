@@ -112,7 +112,7 @@ void Plot_PNG3D ( string const& directory, double max_radius, int iter )
     gp << "plot 'Data/Results.txt' using 1:2 smooth csplines ls 1 title '1','Data/Results.txt' using 1:3 smooth csplines ls 2 title '2', 'Data/Results.txt' using 1:4 smooth csplines ls 3 title '3', 'Data/Results.txt' using 1:5 smooth csplines ls 4 title '1 - 2 + 3', 'Data/Derivative_Critical_Pts.txt' using 1:2 notitle ls 5\n";
 }
 
-void Plot_PDF3D_T2 ( string const& directory, bool experimental, double max_radius, Graph_Parameters const& graph_params, int index )
+void Plot_PDF3D_T2 ( string const& directory, Input3D const& input, Graph_Parameters const& graph_params, int index )
 {
     Gnuplot gp;
     
@@ -138,7 +138,7 @@ void Plot_PDF3D_T2 ( string const& directory, bool experimental, double max_radi
     gp << "set ylabel '{/Symbol p}_i(r)' font ', 20' offset -0.5, 0\n";
     gp << "set xlabel 'Radius of Balls' font ', 20' offset 0, -0.3\n";
     
-    gp << "set xrange [0: " << max_radius << "]\n";
+    gp << "set xrange [0: " << input.max_radius << "]\n";
     gp << "set yrange [0: " << graph_params.yrange << "]\n";
     gp << "set xtics font ', 18'\n";
     gp << "set ytics font ', 18'\n";
@@ -151,13 +151,13 @@ void Plot_PDF3D_T2 ( string const& directory, bool experimental, double max_radi
     gp << "set style line 4 lc rgb '#e70000' lw 3\n";
     gp << "set style line 5 lc rgb '#000000' pt 7 ps 0.5\n";
     
-    if (experimental) gp << "set output \"Graphs/T2 Packing Functions/Oxygens/Synthesised Crystals/experimental.pdf\"\n";
+    if (input.experimental_T2) gp << "set output \"Graphs/T2 Packing Functions/" << input.type_of_experiment << "/Synthesised Crystals/experimental.pdf\"\n";
     
-    else gp << "set output \"Graphs/T2 Packing Functions/Oxygens/Dataset/" << to_string( index ) << ".pdf\"\n";
+    else gp << "set output \"Graphs/T2 Packing Functions/" << input.type_of_experiment << "/Dataset/" << to_string( index ) << ".pdf\"\n";
     
-    if (experimental) gp << "plot 'Data/T2 Packing Functions/Oxygens/Synthesised Crystals/experimental.txt' using 1:2 smooth csplines ls 1 title '{/Symbol p}_1(r)', 'Data/T2 Packing Functions/Oxygens/Synthesised Crystals/experimental.txt' using 1:3 smooth csplines ls 2 title '{/Symbol p}_2(r)', 'Data/T2 Packing Functions/Oxygens/Synthesised Crystals/experimental.txt' using 1:4 smooth csplines ls 3 title '{/Symbol p}_3(r)'\n";
+    if (input.experimental_T2) gp << "plot 'Data/T2 Packing Functions/" << input.type_of_experiment << "/Synthesised Crystals/experimental.txt' using 1:2 smooth csplines ls 1 title '{/Symbol p}_1(r)', 'Data/T2 Packing Functions/" << input.type_of_experiment << "/Synthesised Crystals/experimental.txt' using 1:3 smooth csplines ls 2 title '{/Symbol p}_2(r)', 'Data/T2 Packing Functions/" << input.type_of_experiment << "/Synthesised Crystals/experimental.txt' using 1:4 smooth csplines ls 3 title '{/Symbol p}_3(r)'\n";
     
-    else gp << "plot 'Data/T2 Packing Functions/Oxygens/Dataset/" << to_string( index ) << ".txt' using 1:2 smooth csplines ls 1 title '{/Symbol p}_1(r)', 'Data/T2 Packing Functions/Oxygens/Dataset/" << to_string( index ) << ".txt' using 1:3 smooth csplines ls 2 title '{/Symbol p}_2(r)', 'Data/T2 Packing Functions/Oxygens/Dataset/" << to_string( index ) << ".txt' using 1:4 smooth csplines ls 3 title '{/Symbol p}_3(r)'\n";
+    else gp << "plot 'Data/T2 Packing Functions/" << input.type_of_experiment << "/Dataset/" << to_string( index ) << ".txt' using 1:2 smooth csplines ls 1 title '{/Symbol p}_1(r)', 'Data/T2 Packing Functions/" << input.type_of_experiment << "/Dataset/" << to_string( index ) << ".txt' using 1:3 smooth csplines ls 2 title '{/Symbol p}_2(r)', 'Data/T2 Packing Functions/" << input.type_of_experiment << "/Dataset/" << to_string( index ) << ".txt' using 1:4 smooth csplines ls 3 title '{/Symbol p}_3(r)'\n";
 }
 
 void Plot_PDF3D ( string const& directory, double max_radius, Graph_Parameters const& graph_params )
@@ -212,7 +212,7 @@ void Plot_Graph3D ( string const& directory, Input3D const& input, Graph_Paramet
     {
         if (input.T2)
         {
-            Plot_PDF3D_T2( directory, input.experimental_T2, input.max_radius, graph_params, iter );
+            Plot_PDF3D_T2( directory, input, graph_params, iter );
         }
         
         else
