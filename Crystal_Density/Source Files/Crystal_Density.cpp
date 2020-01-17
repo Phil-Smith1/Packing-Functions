@@ -106,10 +106,14 @@ int main ( int, char*[] )
     
     if (analysis)
     {
-        string filename_1 = directory3D + "Data/T2 Packing Functions/Synthesised Crystals/beta.txt";
-        string filename_2 = directory3D + "Data/T2 Packing Functions/Synthesised Crystals/delta.txt";
+        //string filename_1 = directory3D + "Data/T2 Packing Functions/Synthesised Crystals/beta.txt";
+        //string filename_2 = directory3D + "Data/T2 Packing Functions/Synthesised Crystals/delta.txt";
         
-        Compare_Two_Files( filename_1, filename_2 );
+        //Compare_Two_Files( filename_1, filename_2 );
+        
+        //File_Dataset_Analysis( directory3D );
+        
+        //Manipulate_File_Analysis( directory3D );
     }
     
     Print_Info( start_time, start );

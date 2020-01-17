@@ -10,11 +10,11 @@ void File_Dataset_Analysis ( string const& directory3D )
     pi_2.reserve( 5688 );
     pi_3.reserve( 5688 );
     
-    string filename_1 = directory3D + "Data/T2 Packing Functions/Synthesised Crystals/alpha.txt";
+    string filename_1 = directory3D + "Data/T2 Packing Functions/Oxygens/Synthesised Crystals/delta.txt";
     
     for (int counter = 0; counter < 5688; ++counter)
     {
-        string filename_2 = directory3D + "Data/T2 Packing Functions/Dataset/" + to_string( counter + 1 ) + ".txt";
+        string filename_2 = directory3D + "Data/T2 Packing Functions/Oxygens/Dataset/" + to_string( counter + 1 ) + ".txt";
         
         int difference_in_length;
         double max_diff_pi_1, max_diff_pi_2, max_diff_pi_3;
@@ -27,7 +27,7 @@ void File_Dataset_Analysis ( string const& directory3D )
         pi_3.push_back( max_diff_pi_3 );
     }
     
-    ofstream ofs( directory3D + "Data/T2 Packing Functions/alpha.txt" );
+    ofstream ofs( directory3D + "Data/T2 Packing Functions/Oxygens/Analysis/Raw Data/delta.txt" );
      
      for (int counter_2 = 0; counter_2 < 5688; ++counter_2)
      {
