@@ -113,7 +113,7 @@ int main ( int, char*[] )
         
         //File_Dataset_Analysis( directory3D );
         
-        //Manipulate_File_Analysis( directory3D );
+        Manipulate_File_Analysis( directory3D );
     }
     
     Print_Info( start_time, start );

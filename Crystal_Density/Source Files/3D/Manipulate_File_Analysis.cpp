@@ -7,9 +7,9 @@ using namespace std;
 
 void Manipulate_File_Analysis ( string const& directory3D )
 {
-    string filename_1 = directory3D + "Data/T2 Packing Functions/Molecule_Centres/Analysis/Raw Data/beta.txt";
-    string filename_2 = directory3D + "Data/T2 Packing Functions/Oxygens/Analysis/Raw Data/beta.txt";
-    string filename_3 = directory3D + "Data/T2 Packing Functions/Molecule_Centres_with_Oxygens/Analysis/Raw Data/beta.txt";
+    string filename_1 = directory3D + "Data/T2 Packing Functions/Molecule_Centres/Analysis/Raw Data/delta.txt";
+    string filename_2 = directory3D + "Data/T2 Packing Functions/Oxygens/Analysis/Raw Data/delta.txt";
+    string filename_3 = directory3D + "Data/T2 Packing Functions/Molecule_Centres_with_Oxygens/Analysis/Raw Data/delta.txt";
     
     vector<int> diff_lengths_m, diff_lengths_o, diff_lengths_mo;
     vector<double> pi_1_m, pi_2_m, pi_3_m, pi_1_o, pi_2_o, pi_3_o, pi_1_mo, pi_2_mo, pi_3_mo, metric;
@@ -100,7 +100,7 @@ void Manipulate_File_Analysis ( string const& directory3D )
         list.insert( pair<double, int>( metric[counter], counter ) );
     }
     
-    ofstream ofs( directory3D + "Data/T2 Packing Functions/Analysis/beta.txt" );
+    ofstream ofs( directory3D + "Data/T2 Packing Functions/Analysis/delta.txt" );
     
     for (int counter_1 = 0; counter_1 < 5688; ++counter_1)
     {
@@ -110,11 +110,11 @@ void Manipulate_File_Analysis ( string const& directory3D )
         {
             if (counter_2 == (*iter).second)
             {
-                //if (diff_lengths_m[counter_2] < 2 && diff_lengths_o[counter_2] < 2 && diff_lengths_mo[counter_2] < 2) ofs << "ID" <<  counter_2 + 1 << " " << pi_1_m[counter_2] << " " << pi_2_m[counter_2] << " " << pi_3_m[counter_2] << " " << pi_1_o[counter_2] << " " << pi_2_o[counter_2] << " " << pi_3_o[counter_2] << " " << pi_1_mo[counter_2] << " " << pi_2_mo[counter_2] << " " << pi_3_mo[counter_2] << " " << diff_lengths_m[counter_2] << " " << diff_lengths_o[counter_2] << " " << diff_lengths_mo[counter_2] << " " << metric[counter_2] << endl;
+                if (abs( diff_lengths_m[counter_2] ) + abs( diff_lengths_o[counter_2] ) + abs( diff_lengths_mo[counter_2] ) < 2) ofs << "ID" <<  counter_2 + 1 << " " << pi_1_m[counter_2] << " " << pi_2_m[counter_2] << " " << pi_3_m[counter_2] << " " << pi_1_o[counter_2] << " " << pi_2_o[counter_2] << " " << pi_3_o[counter_2] << " " << pi_1_mo[counter_2] << " " << pi_2_mo[counter_2] << " " << pi_3_mo[counter_2] << " " << diff_lengths_m[counter_2] << " " << diff_lengths_o[counter_2] << " " << diff_lengths_mo[counter_2] << " " << metric[counter_2] << endl;
                 
-                ofs << "ID" <<  counter_2 + 1 << " " << pi_1_m[counter_2] << " " << pi_2_m[counter_2] << " " << pi_3_m[counter_2] << " " << pi_1_o[counter_2] << " " << pi_2_o[counter_2] << " " << pi_3_o[counter_2] << " " << pi_1_mo[counter_2] << " " << pi_2_mo[counter_2] << " " << pi_3_mo[counter_2] << " " << diff_lengths_m[counter_2] << " " << diff_lengths_o[counter_2] << " " << diff_lengths_mo[counter_2] << " " << metric[counter_2] << endl;
+                //ofs << "ID" <<  counter_2 + 1 << " " << pi_1_m[counter_2] << " " << pi_2_m[counter_2] << " " << pi_3_m[counter_2] << " " << pi_1_o[counter_2] << " " << pi_2_o[counter_2] << " " << pi_3_o[counter_2] << " " << pi_1_mo[counter_2] << " " << pi_2_mo[counter_2] << " " << pi_3_mo[counter_2] << " " << diff_lengths_m[counter_2] << " " << diff_lengths_o[counter_2] << " " << diff_lengths_mo[counter_2] << " " << metric[counter_2] << endl;
                 
-                //ofs << "ID" <<  counter_2 + 1 << " " << pi_1[counter_2] << " " << pi_2[counter_2] << " " << pi_3[counter_2] << " " << diff_lengths[counter_2] << " " << metric[counter_2] << endl;
+                //if (diff_lengths_mo[counter_2] > -2) ofs << "ID" <<  counter_2 + 1 << " " << pi_1_o[counter_2] << " " << pi_2_o[counter_2] << " " << pi_3_o[counter_2] << " " << diff_lengths_o[counter_2] << " " << metric[counter_2] << endl;
                 
                 break;
             }

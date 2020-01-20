@@ -63,7 +63,7 @@ void Comparing_Entries( string const& filename_1, string const& filename_2, doub
     
     if (max_r > (int)file_2[0].size()) max_r = (int)file_2[0].size();
     
-    difference_in_length = abs( (int)file_2[0].size() - (int)file_1[0].size() );
+    difference_in_length = (int)file_2[0].size() - (int)file_1[0].size();
     
     double maximum_diff_pi_1 = 0, maximum_diff_pi_2 = 0, maximum_diff_pi_3 = 0;
     
