@@ -23,7 +23,9 @@ bool experimental_T2 = false;
 
 string experimental_T2_label = "d";
 
-bool analysis = true; // Perform analysis.
+bool analysis = false; // Perform analysis.
+
+bool brillouin = true;
 
 vector<P3> parallelepiped_vectors = BCC; //{ P3( 1, 0, 0 ), P3( 0, 1, 0 ), P3( 0.5, 0, 0.5 * sqrt( (double)3 ) ) }; // Input vectors for 3D case.
 
@@ -43,7 +45,7 @@ bool auto_max_radius = true; // The code automatically produces the maximum radi
 
 bool title = false; // Adds title to output graph.
 
-string title_str = "Packing Functions for the BCC Lattice"; // Title of output graph.
+string title_str = "Packing Functions for the Cubic Lattice"; // Title of output graph.
 
 Graph_Parameters graph_params( title, yrange, title_str );
 
