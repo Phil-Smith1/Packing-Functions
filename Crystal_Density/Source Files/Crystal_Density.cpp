@@ -4,6 +4,9 @@
 
 #include <gemmi/cif.hpp>
 
+#include <algorithm>
+#include <thread>
+
 // Includes.
 
 #include "Parameters.h"
@@ -121,11 +124,9 @@ int main ( int, char*[] )
     
     if (brillouin)
     {
-        int perim = 4;
+        int perim = 5;
         
-        int zone_limit = 11;
-        
-        double cube_size = 10;
+        int zone_limit = 5;
         
         P3_E centre_E = P3_E( 0, 0, 0 );
         P3 centre = P3( 0, 0, 0 );
@@ -134,7 +135,7 @@ int main ( int, char*[] )
         
         clock_t time_1 = clock();
         
-        Compute_Brillouin_Zones( perim, zone_limit, cube_size, centre_E, zones_of_tetras );
+        Compute_Brillouin_Zones( perim, zone_limit, centre_E, zones_of_tetras );
         
         clock_t time_2 = clock();
         
@@ -142,9 +143,16 @@ int main ( int, char*[] )
         
         cout << "Time taken = " << time_taken << endl;
         
-        vector<vector<vector<Pl3>>> tetra_cells;
+        /*vector<vector<vector<Pl3>>> tetra_cells;
         
         Extract_Tetra_Cells( zones_of_tetras, zone_limit, tetra_cells );
+        
+        double cell_volume = 0;
+        
+        for (int counter = 0; counter < zones_of_tetras[0].size(); ++counter)
+        {
+            cell_volume += to_double( zones_of_tetras[0][counter].volume() );
+        }
         
         string dir = directory3D + "Data/Results.txt";
         
@@ -152,96 +160,52 @@ int main ( int, char*[] )
         
         double num_pts = 2 * 300;
         
-        double final_radius = 0;
+        double final_radius = 2;
         
-        for (double counter = 0; counter < num_pts; ++counter)
+        for (double counter_1 = 0; counter_1 < num_pts; ++counter_1)
         {
-            double radius = counter / (double)300;
+            double radius = counter_1 / (double)300;
             
             Sphere s( centre, radius );
             
-            double volume1 = 0;
-            double volume2 = 0;
-            double volume3 = 0;
-            double volume4 = 0;
-            double volume5 = 0;
-            double volume6 = 0;
-            double volume7 = 0;
-            double volume8 = 0;
-            double volume9 = 0;
+            vector<double> volume( zone_limit, 0 );
             
-            for (int counter = 0; counter < tetra_cells[0].size(); ++counter)
+            for (int counter_2 = 0; counter_2 < zone_limit; ++counter_2)
             {
-                volume1 += Sphere_Tetrahedron_Intersection( s, tetra_cells[0][counter] );
+                for (int counter_3 = 0; counter_3 < tetra_cells[counter_2].size(); ++counter_3)
+                {
+                    volume[counter_2] += Sphere_Tetrahedron_Intersection( s, tetra_cells[counter_2][counter_3] );
+                }
             }
             
-            for (int counter = 0; counter < tetra_cells[1].size(); ++counter)
+            for (int counter_2 = 0; counter_2 < zone_limit; ++counter_2)
             {
-                volume2 += Sphere_Tetrahedron_Intersection( s, tetra_cells[1][counter] );
+                if (abs( volume[counter_2] ) < tiny_num) volume[counter_2] = tiny_num;
             }
             
-            for (int counter = 0; counter < tetra_cells[2].size(); ++counter)
+            vector<double> pi( zone_limit );
+            
+            for (int counter_2 = 0; counter_2 < zone_limit - 1; ++counter_2)
             {
-                volume3 += Sphere_Tetrahedron_Intersection( s, tetra_cells[2][counter] );
+                pi[counter_2] = volume[counter_2] - volume[counter_2 + 1];
             }
             
-            for (int counter = 0; counter < tetra_cells[3].size(); ++counter)
-            {
-                volume4 += Sphere_Tetrahedron_Intersection( s, tetra_cells[3][counter] );
-            }
+            pi[zone_limit - 1] = volume[zone_limit - 1];
             
-            for (int counter = 0; counter < tetra_cells[4].size(); ++counter)
-            {
-                volume5 += Sphere_Tetrahedron_Intersection( s, tetra_cells[4][counter] );
-            }
-            
-            for (int counter = 0; counter < tetra_cells[5].size(); ++counter)
-            {
-                volume6 += Sphere_Tetrahedron_Intersection( s, tetra_cells[5][counter] );
-            }
-            
-            for (int counter = 0; counter < tetra_cells[6].size(); ++counter)
-            {
-                volume7 += Sphere_Tetrahedron_Intersection( s, tetra_cells[6][counter] );
-            }
-            
-            for (int counter = 0; counter < tetra_cells[7].size(); ++counter)
-            {
-                volume8 += Sphere_Tetrahedron_Intersection( s, tetra_cells[7][counter] );
-            }
-            
-            for (int counter = 0; counter < tetra_cells[8].size(); ++counter)
-            {
-                volume9 += Sphere_Tetrahedron_Intersection( s, tetra_cells[8][counter] );
-            }
-            
-            if (abs( volume1 ) < tiny_num) volume1 = tiny_num;
-            if (abs( volume2 ) < tiny_num) volume2 = tiny_num;
-            if (abs( volume3 ) < tiny_num) volume3 = tiny_num;
-            if (abs( volume4 ) < tiny_num) volume4 = tiny_num;
-            if (abs( volume5 ) < tiny_num) volume5 = tiny_num;
-            if (abs( volume6 ) < tiny_num) volume6 = tiny_num;
-            if (abs( volume7 ) < tiny_num) volume7 = tiny_num;
-            if (abs( volume8 ) < tiny_num) volume8 = tiny_num;
-            if (abs( volume9 ) < tiny_num) volume9 = tiny_num;
-            
-            double pi_1 = volume1 - volume2;
-            double pi_2 = volume2 - volume3;
-            double pi_3 = volume3 - volume4;
-            double pi_4 = volume4 - volume5;
-            double pi_5 = volume5 - volume6;
-            double pi_6 = volume6 - volume7;
-            double pi_7 = volume7 - volume8;
-            double pi_8 = volume8 - volume9;
-            double pi_9 = volume9;
-            
-            if (pi_9 > tiny_num)
+            if (pi[zone_limit - 1] > tiny_num)
             {
                 final_radius = radius;
                 break;
             }
             
-            ofs << setprecision( 10 ) << radius << " " << pi_1 << " " << pi_2 << " " << pi_3 << " " << pi_4 << " " << pi_5 << " " << pi_6 << " " << pi_7 << " " << pi_8 << endl;
+            ofs << setprecision( 10 ) << radius;
+            
+            for (int counter_2 = 0; counter_2 < zone_limit - 1; ++counter_2)
+            {
+                ofs << " " << pi[counter_2] / (double)cell_volume;
+            }
+            
+            ofs << endl;
         }
         
         ofs.close();
@@ -291,7 +255,16 @@ int main ( int, char*[] )
         
         gp << "set samples 1000\n";
         
-        gp << "plot 'Results.txt' using 1:2 smooth csplines ls 1 title '{/Symbol p}_1(r)', 'Results.txt' using 1:3 smooth csplines ls 2 title '{/Symbol p}_2(r)', 'Results.txt' using 1:4 smooth csplines ls 3 title '{/Symbol p}_3(r)', 'Results.txt' using 1:5 smooth csplines ls 4 title '{/Symbol p}_4(r)', 'Results.txt' using 1:6 smooth csplines ls 5 title '{/Symbol p}_5(r)', 'Results.txt' using 1:7 smooth csplines ls 6 title '{/Symbol p}_6(r)', 'Results.txt' using 1:8 smooth csplines ls 7 title '{/Symbol p}_7(r)', 'Results.txt' using 1:9 smooth csplines ls 8 title '{/Symbol p}_8(r)'\n";
+        string plot = "plot 'Results.txt' using 1:2 smooth csplines ls 1 title '{/Symbol p}_1(r)'";
+        
+        for (int counter = 1; counter < zone_limit - 1; ++counter)
+        {
+            plot += ", 'Results.txt' using 1:" + to_string( counter + 2 ) + "smooth csplines ls " + to_string( counter + 1 ) + " title '{/Symbol p}_" + to_string( counter + 1 ) + "(r)'";
+        }
+        
+        plot += "\n";
+        
+        gp << plot;*/
     }
     
     Print_Info( start_time, start );

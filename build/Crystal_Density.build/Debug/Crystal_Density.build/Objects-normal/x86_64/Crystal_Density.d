@@ -133,7 +133,7 @@ dependencies: \
   /usr/local/Cellar/gemmi/include/gemmi/cifdoc.hpp \
   /usr/local/Cellar/gemmi/include/gemmi/util.hpp \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Parameters.h \
-  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Input.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Further_Parameters.h \
   /usr/local/Cellar/cgal/4.14/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
   /usr/local/Cellar/cgal/4.14/include/CGAL/Simple_cartesian.h \
   /usr/local/Cellar/cgal/4.14/include/CGAL/Cartesian/Cartesian_base.h \
@@ -1688,6 +1688,7 @@ dependencies: \
   /usr/local/Cellar/boost/1.69.0/include/boost/type_traits/integral_promotion.hpp \
   /usr/local/Cellar/boost/1.69.0/include/boost/type_traits/promote.hpp \
   /usr/local/Cellar/cgal/4.14/include/CGAL/Triangulation_structural_filtering_traits.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Input.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Input3D.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Graph_Parameters.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Packing_Functions3D.h \
@@ -1844,19 +1845,19 @@ dependencies: \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Make_Cells3D.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Make_Cell3D.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Cell_Volume.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Fourth_Order_Radius.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Make_T2_Cells.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Read_Cell_Shape.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Transformation_Matrix.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Make_T2_Cell.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Frac_To_Cart_Coords.h \
-  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Assign_Experimental_data.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Assign_Experimental_Data.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Read_Atom_Coords.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Obtain_T2_Centres.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Translate_Centres.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Centres_In_Cell.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Distance_To_Cell.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Add_Surrounding_Pts.h \
-  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Fourth_Order_Radius.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Global\ Functions/Deformation.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Cell/Cell_Data.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Basic/Norm.h \
@@ -1953,5 +1954,357 @@ dependencies: \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Derivatives/Derivatives.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Global\ Functions/Plot_Graph.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Global\ Functions/GIF.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Compare_Two_Files.h \
   /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Comparing_Entries.h \
-  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Global\ Functions/Print_Info.h
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Dataset_Dataset_Analysis.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Manipulate_Dataset_Dataset_Analysis.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/File_Dataset_Analysis.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Manipulate_File_Analysis.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Read_Dataset_Matrix.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/Global\ Functions/Print_Info.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/New\ Group/Brillouin_Code.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Brillouin_Code/Triangle_Area3D.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Brillouin_Code/B_Poly.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Exact_predicates_exact_constructions_kernel.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Lazy_kernel.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Static_filtered_predicate.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Epic_converter.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Polyhedron_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/license/Polyhedron.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Polyhedron_3_fwd.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/HalfedgeDS_iterator.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/circulator.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/circulator_bases.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Iterator_project.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/N_step_adaptor_derived.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/iterator.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Iterator_range.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/tuple.h \
+  /usr/local/Cellar/boost/1.69.0/include/boost/tuple/tuple_comparison.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/foreach.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/foreach_fwd.hpp \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Polyhedron_items_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/HalfedgeDS_vertex_base.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/HalfedgeDS_halfedge_base.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/HalfedgeDS_face_base.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/HalfedgeDS_default.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/HalfedgeDS_items_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/HalfedgeDS_list.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/In_place_list.h \
+  /usr/local/Cellar/boost/1.69.0/include/boost/functional/hash.hpp \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/HalfedgeDS_items_decorator.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Unique_hash_map.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Handle_hash_function.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Tools/chained_map.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/boost/graph/graph_traits_HalfedgeDS_default.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/boost/graph/graph_traits_HalfedgeDS.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/boost/graph/named_function_params.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/boost/graph/properties.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/property_map.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/value_type_traits.h \
+  /usr/local/Cellar/boost/1.69.0/include/boost/property_map/property_map.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/concept_archetype.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/property_map/vector_property_map.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/graph/properties.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/pending/property.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/pending/detail/property.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/graph/property_maps/constant_property_map.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/graph/property_maps/null_property_map.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/graph/graph_traits.hpp \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Dynamic_property_map.h \
+  /usr/local/Cellar/boost/1.69.0/include/boost/unordered_map.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/unordered/unordered_map.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/unordered/detail/map.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/unordered/detail/implementation.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/core/pointer_traits.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/unordered/detail/fwd.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/unordered/unordered_map_fwd.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/graph/named_function_params.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/library.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/arithmetic.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/arithmetic/div.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/arithmetic/mul.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/array.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/array/enum.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/array/insert.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/array/push_back.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/array/detail/get_data.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/facilities/is_1.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/facilities/is_empty.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/facilities/is_empty_variadic.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/punctuation/is_begin_parens.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/punctuation/detail/is_begin_parens.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/facilities/detail/is_empty.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/comparison/not_equal.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/array/pop_back.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/repetition/deduce_z.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/array/pop_front.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/array/push_front.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/array/remove.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/array/replace.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/array/reverse.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/tuple/reverse.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/tuple/size.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/array/to_list.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/tuple/to_list.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/array/to_seq.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/tuple/to_seq.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/array/to_tuple.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/comparison.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/comparison/equal.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/comparison/greater.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/comparison/less.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/comparison/greater_equal.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/config/limits.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/control.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/debug.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/debug/assert.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/debug/line.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/facilities.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/facilities/apply.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/detail/is_unary.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/iteration.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/iteration/self.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/list.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/list/append.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/list/at.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/list/rest_n.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/list/cat.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/list/enum.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/list/for_each_i.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/list/filter.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/list/first_n.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/list/for_each.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/list/for_each_product.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/list/to_tuple.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/list/size.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/list/to_array.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/list/to_seq.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/list/transform.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/logical.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/logical/bitnor.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/logical/bitor.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/logical/bitxor.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/logical/nor.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/logical/or.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/logical/xor.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/punctuation.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/punctuation/paren.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/punctuation/paren_if.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/punctuation/remove_parens.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/tuple/enum.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/repetition.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/repetition/deduce_r.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/repetition/enum_params_with_a_default.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/repetition/enum_params_with_defaults.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/repetition/enum_shifted.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/repetition/enum_shifted_binary_params.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/repetition/enum_trailing.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/repetition/enum_trailing_binary_params.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/selection.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/selection/max.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/selection/min.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/seq.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/seq/filter.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/seq/first_n.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/seq/detail/split.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/seq/fold_right.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/seq/reverse.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/seq/for_each.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/seq/for_each_product.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/seq/insert.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/seq/rest_n.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/seq/pop_back.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/seq/pop_front.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/seq/push_back.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/seq/push_front.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/seq/remove.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/seq/replace.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/seq/subseq.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/seq/to_array.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/seq/to_list.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/seq/detail/binary_transform.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/variadic/detail/is_single_return.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/seq/to_tuple.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/seq/variadic_seq_to_seq.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/slot.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/tuple.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/tuple/insert.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/tuple/to_array.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/tuple/pop_back.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/tuple/pop_front.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/tuple/push_back.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/tuple/push_front.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/tuple/remove.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/tuple/replace.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/variadic.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/variadic/to_array.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/variadic/to_list.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/variadic/to_seq.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/variadic/to_tuple.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/preprocessor/wstringize.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/parameter/name.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/parameter/keyword.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/parameter/aux_/unwrap_cv_reference.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/parameter/aux_/yesno.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/parameter/aux_/tag.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/parameter/aux_/tagged_argument.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/parameter/aux_/void.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/parameter/aux_/arg_list.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/parameter/aux_/result_of0.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/parameter/aux_/default.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/parameter/aux_/parameter_requirements.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/parameter/aux_/is_maybe.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/parameter/config.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/mpl/begin.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/mpl/end.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/parameter/value_type.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/parameter/binding.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/graph/detail/d_ary_heap.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/shared_array.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/smart_ptr/shared_array.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/property_map/shared_array_property_map.hpp \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/boost/graph/parameters_interface.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/boost/graph/boost_parameters_interface.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/boost/graph/iterator.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/boost/graph/internal/helpers.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/boost/graph/halfedge_graph_traits.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/HalfedgeDS_decorator.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/HalfedgeDS_const_decorator.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/IO/Verbose_ostream.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Modifier_base.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Polyhedron_traits_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/boost/graph/graph_traits_Polyhedron_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/boost/graph/backward_compatibility_functions.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/boost/graph/properties_Polyhedron_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/boost/graph/internal/Has_member_id.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/boost/graph/properties_Polyhedron_3_time_stamp.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/boost/graph/properties_Polyhedron_3_features.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/IO/Polyhedron_iostream.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/IO/print_OFF.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/IO/File_writer_OFF.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/IO/binary_file_io.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/IO/File_header_OFF.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/IO/File_header_extended_OFF.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/IO/generic_print_polyhedron.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/boost/graph/named_params_helper.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Inverse_index.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/IO/scan_OFF.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/IO/Polyhedron_scan_OFF.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/IO/File_scanner_OFF.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Polyhedron_incremental_builder_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Random_access_adaptor.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/convex_hull_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/license/Convex_hull_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/convex_hull_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/license/Convex_hull_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/convex_hull_traits_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/distance_predicates_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/ch_akl_toussaint.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Convex_hull_2/ch_akl_toussaint_impl.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/convexity_check_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Convex_hull_2/convexity_check_2_impl.h \
+  /usr/local/Cellar/boost/1.69.0/include/boost/bind.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/bind/bind.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/mem_fn.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/bind/mem_fn.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/get_pointer.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/bind/mem_fn_template.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/bind/mem_fn_cc.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/is_placeholder.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/bind/arg.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/visit_each.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/core/is_same.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/bind/storage.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/bind/bind_cc.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/bind/bind_mf_cc.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/bind/bind_mf2_cc.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/bind/placeholders.hpp \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Convex_hull_2/ch_assertions.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/ch_selected_extreme_points_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Convex_hull_2/ch_selected_extreme_points_2_impl.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/ch_graham_andrew.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Convex_hull_2/ch_graham_andrew_impl.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/IO/Tee_for_output_iterator.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/utility.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/ch_bykat.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Convex_hull_2/ch_bykat_impl.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Projection_traits_xy_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/internal/Projection_traits_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Projection_traits_xz_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Projection_traits_yz_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Convex_hull_traits_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Convex_hull_face_base_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Triangulation_face_base_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/license/Triangulation_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/triangulation_assertions.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Triangulation_ds_face_base_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/license/TDS_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Triangulation_utils_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Dummy_tds_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Triangulation_data_structure_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Compact_container.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/CC_safe_handle.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Time_stamper.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Has_timestamp.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/atomic.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Triangulation_ds_vertex_base_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Triangulation_ds_iterators_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Triangulation_ds_circulators_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Triangulation_vertex_base_with_info_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Triangulation_vertex_base_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/boost/graph/copy_face_graph.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/boost/graph/Euler_operations.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/boost/graph/helpers.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/boost/graph/internal/Has_member_clear.h \
+  /usr/local/Cellar/boost/1.69.0/include/boost/unordered_set.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/unordered/unordered_set.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/unordered/detail/set.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/unordered/unordered_set_fwd.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/function_output_iterator.hpp \
+  /usr/local/Cellar/boost/1.69.0/include/boost/iterator/function_output_iterator.hpp \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/boost/graph/graph_traits_Triangulation_data_structure_2.h \
+  /usr/local/Cellar/boost/1.69.0/include/boost/iterator_adaptors.hpp \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/convexity_check_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/boost/graph/property_maps.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Triangulation_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/license/Triangulation_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Triangulation_utils_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/license/TDS_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Triangulation_data_structure_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/internal/Has_member_visited.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Concurrent_compact_container.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Triangulation_ds_cell_base_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/internal/Dummy_tds_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Triangulation_ds_vertex_base_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Triangulation_simplex_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/internal/Triangulation_ds_iterators_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/internal/Triangulation_ds_circulators_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Triangulation_cell_base_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Triangulation_vertex_base_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/spatial_sort.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/hilbert_sort.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Hilbert_policy_tags.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Hilbert_sort_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Hilbert_sort_median_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Hilbert_sort_base.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Hilbert_sort_middle_2.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Hilbert_sort_middle_base.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Polygon_2_algorithms.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Polygon_2/polygon_assertions.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Polygon_2/Polygon_2_algorithms_impl.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Polygon_2/Polygon_2_simplicity.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Hilbert_sort_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Hilbert_sort_median_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Hilbert_sort_middle_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Hilbert_sort_d.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Hilbert_sort_median_d.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Hilbert_sort_middle_d.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Multiscale_sort.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Spatial_sort_traits_adapter_3.h \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/internal/boost/function_property_map.hpp \
+  /usr/local/Cellar/cgal/4.14/include/CGAL/Spatial_lock_grid_3.h \
+  /Users/philsmith/Documents/Work/Xcode\ Projects/Crystal_Density/Crystal_Density/Header\ Files/3D/Brillouin_Code/Sphere_Tetrahedron_Intersection.h

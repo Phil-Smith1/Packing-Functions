@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -54,6 +54,7 @@
 		EE1932E423E2063300C49317 /* Sphere_Tetrahedron_Intersection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE1932E323E2063300C49317 /* Sphere_Tetrahedron_Intersection.cpp */; };
 		EE197E25230C4443002CEA92 /* Three_Sphere_Intersection_Volume_Within_Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE197E24230C4443002CEA92 /* Three_Sphere_Intersection_Volume_Within_Cell.cpp */; };
 		EE197E27230C532F002CEA92 /* Spherical_Wedge_Volume_Within_Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE197E26230C532F002CEA92 /* Spherical_Wedge_Volume_Within_Cell.cpp */; };
+		EE197E2A23E9A64600D71AD8 /* B_Poly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE197E2923E9A64600D71AD8 /* B_Poly.cpp */; };
 		EE197E2C230C63EB002CEA92 /* Sphere_Five_Plane_Intersection_Volume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE197E2B230C63EB002CEA92 /* Sphere_Five_Plane_Intersection_Volume.cpp */; };
 		EE1A989F23B24942004113C7 /* Centres_In_Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE1A989E23B24942004113C7 /* Centres_In_Cell.cpp */; };
 		EE1A98A223B24A9D004113C7 /* Translate_Centres.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE1A98A123B24A9D004113C7 /* Translate_Centres.cpp */; };
@@ -94,6 +95,7 @@
 		EE9CE491231048AB0039CF0A /* Cone_Parallel_Planes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE9CE490231048AB0039CF0A /* Cone_Parallel_Planes.cpp */; };
 		EE9CE49523104CFB0039CF0A /* Cone_Parallel_Lines.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE9CE49423104CFB0039CF0A /* Cone_Parallel_Lines.cpp */; };
 		EE9CE497231056240039CF0A /* General_Spherical_Cone_Exterior_Vertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE9CE496231056240039CF0A /* General_Spherical_Cone_Exterior_Vertex.cpp */; };
+		EEA0CEB523E48DD0008C65C8 /* Triangle_Area3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EEA0CEB423E48DD0008C65C8 /* Triangle_Area3D.cpp */; };
 		EEC76BAE23C3520200E6C190 /* Assign_Experimental_Data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EEC76BAD23C3520200E6C190 /* Assign_Experimental_Data.cpp */; };
 		EECBD2DC23CCEB47000614C7 /* Dataset_Dataset_Analysis.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECBD2DB23CCEB47000614C7 /* Dataset_Dataset_Analysis.cpp */; };
 		EECBD2DE23CCEEBA000614C7 /* Manipulate_Dataset_Dataset_Analysis.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECBD2DD23CCEEBA000614C7 /* Manipulate_Dataset_Dataset_Analysis.cpp */; };
@@ -273,8 +275,10 @@
 		EE197E24230C4443002CEA92 /* Three_Sphere_Intersection_Volume_Within_Cell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Three_Sphere_Intersection_Volume_Within_Cell.cpp; sourceTree = "<group>"; };
 		EE197E26230C532F002CEA92 /* Spherical_Wedge_Volume_Within_Cell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Spherical_Wedge_Volume_Within_Cell.cpp; sourceTree = "<group>"; };
 		EE197E29230C5363002CEA92 /* Spherical_Wedge_Volume_Within_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spherical_Wedge_Volume_Within_Cell.h; sourceTree = "<group>"; };
+		EE197E2923E9A64600D71AD8 /* B_Poly.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = B_Poly.cpp; sourceTree = "<group>"; };
 		EE197E2A230C63D7002CEA92 /* Sphere_Five_Plane_Intersection_Volume.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sphere_Five_Plane_Intersection_Volume.h; sourceTree = "<group>"; };
 		EE197E2B230C63EB002CEA92 /* Sphere_Five_Plane_Intersection_Volume.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sphere_Five_Plane_Intersection_Volume.cpp; sourceTree = "<group>"; };
+		EE197E2B23E9A65300D71AD8 /* B_Poly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = B_Poly.h; sourceTree = "<group>"; };
 		EE1A989D23B24932004113C7 /* Centres_In_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Centres_In_Cell.h; sourceTree = "<group>"; };
 		EE1A989E23B24942004113C7 /* Centres_In_Cell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Centres_In_Cell.cpp; sourceTree = "<group>"; };
 		EE1A98A023B24A86004113C7 /* Translate_Centres.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Translate_Centres.h; sourceTree = "<group>"; };
@@ -393,6 +397,8 @@
 		EE9CE49423104CFB0039CF0A /* Cone_Parallel_Lines.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cone_Parallel_Lines.cpp; sourceTree = "<group>"; };
 		EE9CE496231056240039CF0A /* General_Spherical_Cone_Exterior_Vertex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = General_Spherical_Cone_Exterior_Vertex.cpp; sourceTree = "<group>"; };
 		EE9CE498231056390039CF0A /* General_Spherical_Cone_Exterior_Vertex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = General_Spherical_Cone_Exterior_Vertex.h; sourceTree = "<group>"; };
+		EEA0CEB423E48DD0008C65C8 /* Triangle_Area3D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Triangle_Area3D.cpp; sourceTree = "<group>"; };
+		EEA0CEB623E48DEB008C65C8 /* Triangle_Area3D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Triangle_Area3D.h; sourceTree = "<group>"; };
 		EEC76BAC23C351F000E6C190 /* Assign_Experimental_Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Assign_Experimental_Data.h; sourceTree = "<group>"; };
 		EEC76BAD23C3520200E6C190 /* Assign_Experimental_Data.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Assign_Experimental_Data.cpp; sourceTree = "<group>"; };
 		EECBD2D923CCC1B3000614C7 /* Further_Parameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Further_Parameters.h; sourceTree = "<group>"; };
@@ -721,8 +727,10 @@
 		EE1932E023E2013000C49317 /* Brillouin_Code */ = {
 			isa = PBXGroup;
 			children = (
+				EEA0CEB423E48DD0008C65C8 /* Triangle_Area3D.cpp */,
 				EE1932E323E2063300C49317 /* Sphere_Tetrahedron_Intersection.cpp */,
 				EE1932DE23E1FD1600C49317 /* Brillouin_Code.cpp */,
+				EE197E2923E9A64600D71AD8 /* B_Poly.cpp */,
 			);
 			path = Brillouin_Code;
 			sourceTree = "<group>";
@@ -730,10 +738,28 @@
 		EE1932E123E2015A00C49317 /* Brillouin_Code */ = {
 			isa = PBXGroup;
 			children = (
+				EE197E2B23E9A65300D71AD8 /* B_Poly.h */,
+				EEA0CEB623E48DEB008C65C8 /* Triangle_Area3D.h */,
 				EE1932DD23E1FD0600C49317 /* Brillouin_Code.h */,
 				EE1932E223E2061F00C49317 /* Sphere_Tetrahedron_Intersection.h */,
 			);
 			path = Brillouin_Code;
+			sourceTree = "<group>";
+		};
+		EE1BAA3123EC4952005BC3FD /* 2D */ = {
+			isa = PBXGroup;
+			children = (
+				EE03E12D223AC9AD0010BC95 /* Circle_Area_Within_Cell */,
+				EE03E136223ADDFA0010BC95 /* Derivatives */,
+				EE79CED422412FD20077AFFE /* Four_Circle_Area_Within_Cell */,
+				EE03E12C223AC54D0010BC95 /* Frame */,
+				EE03E139223ADE550010BC95 /* Global Functions */,
+				EE03E134223ADD350010BC95 /* Three_Circle_Area_Within_Cell */,
+				EE03E132223AD4D90010BC95 /* Two_Circle_Area_Within_Cell */,
+				EE03E12A223AC4120010BC95 /* Cell */,
+				EE03E131223AD0ED0010BC95 /* Basic */,
+			);
+			path = 2D;
 			sourceTree = "<group>";
 		};
 		EE3AA5FD21B848710088403C = {
@@ -977,6 +1003,7 @@
 		EECF35BE222D91100079CD62 /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
+				EE1BAA3123EC4952005BC3FD /* 2D */,
 				EE55F2CA22537C4800B8CA0B /* 3D */,
 				EE2CFB9621F8838100270503 /* Circle.cpp */,
 				EECF356C222D7D7D0079CD62 /* Correct_Side_Of_Cell.cpp */,
@@ -985,15 +1012,6 @@
 				EE55F2DE2253AE6F00B8CA0B /* Input.cpp */,
 				EECF356A222D7D570079CD62 /* Same_Side.cpp */,
 				EECF35C1222D92FC0079CD62 /* gnuplot-iostream.h */,
-				EE03E131223AD0ED0010BC95 /* Basic */,
-				EE03E12A223AC4120010BC95 /* Cell */,
-				EE03E12D223AC9AD0010BC95 /* Circle_Area_Within_Cell */,
-				EE03E136223ADDFA0010BC95 /* Derivatives */,
-				EE79CED422412FD20077AFFE /* Four_Circle_Area_Within_Cell */,
-				EE03E12C223AC54D0010BC95 /* Frame */,
-				EE03E139223ADE550010BC95 /* Global Functions */,
-				EE03E134223ADD350010BC95 /* Three_Circle_Area_Within_Cell */,
-				EE03E132223AD4D90010BC95 /* Two_Circle_Area_Within_Cell */,
 			);
 			path = "Source Files";
 			sourceTree = "<group>";
@@ -1034,7 +1052,7 @@
 				};
 			};
 			buildConfigurationList = EE3AA60121B848710088403C /* Build configuration list for PBXProject "Crystal_Density" */;
-			compatibilityVersion = "Xcode 8.0";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -1167,6 +1185,7 @@
 				EECF3597222D84F50079CD62 /* Non_Inclusion_Three_Circle_Intersection_Area_Within_Cell.cpp in Sources */,
 				EE9CE48F2310459E0039CF0A /* Sphere_Volume_By_Exclusion.cpp in Sources */,
 				EE1C33D523A1239E0008CAF2 /* Add_Surrounding_Pts.cpp in Sources */,
+				EEA0CEB523E48DD0008C65C8 /* Triangle_Area3D.cpp in Sources */,
 				EE32B445239FB88200DB22FA /* Circumradius.cpp in Sources */,
 				EEDADBB9239683400065101B /* Make_T2_Cell.cpp in Sources */,
 				EE067CD722FB26A3007F45AB /* Make_Cells3D.cpp in Sources */,
@@ -1184,6 +1203,7 @@
 				EECF35B9222D8CA70079CD62 /* Plot_Graph.cpp in Sources */,
 				EEC76BAE23C3520200E6C190 /* Assign_Experimental_Data.cpp in Sources */,
 				EE379184222EFF3F000B57C8 /* Frame.cpp in Sources */,
+				EE197E2A23E9A64600D71AD8 /* B_Poly.cpp in Sources */,
 				EECF356B222D7D570079CD62 /* Same_Side.cpp in Sources */,
 				EE067CDD22FB4CE0007F45AB /* Sphere_Ordering.cpp in Sources */,
 				EECF355F222D7ADB0079CD62 /* Edge_Circle_Intersections.cpp in Sources */,
@@ -1315,6 +1335,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1390,6 +1412,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_NO_COMMON_BLOCKS = YES;

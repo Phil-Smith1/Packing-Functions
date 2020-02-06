@@ -1,20 +1,16 @@
 #pragma once
 
-#include <CGAL/Exact_predicates_exact_constructions_kernel.h>
+#include "Triangle_Area3D.h"
+#include "B_Poly.h"
+
 #include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
-#include <CGAL/Polyhedron_3.h>
 #include <CGAL/convex_hull_3.h>
 #include <CGAL/Triangulation_3.h>
 
 using namespace std;
-using namespace CGAL;
 
-typedef Exact_predicates_inexact_constructions_kernel K;
-typedef K::Point_3 P3;
 typedef K::Plane_3 Pl3;
 
-typedef Exact_predicates_exact_constructions_kernel Exact_Kernel;
-typedef Polyhedron_3<Exact_Kernel> Polyhedron;
 typedef Tetrahedron_3<Exact_Kernel> Tetrahedron;
 typedef Triangulation_3<Exact_Kernel> Triangulation;
 
@@ -29,18 +25,20 @@ typedef Polyhedron::Vertex_iterator vertex_iterator;
 
 typedef Triangulation::Finite_cells_iterator cells_iterator;
 
-void Produce_Large_Cube ( double cube_size, Polyhedron& cube );
+void Produce_Cube ( double cube_size, P3_E const& centre, Polyhedron& cube );
+
+void Initialise_Cubes ( double cube_size, int num_cubes, P3_E const& centre, vector<Polyhedron>& cubes );
 
 int Compute_Zone( P3_E const& centre, vector<Pl3_E>const& planes, Polyhedron& poly );
 
 double Max_Distance_To_Polygon ( P3_E const& centre, Polyhedron& poly );
 
-void Removing_Distant_Polygons ( P3_E const& centre, vector<Pl3_E>const& planes, double plane_distance, vector<Polyhedron>& polys, vector<Polyhedron>& final_polys, int zone_limit, bool remove_inside_zones );
+void Removing_Distant_Polygons ( P3_E const& centre, vector<Pl3_E>const& planes, double plane_distance, vector<B_Poly>& polys, vector<B_Poly>& final_polys, int zone_limit );
 
-double Max_Radius_Of_Space ( P3_E const& centre, vector<Polyhedron>& polys );
+double Max_Radius_Of_Space ( P3_E const& centre, vector<pair<double, Polyhedron>>& polys );
 
-void Dividing_Space ( P3_E const& centre, multimap<double, P3_E>const& pts, vector<Pl3_E>& planes, vector<Polyhedron>& final_polys, int cube_size, int zone_limit );
+void Dividing_Space ( P3_E const& centre, multimap<double, P3_E>const& pts, vector<B_Poly>& final_polys, int zone_limit );
 
-void Compute_Brillouin_Zones ( int perim, int zone_limit, double cube_size, P3_E const& centre, vector<vector<Tetrahedron>>& zones_of_tetras );
+void Compute_Brillouin_Zones ( int perim, int zone_limit, P3_E const& centre, vector<vector<Tetrahedron>>& zones_of_tetras );
 
 void Extract_Tetra_Cells ( vector<vector<Tetrahedron>>const& zones_of_tetras, int zone_limit, vector<vector<vector<Pl3>>>& tetra_cells );
