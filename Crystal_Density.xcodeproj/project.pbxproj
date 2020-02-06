@@ -31,7 +31,6 @@
 		EE051920223182C70091755F /* Packing_Functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE05191F223182C70091755F /* Packing_Functions.cpp */; };
 		EE05192222318EE50091755F /* Cell_2Circles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE05192122318EE50091755F /* Cell_2Circles.cpp */; };
 		EE05803622E0CB3500254ED5 /* Spherical_Cap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE05803522E0CB3400254ED5 /* Spherical_Cap.cpp */; };
-		EE05803A22E0CBB100254ED5 /* Plane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE05803922E0CBB100254ED5 /* Plane.cpp */; };
 		EE067CD722FB26A3007F45AB /* Make_Cells3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE067CD622FB26A3007F45AB /* Make_Cells3D.cpp */; };
 		EE067CD922FB4243007F45AB /* Volume_Of_Intersection_Of_Two_Spheres.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE067CD822FB4243007F45AB /* Volume_Of_Intersection_Of_Two_Spheres.cpp */; };
 		EE067CDD22FB4CE0007F45AB /* Sphere_Ordering.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE067CDC22FB4CE0007F45AB /* Sphere_Ordering.cpp */; };
@@ -76,6 +75,13 @@
 		EE3AADC02228186700E1FAE5 /* Angle_Between_Vectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE3AADBF2228186700E1FAE5 /* Angle_Between_Vectors.cpp */; };
 		EE3AADC4222819CE00E1FAE5 /* Segment_Area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE3AADC3222819CE00E1FAE5 /* Segment_Area.cpp */; };
 		EE3AADC6222819FE00E1FAE5 /* Intersection_Of_Two_Circles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE3AADC5222819FE00E1FAE5 /* Intersection_Of_Two_Circles.cpp */; };
+		EE43398023EC5DCF004FA97B /* Extract_Tetra_Cells.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE43397F23EC5DCF004FA97B /* Extract_Tetra_Cells.cpp */; };
+		EE43398223EC90AF004FA97B /* Triangulate_Zones.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE43398123EC90AF004FA97B /* Triangulate_Zones.cpp */; };
+		EE43398623EC9610004FA97B /* Divide_Polyhedron.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE43398523EC9610004FA97B /* Divide_Polyhedron.cpp */; };
+		EE43398823EC98CC004FA97B /* Max_Distance_To_Polyhedron.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE43398723EC98CC004FA97B /* Max_Distance_To_Polyhedron.cpp */; };
+		EE43398C23EC99B7004FA97B /* Removing_Polyhedrons.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE43398B23EC99B7004FA97B /* Removing_Polyhedrons.cpp */; };
+		EE43399023EC9AB6004FA97B /* Max_Radius_Of_Space.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE43398F23EC9AB6004FA97B /* Max_Radius_Of_Space.cpp */; };
+		EE43399423EC9B52004FA97B /* Plane_Intersect_Polyhedron.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE43399323EC9B52004FA97B /* Plane_Intersect_Polyhedron.cpp */; };
 		EE4FF54B2236A9E7008E25F0 /* Three_Circles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE4FF54A2236A9E7008E25F0 /* Three_Circles.cpp */; };
 		EE4FF54D2236AA83008E25F0 /* Cell_3Circles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE4FF54C2236AA83008E25F0 /* Cell_3Circles.cpp */; };
 		EE4FF5512236AF7C008E25F0 /* Areas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE4FF5502236AF7C008E25F0 /* Areas.cpp */; };
@@ -222,8 +228,6 @@
 		EE05192322318EF70091755F /* Cell_2Circles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cell_2Circles.h; sourceTree = "<group>"; };
 		EE05803522E0CB3400254ED5 /* Spherical_Cap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Spherical_Cap.cpp; sourceTree = "<group>"; };
 		EE05803722E0CB4E00254ED5 /* Spherical_Cap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spherical_Cap.h; sourceTree = "<group>"; };
-		EE05803922E0CBB100254ED5 /* Plane.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Plane.cpp; sourceTree = "<group>"; };
-		EE05803B22E0CBCD00254ED5 /* Plane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Plane.h; sourceTree = "<group>"; };
 		EE067CD422FB243E007F45AB /* Parameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Parameters.h; sourceTree = "<group>"; };
 		EE067CD522FB2693007F45AB /* Make_Cells3D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Make_Cells3D.h; sourceTree = "<group>"; };
 		EE067CD622FB26A3007F45AB /* Make_Cells3D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Make_Cells3D.cpp; sourceTree = "<group>"; };
@@ -291,7 +295,6 @@
 		EE1BA8532316D96700BC6133 /* Cap_Volume_By_Exclusion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cap_Volume_By_Exclusion.cpp; sourceTree = "<group>"; };
 		EE1C33D423A1239E0008CAF2 /* Add_Surrounding_Pts.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Add_Surrounding_Pts.cpp; sourceTree = "<group>"; };
 		EE1C33D623A123B70008CAF2 /* Add_Surrounding_Pts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Add_Surrounding_Pts.h; sourceTree = "<group>"; };
-		EE20D73B221449E600168C59 /* Same_Side.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Same_Side.h; sourceTree = "<group>"; };
 		EE20D73C22144C6600168C59 /* Correct_Side_Of_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Correct_Side_Of_Cell.h; sourceTree = "<group>"; };
 		EE2CFB9121F87C9600270503 /* Concave_Cone_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Concave_Cone_Area.h; sourceTree = "<group>"; };
 		EE2CFB9521F8837400270503 /* Circle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
@@ -339,6 +342,21 @@
 		EE3CC3E922021F81002366A3 /* Non_Trivial_Three_Circle_Intersection_Pts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Non_Trivial_Three_Circle_Intersection_Pts.h; sourceTree = "<group>"; };
 		EE3D8F3421F9DF0F00D8E9DC /* Triangle_Circumcentre.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Triangle_Circumcentre.h; sourceTree = "<group>"; };
 		EE3D8F3521F9DFCA00D8E9DC /* Rotation_About_Pt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rotation_About_Pt.h; sourceTree = "<group>"; };
+		EE43397823EC5246004FA97B /* Same_Side.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Same_Side.h; sourceTree = "<group>"; };
+		EE43397E23EC5DB1004FA97B /* Extract_Tetra_Cells.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Extract_Tetra_Cells.h; sourceTree = "<group>"; };
+		EE43397F23EC5DCF004FA97B /* Extract_Tetra_Cells.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Extract_Tetra_Cells.cpp; sourceTree = "<group>"; };
+		EE43398123EC90AF004FA97B /* Triangulate_Zones.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Triangulate_Zones.cpp; sourceTree = "<group>"; };
+		EE43398323EC90BC004FA97B /* Triangulate_Zones.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Triangulate_Zones.h; sourceTree = "<group>"; };
+		EE43398423EC95F4004FA97B /* Divide_Polyhedron.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Divide_Polyhedron.h; sourceTree = "<group>"; };
+		EE43398523EC9610004FA97B /* Divide_Polyhedron.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Divide_Polyhedron.cpp; sourceTree = "<group>"; };
+		EE43398723EC98CC004FA97B /* Max_Distance_To_Polyhedron.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Max_Distance_To_Polyhedron.cpp; sourceTree = "<group>"; };
+		EE43398923EC98E1004FA97B /* Max_Distance_To_Polyhedron.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Max_Distance_To_Polyhedron.h; sourceTree = "<group>"; };
+		EE43398A23EC99A6004FA97B /* Removing_Polyhedrons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Removing_Polyhedrons.h; sourceTree = "<group>"; };
+		EE43398B23EC99B7004FA97B /* Removing_Polyhedrons.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Removing_Polyhedrons.cpp; sourceTree = "<group>"; };
+		EE43398F23EC9AB6004FA97B /* Max_Radius_Of_Space.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Max_Radius_Of_Space.cpp; sourceTree = "<group>"; };
+		EE43399123EC9AC3004FA97B /* Max_Radius_Of_Space.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Max_Radius_Of_Space.h; sourceTree = "<group>"; };
+		EE43399223EC9B3D004FA97B /* Plane_Intersect_Polyhedron.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Plane_Intersect_Polyhedron.h; sourceTree = "<group>"; };
+		EE43399323EC9B52004FA97B /* Plane_Intersect_Polyhedron.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Plane_Intersect_Polyhedron.cpp; sourceTree = "<group>"; };
 		EE43D59B220DA2F70079D8E7 /* Two_Circle_Intersection_Interior_Edge_Area.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Two_Circle_Intersection_Interior_Edge_Area.h; sourceTree = "<group>"; };
 		EE46B9942215A3F400ABD017 /* Four_Circle_Intersection_Area_Within_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Four_Circle_Intersection_Area_Within_Cell.h; sourceTree = "<group>"; };
 		EE46B9952215AA2300ABD017 /* Non_Trivial_Four_Circle_Intersection_Area_Within_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Non_Trivial_Four_Circle_Intersection_Area_Within_Cell.h; sourceTree = "<group>"; };
@@ -540,8 +558,8 @@
 				EE3999A22239818400083354 /* Four_Circles.cpp */,
 				EE379183222EFF3F000B57C8 /* Frame.cpp */,
 				EE3AADC5222819FE00E1FAE5 /* Intersection_Of_Two_Circles.cpp */,
-				EE4FF54A2236A9E7008E25F0 /* Three_Circles.cpp */,
 				EE03C345223825B200C19AC5 /* Three_Circle_Intersection_Area.cpp */,
+				EE4FF54A2236A9E7008E25F0 /* Three_Circles.cpp */,
 				EE3AADBB2228157100E1FAE5 /* Two_Circle_Intersection_Area.cpp */,
 				EE6FE9ED2226FD7E006B4477 /* Two_Circles.cpp */,
 			);
@@ -727,10 +745,17 @@
 		EE1932E023E2013000C49317 /* Brillouin_Code */ = {
 			isa = PBXGroup;
 			children = (
-				EEA0CEB423E48DD0008C65C8 /* Triangle_Area3D.cpp */,
-				EE1932E323E2063300C49317 /* Sphere_Tetrahedron_Intersection.cpp */,
-				EE1932DE23E1FD1600C49317 /* Brillouin_Code.cpp */,
+				EE43399323EC9B52004FA97B /* Plane_Intersect_Polyhedron.cpp */,
+				EE43398B23EC99B7004FA97B /* Removing_Polyhedrons.cpp */,
+				EE43398523EC9610004FA97B /* Divide_Polyhedron.cpp */,
+				EE43398F23EC9AB6004FA97B /* Max_Radius_Of_Space.cpp */,
+				EE43398723EC98CC004FA97B /* Max_Distance_To_Polyhedron.cpp */,
+				EE43398123EC90AF004FA97B /* Triangulate_Zones.cpp */,
+				EE43397F23EC5DCF004FA97B /* Extract_Tetra_Cells.cpp */,
 				EE197E2923E9A64600D71AD8 /* B_Poly.cpp */,
+				EE1932DE23E1FD1600C49317 /* Brillouin_Code.cpp */,
+				EE1932E323E2063300C49317 /* Sphere_Tetrahedron_Intersection.cpp */,
+				EEA0CEB423E48DD0008C65C8 /* Triangle_Area3D.cpp */,
 			);
 			path = Brillouin_Code;
 			sourceTree = "<group>";
@@ -738,10 +763,17 @@
 		EE1932E123E2015A00C49317 /* Brillouin_Code */ = {
 			isa = PBXGroup;
 			children = (
+				EE43399223EC9B3D004FA97B /* Plane_Intersect_Polyhedron.h */,
+				EE43399123EC9AC3004FA97B /* Max_Radius_Of_Space.h */,
+				EE43398A23EC99A6004FA97B /* Removing_Polyhedrons.h */,
+				EE43398923EC98E1004FA97B /* Max_Distance_To_Polyhedron.h */,
+				EE43398323EC90BC004FA97B /* Triangulate_Zones.h */,
+				EE43397E23EC5DB1004FA97B /* Extract_Tetra_Cells.h */,
 				EE197E2B23E9A65300D71AD8 /* B_Poly.h */,
-				EEA0CEB623E48DEB008C65C8 /* Triangle_Area3D.h */,
 				EE1932DD23E1FD0600C49317 /* Brillouin_Code.h */,
+				EE43398423EC95F4004FA97B /* Divide_Polyhedron.h */,
 				EE1932E223E2061F00C49317 /* Sphere_Tetrahedron_Intersection.h */,
+				EEA0CEB623E48DEB008C65C8 /* Triangle_Area3D.h */,
 			);
 			path = Brillouin_Code;
 			sourceTree = "<group>";
@@ -749,6 +781,13 @@
 		EE1BAA3123EC4952005BC3FD /* 2D */ = {
 			isa = PBXGroup;
 			children = (
+				EE2CFB9621F8838100270503 /* Circle.cpp */,
+				EECF356C222D7D7D0079CD62 /* Correct_Side_Of_Cell.cpp */,
+				EE09749121F0F1DD006A34D3 /* Edge.cpp */,
+				EE55F2DE2253AE6F00B8CA0B /* Input.cpp */,
+				EECF356A222D7D570079CD62 /* Same_Side.cpp */,
+				EE03E131223AD0ED0010BC95 /* Basic */,
+				EE03E12A223AC4120010BC95 /* Cell */,
 				EE03E12D223AC9AD0010BC95 /* Circle_Area_Within_Cell */,
 				EE03E136223ADDFA0010BC95 /* Derivatives */,
 				EE79CED422412FD20077AFFE /* Four_Circle_Area_Within_Cell */,
@@ -756,10 +795,53 @@
 				EE03E139223ADE550010BC95 /* Global Functions */,
 				EE03E134223ADD350010BC95 /* Three_Circle_Area_Within_Cell */,
 				EE03E132223AD4D90010BC95 /* Two_Circle_Area_Within_Cell */,
-				EE03E12A223AC4120010BC95 /* Cell */,
-				EE03E131223AD0ED0010BC95 /* Basic */,
 			);
 			path = 2D;
+			sourceTree = "<group>";
+		};
+		EE1BAA3223EC4CFE005BC3FD /* 2D */ = {
+			isa = PBXGroup;
+			children = (
+				EE4A32AA21EF929100092424 /* Change_Cloud_Type.h */,
+				EE2CFB9521F8837400270503 /* Circle.h */,
+				EE20D73C22144C6600168C59 /* Correct_Side_Of_Cell.h */,
+				EE09749321F0F1E5006A34D3 /* Edge.h */,
+				EE55F2E02253AE7800B8CA0B /* Input.h */,
+				EE43397823EC5246004FA97B /* Same_Side.h */,
+				EE6FE9EB2226FA2F006B4477 /* Spare_Code.h */,
+				EE03E130223AD09E0010BC95 /* Basic */,
+				EE03E129223AC3A20010BC95 /* Cell */,
+				EE03E12E223ACA760010BC95 /* Circle_Area_Within_Cell */,
+				EE03E137223ADE0A0010BC95 /* Derivatives */,
+				EE79CED5224130100077AFFE /* Four_Circle_Area_Within_Cell */,
+				EE03E12B223AC5160010BC95 /* Frame */,
+				EE03E138223ADE2D0010BC95 /* Global Functions */,
+				EE03E135223ADD610010BC95 /* Three_Circle_Area_Within_Cell */,
+				EE03E133223AD50A0010BC95 /* Two_Circle_Area_Within_Cell */,
+			);
+			path = 2D;
+			sourceTree = "<group>";
+		};
+		EE1BAA3323EC4D40005BC3FD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EE1C33D423A1239E0008CAF2 /* Add_Surrounding_Pts.cpp */,
+				EEC76BAD23C3520200E6C190 /* Assign_Experimental_Data.cpp */,
+				EE55F2DC2253903B00B8CA0B /* Cell_Volume.cpp */,
+				EE1A989E23B24942004113C7 /* Centres_In_Cell.cpp */,
+				EE1ACBF223ABACFC00CCED83 /* Distance_To_Cell.cpp */,
+				EEDADBBF239689450065101B /* Frac_To_Cart_Coords.cpp */,
+				EE55F2D2225380BE00B8CA0B /* Make_Cell3D.cpp */,
+				EE067CD622FB26A3007F45AB /* Make_Cells3D.cpp */,
+				EEDADBB8239683400065101B /* Make_T2_Cell.cpp */,
+				EE32B449239FCBCA00DB22FA /* Make_T2_Cells.cpp */,
+				EEDADBC523969A640065101B /* Obtain_T2_Centres.cpp */,
+				EEDADBC3239699600065101B /* Read_Atom_Coords.cpp */,
+				EEDADBB6239681BB0065101B /* Read_Cell_Shape.cpp */,
+				EEDADBBD239687350065101B /* Transformation_Matrix.cpp */,
+				EE1A98A123B24A9D004113C7 /* Translate_Centres.cpp */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		EE3AA5FD21B848710088403C = {
@@ -790,106 +872,233 @@
 		EE3AADBA2228131100E1FAE5 /* Header Files */ = {
 			isa = PBXGroup;
 			children = (
+				EE1BAA3223EC4CFE005BC3FD /* 2D */,
 				EE55F2C922537C3800B8CA0B /* 3D */,
-				EE4A32AA21EF929100092424 /* Change_Cloud_Type.h */,
-				EE2CFB9521F8837400270503 /* Circle.h */,
-				EE20D73C22144C6600168C59 /* Correct_Side_Of_Cell.h */,
-				EE09749321F0F1E5006A34D3 /* Edge.h */,
-				EE55F2E02253AE7800B8CA0B /* Input.h */,
-				EE20D73B221449E600168C59 /* Same_Side.h */,
-				EE6FE9EB2226FA2F006B4477 /* Spare_Code.h */,
-				EE03E130223AD09E0010BC95 /* Basic */,
-				EE03E129223AC3A20010BC95 /* Cell */,
-				EE03E12E223ACA760010BC95 /* Circle_Area_Within_Cell */,
-				EE03E137223ADE0A0010BC95 /* Derivatives */,
-				EE79CED5224130100077AFFE /* Four_Circle_Area_Within_Cell */,
-				EE03E12B223AC5160010BC95 /* Frame */,
-				EE03E138223ADE2D0010BC95 /* Global Functions */,
-				EE03E135223ADD610010BC95 /* Three_Circle_Area_Within_Cell */,
-				EE03E133223AD50A0010BC95 /* Two_Circle_Area_Within_Cell */,
 			);
 			path = "Header Files";
 			sourceTree = "<group>";
 		};
-		EE55F2C922537C3800B8CA0B /* 3D */ = {
+		EE43397223EC4F16004FA97B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				EE1932E123E2015A00C49317 /* Brillouin_Code */,
+				EE55F2D022537FB400B8CA0B /* Cell3D.cpp */,
+				EE55F2D9225385B700B8CA0B /* Edge3D.cpp */,
+				EEFCD5E0239EB6A500D9CB4F /* Graph_Parameters.cpp */,
+				EE55F2D5225383EB00B8CA0B /* Input3D.cpp */,
+				EE55F2CD22537D1100B8CA0B /* Sphere.cpp */,
+			);
+			name = Classes;
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		EE43397323EC4F21004FA97B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
 				EE1C33D623A123B70008CAF2 /* Add_Surrounding_Pts.h */,
-				EE113FE222E8784E000A75AC /* Angle_Between_Vectors3D.h */,
 				EEC76BAC23C351F000E6C190 /* Assign_Experimental_Data.h */,
-				EE1BA8522316D95700BC6133 /* Cap_Volume_By_Exclusion.h */,
 				EE55F2DB2253902A00B8CA0B /* Cell_Volume.h */,
-				EE55F2CF22537F9D00B8CA0B /* Cell3D.h */,
 				EE1A989D23B24932004113C7 /* Centres_In_Cell.h */,
-				EE0AFD1D22E76DE400174226 /* Circular_Intersection_Of_Sphere_And_Plane.h */,
-				EE32B446239FB88E00DB22FA /* Circumradius.h */,
-				EE00601823CF6B1B0033D6AF /* Compare_Two_Files.h */,
-				EE119AB323BF8FE3004BBFEF /* Comparing_Entries.h */,
-				EE9CE49323104CE80039CF0A /* Cone_Parallel_Lines.h */,
-				EE9CE492231048BB0039CF0A /* Cone_Parallel_Planes.h */,
-				EE0AFD1C22E76D9200174226 /* Cone.h */,
-				EECBD2DA23CCEB33000614C7 /* Dataset_Dataset_Analysis.h */,
-				EE32B447239FC96400DB22FA /* Debug.h */,
-				EE03934722F21A2E000927BF /* Derivatives3D.h */,
 				EE1ACBF423ABAD0F00CCED83 /* Distance_To_Cell.h */,
-				EE55F2D8225385A300B8CA0B /* Edge3D.h */,
-				EE03933C22F1D0DA000927BF /* Extract_Data_Pts3D.h */,
-				EECBD2E023CCF197000614C7 /* File_Dataset_Analysis.h */,
-				EE03934122F1D78C000927BF /* First_Order_Total_Volume.h */,
-				EE1B0BFB23AA34930066B370 /* Fourth_Order_Radius.h */,
 				EEDADBC1239689520065101B /* Frac_To_Cart_Coords.h */,
-				EECBD2D923CCC1B3000614C7 /* Further_Parameters.h */,
-				EE9CE498231056390039CF0A /* General_Spherical_Cone_Exterior_Vertex.h */,
-				EE04BE1422E9F0EF00CAE1E3 /* General_Spherical_Cone.h */,
-				EE113FE822E8B6E9000A75AC /* General_Spherical_Wedge.h */,
-				EEFCD5DF239EB69300D9CB4F /* Graph_Parameters.h */,
-				EE55F2D7225383FB00B8CA0B /* Input3D.h */,
-				EE0889A122EF3A84005CD5A4 /* Intersection_Of_Line_And_Plane.h */,
-				EE830BA922F32B3600E42258 /* Intersection_Of_Plane_And_Circle.h */,
-				EE04BE1522E9F25E00CAE1E3 /* Intersection_Of_Two_Lines3D.h */,
-				EE0AFD2322E771F900174226 /* Intersection_Pts_Of_Plane_And_Circle.h */,
-				EE0AFD1722E7601200174226 /* Line_Of_Intersection_Of_Two_Planes.h */,
 				EE55F2D4225380DE00B8CA0B /* Make_Cell3D.h */,
 				EE067CD522FB2693007F45AB /* Make_Cells3D.h */,
 				EEDADBBB2396835F0065101B /* Make_T2_Cell.h */,
 				EE32B448239FCB7400DB22FA /* Make_T2_Cells.h */,
-				EECBD2DF23CCEED1000614C7 /* Manipulate_Dataset_Dataset_Analysis.h */,
-				EECBD2E323CCF365000614C7 /* Manipulate_File_Analysis.h */,
-				EE97B9FA22E60033000F624F /* Norm3D.h */,
 				EEDADBC723969A720065101B /* Obtain_T2_Centres.h */,
-				EE03933B22F1D05A000927BF /* Packing_Functions3D.h */,
-				EE045D8A22FC5E0200EDA7BD /* Parallel_Lines.h */,
-				EE045D8522FC4A0000EDA7BD /* Parallel_Planes.h */,
-				EE067CD422FB243E007F45AB /* Parameters.h */,
-				EE0AFD2222E7716200174226 /* Partial_Cone.h */,
-				EE05803B22E0CBCD00254ED5 /* Plane.h */,
-				EE03934222F1FB1A000927BF /* Plot_Graph3D.h */,
 				EEDADBC22396994A0065101B /* Read_Atom_Coords.h */,
 				EEDADBB5239681A90065101B /* Read_Cell_Shape.h */,
-				EECBD2E823CCF4E9000614C7 /* Read_Dataset_Matrix.h */,
+				EEDADBBC2396871E0065101B /* Transformation_Matrix.h */,
+				EE1A98A023B24A86004113C7 /* Translate_Centres.h */,
+			);
+			name = Cell;
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		EE43397423EC4F29004FA97B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EE55F2CF22537F9D00B8CA0B /* Cell3D.h */,
+				EE55F2D8225385A300B8CA0B /* Edge3D.h */,
+				EEFCD5DF239EB69300D9CB4F /* Graph_Parameters.h */,
+				EE55F2D7225383FB00B8CA0B /* Input3D.h */,
+				EE55F2CC22537C8F00B8CA0B /* Sphere.h */,
+			);
+			name = Classes;
+			path = "New Group2";
+			sourceTree = "<group>";
+		};
+		EE43397523EC4FA9004FA97B /* Volume Computations */ = {
+			isa = PBXGroup;
+			children = (
+				EE1BA8532316D96700BC6133 /* Cap_Volume_By_Exclusion.cpp */,
+				EE9CE49423104CFB0039CF0A /* Cone_Parallel_Lines.cpp */,
+				EE9CE490231048AB0039CF0A /* Cone_Parallel_Planes.cpp */,
+				EE0AFD1A22E76D8800174226 /* Cone.cpp */,
+				EE9CE496231056240039CF0A /* General_Spherical_Cone_Exterior_Vertex.cpp */,
+				EE04BE1222E9F0E100CAE1E3 /* General_Spherical_Cone.cpp */,
+				EE113FE622E8B6D7000A75AC /* General_Spherical_Wedge.cpp */,
+				EE0AFD2022E7715300174226 /* Partial_Cone.cpp */,
+				EE113FEA22E8B991000A75AC /* Regularised_Spherical_Wedge.cpp */,
+				EEFEC13522DCDDE500F02A23 /* Sphere_Area_Within_Cell.cpp */,
+				EE197E2B230C63EB002CEA92 /* Sphere_Five_Plane_Intersection_Volume.cpp */,
+				EE045D8E22FCA5FE00EDA7BD /* Sphere_Four_Plane_Intersection_Volume.cpp */,
+				EE9CE48E2310459E0039CF0A /* Sphere_Volume_By_Exclusion.cpp */,
+				EE0889A522EF612E005CD5A4 /* Sphere_Volume_Within_Cell.cpp */,
+				EE045D8022FC422200EDA7BD /* Spherical_Cap_Volume_Within_Cell.cpp */,
+				EE05803522E0CB3400254ED5 /* Spherical_Cap.cpp */,
+				EE197E26230C532F002CEA92 /* Spherical_Wedge_Volume_Within_Cell.cpp */,
+				EE113FE422E89EF4000A75AC /* Spherical_Wedge.cpp */,
+				EE04BE1822EA078200CAE1E3 /* Tetrahedron_Volume.cpp */,
+				EE197E24230C4443002CEA92 /* Three_Sphere_Intersection_Volume_Within_Cell.cpp */,
+				EE045D7C22FC3F7700EDA7BD /* Two_Sphere_Intersection_Volume_Within_Cell.cpp */,
+				EE067CD822FB4243007F45AB /* Volume_Of_Intersection_Of_Two_Spheres.cpp */,
+			);
+			path = "Volume Computations";
+			sourceTree = "<group>";
+		};
+		EE43397623EC4FF3004FA97B /* Volume Computations */ = {
+			isa = PBXGroup;
+			children = (
+				EE1BA8522316D95700BC6133 /* Cap_Volume_By_Exclusion.h */,
+				EE9CE49323104CE80039CF0A /* Cone_Parallel_Lines.h */,
+				EE9CE492231048BB0039CF0A /* Cone_Parallel_Planes.h */,
+				EE0AFD1C22E76D9200174226 /* Cone.h */,
+				EE9CE498231056390039CF0A /* General_Spherical_Cone_Exterior_Vertex.h */,
+				EE04BE1422E9F0EF00CAE1E3 /* General_Spherical_Cone.h */,
+				EE113FE822E8B6E9000A75AC /* General_Spherical_Wedge.h */,
+				EE0AFD2222E7716200174226 /* Partial_Cone.h */,
 				EE113FE922E8B980000A75AC /* Regularised_Spherical_Wedge.h */,
-				EE045D8422FC456200EDA7BD /* Second_Order_Total_Volume.h */,
 				EEFEC13422DCDDC900F02A23 /* Sphere_Area_Within_Cell.h */,
 				EE197E2A230C63D7002CEA92 /* Sphere_Five_Plane_Intersection_Volume.h */,
 				EE045D8B22FCA0B300EDA7BD /* Sphere_Four_Plane_Intersection_Volume.h */,
-				EE067CDB22FB4CCA007F45AB /* Sphere_Ordering.h */,
-				EE97B9FD22E611D5000F624F /* Sphere_Plane_Distance.h */,
 				EE9CE48A2310456C0039CF0A /* Sphere_Volume_By_Exclusion.h */,
 				EE0889A422EF611D005CD5A4 /* Sphere_Volume_Within_Cell.h */,
-				EE55F2CC22537C8F00B8CA0B /* Sphere.h */,
 				EE045D7F22FC420D00EDA7BD /* Spherical_Cap_Volume_Within_Cell.h */,
 				EE05803722E0CB4E00254ED5 /* Spherical_Cap.h */,
 				EE197E29230C5363002CEA92 /* Spherical_Wedge_Volume_Within_Cell.h */,
 				EE113FE322E89EE4000A75AC /* Spherical_Wedge.h */,
 				EE04BE1A22EA079600CAE1E3 /* Tetrahedron_Volume.h */,
-				EE1927ED230EBCB2005337EF /* Third_Order_Total_Volume.h */,
 				EE197E23230C442C002CEA92 /* Three_Sphere_Intersection_Volume_Within_Cell.h */,
-				EEDADBBC2396871E0065101B /* Transformation_Matrix.h */,
-				EE1A98A023B24A86004113C7 /* Translate_Centres.h */,
 				EE045D7E22FC3F8F00EDA7BD /* Two_Sphere_Intersection_Volume_Within_Cell.h */,
 				EE067CDA22FB425E007F45AB /* Volume_Of_Intersection_Of_Two_Spheres.h */,
+			);
+			path = "Volume Computations";
+			sourceTree = "<group>";
+		};
+		EE43397723EC509E004FA97B /* Basic Functions */ = {
+			isa = PBXGroup;
+			children = (
+				EE113FE022E8783B000A75AC /* Angle_Between_Vectors3D.cpp */,
+				EE0AFD1E22E76DFC00174226 /* Circular_Intersection_Of_Sphere_And_Plane.cpp */,
+				EE32B444239FB88200DB22FA /* Circumradius.cpp */,
+				EE1B0BFC23AA34AB0066B370 /* Fourth_Order_Radius.cpp */,
+				EE0889A222EF3A97005CD5A4 /* Intersection_Of_Line_And_Plane.cpp */,
+				EE830BA722F32B2600E42258 /* Intersection_Of_Plane_And_Circle.cpp */,
+				EE04BE1622E9F27200CAE1E3 /* Intersection_Of_Two_Lines3D.cpp */,
+				EE0AFD2422E7721100174226 /* Intersection_Pts_Of_Plane_And_Circle.cpp */,
+				EE0AFD1822E760CA00174226 /* Line_Of_Intersection_Of_Two_Planes.cpp */,
+				EE97B9FB22E60049000F624F /* Norm3D.cpp */,
+				EE045D8822FC5DF100EDA7BD /* Parallel_Lines.cpp */,
+				EE045D8622FC4A1000EDA7BD /* Parallel_Planes.cpp */,
+				EE067CDC22FB4CE0007F45AB /* Sphere_Ordering.cpp */,
+				EE97B9FE22E6120D000F624F /* Sphere_Plane_Distance.cpp */,
+			);
+			path = "Basic Functions";
+			sourceTree = "<group>";
+		};
+		EE43397923EC5352004FA97B /* Analysis */ = {
+			isa = PBXGroup;
+			children = (
+				EE00601923CF6B2A0033D6AF /* Compare_Two_Files.cpp */,
+				EE119AB123BF8F85004BBFEF /* Comparing_Entries.cpp */,
+				EECBD2DB23CCEB47000614C7 /* Dataset_Dataset_Analysis.cpp */,
+				EECBD2E123CCF1A8000614C7 /* File_Dataset_Analysis.cpp */,
+				EECBD2DD23CCEEBA000614C7 /* Manipulate_Dataset_Dataset_Analysis.cpp */,
+				EECBD2E423CCF375000614C7 /* Manipulate_File_Analysis.cpp */,
+				EECBD2E623CCF4CA000614C7 /* Read_Dataset_Matrix.cpp */,
+			);
+			path = Analysis;
+			sourceTree = "<group>";
+		};
+		EE43397A23EC53B2004FA97B /* Global Functions */ = {
+			isa = PBXGroup;
+			children = (
+				EE03934822F21A3B000927BF /* Derivatives3D.cpp */,
+				EE03933D22F1D0F0000927BF /* Extract_Data_Pts3D.cpp */,
+				EE03933F22F1D778000927BF /* First_Order_Total_Volume.cpp */,
+				EE03933922F1D048000927BF /* Packing_Functions3D.cpp */,
+				EE03934522F1FB53000927BF /* Plot_Graph3D.cpp */,
+				EE045D8222FC455100EDA7BD /* Second_Order_Total_Volume.cpp */,
+				EE1927EB230EBCA1005337EF /* Third_Order_Total_Volume.cpp */,
+				EEDADBB223954FB60065101B /* Volumes3D.cpp */,
+			);
+			path = "Global Functions";
+			sourceTree = "<group>";
+		};
+		EE43397B23EC57CB004FA97B /* Analysis */ = {
+			isa = PBXGroup;
+			children = (
+				EE00601823CF6B1B0033D6AF /* Compare_Two_Files.h */,
+				EE119AB323BF8FE3004BBFEF /* Comparing_Entries.h */,
+				EECBD2DA23CCEB33000614C7 /* Dataset_Dataset_Analysis.h */,
+				EECBD2E023CCF197000614C7 /* File_Dataset_Analysis.h */,
+				EECBD2DF23CCEED1000614C7 /* Manipulate_Dataset_Dataset_Analysis.h */,
+				EECBD2E323CCF365000614C7 /* Manipulate_File_Analysis.h */,
+				EECBD2E823CCF4E9000614C7 /* Read_Dataset_Matrix.h */,
+			);
+			path = Analysis;
+			sourceTree = "<group>";
+		};
+		EE43397C23EC57D2004FA97B /* Basic Functions */ = {
+			isa = PBXGroup;
+			children = (
+				EE113FE222E8784E000A75AC /* Angle_Between_Vectors3D.h */,
+				EE0AFD1D22E76DE400174226 /* Circular_Intersection_Of_Sphere_And_Plane.h */,
+				EE32B446239FB88E00DB22FA /* Circumradius.h */,
+				EE1B0BFB23AA34930066B370 /* Fourth_Order_Radius.h */,
+				EE0889A122EF3A84005CD5A4 /* Intersection_Of_Line_And_Plane.h */,
+				EE830BA922F32B3600E42258 /* Intersection_Of_Plane_And_Circle.h */,
+				EE04BE1522E9F25E00CAE1E3 /* Intersection_Of_Two_Lines3D.h */,
+				EE0AFD2322E771F900174226 /* Intersection_Pts_Of_Plane_And_Circle.h */,
+				EE0AFD1722E7601200174226 /* Line_Of_Intersection_Of_Two_Planes.h */,
+				EE97B9FA22E60033000F624F /* Norm3D.h */,
+				EE045D8A22FC5E0200EDA7BD /* Parallel_Lines.h */,
+				EE045D8522FC4A0000EDA7BD /* Parallel_Planes.h */,
+				EE067CDB22FB4CCA007F45AB /* Sphere_Ordering.h */,
+				EE97B9FD22E611D5000F624F /* Sphere_Plane_Distance.h */,
+			);
+			name = "Basic Functions";
+			path = "New Group4";
+			sourceTree = "<group>";
+		};
+		EE43397D23EC57E4004FA97B /* Global Functions */ = {
+			isa = PBXGroup;
+			children = (
+				EE03934722F21A2E000927BF /* Derivatives3D.h */,
+				EE03933C22F1D0DA000927BF /* Extract_Data_Pts3D.h */,
+				EE03934122F1D78C000927BF /* First_Order_Total_Volume.h */,
+				EE03933B22F1D05A000927BF /* Packing_Functions3D.h */,
+				EE03934222F1FB1A000927BF /* Plot_Graph3D.h */,
+				EE045D8422FC456200EDA7BD /* Second_Order_Total_Volume.h */,
+				EE1927ED230EBCB2005337EF /* Third_Order_Total_Volume.h */,
 				EEDADBB423954FC30065101B /* Volumes3D.h */,
+			);
+			path = "Global Functions";
+			sourceTree = "<group>";
+		};
+		EE55F2C922537C3800B8CA0B /* 3D */ = {
+			isa = PBXGroup;
+			children = (
+				EE32B447239FC96400DB22FA /* Debug.h */,
+				EECBD2D923CCC1B3000614C7 /* Further_Parameters.h */,
+				EE067CD422FB243E007F45AB /* Parameters.h */,
+				EE43397B23EC57CB004FA97B /* Analysis */,
+				EE43397C23EC57D2004FA97B /* Basic Functions */,
+				EE1932E123E2015A00C49317 /* Brillouin_Code */,
+				EE43397323EC4F21004FA97B /* Cell */,
+				EE43397423EC4F29004FA97B /* Classes */,
+				EE43397D23EC57E4004FA97B /* Global Functions */,
+				EE43397623EC4FF3004FA97B /* Volume Computations */,
 			);
 			path = 3D;
 			sourceTree = "<group>";
@@ -897,79 +1106,13 @@
 		EE55F2CA22537C4800B8CA0B /* 3D */ = {
 			isa = PBXGroup;
 			children = (
+				EE43397923EC5352004FA97B /* Analysis */,
+				EE43397723EC509E004FA97B /* Basic Functions */,
 				EE1932E023E2013000C49317 /* Brillouin_Code */,
-				EE1C33D423A1239E0008CAF2 /* Add_Surrounding_Pts.cpp */,
-				EE113FE022E8783B000A75AC /* Angle_Between_Vectors3D.cpp */,
-				EEC76BAD23C3520200E6C190 /* Assign_Experimental_Data.cpp */,
-				EE1BA8532316D96700BC6133 /* Cap_Volume_By_Exclusion.cpp */,
-				EE55F2DC2253903B00B8CA0B /* Cell_Volume.cpp */,
-				EE55F2D022537FB400B8CA0B /* Cell3D.cpp */,
-				EE1A989E23B24942004113C7 /* Centres_In_Cell.cpp */,
-				EE0AFD1E22E76DFC00174226 /* Circular_Intersection_Of_Sphere_And_Plane.cpp */,
-				EE32B444239FB88200DB22FA /* Circumradius.cpp */,
-				EE00601923CF6B2A0033D6AF /* Compare_Two_Files.cpp */,
-				EE119AB123BF8F85004BBFEF /* Comparing_Entries.cpp */,
-				EE9CE49423104CFB0039CF0A /* Cone_Parallel_Lines.cpp */,
-				EE9CE490231048AB0039CF0A /* Cone_Parallel_Planes.cpp */,
-				EE0AFD1A22E76D8800174226 /* Cone.cpp */,
-				EECBD2DB23CCEB47000614C7 /* Dataset_Dataset_Analysis.cpp */,
-				EE03934822F21A3B000927BF /* Derivatives3D.cpp */,
-				EE1ACBF223ABACFC00CCED83 /* Distance_To_Cell.cpp */,
-				EE55F2D9225385B700B8CA0B /* Edge3D.cpp */,
-				EE03933D22F1D0F0000927BF /* Extract_Data_Pts3D.cpp */,
-				EECBD2E123CCF1A8000614C7 /* File_Dataset_Analysis.cpp */,
-				EE03933F22F1D778000927BF /* First_Order_Total_Volume.cpp */,
-				EE1B0BFC23AA34AB0066B370 /* Fourth_Order_Radius.cpp */,
-				EEDADBBF239689450065101B /* Frac_To_Cart_Coords.cpp */,
-				EE9CE496231056240039CF0A /* General_Spherical_Cone_Exterior_Vertex.cpp */,
-				EE04BE1222E9F0E100CAE1E3 /* General_Spherical_Cone.cpp */,
-				EE113FE622E8B6D7000A75AC /* General_Spherical_Wedge.cpp */,
-				EEFCD5E0239EB6A500D9CB4F /* Graph_Parameters.cpp */,
-				EE55F2D5225383EB00B8CA0B /* Input3D.cpp */,
-				EE0889A222EF3A97005CD5A4 /* Intersection_Of_Line_And_Plane.cpp */,
-				EE830BA722F32B2600E42258 /* Intersection_Of_Plane_And_Circle.cpp */,
-				EE04BE1622E9F27200CAE1E3 /* Intersection_Of_Two_Lines3D.cpp */,
-				EE0AFD2422E7721100174226 /* Intersection_Pts_Of_Plane_And_Circle.cpp */,
-				EE0AFD1822E760CA00174226 /* Line_Of_Intersection_Of_Two_Planes.cpp */,
-				EE55F2D2225380BE00B8CA0B /* Make_Cell3D.cpp */,
-				EE067CD622FB26A3007F45AB /* Make_Cells3D.cpp */,
-				EEDADBB8239683400065101B /* Make_T2_Cell.cpp */,
-				EE32B449239FCBCA00DB22FA /* Make_T2_Cells.cpp */,
-				EECBD2DD23CCEEBA000614C7 /* Manipulate_Dataset_Dataset_Analysis.cpp */,
-				EECBD2E423CCF375000614C7 /* Manipulate_File_Analysis.cpp */,
-				EE97B9FB22E60049000F624F /* Norm3D.cpp */,
-				EEDADBC523969A640065101B /* Obtain_T2_Centres.cpp */,
-				EE03933922F1D048000927BF /* Packing_Functions3D.cpp */,
-				EE045D8822FC5DF100EDA7BD /* Parallel_Lines.cpp */,
-				EE045D8622FC4A1000EDA7BD /* Parallel_Planes.cpp */,
-				EE0AFD2022E7715300174226 /* Partial_Cone.cpp */,
-				EE05803922E0CBB100254ED5 /* Plane.cpp */,
-				EE03934522F1FB53000927BF /* Plot_Graph3D.cpp */,
-				EEDADBC3239699600065101B /* Read_Atom_Coords.cpp */,
-				EEDADBB6239681BB0065101B /* Read_Cell_Shape.cpp */,
-				EECBD2E623CCF4CA000614C7 /* Read_Dataset_Matrix.cpp */,
-				EE113FEA22E8B991000A75AC /* Regularised_Spherical_Wedge.cpp */,
-				EE045D8222FC455100EDA7BD /* Second_Order_Total_Volume.cpp */,
-				EEFEC13522DCDDE500F02A23 /* Sphere_Area_Within_Cell.cpp */,
-				EE197E2B230C63EB002CEA92 /* Sphere_Five_Plane_Intersection_Volume.cpp */,
-				EE045D8E22FCA5FE00EDA7BD /* Sphere_Four_Plane_Intersection_Volume.cpp */,
-				EE067CDC22FB4CE0007F45AB /* Sphere_Ordering.cpp */,
-				EE97B9FE22E6120D000F624F /* Sphere_Plane_Distance.cpp */,
-				EE9CE48E2310459E0039CF0A /* Sphere_Volume_By_Exclusion.cpp */,
-				EE0889A522EF612E005CD5A4 /* Sphere_Volume_Within_Cell.cpp */,
-				EE55F2CD22537D1100B8CA0B /* Sphere.cpp */,
-				EE045D8022FC422200EDA7BD /* Spherical_Cap_Volume_Within_Cell.cpp */,
-				EE05803522E0CB3400254ED5 /* Spherical_Cap.cpp */,
-				EE197E26230C532F002CEA92 /* Spherical_Wedge_Volume_Within_Cell.cpp */,
-				EE113FE422E89EF4000A75AC /* Spherical_Wedge.cpp */,
-				EE04BE1822EA078200CAE1E3 /* Tetrahedron_Volume.cpp */,
-				EE1927EB230EBCA1005337EF /* Third_Order_Total_Volume.cpp */,
-				EE197E24230C4443002CEA92 /* Three_Sphere_Intersection_Volume_Within_Cell.cpp */,
-				EEDADBBD239687350065101B /* Transformation_Matrix.cpp */,
-				EE1A98A123B24A9D004113C7 /* Translate_Centres.cpp */,
-				EE045D7C22FC3F7700EDA7BD /* Two_Sphere_Intersection_Volume_Within_Cell.cpp */,
-				EE067CD822FB4243007F45AB /* Volume_Of_Intersection_Of_Two_Spheres.cpp */,
-				EEDADBB223954FB60065101B /* Volumes3D.cpp */,
+				EE1BAA3323EC4D40005BC3FD /* Cell */,
+				EE43397223EC4F16004FA97B /* Classes */,
+				EE43397A23EC53B2004FA97B /* Global Functions */,
+				EE43397523EC4FA9004FA97B /* Volume Computations */,
 			);
 			path = 3D;
 			sourceTree = "<group>";
@@ -1003,15 +1146,10 @@
 		EECF35BE222D91100079CD62 /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
+				EE3AA60921B848710088403C /* Crystal_Density.cpp */,
+				EECF35C1222D92FC0079CD62 /* gnuplot-iostream.h */,
 				EE1BAA3123EC4952005BC3FD /* 2D */,
 				EE55F2CA22537C4800B8CA0B /* 3D */,
-				EE2CFB9621F8838100270503 /* Circle.cpp */,
-				EECF356C222D7D7D0079CD62 /* Correct_Side_Of_Cell.cpp */,
-				EE3AA60921B848710088403C /* Crystal_Density.cpp */,
-				EE09749121F0F1DD006A34D3 /* Edge.cpp */,
-				EE55F2DE2253AE6F00B8CA0B /* Input.cpp */,
-				EECF356A222D7D570079CD62 /* Same_Side.cpp */,
-				EECF35C1222D92FC0079CD62 /* gnuplot-iostream.h */,
 			);
 			path = "Source Files";
 			sourceTree = "<group>";
@@ -1094,7 +1232,6 @@
 				EE379188222F02D8000B57C8 /* Cell_Circle.cpp in Sources */,
 				EECF3567222D7CCB0079CD62 /* Make_Cell.cpp in Sources */,
 				EECF35A9222D89570079CD62 /* Fourth_Order_Total_Area.cpp in Sources */,
-				EE05803A22E0CBB100254ED5 /* Plane.cpp in Sources */,
 				EE0AFD1B22E76D8800174226 /* Cone.cpp in Sources */,
 				EE0AFD2122E7715300174226 /* Partial_Cone.cpp in Sources */,
 				EECF3573222D7E130079CD62 /* Interior_Edge_Area.cpp in Sources */,
@@ -1161,17 +1298,21 @@
 				EE113FE522E89EF4000A75AC /* Spherical_Wedge.cpp in Sources */,
 				EE3AADBE2228170B00E1FAE5 /* Norm.cpp in Sources */,
 				EE113FEB22E8B991000A75AC /* Regularised_Spherical_Wedge.cpp in Sources */,
+				EE43398023EC5DCF004FA97B /* Extract_Tetra_Cells.cpp in Sources */,
 				EE9CE491231048AB0039CF0A /* Cone_Parallel_Planes.cpp in Sources */,
 				EE55F2CE22537D1100B8CA0B /* Sphere.cpp in Sources */,
 				EE55F2D6225383EB00B8CA0B /* Input3D.cpp in Sources */,
 				EECF3563222D7BA20079CD62 /* Cell_Circle_Intersections.cpp in Sources */,
+				EE43398823EC98CC004FA97B /* Max_Distance_To_Polyhedron.cpp in Sources */,
 				EE3999A32239818400083354 /* Four_Circles.cpp in Sources */,
+				EE43398C23EC99B7004FA97B /* Removing_Polyhedrons.cpp in Sources */,
 				EE3AADC4222819CE00E1FAE5 /* Segment_Area.cpp in Sources */,
 				EE04BE1922EA078200CAE1E3 /* Tetrahedron_Volume.cpp in Sources */,
 				EECF3599222D854B0079CD62 /* Three_Circle_Intersection_Area_Within_Cell.cpp in Sources */,
 				EECF35B5222D8C320079CD62 /* Derivatives.cpp in Sources */,
 				EE0AFD1922E760CA00174226 /* Line_Of_Intersection_Of_Two_Planes.cpp in Sources */,
 				EE03933A22F1D048000927BF /* Packing_Functions3D.cpp in Sources */,
+				EE43399423EC9B52004FA97B /* Plane_Intersect_Polyhedron.cpp in Sources */,
 				EECF3579222D7F050079CD62 /* First_Order_Total_Area.cpp in Sources */,
 				EE09748F21F0F060006A34D3 /* Cell.cpp in Sources */,
 				EECF3585222D824A0079CD62 /* Second_Order_Total_Area.cpp in Sources */,
@@ -1181,10 +1322,12 @@
 				EE00601A23CF6B2A0033D6AF /* Compare_Two_Files.cpp in Sources */,
 				EECBD2DC23CCEB47000614C7 /* Dataset_Dataset_Analysis.cpp in Sources */,
 				EECF357B222D7F700079CD62 /* Two_Circle_Intersection_Area_Excluded_By_Exterior_Edge.cpp in Sources */,
+				EE43399023EC9AB6004FA97B /* Max_Radius_Of_Space.cpp in Sources */,
 				EECF3565222D7BD10079CD62 /* Num_Vertices_Within_Circle.cpp in Sources */,
 				EECF3597222D84F50079CD62 /* Non_Inclusion_Three_Circle_Intersection_Area_Within_Cell.cpp in Sources */,
 				EE9CE48F2310459E0039CF0A /* Sphere_Volume_By_Exclusion.cpp in Sources */,
 				EE1C33D523A1239E0008CAF2 /* Add_Surrounding_Pts.cpp in Sources */,
+				EE43398223EC90AF004FA97B /* Triangulate_Zones.cpp in Sources */,
 				EEA0CEB523E48DD0008C65C8 /* Triangle_Area3D.cpp in Sources */,
 				EE32B445239FB88200DB22FA /* Circumradius.cpp in Sources */,
 				EEDADBB9239683400065101B /* Make_T2_Cell.cpp in Sources */,
@@ -1215,6 +1358,7 @@
 				EE97B9FC22E60049000F624F /* Norm3D.cpp in Sources */,
 				EE3AADC02228186700E1FAE5 /* Angle_Between_Vectors.cpp in Sources */,
 				EE1ACBF323ABACFC00CCED83 /* Distance_To_Cell.cpp in Sources */,
+				EE43398623EC9610004FA97B /* Divide_Polyhedron.cpp in Sources */,
 				EE4FF54B2236A9E7008E25F0 /* Three_Circles.cpp in Sources */,
 				EE9CE49523104CFB0039CF0A /* Cone_Parallel_Lines.cpp in Sources */,
 				EECF358F222D839C0079CD62 /* Three_Circle_Intersection_Concave_Cone_Area.cpp in Sources */,

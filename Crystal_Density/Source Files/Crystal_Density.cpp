@@ -131,11 +131,36 @@ int main ( int, char*[] )
         P3_E centre_E = P3_E( 0, 0, 0 );
         P3 centre = P3( 0, 0, 0 );
         
+        V3_E v1 = V3_E( 5 / (double)6, -1 / (double)6, -1 / (double)6 );
+        V3_E v2 = V3_E( -1 / (double)6, 5 / (double)6, -1 / (double)6 );
+        V3_E v3 = V3_E( -1 / (double)6, -1 / (double)6, 5 / (double)6 );
+        
+        multimap<double, P3_E> pts;
+        
+        for (int counter_1 = -perim; counter_1 < perim + 1; ++counter_1)
+        {
+            for (int counter_2 = -perim; counter_2 < perim + 1; ++counter_2)
+            {
+                for (int counter_3 = -perim; counter_3 < perim + 1; ++counter_3)
+                {
+                    if (counter_1 == 0 && counter_2 == 0 && counter_3 == 0) continue;
+                    
+                    V3_E v = counter_1 * v1 + counter_2 * v2 + counter_3 * v3;
+                    
+                    P3_E p = P3_E( v.x(), v.y(), v.z() );
+                    
+                    double dist = to_double( squared_distance( centre_E, p ) );
+                    
+                    pts.insert( pair<double, P3_E>( dist, p ) );
+                }
+            }
+        }
+        
         vector<vector<Tetrahedron>> zones_of_tetras;
         
         clock_t time_1 = clock();
         
-        Compute_Brillouin_Zones( perim, zone_limit, centre_E, zones_of_tetras );
+        Compute_Brillouin_Zones( pts, zone_limit, centre_E, zones_of_tetras );
         
         clock_t time_2 = clock();
         
@@ -143,7 +168,7 @@ int main ( int, char*[] )
         
         cout << "Time taken = " << time_taken << endl;
         
-        /*vector<vector<vector<Pl3>>> tetra_cells;
+        vector<vector<vector<Pl3>>> tetra_cells;
         
         Extract_Tetra_Cells( zones_of_tetras, zone_limit, tetra_cells );
         
@@ -264,7 +289,7 @@ int main ( int, char*[] )
         
         plot += "\n";
         
-        gp << plot;*/
+        gp << plot;
     }
     
     Print_Info( start_time, start );
