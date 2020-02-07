@@ -17,7 +17,7 @@ bool threeD = false; // Run code for 3D.
 
 bool T2 = true; // Run code for T2 crystals.
 
-string type_of_experiment = "Oxygens"; // Molecule_Centres, Molecule_Centres_with_Oxygens, Oxygens
+string type_of_experiment = "Molecule_Centres"; // Molecule_Centres, Molecule_Centres_with_Oxygens, Oxygens
 
 bool experimental_T2 = false;
 
@@ -27,7 +27,7 @@ bool analysis = false; // Perform analysis.
 
 bool brillouin = true;
 
-vector<P3> parallelepiped_vectors = BCC; //{ P3( 1, 0, 0 ), P3( 0, 1, 0 ), P3( 0.5, 0, 0.5 * sqrt( (double)3 ) ) }; // Input vectors for 3D case.
+vector<P3> parallelepiped_vectors = Cube; //{ P3( 1, 0, 0 ), P3( 0, 1, 0 ), P3( 0.5, 0, 0.5 * sqrt( (double)3 ) ) }; // Input vectors for 3D case.
 
 bool pts_at_vertices = true; // Add points at vertices of the parallelepiped.
 
@@ -45,7 +45,7 @@ bool auto_max_radius = true; // The code automatically produces the maximum radi
 
 bool title = false; // Adds title to output graph.
 
-string title_str = "Packing Functions for the Cubic Lattice"; // Title of output graph.
+string title_str = "Packing Functions for T2 Entry 1"; // Title of output graph.
 
 Graph_Parameters graph_params( title, yrange, title_str );
 

@@ -23,6 +23,7 @@
 #include "Read_Dataset_Matrix.h"
 #include "Print_Info.h"
 
+#include "Brillouin_Surrounding_Pts.h"
 #include "Compute_Brillouin_Zones.h"
 #include "Extract_Tetra_Cells.h"
 #include "Sphere_Tetrahedron_Intersection.h"
@@ -124,41 +125,105 @@ int main ( int, char*[] )
     {
         int perim = 5;
         
-        int zone_limit = 5;
+        int zone_limit = 9;
         
-        P3_E centre_E = P3_E( 0, 0, 0 );
-        P3 centre = P3( 0, 0, 0 );
+        vector<P3_E> centre_E;
+        vector<P3> centre;
         
-        V3_E v1 = V3_E( 5 / (double)6, -1 / (double)6, -1 / (double)6 );
-        V3_E v2 = V3_E( -1 / (double)6, 5 / (double)6, -1 / (double)6 );
-        V3_E v3 = V3_E( -1 / (double)6, -1 / (double)6, 5 / (double)6 );
+        vector<multimap<double, P3_E>> pts;
         
-        multimap<double, P3_E> pts;
+        double cell_volume = 0;
         
-        for (int counter_1 = -perim; counter_1 < perim + 1; ++counter_1)
+        if (T2)
         {
-            for (int counter_2 = -perim; counter_2 < perim + 1; ++counter_2)
+            string filename = "T2_2_num_molGeom.cif";
+            
+            string file_path = dataset_directory + filename;
+            
+            cif::Document cif_file = cif::read_file( file_path ); // Accessing CIF file.
+            
+            cif::Block * block = &(*(++cif_file.blocks.begin())); // Pointer to relevant block.
+            
+            vector<pair<string, double>> cell_shape;
+            
+            Read_Cell_Shape( block, cell_shape ); // Reading cell shape.
+            
+            double ** matrix;
+            matrix = new double *[3];
+            for (int counter_2 = 0; counter_2 < 3; ++counter_2)
             {
-                for (int counter_3 = -perim; counter_3 < perim + 1; ++counter_3)
-                {
-                    if (counter_1 == 0 && counter_2 == 0 && counter_3 == 0) continue;
-                    
-                    V3_E v = counter_1 * v1 + counter_2 * v2 + counter_3 * v3;
-                    
-                    P3_E p = P3_E( v.x(), v.y(), v.z() );
-                    
-                    double dist = to_double( squared_distance( centre_E, p ) );
-                    
-                    pts.insert( pair<double, P3_E>( dist, p ) );
-                }
+                matrix[counter_2] = new double [3];
+            }
+            
+            Transformation_Matrix( cell_shape, matrix ); // Calculating the transformation matrix.
+            
+            vector<P3> atom_cloud;
+            
+            Read_Atom_Coords( block, matrix, atom_cloud );
+            
+            vector<P3> T2_centres;
+            
+            Obtain_T2_Centres( atom_cloud, input3D.type_of_experiment, T2_centres );
+            
+            pts.resize( T2_centres.size() );
+            
+            for (int counter = 0; counter < T2_centres.size(); ++counter)
+            {
+                Brillouin_Surrounding_Pts( perim, matrix, counter, T2_centres, pts[counter] );
+            }
+            
+            cell_volume = Cell_Volume( cell_shape );
+            
+            for (int counter = 0; counter < T2_centres.size(); ++counter)
+            {
+                centre_E.push_back( P3_E( T2_centres[counter].x(), T2_centres[counter].y(), T2_centres[counter].z() ) );
+                centre.push_back( T2_centres[counter] );
             }
         }
         
-        vector<vector<Tetrahedron>> zones_of_tetras;
+        else
+        {
+            multimap<double, P3_E> pts_copy;
+            
+            P3 p1 = input3D.parallelepiped_vectors[0], p2 = input3D.parallelepiped_vectors[1], p3 = input3D.parallelepiped_vectors[2];
+            
+            centre_E.push_back( P3_E( 0, 0, 0 ) );
+            centre.push_back( P3( 0, 0, 0 ) );
+            
+            V3_E v1_E = V3_E( p1.x(), p1.y(), p1.z() );
+            V3_E v2_E = V3_E( p2.x(), p2.y(), p2.z() );
+            V3_E v3_E = V3_E( p3.x(), p3.y(), p3.z() );
+            
+            for (int counter_1 = -perim; counter_1 < perim + 1; ++counter_1)
+            {
+                for (int counter_2 = -perim; counter_2 < perim + 1; ++counter_2)
+                {
+                    for (int counter_3 = -perim; counter_3 < perim + 1; ++counter_3)
+                    {
+                        if (counter_1 == 0 && counter_2 == 0 && counter_3 == 0) continue;
+                        
+                        V3_E v = counter_1 * v1_E + counter_2 * v2_E + counter_3 * v3_E;
+                        
+                        P3_E p = P3_E( v.x(), v.y(), v.z() );
+                        
+                        double dist = to_double( squared_distance( centre_E[0], p ) );
+                        
+                        pts_copy.insert( pair<double, P3_E>( dist, p ) );
+                    }
+                }
+            }
+            
+            pts.push_back( pts_copy );
+        }
+        
+        vector<vector<vector<Tetrahedron>>> zones_of_tetras( pts.size() );
         
         clock_t time_1 = clock();
         
-        Compute_Brillouin_Zones( pts, zone_limit, centre_E, zones_of_tetras );
+        for (int counter = 0; counter < pts.size(); ++counter)
+        {
+            Compute_Brillouin_Zones( pts[counter], zone_limit, centre_E[counter], zones_of_tetras[counter] );
+        }
         
         clock_t time_2 = clock();
         
@@ -166,38 +231,47 @@ int main ( int, char*[] )
         
         cout << "Time taken = " << time_taken << endl;
         
-        vector<vector<vector<Pl3>>> tetra_cells;
+        vector<vector<vector<vector<Pl3>>>> tetra_cells( pts.size() );
         
-        Extract_Tetra_Cells( zones_of_tetras, zone_limit, tetra_cells );
-        
-        double cell_volume = 0;
-        
-        for (int counter = 0; counter < zones_of_tetras[0].size(); ++counter)
+        for (int counter = 0; counter < pts.size(); ++counter)
         {
-            cell_volume += to_double( zones_of_tetras[0][counter].volume() );
+            Extract_Tetra_Cells( zones_of_tetras[counter], zone_limit, tetra_cells[counter] );
+        }
+        
+        if (!T2)
+        {
+            for (int counter = 0; counter < zones_of_tetras[0].size(); ++counter)
+            {
+                cell_volume += to_double( zones_of_tetras[0][0][counter].volume() );
+            }
         }
         
         string dir = directory3D + "Data/Results.txt";
         
         ofstream ofs( dir );
         
-        double num_pts = 2 * 300;
+        double final_radius = 20;
         
-        double final_radius = 2;
+        double num_pts = final_radius * 10;
         
-        for (double counter_1 = 0; counter_1 < num_pts; ++counter_1)
+        bool limit_non_zero = false;
+        
+        for (int counter_1 = 0; counter_1 < num_pts; ++counter_1)
         {
-            double radius = counter_1 / (double)300;
-            
-            Sphere s( centre, radius );
+            double radius = counter_1 / (double)10;
             
             vector<double> volume( zone_limit, 0 );
             
-            for (int counter_2 = 0; counter_2 < zone_limit; ++counter_2)
+            for (int counter_4 = 0; counter_4 < pts.size(); ++counter_4)
             {
-                for (int counter_3 = 0; counter_3 < tetra_cells[counter_2].size(); ++counter_3)
+                Sphere s( centre[counter_4], radius );
+                
+                for (int counter_2 = 0; counter_2 < zone_limit; ++counter_2)
                 {
-                    volume[counter_2] += Sphere_Tetrahedron_Intersection( s, tetra_cells[counter_2][counter_3] );
+                    for (int counter_3 = 0; counter_3 < tetra_cells[counter_4][counter_2].size(); ++counter_3)
+                    {
+                        volume[counter_2] += Sphere_Tetrahedron_Intersection( s, tetra_cells[counter_4][counter_2][counter_3] );
+                    }
                 }
             }
             
@@ -211,21 +285,33 @@ int main ( int, char*[] )
             for (int counter_2 = 0; counter_2 < zone_limit - 1; ++counter_2)
             {
                 pi[counter_2] = volume[counter_2] - volume[counter_2 + 1];
+                pi[counter_2] = pi[counter_2] / (double)cell_volume;
             }
             
             pi[zone_limit - 1] = volume[zone_limit - 1];
             
-            if (pi[zone_limit - 1] > tiny_num)
+            if (!limit_non_zero)
             {
-                final_radius = radius;
-                break;
+                if (pi[zone_limit - 2] > tiny_num * 1e8)
+                {
+                    limit_non_zero = true;
+                }
+            }
+            
+            if (limit_non_zero)
+            {
+                if (pi[zone_limit - 2] < tiny_num * 1e7)
+                {
+                    final_radius = radius;
+                    break;
+                }
             }
             
             ofs << setprecision( 10 ) << radius;
             
             for (int counter_2 = 0; counter_2 < zone_limit - 1; ++counter_2)
             {
-                ofs << " " << pi[counter_2] / (double)cell_volume;
+                ofs << " " << pi[counter_2];
             }
             
             ofs << endl;
@@ -244,7 +330,7 @@ int main ( int, char*[] )
         gp << "set bmargin 4.5\n";
         gp << "set lmargin 8.5\n";
         
-        if (true)
+        if (false)
         {
             gp << "set tmargin 5\n";
             gp << "set title '" << graph_params.title_str << "' font ', 20' offset 0, 2\n";

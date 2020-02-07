@@ -106,6 +106,7 @@
 		EEB3D34E23ED82EF0002CCF2 /* Initialise_Cubes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EEB3D34D23ED82EF0002CCF2 /* Initialise_Cubes.cpp */; };
 		EEB3D35023ED835F0002CCF2 /* Compute_Zone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EEB3D34F23ED835F0002CCF2 /* Compute_Zone.cpp */; };
 		EEB3D35423ED84EB0002CCF2 /* Dividing_Space.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EEB3D35323ED84EB0002CCF2 /* Dividing_Space.cpp */; };
+		EEB3D35A23EDC47F0002CCF2 /* Brillouin_Surrounding_Pts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EEB3D35923EDC47F0002CCF2 /* Brillouin_Surrounding_Pts.cpp */; };
 		EEC76BAE23C3520200E6C190 /* Assign_Experimental_Data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EEC76BAD23C3520200E6C190 /* Assign_Experimental_Data.cpp */; };
 		EECBD2DC23CCEB47000614C7 /* Dataset_Dataset_Analysis.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECBD2DB23CCEB47000614C7 /* Dataset_Dataset_Analysis.cpp */; };
 		EECBD2DE23CCEEBA000614C7 /* Manipulate_Dataset_Dataset_Analysis.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EECBD2DD23CCEEBA000614C7 /* Manipulate_Dataset_Dataset_Analysis.cpp */; };
@@ -429,6 +430,8 @@
 		EEB3D35123ED836B0002CCF2 /* Compute_Zone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Compute_Zone.h; sourceTree = "<group>"; };
 		EEB3D35223ED84DC0002CCF2 /* Dividing_Space.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dividing_Space.h; sourceTree = "<group>"; };
 		EEB3D35323ED84EB0002CCF2 /* Dividing_Space.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Dividing_Space.cpp; sourceTree = "<group>"; };
+		EEB3D35823EDC43A0002CCF2 /* Brillouin_Surrounding_Pts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Brillouin_Surrounding_Pts.h; sourceTree = "<group>"; };
+		EEB3D35923EDC47F0002CCF2 /* Brillouin_Surrounding_Pts.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Brillouin_Surrounding_Pts.cpp; sourceTree = "<group>"; };
 		EEC76BAC23C351F000E6C190 /* Assign_Experimental_Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Assign_Experimental_Data.h; sourceTree = "<group>"; };
 		EEC76BAD23C3520200E6C190 /* Assign_Experimental_Data.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Assign_Experimental_Data.cpp; sourceTree = "<group>"; };
 		EECBD2D923CCC1B3000614C7 /* Further_Parameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Further_Parameters.h; sourceTree = "<group>"; };
@@ -757,21 +760,22 @@
 		EE1932E023E2013000C49317 /* Brillouin_Code */ = {
 			isa = PBXGroup;
 			children = (
-				EEB3D35323ED84EB0002CCF2 /* Dividing_Space.cpp */,
-				EEB3D34F23ED835F0002CCF2 /* Compute_Zone.cpp */,
-				EEB3D34D23ED82EF0002CCF2 /* Initialise_Cubes.cpp */,
-				EE43399323EC9B52004FA97B /* Plane_Intersect_Polyhedron.cpp */,
-				EE43398B23EC99B7004FA97B /* Removing_Polyhedrons.cpp */,
-				EE43398523EC9610004FA97B /* Divide_Polyhedron.cpp */,
-				EE43398F23EC9AB6004FA97B /* Max_Radius_Of_Space.cpp */,
-				EE43398723EC98CC004FA97B /* Max_Distance_To_Polyhedron.cpp */,
-				EE43398123EC90AF004FA97B /* Triangulate_Zones.cpp */,
-				EE43397F23EC5DCF004FA97B /* Extract_Tetra_Cells.cpp */,
+				EEB3D35923EDC47F0002CCF2 /* Brillouin_Surrounding_Pts.cpp */,
 				EE197E2923E9A64600D71AD8 /* B_Poly.cpp */,
 				EE1932DE23E1FD1600C49317 /* Compute_Brillouin_Zones.cpp */,
+				EEB3D34F23ED835F0002CCF2 /* Compute_Zone.cpp */,
+				EE43398523EC9610004FA97B /* Divide_Polyhedron.cpp */,
+				EEB3D35323ED84EB0002CCF2 /* Dividing_Space.cpp */,
+				EE43397F23EC5DCF004FA97B /* Extract_Tetra_Cells.cpp */,
 				EEB3D34923ED7DC40002CCF2 /* Generate_Cube.cpp */,
+				EEB3D34D23ED82EF0002CCF2 /* Initialise_Cubes.cpp */,
+				EE43398723EC98CC004FA97B /* Max_Distance_To_Polyhedron.cpp */,
+				EE43398F23EC9AB6004FA97B /* Max_Radius_Of_Space.cpp */,
+				EE43399323EC9B52004FA97B /* Plane_Intersect_Polyhedron.cpp */,
+				EE43398B23EC99B7004FA97B /* Removing_Polyhedrons.cpp */,
 				EE1932E323E2063300C49317 /* Sphere_Tetrahedron_Intersection.cpp */,
 				EEA0CEB423E48DD0008C65C8 /* Triangle_Area3D.cpp */,
+				EE43398123EC90AF004FA97B /* Triangulate_Zones.cpp */,
 			);
 			path = Brillouin_Code;
 			sourceTree = "<group>";
@@ -779,21 +783,22 @@
 		EE1932E123E2015A00C49317 /* Brillouin_Code */ = {
 			isa = PBXGroup;
 			children = (
-				EEB3D35223ED84DC0002CCF2 /* Dividing_Space.h */,
-				EEB3D35123ED836B0002CCF2 /* Compute_Zone.h */,
-				EEB3D34B23ED7DD30002CCF2 /* Generate_Cube.h */,
-				EE43399223EC9B3D004FA97B /* Plane_Intersect_Polyhedron.h */,
-				EE43399123EC9AC3004FA97B /* Max_Radius_Of_Space.h */,
-				EE43398A23EC99A6004FA97B /* Removing_Polyhedrons.h */,
-				EE43398923EC98E1004FA97B /* Max_Distance_To_Polyhedron.h */,
-				EE43398323EC90BC004FA97B /* Triangulate_Zones.h */,
-				EE43397E23EC5DB1004FA97B /* Extract_Tetra_Cells.h */,
+				EEB3D35823EDC43A0002CCF2 /* Brillouin_Surrounding_Pts.h */,
 				EE197E2B23E9A65300D71AD8 /* B_Poly.h */,
 				EE1932DD23E1FD0600C49317 /* Compute_Brillouin_Zones.h */,
-				EEB3D34C23ED82D90002CCF2 /* Initialise_Cubes.h */,
+				EEB3D35123ED836B0002CCF2 /* Compute_Zone.h */,
 				EE43398423EC95F4004FA97B /* Divide_Polyhedron.h */,
+				EEB3D35223ED84DC0002CCF2 /* Dividing_Space.h */,
+				EE43397E23EC5DB1004FA97B /* Extract_Tetra_Cells.h */,
+				EEB3D34B23ED7DD30002CCF2 /* Generate_Cube.h */,
+				EEB3D34C23ED82D90002CCF2 /* Initialise_Cubes.h */,
+				EE43398923EC98E1004FA97B /* Max_Distance_To_Polyhedron.h */,
+				EE43399123EC9AC3004FA97B /* Max_Radius_Of_Space.h */,
+				EE43399223EC9B3D004FA97B /* Plane_Intersect_Polyhedron.h */,
+				EE43398A23EC99A6004FA97B /* Removing_Polyhedrons.h */,
 				EE1932E223E2061F00C49317 /* Sphere_Tetrahedron_Intersection.h */,
 				EEA0CEB623E48DEB008C65C8 /* Triangle_Area3D.h */,
+				EE43398323EC90BC004FA97B /* Triangulate_Zones.h */,
 			);
 			path = Brillouin_Code;
 			sourceTree = "<group>";
@@ -1314,6 +1319,7 @@
 				EEFCD5E1239EB6A500D9CB4F /* Graph_Parameters.cpp in Sources */,
 				EE051920223182C70091755F /* Packing_Functions.cpp in Sources */,
 				EECBD2E223CCF1A8000614C7 /* File_Dataset_Analysis.cpp in Sources */,
+				EEB3D35A23EDC47F0002CCF2 /* Brillouin_Surrounding_Pts.cpp in Sources */,
 				EECF3587222D828A0079CD62 /* Order_Circles.cpp in Sources */,
 				EE045D8122FC422200EDA7BD /* Spherical_Cap_Volume_Within_Cell.cpp in Sources */,
 				EE113FE522E89EF4000A75AC /* Spherical_Wedge.cpp in Sources */,

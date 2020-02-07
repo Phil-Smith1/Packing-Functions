@@ -27,7 +27,7 @@ void Extract_Tetra_Cells ( vector<vector<Tetrahedron>>const& zones_of_tetras, in
         
         for (int counter_2 = 0; counter_2 < zones_of_tetras[counter_1].size(); ++counter_2)
         {
-            if (to_double( zones_of_tetras[counter_1][counter_2].volume() ) < tiny_num) continue;
+            if (to_double( zones_of_tetras[counter_1][counter_2].volume() ) < tiny_num * 1e7) continue;
             
             vector<P3_E> exact_vertices;
             
