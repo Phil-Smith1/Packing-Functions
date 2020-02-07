@@ -4,9 +4,6 @@
 
 #include <gemmi/cif.hpp>
 
-#include <algorithm>
-#include <thread>
-
 // Includes.
 
 #include "Parameters.h"
@@ -26,7 +23,8 @@
 #include "Read_Dataset_Matrix.h"
 #include "Print_Info.h"
 
-#include "Brillouin_Code.h"
+#include "Compute_Brillouin_Zones.h"
+#include "Extract_Tetra_Cells.h"
 #include "Sphere_Tetrahedron_Intersection.h"
 
 // Main.
