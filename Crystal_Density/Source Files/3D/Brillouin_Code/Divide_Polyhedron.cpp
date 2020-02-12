@@ -146,6 +146,4 @@ void Divide_Polyhedron ( P3_E const centre, multimap<double, P3_E>const pts, Pol
     Removing_Polyhedrons( centre, planes, plane_distance, polys, final_polys, zone_limit );
     
     final_polys.insert( final_polys.end(), polys.begin(), polys.end() );
-    
-    cout << final_polys.size() << endl;
 }

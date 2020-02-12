@@ -33,7 +33,7 @@ int deformation_type = 0; // 0: No deformation; 1: Square to Triangular; 2: Inte
 
 bool draw_cell = false; // True to draw cell.
 
-double max_radius = 1;
+double max_radius = 20;
 
 bool parallelepiped = false;
 

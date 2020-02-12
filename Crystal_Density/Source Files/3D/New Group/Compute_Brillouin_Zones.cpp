@@ -10,7 +10,7 @@ void Compute_Brillouin_Zones ( multimap<double, P3_E> const& pts, int zone_limit
     
     Dividing_Space( centre, pts, polys, zone_limit );
     
-    cout << polys.size() << endl;
+    cout << "Number of polyhedrons: " << polys.size() << "." << endl;
     
     /*for (int counter_1 = 0; counter_1 < polys.size(); ++counter_1)
     {

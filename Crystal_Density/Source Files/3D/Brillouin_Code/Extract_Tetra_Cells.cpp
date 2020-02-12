@@ -20,8 +20,6 @@ typedef K::Plane_3 Pl3;
 const double tiny_num = 1e-10;
 #endif
 
-#include "Sphere_Tetrahedron_Intersection.h"
-
 void Extract_Tetra_Cells ( vector<vector<Tetrahedron>>const& zones_of_tetras, int zone_limit, vector<vector<vector<Pl3>>>& tetra_cells )
 {
     for (int counter_1 = 0; counter_1 < zone_limit; ++counter_1)

@@ -27,6 +27,10 @@ bool analysis = false; // Perform analysis.
 
 bool brillouin = true;
 
+int perim = 5;
+
+int zone_limit = 9;
+
 vector<P3> parallelepiped_vectors = Cube; //{ P3( 1, 0, 0 ), P3( 0, 1, 0 ), P3( 0.5, 0, 0.5 * sqrt( (double)3 ) ) }; // Input vectors for 3D case.
 
 bool pts_at_vertices = true; // Add points at vertices of the parallelepiped.
@@ -49,6 +53,6 @@ string title_str = "Packing Functions for T2 Entry 1"; // Title of output graph.
 
 Graph_Parameters graph_params( title, yrange, title_str );
 
-Input3D input3D( T2, type_of_experiment, experimental_T2, experimental_T2_label, function_type, lattice_type, parallelepiped_vectors, pts_at_vertices, scale, interior_points, interior_pts3D, deformation_type3D, iterations, sample_rate, auto_max_radius, max_radius, parallelepiped );
+Input3D input3D( T2, type_of_experiment, experimental_T2, experimental_T2_label, function_type, lattice_type, parallelepiped_vectors, pts_at_vertices, scale, interior_points, interior_pts3D, deformation_type3D, iterations, sample_rate, auto_max_radius, max_radius, parallelepiped, perim, zone_limit );
 
 Input input( function_type, lattice_type, pts, scale, interior_points, interior_pts, deformation_type, iterations, sample_rate );
