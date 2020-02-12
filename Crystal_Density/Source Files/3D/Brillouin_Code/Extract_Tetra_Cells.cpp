@@ -9,14 +9,18 @@ typedef Exact_predicates_inexact_constructions_kernel K;
 
 typedef Tetrahedron_3<Exact_Kernel> Tetrahedron;
 typedef Exact_Kernel::Point_3 P3_E;
+typedef Exact_Kernel::Plane_3 Pl3_E;
 
 typedef K::Point_3 P3;
+typedef K::Line_3 L3;
 typedef K::Plane_3 Pl3;
 
 #ifndef tiny_number
 #define tiny_number
 const double tiny_num = 1e-10;
 #endif
+
+#include "Sphere_Tetrahedron_Intersection.h"
 
 void Extract_Tetra_Cells ( vector<vector<Tetrahedron>>const& zones_of_tetras, int zone_limit, vector<vector<vector<Pl3>>>& tetra_cells )
 {
@@ -49,6 +53,14 @@ void Extract_Tetra_Cells ( vector<vector<Tetrahedron>>const& zones_of_tetras, in
             tetra_cell.push_back( Pl3( vertices[0], vertices[1], vertices[3] ) );
             tetra_cell.push_back( Pl3( vertices[0], vertices[2], vertices[3] ) );
             tetra_cell.push_back( Pl3( vertices[1], vertices[2], vertices[3] ) );
+            
+            for (int counter_3 = 0; counter_3 < 4; ++counter_3)
+            {
+                if (abs( tetra_cell[counter_3].a() ) < tiny_num) Pl3( 0, tetra_cell[counter_3].b(), tetra_cell[counter_3].c(), tetra_cell[counter_3].d() );
+                if (abs( tetra_cell[counter_3].b() ) < tiny_num) Pl3( tetra_cell[counter_3].a(), 0, tetra_cell[counter_3].c(), tetra_cell[counter_3].d() );
+                if (abs( tetra_cell[counter_3].c() ) < tiny_num) Pl3( tetra_cell[counter_3].a(), tetra_cell[counter_3].b(), 0, tetra_cell[counter_3].d() );
+                if (abs( tetra_cell[counter_3].d() ) < tiny_num) Pl3( tetra_cell[counter_3].a(), tetra_cell[counter_3].b(), tetra_cell[counter_3].c(), 0 );
+            }
             
             if (tetra_cell[0].oriented_side( vertices[3] ) == ON_NEGATIVE_SIDE) tetra_cell[0] = tetra_cell[0].opposite();
             if (tetra_cell[1].oriented_side( vertices[2] ) == ON_NEGATIVE_SIDE) tetra_cell[1] = tetra_cell[1].opposite();

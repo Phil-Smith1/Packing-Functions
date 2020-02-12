@@ -21,7 +21,7 @@ string type_of_experiment = "Molecule_Centres"; // Molecule_Centres, Molecule_Ce
 
 bool experimental_T2 = false;
 
-string experimental_T2_label = "d";
+string experimental_T2_label = "c";
 
 bool analysis = false; // Perform analysis.
 

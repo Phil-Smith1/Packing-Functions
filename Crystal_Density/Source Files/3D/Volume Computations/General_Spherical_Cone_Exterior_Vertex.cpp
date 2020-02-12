@@ -79,17 +79,59 @@ double General_Spherical_Cone_Exterior_Vertex ( Sphere const& s, P3 const& verte
                 else if (p3.oriented_side( c2.c ) == ON_NEGATIVE_SIDE) return General_Spherical_Wedge( s, p1, p3 );
             }
             
-            bool positive_side1, positive_side2, positive_side3;
+            bool positive_side1 = false, positive_side2 = false, positive_side3 = false;
             
             if (Norm( s.c, vertex ) > s.r)
             {
-                if ((p1.oriented_side( i5 ) == ON_NEGATIVE_SIDE && p1.oriented_side( i6 ) == ON_NEGATIVE_SIDE) || (p1.oriented_side( i5 ) == ON_NEGATIVE_SIDE && squared_distance( i5, p1 ) > tiny_num * 5e6) || (p1.oriented_side( i6 ) == ON_NEGATIVE_SIDE && squared_distance( i6, p1 ) > tiny_num * 5e6)) positive_side1 = false;
+                /*if ((p1.oriented_side( i5 ) == ON_NEGATIVE_SIDE && p1.oriented_side( i6 ) == ON_NEGATIVE_SIDE) || (p1.oriented_side( i5 ) == ON_NEGATIVE_SIDE && squared_distance( i5, p1 ) > tiny_num * 5e6) || (p1.oriented_side( i6 ) == ON_NEGATIVE_SIDE && squared_distance( i6, p1 ) > tiny_num * 5e6)) positive_side1 = false;
                 else positive_side1 = true;
                 
                 if ((p2.oriented_side( i3 ) == ON_NEGATIVE_SIDE && p2.oriented_side( i4 ) == ON_NEGATIVE_SIDE) || (p2.oriented_side( i3 ) == ON_NEGATIVE_SIDE && squared_distance( i3, p2 ) > tiny_num * 5e6) || (p2.oriented_side( i4 ) == ON_NEGATIVE_SIDE && squared_distance( i4, p2 ) > tiny_num * 5e6)) positive_side2 = false;
                 else positive_side2 = true;
                 
                 if ((p3.oriented_side( i1 ) == ON_NEGATIVE_SIDE && p3.oriented_side( i2 ) == ON_NEGATIVE_SIDE) || (p3.oriented_side( i1 ) == ON_NEGATIVE_SIDE && squared_distance( i1, p3 ) > tiny_num * 5e6) || (p3.oriented_side( i2 ) == ON_NEGATIVE_SIDE && squared_distance( i2, p3 ) > tiny_num * 5e6)) positive_side3 = false;
+                else positive_side3 = true;*/
+                
+                if (p1.oriented_side( i5 ) == ON_NEGATIVE_SIDE && p1.oriented_side( i6 ) == ON_NEGATIVE_SIDE) positive_side1 = false;
+                
+                else if (p1.oriented_side( i5 ) == ON_NEGATIVE_SIDE && p1.oriented_side( i6 ) == ON_POSITIVE_SIDE)
+                {
+                    squared_distance( i5, p1 ) > squared_distance( i6, p1 ) ? positive_side1 = false : positive_side1 = true;
+                }
+                
+                else if (p1.oriented_side( i5 ) == ON_POSITIVE_SIDE && p1.oriented_side( i6 ) == ON_NEGATIVE_SIDE)
+                {
+                    squared_distance( i5, p1 ) > squared_distance( i6, p1 ) ? positive_side1 = true : positive_side1 = false;
+                }
+                
+                else positive_side1 = true;
+                
+                if (p2.oriented_side( i3 ) == ON_NEGATIVE_SIDE && p2.oriented_side( i4 ) == ON_NEGATIVE_SIDE) positive_side2 = false;
+                
+                else if (p2.oriented_side( i3 ) == ON_NEGATIVE_SIDE && p2.oriented_side( i4 ) == ON_POSITIVE_SIDE)
+                {
+                    squared_distance( i3, p2 ) > squared_distance( i4, p2 ) ? positive_side2 = false : positive_side2 = true;
+                }
+                
+                else if (p2.oriented_side( i3 ) == ON_POSITIVE_SIDE && p2.oriented_side( i4 ) == ON_NEGATIVE_SIDE)
+                {
+                    squared_distance( i3, p2 ) > squared_distance( i4, p2 ) ? positive_side2 = true : positive_side2 = false;
+                }
+                
+                else positive_side2 = true;
+                
+                if (p3.oriented_side( i1 ) == ON_NEGATIVE_SIDE && p3.oriented_side( i2 ) == ON_NEGATIVE_SIDE) positive_side3 = false;
+                
+                else if (p3.oriented_side( i1 ) == ON_NEGATIVE_SIDE && p3.oriented_side( i2 ) == ON_POSITIVE_SIDE)
+                {
+                    squared_distance( i1, p3 ) > squared_distance( i2, p3 ) ? positive_side3 = false : positive_side3 = true;
+                }
+                
+                else if (p3.oriented_side( i1 ) == ON_POSITIVE_SIDE && p3.oriented_side( i2 ) == ON_NEGATIVE_SIDE)
+                {
+                    squared_distance( i1, p3 ) > squared_distance( i2, p3 ) ? positive_side3 = true : positive_side3 = false;
+                }
+                
                 else positive_side3 = true;
                 
                 int num_pos = 0;

@@ -13,7 +13,7 @@ typedef K::Point_3 P3;
 
 const string function_type = "Exact"; // Exact, At_Least.
 
-const string lattice_type = "Square"; // Square, Triangular, Custom.
+const string lattice_type = "Triangular"; // Square, Triangular, Custom.
 
 vector<P2> pts = { P2( 0, 1 ), P2( 1, 0 ) }; // Input vectors for 2D case.
 
@@ -33,7 +33,7 @@ int deformation_type = 0; // 0: No deformation; 1: Square to Triangular; 2: Inte
 
 bool draw_cell = false; // True to draw cell.
 
-double max_radius = 6;
+double max_radius = 1;
 
 bool parallelepiped = false;
 

@@ -26,13 +26,13 @@ double General_Spherical_Cone ( Sphere const& s, Pl3 const& p1, Pl3 const& p2, P
     
     Intersection_Pts_Of_Plane_And_Circle( p2, c, i1, i2 );
     
-    if (Norm( i1, i2 ) < tiny_num) return General_Spherical_Cone_Exterior_Vertex( s, vertex, p1, p2, p3 );
+    if (Norm( i1, i2 ) < tiny_num || p3.oriented_side( i1 ) == p3.oriented_side( i2 ) || p3.oriented_side( i1 ) == ON_ORIENTED_BOUNDARY || p3.oriented_side( i2 ) == ON_ORIENTED_BOUNDARY) return General_Spherical_Cone_Exterior_Vertex( s, vertex, p1, p2, p3 );
     else if (p3.oriented_side( i1 ) == ON_POSITIVE_SIDE) pt3 = i1;
     else pt3 = i2;
     
     Intersection_Pts_Of_Plane_And_Circle( p3, c, i1, i2 );
     
-    if (Norm( i1, i2 ) < tiny_num) return General_Spherical_Cone_Exterior_Vertex( s, vertex, p1, p2, p3 );
+    if (Norm( i1, i2 ) < tiny_num || p2.oriented_side( i1 ) == p2.oriented_side( i2 ) || p2.oriented_side( i1 ) == ON_ORIENTED_BOUNDARY || p2.oriented_side( i2 ) == ON_ORIENTED_BOUNDARY) return General_Spherical_Cone_Exterior_Vertex( s, vertex, p1, p2, p3 );
     else if (p2.oriented_side( i1 ) == ON_POSITIVE_SIDE) pt2 = i1;
     else pt2 = i2;
     
@@ -40,7 +40,7 @@ double General_Spherical_Cone ( Sphere const& s, Pl3 const& p1, Pl3 const& p2, P
     
     Intersection_Pts_Of_Plane_And_Circle( p3, c, i1, i2 );
     
-    if (Norm( i1, i2 ) < tiny_num) return General_Spherical_Cone_Exterior_Vertex( s, vertex, p1, p2, p3 );
+    if (Norm( i1, i2 ) < tiny_num || p1.oriented_side( i1 ) == p1.oriented_side( i2 ) || p1.oriented_side( i1 ) == ON_ORIENTED_BOUNDARY || p1.oriented_side( i2 ) == ON_ORIENTED_BOUNDARY) return General_Spherical_Cone_Exterior_Vertex( s, vertex, p1, p2, p3 );
     else if (p1.oriented_side( i1 ) == ON_POSITIVE_SIDE) pt1 = i1;
     else pt1 = i2;
     
