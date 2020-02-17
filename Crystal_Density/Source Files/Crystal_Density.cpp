@@ -124,7 +124,7 @@ int main ( int, char*[] )
     
     if (brillouin)
     {
-        for (int file_index = 13; file_index < 100; ++file_index)
+        for (int file_index = 7; file_index < 8; ++file_index)
         {
             cout << "T2 crystal: " << file_index + 1 << "." << endl;
             

@@ -9,6 +9,8 @@ void Extract_Data_Pts_Brillouin ( string const& directory3D, Input3D& input, int
     
     ofstream ofs( dir );
     
+    input.max_radius = 20;
+    
     double num_pts = input.max_radius * input.sample_rate;
     
     vector<bool> nonzero( input.zone_limit, false );
@@ -37,6 +39,7 @@ void Extract_Data_Pts_Brillouin ( string const& directory3D, Input3D& input, int
         for (int counter_2 = 0; counter_2 < centres.size(); ++counter_2)
         {
             Sphere s( centres[counter_2], radius );
+            Sphere s1( centres[counter_2], radius + 0.1 );
             
             for (int counter_3 = 0; counter_3 < input.zone_limit; ++counter_3)
             {
@@ -62,6 +65,7 @@ void Extract_Data_Pts_Brillouin ( string const& directory3D, Input3D& input, int
                 pi[counter_2] = pi[counter_2] / (double)cell_volume;
                 
                 if (abs( pi[counter_2] ) < tiny_num) pi[counter_2] = tiny_num;
+                else if (pi[counter_2] < 0) pi[counter_2] = tiny_num;
             }
         }
         

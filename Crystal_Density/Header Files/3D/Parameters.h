@@ -27,7 +27,7 @@ bool analysis = false; // Perform analysis.
 
 bool brillouin = true;
 
-int perim = 5;
+int perim = 9;
 
 int zone_limit = 9;
 
