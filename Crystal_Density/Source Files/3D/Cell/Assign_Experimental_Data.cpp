@@ -41,12 +41,22 @@ void Assign_Experimental_Cell_Shape ( vector<pair<string, double>>& cell_shape, 
     
     else if (label == "d")
     {
-        cell_shape.push_back( pair<string, double>( "_cell_length_a", 7.2523 ) );
-        cell_shape.push_back( pair<string, double>( "_cell_length_b", 13.033 ) );
-        cell_shape.push_back( pair<string, double>( "_cell_length_c", 20.693 ) );
-        cell_shape.push_back( pair<string, double>( "_cell_angle_alpha", 72.701 ) );
-        cell_shape.push_back( pair<string, double>( "_cell_angle_beta", 86.552 ) );
-        cell_shape.push_back( pair<string, double>( "_cell_angle_gamma", 73.915 ) );
+        cell_shape.push_back( pair<string, double>( "_cell_length_a", 24.316 ) );
+        cell_shape.push_back( pair<string, double>( "_cell_length_b", 7.284 ) );
+        cell_shape.push_back( pair<string, double>( "_cell_length_c", 14.9 ) );
+        cell_shape.push_back( pair<string, double>( "_cell_angle_alpha", 90 ) );
+        cell_shape.push_back( pair<string, double>( "_cell_angle_beta", 119.038 ) );
+        cell_shape.push_back( pair<string, double>( "_cell_angle_gamma", 90 ) );
+    }
+    
+    else if (label == "e")
+    {
+        cell_shape.push_back( pair<string, double>( "_cell_length_a", 12.6079 ) );
+        cell_shape.push_back( pair<string, double>( "_cell_length_b", 12.6079 ) );
+        cell_shape.push_back( pair<string, double>( "_cell_length_c", 7.4937 ) );
+        cell_shape.push_back( pair<string, double>( "_cell_angle_alpha", 90 ) );
+        cell_shape.push_back( pair<string, double>( "_cell_angle_beta", 90 ) );
+        cell_shape.push_back( pair<string, double>( "_cell_angle_gamma", 120 ) );
     }
 }
 
@@ -228,19 +238,19 @@ void Assign_Experimental_Centres ( vector<P3>& T2_centres, double ** matrix, str
     
     else if (label == "d")
     {
-        /*P3 p = P3( 0.7707, 0.33245, 0.34045 );
-        Frac_To_Cart_Coords( matrix, p );
-        T2_centres.push_back( p );
-        
-        p = P3( 0.2293, 0.66755, 0.65955 );
-        Frac_To_Cart_Coords( matrix, p );
-        T2_centres.push_back( p );*/
-        
-        P3 p = P3( 0.769, 0.338, 0.328 );
+        P3 p = P3( 0.744, 0, 0.255 );
         Frac_To_Cart_Coords( matrix, p );
         centres.push_back( p );
         
-        p = P3( 0.231, 0.662, 0.672 );
+        p = P3( 0.756, 0.5, 0.745 );
+        Frac_To_Cart_Coords( matrix, p );
+        centres.push_back( p );
+        
+        p = P3( 0.244, 0.5, 0.255 );
+        Frac_To_Cart_Coords( matrix, p );
+        centres.push_back( p );
+        
+        p = P3( 0.256, 0, 0.745 );
         Frac_To_Cart_Coords( matrix, p );
         centres.push_back( p );
         
@@ -267,6 +277,17 @@ void Assign_Experimental_Centres ( vector<P3>& T2_centres, double ** matrix, str
         p = P3( 0.48720, 0.19820, 0.53070 );
         Frac_To_Cart_Coords( matrix, p );
         oxygens.push_back( p );
+    }
+    
+    else if (label == "e")
+    {
+        P3 p = P3( 0.667, 0.333, 0.75 );
+        Frac_To_Cart_Coords( matrix, p );
+        centres.push_back( p );
+        
+        p = P3( 0.333, 0.667, 0.25 );
+        Frac_To_Cart_Coords( matrix, p );
+        centres.push_back( p );
     }
     
     if (type_of_experiment == "Molecule_Centres")

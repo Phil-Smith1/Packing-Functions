@@ -7,7 +7,7 @@
 #include "Brillouin_Surrounding_Pts.h"
 #include "Cell_Volume.h"
 
-void Preprocessing_T2_For_Brillouin ( string const& dataset_directory, int index, Input3D const& input, double& cell_volume, vector<P3_E>& centres_E, vector<P3>& centres, vector<multimap<double, P3_E>>& pts )
+void Preprocessing_T2_For_Brillouin ( string const& dataset_directory, int index, Input3D const& input, vector<P3_E>& centres_E, vector<P3>& centres, vector<multimap<double, P3>>& pts )
 {
     string filename = "T2_" + to_string( index ) + "_num_molGeom.cif";
     string file_path = dataset_directory + filename;
@@ -45,10 +45,8 @@ void Preprocessing_T2_For_Brillouin ( string const& dataset_directory, int index
     
     for (int counter = 0; counter < T2_centres.size(); ++counter)
     {
-        Brillouin_Surrounding_Pts( input.perim, matrix, counter, T2_centres, pts[counter] );
+        Brillouin_Surrounding_Pts_I( input.perim, matrix, counter, T2_centres, pts[counter] );
     }
-    
-    cell_volume = Cell_Volume( cell_shape );
     
     for (int counter = 0; counter < T2_centres.size(); ++counter)
     {

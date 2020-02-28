@@ -6,6 +6,24 @@
 
 double General_Spherical_Wedge ( Sphere const& s, Pl3 const& p1, Pl3 const& p2 )
 {
+    double plane_dist_1 = sqrt( squared_distance( s.c, p1 ) );
+    
+    if (plane_dist_1 > s.r - tiny_num)
+    {
+        if (p1.oriented_side( s.c ) == ON_NEGATIVE_SIDE) return 0;
+        
+        else return Spherical_Cap( s, p2 );
+    }
+    
+    double plane_dist_2 = sqrt( squared_distance( s.c, p1 ) );
+    
+    if (plane_dist_2 > s.r - tiny_num)
+    {
+        if (p2.oriented_side( s.c ) == ON_NEGATIVE_SIDE) return 0;
+        
+        else return Spherical_Cap( s, p1 );
+    }
+    
     if (Parallel_Planes( p1, p2 ))
     {
         if (p2.oriented_side( p1.point() ) == ON_ORIENTED_BOUNDARY)

@@ -31,5 +31,5 @@ void Cell_Data ( Input& input, Cell& cell )
         input.max_radius = (Norm( cell.vertices[0], cell.vertices[2] ) > Norm( cell.vertices[1], cell.vertices[3] )) ? Norm( cell.vertices[0], cell.vertices[2] ) : Norm( cell.vertices[1], cell.vertices[3] );
     }
     
-    input.max_radius = 0.6;
+    input.max_radius = 1;
 }

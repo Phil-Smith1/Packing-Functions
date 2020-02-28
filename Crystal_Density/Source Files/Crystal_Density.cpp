@@ -2,6 +2,8 @@
 
 // Include for gemmi, for parsing CIFs.
 
+#define BOOST_HAS_THREADS
+
 #include <gemmi/cif.hpp>
 
 // Includes.
@@ -67,7 +69,7 @@ int main ( int, char*[] )
             Packing_Functions( directory, input, cells[counter], counter );
         }
         
-        GIF( directory + "Graphs/Deformation", "Deform", input.iterations );
+        /*GIF( directory + "Graphs/Deformation", "Deform", input.iterations );
         
         for (int counter = 0; counter < input.iterations; ++counter)
         {
@@ -76,7 +78,7 @@ int main ( int, char*[] )
             system( str.c_str() );
         }
         
-        GIF( directory + "Graphs/Append", "Append_", input.iterations );
+        GIF( directory + "Graphs/Append", "Append_", input.iterations );*/
     }
     
     if (threeD) // Runs for 3D packing functions.
@@ -124,32 +126,32 @@ int main ( int, char*[] )
     
     if (brillouin)
     {
-        for (int file_index = 7; file_index < 8; ++file_index)
+        for (int file_index = 0; file_index < 100; ++file_index)
         {
             cout << "T2 crystal: " << file_index + 1 << "." << endl;
             
-            double cell_volume = 0;
             vector<P3_E> centres_E;
             vector<P3> centres;
-            vector<multimap<double, P3_E>> pts;
+            vector<multimap<double, P3>> pts;
+            vector<multimap<double, P3_E>> pts_E;
             
             if (T2)
             {
-                Preprocessing_T2_For_Brillouin( dataset_directory, file_index + 1, input3D, cell_volume, centres_E, centres, pts );
+                Preprocessing_T2_For_Brillouin( dataset_directory, file_index + 1, input3D, centres_E, centres, pts );
             }
             
             else
             {
-                multimap<double, P3_E> pts_copy;
+                multimap<double, P3> pts_copy;
                 
                 P3 p1 = input3D.parallelepiped_vectors[0], p2 = input3D.parallelepiped_vectors[1], p3 = input3D.parallelepiped_vectors[2];
                 
                 centres_E.push_back( P3_E( 0, 0, 0 ) );
                 centres.push_back( P3( 0, 0, 0 ) );
                 
-                V3_E v1_E = V3_E( p1.x(), p1.y(), p1.z() );
-                V3_E v2_E = V3_E( p2.x(), p2.y(), p2.z() );
-                V3_E v3_E = V3_E( p3.x(), p3.y(), p3.z() );
+                V3 v1_E = V3( p1.x(), p1.y(), p1.z() );
+                V3 v2_E = V3( p2.x(), p2.y(), p2.z() );
+                V3 v3_E = V3( p3.x(), p3.y(), p3.z() );
                 
                 for (int counter_1 = -perim; counter_1 < perim + 1; ++counter_1)
                 {
@@ -159,13 +161,13 @@ int main ( int, char*[] )
                         {
                             if (counter_1 == 0 && counter_2 == 0 && counter_3 == 0) continue;
                             
-                            V3_E v = counter_1 * v1_E + counter_2 * v2_E + counter_3 * v3_E;
+                            V3 v = counter_1 * v1_E + counter_2 * v2_E + counter_3 * v3_E;
                             
-                            P3_E p = P3_E( v.x(), v.y(), v.z() );
+                            P3 p = P3( v.x(), v.y(), v.z() );
                             
-                            double dist = to_double( squared_distance( centres_E[0], p ) );
+                            double dist = to_double( squared_distance( centres[0], p ) );
                             
-                            pts_copy.insert( pair<double, P3_E>( dist, p ) );
+                            pts_copy.insert( pair<double, P3>( dist, p ) );
                         }
                     }
                 }
@@ -173,15 +175,37 @@ int main ( int, char*[] )
                 pts.push_back( pts_copy );
             }
             
-            vector<vector<vector<Tetrahedron>>> zones_of_tetras( pts.size() );
+            vector<vector<vector<Tetrahedron_I>>> zones_of_tetras( pts.size() );
             
             cout << "Computing Brillouin zones for " << pts.size() << " points." << endl;
             
             clock_t time_1 = clock();
             
-            for (int counter = 0; counter < pts.size(); ++counter)
+            vector<vector<double>> max_radii( (int)centres.size() );
+            
+            bool use_threads = true;
+            
+            if (use_threads)
             {
-                Compute_Brillouin_Zones( pts[counter], zone_limit, centres_E[counter], zones_of_tetras[counter] );
+                vector<thread> thr;
+                
+                for (int counter = 0; counter < pts.size(); ++counter)
+                {
+                    thr.push_back( thread( Compute_Brillouin_Zones_IT, pts[counter], zone_limit, centres[counter], ref( zones_of_tetras[counter] ), ref( max_radii[counter] ) ) );
+                }
+                
+                for (int counter = 0; counter < pts.size(); ++counter)
+                {
+                    thr[counter].join();
+                }
+            }
+            
+            else
+            {
+                for (int counter = 0; counter < pts.size(); ++counter)
+                {
+                    Compute_Brillouin_Zones_I( pts[counter], zone_limit, centres[counter], zones_of_tetras[counter], max_radii[counter] );
+                }
             }
             
             clock_t time_2 = clock();
@@ -190,28 +214,23 @@ int main ( int, char*[] )
             
             cout << "Time taken to compute Brillouin zones: " << time_taken << "." << endl;
             
+            vector<vector<double>> cell_volume( pts.size() );
             vector<vector<vector<vector<Pl3>>>> tetra_cells( pts.size() );
             
             for (int counter = 0; counter < pts.size(); ++counter)
             {
-                Extract_Tetra_Cells( zones_of_tetras[counter], zone_limit, tetra_cells[counter] );
+                Extract_Tetra_Cells_I( centres[counter], zones_of_tetras[counter], zone_limit, tetra_cells[counter], cell_volume[counter] );
             }
             
             cout << "Tetrahedrons extracted." << endl;
             
-            if (!T2)
-            {
-                for (int counter = 0; counter < zones_of_tetras[0].size(); ++counter)
-                {
-                    cell_volume += to_double( zones_of_tetras[0][0][counter].volume() );
-                }
-            }
-            
-            Extract_Data_Pts_Brillouin( directory3D, input3D, file_index + 1, centres, tetra_cells, cell_volume );
+            Extract_Data_Pts_Brillouin( directory3D, input3D, file_index + 1, centres, tetra_cells, cell_volume, max_radii );
             
             cout << "Data extracted." << endl;
             
-            Plot_Graph_Brillouin( directory3D, input3D, graph_params, file_index + 1 );
+            if (input3D.experimental_T2) Plot_Graph_Brillouin_T2( directory3D, input3D, graph_params, file_index + 1 );
+            
+            else Plot_Graph_Brillouin( directory3D, input3D, graph_params, file_index + 1 );
             
             cout << "Graph plotted." << endl << endl;
         }

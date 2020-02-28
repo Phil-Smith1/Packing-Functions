@@ -7,6 +7,33 @@
 
 double General_Spherical_Cone ( Sphere const& s, Pl3 const& p1, Pl3 const& p2, Pl3 const& p3 )
 {
+    double plane_dist_1 = sqrt( squared_distance( s.c, p1 ) );
+    
+    if (plane_dist_1 > s.r - tiny_num)
+    {
+        if (p1.oriented_side( s.c ) == ON_NEGATIVE_SIDE) return 0;
+        
+        else return General_Spherical_Wedge( s, p2, p3 );
+    }
+    
+    double plane_dist_2 = sqrt( squared_distance( s.c, p2 ) );
+    
+    if (plane_dist_2 > s.r - tiny_num)
+    {
+        if (p2.oriented_side( s.c ) == ON_NEGATIVE_SIDE) return 0;
+        
+        else return General_Spherical_Wedge( s, p1, p3 );
+    }
+    
+    double plane_dist_3 = sqrt( squared_distance( s.c, p3 ) );
+    
+    if (plane_dist_3 > s.r - tiny_num)
+    {
+        if (p3.oriented_side( s.c ) == ON_NEGATIVE_SIDE) return 0;
+        
+        else return General_Spherical_Wedge( s, p1, p2 );
+    }
+    
     if (Parallel_Planes( p1, p2 )) return Cone_Parallel_Planes( s, p1, p2, p3 );
     else if (Parallel_Planes( p1, p3 )) return Cone_Parallel_Planes( s, p1, p3, p2 );
     else if (Parallel_Planes( p2, p3 )) return Cone_Parallel_Planes( s, p2, p3, p1 );

@@ -95,6 +95,7 @@
 		EE55F2DA225385B700B8CA0B /* Edge3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE55F2D9225385B700B8CA0B /* Edge3D.cpp */; };
 		EE55F2DD2253903B00B8CA0B /* Cell_Volume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE55F2DC2253903B00B8CA0B /* Cell_Volume.cpp */; };
 		EE55F2DF2253AE6F00B8CA0B /* Input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE55F2DE2253AE6F00B8CA0B /* Input.cpp */; };
+		EE67D11923FC541300810552 /* B_Poly_I.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE67D11823FC541300810552 /* B_Poly_I.cpp */; };
 		EE6FE9EE2226FD7E006B4477 /* Two_Circles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE6FE9ED2226FD7E006B4477 /* Two_Circles.cpp */; };
 		EE79CED9224162E30077AFFE /* Deformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE79CED8224162E30077AFFE /* Deformation.cpp */; };
 		EE830BA822F32B2600E42258 /* Intersection_Of_Plane_And_Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE830BA722F32B2600E42258 /* Intersection_Of_Plane_And_Circle.cpp */; };
@@ -406,6 +407,8 @@
 		EE63830E2211C2940088E8AE /* Three_Circle_Intersection_Area_Within_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Three_Circle_Intersection_Area_Within_Cell.h; sourceTree = "<group>"; };
 		EE63830F2211C7710088E8AE /* Non_Inclusion_Three_Circle_Intersection_Area_Within_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Non_Inclusion_Three_Circle_Intersection_Area_Within_Cell.h; sourceTree = "<group>"; };
 		EE6383112211DDC40088E8AE /* Non_Trivial_Three_Circle_Intersection_Area_Within_Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Non_Trivial_Three_Circle_Intersection_Area_Within_Cell.h; sourceTree = "<group>"; };
+		EE67D11823FC541300810552 /* B_Poly_I.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = B_Poly_I.cpp; sourceTree = "<group>"; };
+		EE67D11B23FC544B00810552 /* B_Poly_I.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B_Poly_I.h; sourceTree = "<group>"; };
 		EE6FE9EB2226FA2F006B4477 /* Spare_Code.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spare_Code.h; sourceTree = "<group>"; };
 		EE6FE9EC2226FD6A006B4477 /* Two_Circles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Two_Circles.h; sourceTree = "<group>"; };
 		EE6FE9ED2226FD7E006B4477 /* Two_Circles.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Two_Circles.cpp; sourceTree = "<group>"; };
@@ -769,6 +772,7 @@
 		EE1932E023E2013000C49317 /* Brillouin_Code */ = {
 			isa = PBXGroup;
 			children = (
+				EE67D11823FC541300810552 /* B_Poly_I.cpp */,
 				EE197E2923E9A64600D71AD8 /* B_Poly.cpp */,
 				EEB3D35923EDC47F0002CCF2 /* Brillouin_Surrounding_Pts.cpp */,
 				EE1932DE23E1FD1600C49317 /* Compute_Brillouin_Zones.cpp */,
@@ -795,6 +799,7 @@
 		EE1932E123E2015A00C49317 /* Brillouin_Code */ = {
 			isa = PBXGroup;
 			children = (
+				EE67D11B23FC544B00810552 /* B_Poly_I.h */,
 				EE197E2B23E9A65300D71AD8 /* B_Poly.h */,
 				EEB3D35823EDC43A0002CCF2 /* Brillouin_Surrounding_Pts.h */,
 				EE1932DD23E1FD0600C49317 /* Compute_Brillouin_Zones.h */,
@@ -1357,6 +1362,7 @@
 				EE0AFD1922E760CA00174226 /* Line_Of_Intersection_Of_Two_Planes.cpp in Sources */,
 				EE03933A22F1D048000927BF /* Packing_Functions3D.cpp in Sources */,
 				EE43399423EC9B52004FA97B /* Plane_Intersect_Polyhedron.cpp in Sources */,
+				EE67D11923FC541300810552 /* B_Poly_I.cpp in Sources */,
 				EECF3579222D7F050079CD62 /* First_Order_Total_Area.cpp in Sources */,
 				EE09748F21F0F060006A34D3 /* Cell.cpp in Sources */,
 				EE0A7D5623F467C800E475D9 /* Plot_Graph_Brillouin.cpp in Sources */,
@@ -1423,7 +1429,7 @@
 		EE3AA60B21B848710088403C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1468,9 +1474,23 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/cgal/5.0.1/include,
+					/usr/local/Cellar/boost/1.72.0/include,
+					/usr/local/Cellar/gmp/6.1.2_2/include,
+					/usr/local/Cellar/mpfr/4.0.2/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/cgal/5.0.1/lib,
+					/usr/local/Cellar/mpfr/4.0.2/lib,
+					/usr/local/Cellar/boost/1.72.0/lib,
+					/usr/local/Cellar/gmp/6.1.2_2/lib,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -1478,7 +1498,7 @@
 		EE3AA60C21B848710088403C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1517,8 +1537,22 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/cgal/5.0.1/include,
+					/usr/local/Cellar/boost/1.72.0/include,
+					/usr/local/Cellar/gmp/6.1.2_2/include,
+					/usr/local/Cellar/mpfr/4.0.2/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/cgal/5.0.1/lib,
+					/usr/local/Cellar/mpfr/4.0.2/lib,
+					/usr/local/Cellar/boost/1.72.0/lib,
+					/usr/local/Cellar/gmp/6.1.2_2/lib,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -1535,7 +1569,7 @@
 				HEADER_SEARCH_PATHS = (
 					/usr/local/Cellar/boost/1.69.0/include,
 					/usr/local/Cellar/opencv/4.0.1/include/opencv4,
-					/usr/local/Cellar/cgal/4.14/include,
+					/usr/local/Cellar/cgal/5.0.1/include,
 					/usr/local/Cellar/gmp/6.1.2_2/include,
 					/usr/local/Cellar/mpfr/4.0.2/include,
 					/usr/local/Cellar/gemmi/third_party,
@@ -1545,13 +1579,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/Cellar/boost/1.69.0/lib,
 					/usr/local/Cellar/opencv/4.0.1/lib,
-					/usr/local/Cellar/cgal/4.14/lib,
+					/usr/local/Cellar/cgal/5.0.1/lib,
 					/usr/local/Cellar/gmp/6.1.2_2/lib,
 					/usr/local/Cellar/mpfr/4.0.2/lib,
 				);
 				OTHER_LDFLAGS = (
-					"-lCGAL",
-					"-lCGAL_Core",
 					"-lgmp",
 					"-lmpfr",
 					"-lopencv_calib3d",
@@ -1612,7 +1644,7 @@
 				HEADER_SEARCH_PATHS = (
 					/usr/local/Cellar/boost/1.69.0/include,
 					/usr/local/Cellar/opencv/4.0.1/include/opencv4,
-					/usr/local/Cellar/cgal/4.14/include,
+					/usr/local/Cellar/cgal/5.0.1/include,
 					/usr/local/Cellar/gmp/6.1.2_2/include,
 					/usr/local/Cellar/mpfr/4.0.2/include,
 					/usr/local/Cellar/gemmi/third_party,
@@ -1622,13 +1654,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/Cellar/boost/1.69.0/lib,
 					/usr/local/Cellar/opencv/4.0.1/lib,
-					/usr/local/Cellar/cgal/4.14/lib,
+					/usr/local/Cellar/cgal/5.0.1/lib,
 					/usr/local/Cellar/gmp/6.1.2_2/lib,
 					/usr/local/Cellar/mpfr/4.0.2/lib,
 				);
 				OTHER_LDFLAGS = (
-					"-lCGAL",
-					"-lCGAL_Core",
 					"-lgmp",
 					"-lmpfr",
 					"-lopencv_calib3d",

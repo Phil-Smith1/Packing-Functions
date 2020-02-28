@@ -31,7 +31,7 @@ int perim = 9;
 
 int zone_limit = 9;
 
-vector<P3> parallelepiped_vectors = Cube; //{ P3( 1, 0, 0 ), P3( 0, 1, 0 ), P3( 0.5, 0, 0.5 * sqrt( (double)3 ) ) }; // Input vectors for 3D case.
+vector<P3> parallelepiped_vectors = FCC; //{ P3( 1, 0, 0 ), P3( 0, 1, 0 ), P3( 0.5, 0, 0.5 * sqrt( (double)3 ) ) }; // Input vectors for 3D case.
 
 bool pts_at_vertices = true; // Add points at vertices of the parallelepiped.
 
@@ -47,9 +47,9 @@ int sample_rate = 10; // Sample rate.
 
 bool auto_max_radius = true; // The code automatically produces the maximum radius.
 
-bool title = false; // Adds title to output graph.
+bool title = true; // Adds title to output graph.
 
-string title_str = "Packing Functions for T2 Entry 1"; // Title of output graph.
+string title_str = "Covering Functions for T2"; // Title of output graph.
 
 Graph_Parameters graph_params( title, yrange, title_str );
 

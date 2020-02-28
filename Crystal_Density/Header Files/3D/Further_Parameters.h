@@ -13,7 +13,7 @@ typedef K::Point_3 P3;
 
 const string function_type = "Exact"; // Exact, At_Least.
 
-const string lattice_type = "Triangular"; // Square, Triangular, Custom.
+const string lattice_type = "Square"; // Square, Triangular, Custom.
 
 vector<P2> pts = { P2( 0, 1 ), P2( 1, 0 ) }; // Input vectors for 2D case.
 
