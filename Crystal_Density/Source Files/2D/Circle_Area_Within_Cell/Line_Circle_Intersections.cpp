@@ -1,11 +1,16 @@
 #include "Edge.h"
 #include "Circle.h"
 
+#ifndef tiny_number
+#define tiny_number
+const double tiny_num = 1e-10;
+#endif
+
 int Line_Circle_Intersections ( Circle const& circle, Edge& e )
 {
     double a = e.line.a(), b = e.line.b(), c = e.line.c();
     
-    if (a != 0 && b != 0)
+    if (abs( a ) > tiny_num && abs( b ) > tiny_num)
     {
         double discriminant = circle.r * circle.r * (1 + pow( a / (double)b, 2 )) - pow( circle.c.y() + circle.c.x() * a / (double)b + c / (double)b, 2 );
         
@@ -19,12 +24,12 @@ int Line_Circle_Intersections ( Circle const& circle, Edge& e )
         e.i1 = P2( x_1, y_1 );
         e.i2 = P2( x_2, y_2 );
         
-        if (discriminant == 0) return 1;
+        if (discriminant < tiny_num) return 1;
         
         else return 2;
     }
     
-    else if (a == 0)
+    else if (abs( b ) > tiny_num)
     {
         double discriminant = circle.r * circle.r - pow( c / (double)b + circle.c.y(), 2 );
         
@@ -38,7 +43,7 @@ int Line_Circle_Intersections ( Circle const& circle, Edge& e )
         e.i1 = P2( x_1, y_1 );
         e.i2 = P2( x_2, y_2 );
         
-        if (discriminant == 0) return 1;
+        if (discriminant < tiny_num) return 1;
         
         else return 2;
     }
@@ -57,7 +62,7 @@ int Line_Circle_Intersections ( Circle const& circle, Edge& e )
         e.i1 = P2( x_1, y_1 );
         e.i2 = P2( x_2, y_2 );
         
-        if (discriminant == 0) return 1;
+        if (discriminant < tiny_num) return 1;
         
         else return 2;
     }

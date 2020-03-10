@@ -5,84 +5,114 @@
 
 using namespace std;
 
-void Comparing_Entries( string const& filename_1, string const& filename_2, double& max_diff_pi_1, double& max_diff_pi_2, double& max_diff_pi_3, int& difference_in_length )
+void Comparing_Entries( string const& filename_1, string const& filename_2, vector<double>& max_diff_pi, int zone_limit )
 {
     ifstream ifs_1( filename_1 );
     ifstream ifs_2( filename_2 );
     
     string line_data;
-    stringstream stream;
     vector<vector<double>> file_1, file_2;
-    vector<double> pi_1, pi_2, pi_3;
+    vector<vector<double>> pi( zone_limit );
     
     while (getline( ifs_1, line_data ))
     {
-        double col_1, col_2, col_3, col_4;
+        vector<double> col( zone_limit + 1 );
         stringstream stream;
         
         stream << line_data;
-        stream >> col_1 >> col_2 >> col_3 >> col_4;
         
-        pi_1.push_back( col_2 );
-        pi_2.push_back( col_3 );
-        pi_3.push_back( col_4 );
+        for (int counter = 0; counter < zone_limit + 1; ++counter)
+        {
+            stream >> col[counter];
+        }
+        
+        for (int counter = 0; counter < zone_limit; ++counter)
+        {
+            pi[counter].push_back( col[counter + 1] );
+        }
     }
     
-    file_1.push_back( pi_1 );
-    pi_1.clear();
-    file_1.push_back( pi_2 );
-    pi_2.clear();
-    file_1.push_back( pi_3 );
-    pi_3.clear();
+    for (int counter = 0; counter < zone_limit; ++counter)
+    {
+        file_1.push_back( pi[counter] );
+        pi[counter].clear();
+    }
     
     ifs_1.close();
     
     while (getline( ifs_2, line_data ))
     {
-        double col_1, col_2, col_3, col_4;
+        vector<double> col( zone_limit + 1 );
         stringstream stream;
         
         stream << line_data;
-        stream >> col_1 >> col_2 >> col_3 >> col_4;
         
-        pi_1.push_back( col_2 );
-        pi_2.push_back( col_3 );
-        pi_3.push_back( col_4 );
+        for (int counter = 0; counter < zone_limit + 1; ++counter)
+        {
+            stream >> col[counter];
+        }
+        
+        for (int counter = 0; counter < zone_limit; ++counter)
+        {
+            pi[counter].push_back( col[counter + 1] );
+        }
     }
     
-    file_2.push_back( pi_1 );
-    pi_1.clear();
-    file_2.push_back( pi_2 );
-    pi_2.clear();
-    file_2.push_back( pi_3 );
-    pi_3.clear();
+    for (int counter = 0; counter < zone_limit; ++counter)
+    {
+        file_2.push_back( pi[counter] );
+        pi[counter].clear();
+    }
     
     ifs_2.close();
     
-    double max_r = (int)file_1[0].size();
+    int max_r_1 = (int)file_1[0].size();
+    int max_r_2 = (int)file_2[0].size();
+    int max_r;
     
-    if (max_r > (int)file_2[0].size()) max_r = (int)file_2[0].size();
+    if (max_r_1 > max_r_2) max_r = max_r_2;
+    else max_r = max_r_1;
     
-    difference_in_length = (int)file_2[0].size() - (int)file_1[0].size();
+    vector<double> maximum_diff_pi( zone_limit, 0 );
     
-    double maximum_diff_pi_1 = 0, maximum_diff_pi_2 = 0, maximum_diff_pi_3 = 0;
-    
-    for (int counter = 0; counter < max_r; ++counter)
+    for (int counter_1 = 0; counter_1 < max_r; ++counter_1)
     {
-        double diff = abs( file_1[0][counter] - file_2[0][counter] );
-        
-        if (diff > maximum_diff_pi_1) maximum_diff_pi_1 = diff;
-        
-        diff = abs( file_1[1][counter] - file_2[1][counter] );
-        
-        if (diff > maximum_diff_pi_2) maximum_diff_pi_2 = diff;
-        
-        diff = abs( file_1[2][counter] - file_2[2][counter] );
-        
-        if (diff > maximum_diff_pi_3) maximum_diff_pi_3 = diff;
+        for (int counter_2 = 0; counter_2 < zone_limit; ++counter_2)
+        {
+            double diff = abs( file_1[counter_2][counter_1] - file_2[counter_2][counter_1] );
+            
+            if (diff > maximum_diff_pi[counter_2]) maximum_diff_pi[counter_2] = diff;
+        }
     }
     
-    max_diff_pi_1 = maximum_diff_pi_1;
-    max_diff_pi_2 = maximum_diff_pi_2;
-    max_diff_pi_3 = maximum_diff_pi_3;
+    if (max_r_1 > max_r_2)
+    {
+        for (int counter_1 = max_r_2; counter_1 < max_r_1; ++counter_1)
+        {
+            for (int counter_2 = 0; counter_2 < zone_limit; ++counter_2)
+            {
+                double diff = file_1[counter_2][counter_1];
+                
+                if (diff > maximum_diff_pi[counter_2]) maximum_diff_pi[counter_2] = diff;
+            }
+        }
+    }
+    
+    if (max_r_2 > max_r_1)
+    {
+        for (int counter_1 = max_r_1; counter_1 < max_r_2; ++counter_1)
+        {
+            for (int counter_2 = 0; counter_2 < zone_limit; ++counter_2)
+            {
+                double diff = file_2[counter_2][counter_1];
+                
+                if (diff > maximum_diff_pi[counter_2]) maximum_diff_pi[counter_2] = diff;
+            }
+        }
+    }
+    
+    for (int counter = 0; counter < zone_limit; ++counter)
+    {
+        max_diff_pi[counter] = maximum_diff_pi[counter];
+    }
 }

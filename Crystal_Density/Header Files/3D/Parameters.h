@@ -11,23 +11,23 @@ const string directory3D = "/Users/philsmith/Documents/Work/Xcode Projects/Cryst
 
 const string dataset_directory = "/Users/philsmith/Documents/Work/Xcode Projects/T2_Dataset/"; // Root directory for the T2 dataset.
 
-bool twoD = false; // Run code for 2D.
+bool twoD = true; // Run code for 2D.
 
-bool threeD = false; // Run code for 3D.
+bool threeD = true; // Run code for 3D.
 
 bool T2 = true; // Run code for T2 crystals.
 
 string type_of_experiment = "Molecule_Centres"; // Molecule_Centres, Molecule_Centres_with_Oxygens, Oxygens
 
-bool experimental_T2 = false;
+bool experimental_T2 = true;
 
-string experimental_T2_label = "c";
+string experimental_T2_label = "e";
 
 bool analysis = false; // Perform analysis.
 
 bool brillouin = true;
 
-int perim = 9;
+int perim = 15;
 
 int zone_limit = 9;
 
@@ -43,7 +43,7 @@ int deformation_type3D = 0; // 0: No deformation; 1: Cube to slanted z-plane in 
 
 int iterations = 5688; // Number of iterations.
 
-int sample_rate = 10; // Sample rate.
+int sample_rate = 300; // Sample rate.
 
 bool auto_max_radius = true; // The code automatically produces the maximum radius.
 

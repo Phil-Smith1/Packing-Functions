@@ -19,7 +19,7 @@ void File_Dataset_Analysis ( string const& directory3D )
         int difference_in_length;
         double max_diff_pi_1, max_diff_pi_2, max_diff_pi_3;
         
-        Comparing_Entries( filename_1, filename_2, max_diff_pi_1, max_diff_pi_2, max_diff_pi_3, difference_in_length );
+        //Comparing_Entries( filename_1, filename_2, max_diff_pi_1, max_diff_pi_2, max_diff_pi_3, difference_in_length );
         
         length_diff.push_back( difference_in_length );
         pi_1.push_back( max_diff_pi_1 );

@@ -7,4 +7,4 @@
 
 using namespace std;
 
-void Comparing_Entries( string const& filename_1, string const& filename_2, double& max_diff_pi_1, double& max_diff_pi_2, double& max_diff_pi_3, int& difference_in_length );
+void Comparing_Entries( string const& filename_1, string const& filename_2, vector<double>& max_diff_pi, int zone_limit );

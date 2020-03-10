@@ -304,7 +304,7 @@ void Divide_Polyhedron_I ( P3 const centre, multimap<double, P3>const pts, Polyh
                         {
                             if (const P3 * p = boost::get<P3>( &*result ))
                             {
-                                if (squared_distance( *p, segs[counter_2].source()) > tiny_num && squared_distance( *p, segs[counter_2].target()) > tiny_num)
+                                if (squared_distance( *p, segs[counter_2].source() ) > tiny_num && squared_distance( *p, segs[counter_2].target() ) > tiny_num)
                                 {
                                     P3 pt = *p;
                                     

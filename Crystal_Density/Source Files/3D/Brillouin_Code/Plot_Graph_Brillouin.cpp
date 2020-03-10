@@ -125,19 +125,19 @@ void Plot_Graph_Brillouin_T2 ( string const& directory3D, Input3D const& input, 
     gp << "set border 3\n";
     gp << "set grid\n";
     gp << "set bmargin 4.5\n";
-    gp << "set lmargin 8.5\n";
+    gp << "set lmargin 9\n";
     
     if (graph_params.title)
     {
         gp << "set tmargin 5\n";
-        gp << "set title '" << "Covering Functions for T2-{/Symbol " + lab + "} and Entry " + to_string( entry ) << "' font ', 20' offset 0, 2\n";
+        gp << "set title '" << "Density Functions for T2-{/Symbol " + lab + "} and Entry " + to_string( entry ) << "' font ', 20' offset 0, 2\n";
     }
     
     else gp << "set tmargin 3\n";
     
     gp << "set rmargin 2\n";
     
-    gp << "set ylabel '{/Symbol p}_i(C; r)' font ', 20' offset -0.5, 0\n";
+    gp << "set ylabel '{/Symbol y}_k(A; r)' font ', 20' offset -0.5, 0\n";
     gp << "set xlabel 'Radius of Balls (Angstroms)' font ', 20' offset 0, -0.3\n";
     
     gp << "set xrange [0: " << max_radius << "]\n";
@@ -169,11 +169,11 @@ void Plot_Graph_Brillouin_T2 ( string const& directory3D, Input3D const& input, 
     
     gp << "set samples 1000\n";
     
-    string plot = "plot 'Data/Brill/new_" + label + ".txt' using 1:2 smooth csplines ls 1 title '{/Symbol p}_1(C; r)'";
+    string plot = "plot 'Data/Brill/new_" + label + ".txt' using 1:2 smooth csplines ls 1 title '{/Symbol y}_1(A; r)'";
     
     for (int counter = 1; counter < input.zone_limit - 1; ++counter)
     {
-        plot += ", 'Data/Brill/new_" + label + ".txt' using 1:" + to_string( counter + 2 ) + "smooth csplines ls " + to_string( counter + 1 ) + " title '{/Symbol p}_" + to_string( counter + 1 ) + "(C; r)'";
+        plot += ", 'Data/Brill/new_" + label + ".txt' using 1:" + to_string( counter + 2 ) + "smooth csplines ls " + to_string( counter + 1 ) + " title '{/Symbol y}_{" + to_string( counter + 1 ) + "}(A; r)'";
     }
     
     for (int counter = 0; counter < input.zone_limit - 1; ++counter)
