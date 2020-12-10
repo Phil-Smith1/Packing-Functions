@@ -12,10 +12,12 @@ const double big_num = 1e10;
 
 void Bounding_Box ( vector<P2>const& vertices, pair<Point2d, Point2d>& cell_box );
 
-void Scaling_Parameters ( vector<P2>const& vertices, Point image_sizes, double scale, Point2d& shift );
+void Scaling_Parameters ( vector<P2>const& vertices, Point image_sizes, double& scale, Point2d& shift );
 
 void Bounding_Box ( vector<Cell>const& cells, pair<Point2d, Point2d>& cell_box );
 
 void Scaling_Parameters ( vector<Cell>const& cells, Point image_sizes, double& scale );
 
 void Draw_Cells ( vector<Cell> const& cells );
+
+void Draw_Unit_Cell ( P2 const& p1, P2 const& p2, vector<P2> const& int_pts );

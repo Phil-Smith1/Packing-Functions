@@ -27,7 +27,7 @@ typedef K::Intersect_2 I2;
 
 void Extract_Data_Pts_Brillouin_2D ( string const& directory3D, Input3D& input, int index, vector<P2> const& centres, vector<vector<vector<Tri>>> triangles, vector<double>const& cell_volume, vector<vector<double>>const& max_radii )
 {
-    string dir = directory3D + "Data/Completeness Tests/K " + to_string( index ) + "/1.txt";
+    string dir = directory3D + "Data/Lattice Packing Functions/Square.txt";
     
     ofstream ofs( dir );
     

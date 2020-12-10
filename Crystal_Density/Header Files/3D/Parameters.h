@@ -13,13 +13,13 @@ const string dataset_directory = "/Users/philsmith/Documents/Work/Xcode Projects
 
 bool twoD = true; // Run code for 2D.
 
-bool threeD = true; // Run code for 3D.
+bool threeD = false; // Run code for 3D.
 
-bool T2 = true; // Run code for T2 crystals.
+bool T2 = false; // Run code for T2 crystals.
 
 string type_of_experiment = "Molecule_Centres"; // Molecule_Centres, Molecule_Centres_with_Oxygens, Oxygens
 
-bool experimental_T2 = true;
+bool experimental_T2 = false;
 
 string experimental_T2_label = "e";
 
@@ -27,7 +27,7 @@ bool analysis = false; // Perform analysis.
 
 bool brillouin = true;
 
-int perim = 15;
+int perim = 9;
 
 int zone_limit = 9;
 
@@ -41,7 +41,7 @@ vector<P3> interior_pts3D = { P3( 1, 1, -1 ) }; // 3D interior points.
 
 int deformation_type3D = 0; // 0: No deformation; 1: Cube to slanted z-plane in the x-direction (upto angle 80 degrees).
 
-int iterations = 5688; // Number of iterations.
+int iterations = 1; // Number of iterations.
 
 int sample_rate = 300; // Sample rate.
 

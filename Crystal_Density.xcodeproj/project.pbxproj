@@ -784,16 +784,17 @@
 		EE1932E023E2013000C49317 /* Brillouin_Code */ = {
 			isa = PBXGroup;
 			children = (
+				EE655E90240E86EF004B1276 /* B_Poly_2D.cpp */,
 				EE67D11823FC541300810552 /* B_Poly_I.cpp */,
 				EE197E2923E9A64600D71AD8 /* B_Poly.cpp */,
 				EEB3D35923EDC47F0002CCF2 /* Brillouin_Surrounding_Pts.cpp */,
+				EE655E8A240E831B004B1276 /* Compute_Brillouin_Zones_2D.cpp */,
 				EE1932DE23E1FD1600C49317 /* Compute_Brillouin_Zones.cpp */,
-				EE655E90240E86EF004B1276 /* B_Poly_2D.cpp */,
-				EE655E97240E99C4004B1276 /* Disk_Triangle_Intersection.cpp */,
-				EE655E93240E9837004B1276 /* Extract_Data_Pts_Brillouin_2D.cpp */,
 				EEB3D34F23ED835F0002CCF2 /* Compute_Zone.cpp */,
+				EE655E97240E99C4004B1276 /* Disk_Triangle_Intersection.cpp */,
 				EE43398523EC9610004FA97B /* Divide_Polyhedron.cpp */,
 				EEB3D35323ED84EB0002CCF2 /* Dividing_Space.cpp */,
+				EE655E93240E9837004B1276 /* Extract_Data_Pts_Brillouin_2D.cpp */,
 				EE0A7D5123F4618600E475D9 /* Extract_Data_Pts_Brillouin.cpp */,
 				EE43397F23EC5DCF004FA97B /* Extract_Tetra_Cells.cpp */,
 				EEB3D34923ED7DC40002CCF2 /* Generate_Cube.cpp */,
@@ -807,7 +808,6 @@
 				EE1932E323E2063300C49317 /* Sphere_Tetrahedron_Intersection.cpp */,
 				EEA0CEB423E48DD0008C65C8 /* Triangle_Area3D.cpp */,
 				EE43398123EC90AF004FA97B /* Triangulate_Zones.cpp */,
-				EE655E8A240E831B004B1276 /* Compute_Brillouin_Zones_2D.cpp */,
 			);
 			path = Brillouin_Code;
 			sourceTree = "<group>";

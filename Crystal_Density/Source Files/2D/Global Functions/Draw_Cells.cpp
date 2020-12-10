@@ -18,13 +18,13 @@ void Bounding_Box ( vector<P2>const& vertices, pair<Point2d, Point2d>& cell_box 
     for (auto v : vertices)
     {
         if (cell_box.first.x > v.x()) cell_box.first.x = v.x();
-        if (cell_box.first.y > -v.y()) cell_box.first.y = -v.y();
+        if (cell_box.first.y > v.y()) cell_box.first.y = v.y();
         if (cell_box.second.x < v.x()) cell_box.second.x = v.x();
-        if (cell_box.second.y < -v.y()) cell_box.second.y = -v.y();
+        if (cell_box.second.y < v.y()) cell_box.second.y = v.y();
     }
 }
 
-void Scaling_Parameters ( vector<P2>const& vertices, Point image_sizes, double scale, Point2d& shift )
+void Scaling_Parameters ( vector<P2>const& vertices, Point image_sizes, double& scale, Point2d& shift )
 {
     pair<Point2d, Point2d> box;
     
@@ -36,6 +36,8 @@ void Scaling_Parameters ( vector<P2>const& vertices, Point image_sizes, double s
     
     Point2d image_centre( image_sizes.x * 0.5, image_sizes.y * 0.5 );
     
+    scale = std::min( image_sizes.x / (double)cell_sizes.x, image_sizes.y / (double)cell_sizes.y );
+    scale *= 0.9;
     shift = image_centre - scale * cell_centre;
 }
 
@@ -109,4 +111,69 @@ void Draw_Cells ( vector<Cell> const& cells )
         
         ++counter_1;
     }
+}
+
+void Draw_Unit_Cell ( P2 const& p1, P2 const& p2, vector<P2> const& int_pts )
+{
+    const Point image_sizes( 450, 350 );
+    
+    vector<P2> vertices;
+    
+    vertices.push_back( P2( 0, 0 ) );
+    vertices.push_back( p1 );
+    vertices.push_back( p2 );
+    vertices.push_back( P2( p1.x() + p2.x(), p1.y() + p2.y() ) );
+    
+    double scale = 0;
+    Point2d shift;
+    
+    Scaling_Parameters( vertices, image_sizes, scale, shift );
+    
+    Mat image( image_sizes, CV_8UC3, CV_RGB( 255, 255, 255 ) );
+    
+    Point2d pt1 = scale * Point2d( vertices[0].x(), vertices[0].y() ) + shift;
+    Point2d pt2 = scale * Point2d( vertices[1].x(), vertices[1].y() ) + shift;
+    
+    line( image, pt1, pt2, CV_RGB( 0, 0, 0 ), 1 );
+    
+    pt1 = scale * Point2d( vertices[1].x(), vertices[1].y() ) + shift;
+    pt2 = scale * Point2d( vertices[3].x(), vertices[3].y() ) + shift;
+    
+    line( image, pt1, pt2, CV_RGB( 0, 0, 0 ), 1 );
+    
+    pt1 = scale * Point2d( vertices[3].x(), vertices[3].y() ) + shift;
+    pt2 = scale * Point2d( vertices[2].x(), vertices[2].y() ) + shift;
+    
+    line( image, pt1, pt2, CV_RGB( 0, 0, 0 ), 1 );
+    
+    pt1 = scale * Point2d( vertices[2].x(), vertices[2].y() ) + shift;
+    pt2 = scale * Point2d( vertices[0].x(), vertices[0].y() ) + shift;
+    
+    line( image, pt1, pt2, CV_RGB( 0, 0, 0 ), 1 );
+    
+    for (int counter = 0; counter < int_pts.size(); ++counter)
+    {
+        Point2d p = scale * Point2d( int_pts[counter].x(), int_pts[counter].y() ) + shift;
+        
+        circle( image, p, 4, CV_RGB( 0, 0, 0 ), -1 );
+    }
+    
+    vector<P2> extra_pts;
+    
+    extra_pts.push_back( P2( -0.025, 0.05 ) );
+    extra_pts.push_back( P2( 0.275, -0.05 ) );
+    extra_pts.push_back( P2( 1 - 0.025, 0.05 ) );
+    
+    extra_pts.push_back( P2( -0.025, 1.05 ) );
+    extra_pts.push_back( P2( 0.275, 1 - 0.05 ) );
+    extra_pts.push_back( P2( 1 - 0.025, 1.05 ) );
+    
+    for (int counter = 0; counter < extra_pts.size(); ++counter)
+    {
+        Point2d p = scale * Point2d( extra_pts[counter].x(), extra_pts[counter].y() ) + shift;
+        
+        circle( image, p, 4, CV_RGB( 255, 0, 0 ), -1 );
+    }
+    
+    imwrite( "/Users/philsmith/Documents/Work/Xcode Projects/Crystal_Density/3D/Graphs/Unit_Cell.png", image );
 }

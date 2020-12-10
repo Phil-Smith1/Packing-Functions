@@ -117,32 +117,105 @@ int main ( int, char*[] )
     
     if (analysis)
     {
-        string filename_1 = directory3D + "Data/Completeness Tests/K 5/1.txt";
-        string filename_2 = directory3D + "Data/Completeness Tests/K 5/2.txt";
+        string filename_1 = "/Users/philsmith/Documents/Work/Xcode Projects/Crystal_Density/3D/Data/Completeness Tests 2/K 2/A.txt";
+        string filename_2 = "/Users/philsmith/Documents/Work/Xcode Projects/Crystal_Density/3D/Data/Completeness Tests 2/K 2/Q.txt";
         
         Compare_Two_Files( filename_1, filename_2 );
         
         //File_Dataset_Analysis( directory3D );
         
         //Manipulate_File_Analysis( directory3D );
+        
+        /*ifstream ifs_1( filename_1 );
+        ifstream ifs_2( filename_2 );
+        
+        vector<double> vec1, vec2;
+        
+        string line_data;
+        
+        while (getline( ifs_1, line_data ))
+        {
+            stringstream stream;
+            
+            double val;
+            
+            stream << line_data;
+            
+            stream >> val;
+            
+            vec1.push_back( val );
+        }
+        
+        while (getline( ifs_2, line_data ))
+        {
+            stringstream stream;
+            
+            double val;
+            
+            stream << line_data;
+            
+            stream >> val;
+            
+            vec2.push_back( val );
+        }
+        
+        for (int counter = 0; counter < vec1.size(); ++counter)
+        {
+            double diff = vec1[counter] - vec2[counter];
+            
+            if (diff > 0)
+            {
+                cout << vec1[counter] << endl;
+                cout << vec2[counter] << endl;
+                cout << diff << endl;
+                cout << counter << endl << endl;
+            }
+        }*/
     }
     
     if (brillouin)
     {
         if (twoD)
         {
-            int k = 5;
-            int point_set = 1;
+            int k = 2;
+            int point_set = 2;
             
-            P2 p1 = P2( 10, 0 ), p2 = P2( 0, 1 / (double)(k - 0.5) );
+            //P2 p1 = P2( 10, 0 ), p2 = P2( 0, 1 / (double)(k - 0.5) );
+            
+            //P2 p1 = P2( 2 * k + 6, 0 ), p2 = P2( 0, k + 2 );
+            
+            P2 p1 = P2( 1, 0 ), p2 = P2( 0, 1 );
             
             vector<P2> int_pts;
             
-            int_pts.push_back( P2( 0.1, 0 ) );
+            int_pts.push_back( P2( 0, 0 ) );
+            int_pts.push_back( P2( 0.25, 0 ) );
+            
+            /*int_pts.push_back( P2( 0.1, 0 ) );
             if (point_set == 1) int_pts.push_back( P2( 0.2, 0 ) );
             else int_pts.push_back( P2( 0.4, 0 ) );
             int_pts.push_back( P2( 0.5, 0 ) );
-            int_pts.push_back( P2( 0.6, 0 ) );
+            int_pts.push_back( P2( 0.6, 0 ) );*/
+            
+            /*for (int counter_1 = 0; counter_1 < 2 * k + 6; ++counter_1)
+            {
+                for (int counter_2 = 0; counter_2 < k + 2; ++counter_2)
+                {
+                    if (counter_1 == 0 && counter_2 == 0) continue;
+                    
+                    if (point_set == 1)
+                    {
+                        if (counter_1 == k + 2 && counter_2 == 0) continue;
+                    }
+                    
+                    if (point_set == 2)
+                    {
+                        if (counter_1 == k + 3 && counter_2 == 0) continue;
+                    }
+                    
+                    int_pts.push_back( P2( counter_1, counter_2 ) );
+                }
+            }*/
             
             vector<P2> int_pts_coords;
             vector<P2> centres;
@@ -150,6 +223,8 @@ int main ( int, char*[] )
             for (int counter = 0; counter < int_pts.size(); ++counter)
             {
                 int_pts_coords.push_back( P2( int_pts[counter].x() * p1.x() + int_pts[counter].y() * p2.x(), int_pts[counter].x() * p1.y() + int_pts[counter].y() * p2.y() ) );
+                
+                //int_pts_coords.push_back( int_pts[counter] );
                 
                 centres.push_back( int_pts_coords[counter] );
             }
@@ -184,6 +259,24 @@ int main ( int, char*[] )
                 
                 pts.push_back( copy );
             }
+            
+            vector<P2> draw_pts;
+            
+            draw_pts.push_back( centres[0] );
+            
+            for (int counter = 0; counter < pts[0].size(); ++counter)
+            {
+                auto iter = pts[0].begin();
+                
+                for (int counter_2 = 0; counter_2 < counter; ++counter_2)
+                {
+                    ++iter;
+                }
+                
+                draw_pts.push_back( iter->second );
+            }
+            
+            Draw_Unit_Cell( p1, p2, draw_pts );
             
             vector<vector<vector<Tri>>> triangles( centres.size() );
             
@@ -233,24 +326,24 @@ int main ( int, char*[] )
             
             gp << "cd \"" << directory3D << "\"\n";
             
-            gp << "set terminal pdfcairo size 9.8, 3.5\n";
+            gp << "set terminal pdfcairo size 5, 3.5\n";
             
             gp << "set border 3\n";
             gp << "set grid\n";
             gp << "set bmargin 4.5\n";
-            gp << "set lmargin 8.5\n";
+            gp << "set lmargin 9\n";
             
             if (graph_params.title)
             {
-                gp << "set tmargin 7\n";
-                gp << "set title '" << "Point Set " << to_string( point_set ) << ", K = " << to_string( k ) << "' font ', 20' offset 0, 3\n";
+                gp << "set tmargin 5\n";
+                //gp << "set title 'Density Functions for the Square Lattice' font ', 20' offset 0, 4\n";
             }
             
             else gp << "set tmargin 3\n";
             
             gp << "set rmargin 2\n";
             
-            gp << "set ylabel '{/Symbol p}_i(C; r)' font ', 20' offset -0.5, 0\n";
+            gp << "set ylabel '{/Symbol y}@_k^A(t)' font ', 20' offset -0.5, 0\n";
             gp << "set xlabel 'Radius of Balls' font ', 20' offset 0, -0.3\n";
             
             gp << "set xrange [0: " << input3D.max_radius << "]\n";
@@ -258,7 +351,7 @@ int main ( int, char*[] )
             gp << "set xtics font ', 18'\n";
             gp << "set ytics font ', 18'\n";
             
-            gp << "set key horizontal at graph 0.5, graph 1.04 center bottom font ', 16'\n";
+            gp << "set key horizontal at graph 0.5, graph 1.04 center bottom font ', 16' spacing 1.5\n";
             
             gp << "set style line 1 lc rgb '#0d61ec' lw 3\n";
             gp << "set style line 2 lc rgb '#24ae1d' lw 3\n";
@@ -270,18 +363,29 @@ int main ( int, char*[] )
             gp << "set style line 8 lc rgb '#000000' lw 3\n";
             gp << "set style line 9 lc rgb '#05FCF5' lw 3\n";
             gp << "set style line 10 lc rgb '#43FA96' lw 3\n";
-            gp << "set style line 11 lc rgb '#D2FB1B' lw 3\n";
-            gp << "set style line 12 lc rgb '#FBE31B' lw 3\n";
+            gp << "set style line 11 dt 2 lc rgb '#0d61ec' lw 3\n";
+            gp << "set style line 12 dt 2 lc rgb '#24ae1d' lw 3\n";
+            gp << "set style line 13 dt 2 lc rgb '#ffae00' lw 3\n";
+            gp << "set style line 14 dt 2 lc rgb '#e70000' lw 3\n";
+            gp << "set style line 15 dt 2 lc rgb '#db0dec' lw 3\n";
+            gp << "set style line 16 dt 2 lc rgb '#7B0985' lw 3\n";
+            gp << "set style line 17 dt 2 lc rgb '#87663E' lw 3\n";
+            gp << "set style line 18 dt 2 lc rgb '#000000' lw 3\n";
             
-            gp << "set output \"Graphs/Completeness Tests/K " << to_string( k ) << "/1.pdf\"\n";
+            gp << "set output \"Graphs/Lattice Packing Functions/Square.pdf\"\n";
             
             gp << "set samples 1000\n";
             
-            string plot = "plot 'Data/Completeness Tests/K " + to_string( k ) + "/1.txt' using 1:2 smooth csplines ls 1 title '{/Symbol p}_{1}(C; r)'";
+            string plot = "plot 'Data/Lattice Packing Functions/Set1.txt' using 1:2 smooth csplines ls 1 title '{/Symbol y}@_1^A'";
             
             for (int counter = 1; counter < zone_limit - 1; ++counter)
             {
-                plot += ", 'Data/Completeness Tests/K " + to_string( k ) + "/1.txt' using 1:" + to_string( counter + 2 ) + "smooth csplines ls " + to_string( (counter) % 12 + 1 ) + " title '{/Symbol p}_{" + to_string( counter + 1 ) + "}(C; r)'";
+                plot += ", 'Data/Lattice Packing Functions/Set1.txt' using 1:" + to_string( counter + 2 ) + "smooth csplines ls " + to_string( (counter) % 12 + 1 ) + " title '  {/Symbol y}@_{" + to_string( counter + 1 ) + "}^A'";
+            }
+            
+            for (int counter = 0; counter < zone_limit - 1; ++counter)
+            {
+                plot += ", 'Data/Lattice Packing Functions/Set2.txt' using 1:" + to_string( counter + 2 ) + "smooth csplines ls " + to_string( counter + 11 ) + " notitle";
             }
             
             plot += "\n";

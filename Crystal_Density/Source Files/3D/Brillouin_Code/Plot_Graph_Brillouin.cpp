@@ -120,7 +120,7 @@ void Plot_Graph_Brillouin_T2 ( string const& directory3D, Input3D const& input, 
     
     gp << "cd \"" << directory3D << "\"\n";
     
-    gp << "set terminal pdfcairo size 9.8, 3.5\n";
+    gp << "set terminal pdfcairo size 10, 3.5\n";
     
     gp << "set border 3\n";
     gp << "set grid\n";
@@ -137,11 +137,11 @@ void Plot_Graph_Brillouin_T2 ( string const& directory3D, Input3D const& input, 
     
     gp << "set rmargin 2\n";
     
-    gp << "set ylabel '{/Symbol y}_k(A; r)' font ', 20' offset -0.5, 0\n";
+    gp << "set ylabel '{/Symbol y}@_k^A(r)' font ', 20' offset -0.5, 0\n";
     gp << "set xlabel 'Radius of Balls (Angstroms)' font ', 20' offset 0, -0.3\n";
     
     gp << "set xrange [0: " << max_radius << "]\n";
-    gp << "set yrange [0: " << 1 << "]\n";
+    gp << "set yrange [0: " << 0.7 << "]\n";
     gp << "set xtics font ', 18'\n";
     gp << "set ytics font ', 18'\n";
     
@@ -169,11 +169,11 @@ void Plot_Graph_Brillouin_T2 ( string const& directory3D, Input3D const& input, 
     
     gp << "set samples 1000\n";
     
-    string plot = "plot 'Data/Brill/new_" + label + ".txt' using 1:2 smooth csplines ls 1 title '{/Symbol y}_1(A; r)'";
+    string plot = "plot 'Data/Brill/new_" + label + ".txt' using 1:2 smooth csplines ls 1 title '{/Symbol y}@_1^A(r)'";
     
     for (int counter = 1; counter < input.zone_limit - 1; ++counter)
     {
-        plot += ", 'Data/Brill/new_" + label + ".txt' using 1:" + to_string( counter + 2 ) + "smooth csplines ls " + to_string( counter + 1 ) + " title '{/Symbol y}_{" + to_string( counter + 1 ) + "}(A; r)'";
+        plot += ", 'Data/Brill/new_" + label + ".txt' using 1:" + to_string( counter + 2 ) + "smooth csplines ls " + to_string( counter + 1 ) + " title '{/Symbol y}@_{" + to_string( counter + 1 ) + "}^A(r)'";
     }
     
     for (int counter = 0; counter < input.zone_limit - 1; ++counter)
