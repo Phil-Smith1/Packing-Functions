@@ -4,7 +4,7 @@
 
 #include <fstream>
 
-void Compute_Brillouin_Zones ( multimap<double, P3_E> const& pts, int zone_limit, P3_E const& centre, vector<vector<Tetrahedron>>& zones_of_tetras )
+void Compute_Brillouin_Zones ( multimap<double, P3_E>const& pts, int zone_limit, P3_E const& centre, vector<vector<Tetrahedron>>& zones_of_tetras )
 {
     vector<B_Poly> polys;
     
@@ -22,4 +22,28 @@ void Compute_Brillouin_Zones ( multimap<double, P3_E> const& pts, int zone_limit
     }*/
     
     Triangulate_Zones( polys, zone_limit, zones_of_tetras );
+}
+
+void Compute_Brillouin_Zones_I ( multimap<double, P3>const& pts, int zone_limit, P3 const& centre, vector<vector<Tetrahedron_I>>& zones_of_tetras, vector<double>& max_radii )
+{
+    vector<B_Poly_I> polys;
+    polys.reserve( 3000 );
+    
+    Dividing_Space_I( centre, pts, polys, zone_limit, max_radii );
+    
+    cout << "Number of polyhedrons: " << polys.size() << "." << endl;
+    
+    Triangulate_Zones_I( polys, zone_limit, zones_of_tetras );
+}
+
+void Compute_Brillouin_Zones_IT ( multimap<double, P3>const pts, int zone_limit, P3 const centre, vector<vector<Tetrahedron_I>>& zones_of_tetras, vector<double>& max_radii )
+{
+    vector<B_Poly_I> polys;
+    polys.reserve( 3000 );
+    
+    Dividing_Space_I( centre, pts, polys, zone_limit, max_radii );
+    
+    cout << "Number of polyhedrons: " << polys.size() << "." << endl;
+    
+    Triangulate_Zones_I( polys, zone_limit, zones_of_tetras );
 }
